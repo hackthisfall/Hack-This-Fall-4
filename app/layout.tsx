@@ -2,11 +2,17 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Providers } from './providers';
 import { DM_Sans, Poppins } from 'next/font/google';
+import localFont from 'next/font/local';
 
 const poppins = Poppins({
   subsets: ['latin'],
   variable: '--font-popins',
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+});
+
+const nohemi = localFont({
+  src: './fonts/nohemi.woff2',
+  variable: '--font-nohemi',
 });
 
 const dmSans = DM_Sans({
