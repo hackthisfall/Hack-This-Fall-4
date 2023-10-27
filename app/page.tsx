@@ -10,7 +10,7 @@ const Page = () => {
         overflow="hidden"
         position="relative"
         mx="auto"
-        width="min(100vw, 177vh)"
+        width="min(100vw, 200vh)"
         justifyContent="center"
         alignItems="center"
       >
