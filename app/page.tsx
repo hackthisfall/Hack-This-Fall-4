@@ -23,7 +23,7 @@ const Page = () => {
           zIndex="1"
         >
           <Image
-            animation="rotateImg 20s linear infinite"
+            animation="rotateImg 30s linear infinite"
             opacity="0.15"
             src="/assets/mainMandala.svg"
             h="90%"
@@ -33,7 +33,7 @@ const Page = () => {
             position="absolute"
             right="-18vh"
             top="0"
-            animation="rotateImg 20s linear infinite"
+            animation="rotateImg 30s linear infinite"
             opacity="0.15"
             src="/assets/rightMandala.svg"
             h="36vh"
@@ -43,7 +43,7 @@ const Page = () => {
             position="absolute"
             left="-15vh"
             bottom="-10vh"
-            animation="rotateImg 20s linear infinite"
+            animation="rotateImg 30s linear infinite"
             opacity="0.15"
             src="/assets/leftMandala.svg"
             h="40vh"
