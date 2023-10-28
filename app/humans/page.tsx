@@ -174,7 +174,7 @@ const Humans = () => {
           zIndex="1"
         >
           <Image
-            animation="rotateImg 30s linear infinite"
+            animation="clockwiseSpin 30s linear infinite"
             opacity="0.1"
             src="/assets/mandala-main-light.svg"
             h="90%"
@@ -184,7 +184,7 @@ const Humans = () => {
             position="absolute"
             right="-18vh"
             top="0"
-            animation="rotateImg 30s linear infinite"
+            animation="antiClockwiseSpin 30s linear infinite"
             opacity="0.1"
             src="/assets/mandala-right-light.svg"
             h="36vh"
@@ -194,7 +194,7 @@ const Humans = () => {
             position="absolute"
             left="-15vh"
             bottom="-10vh"
-            animation="rotateImg 30s linear infinite"
+            animation="antiClockwiseSpin 30s linear infinite"
             opacity="0.1"
             src="/assets/mandala-left-light.svg"
             h="40vh"
@@ -206,7 +206,7 @@ const Humans = () => {
           <Heading
             lineHeight="90%"
             fontFamily="var(--font-nohemi)"
-            fontSize="2rem"
+            fontSize="3rem"
             color={"#000000"}
             fontWeight="600"
             letterSpacing="0.3rem"

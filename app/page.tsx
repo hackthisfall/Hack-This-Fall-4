@@ -23,7 +23,7 @@ const Page = () => {
           zIndex="1"
         >
           <Image
-            animation="rotateImg 30s linear infinite"
+            animation="clockwiseSpin 30s linear infinite"
             opacity="0.15"
             src="/assets/mandala-main-dark.svg"
             h="90%"
@@ -33,7 +33,7 @@ const Page = () => {
             position="absolute"
             right="-18vh"
             top="0"
-            animation="rotateImg 30s linear infinite"
+            animation="antiClockwiseSpin 30s linear infinite"
             opacity="0.15"
             src="/assets/mandala-right-dark.svg"
             h="36vh"
@@ -43,7 +43,7 @@ const Page = () => {
             position="absolute"
             left="-15vh"
             bottom="-10vh"
-            animation="rotateImg 30s linear infinite"
+            animation="antiClockwiseSpin 30s linear infinite"
             opacity="0.15"
             src="/assets/mandala-left-dark.svg"
             h="40vh"
