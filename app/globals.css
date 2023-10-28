@@ -34,3 +34,75 @@ body {
     transform: rotate(359deg);
   }
 }
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slide-rev {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.images {
+  overflow: hidden;
+  background: transparent;
+  white-space: nowrap;
+  border-radius: 0.75rem;
+}
+
+.images:hover .images-slide {
+  animation-play-state: paused;
+}
+
+.images-slide {
+  width: max-content;
+  display: inline-block;
+  animation: 10s slide infinite linear;
+}
+
+.images-slide-rev {
+  width: max-content;
+  display: inline-block;
+  animation: 10s slide-rev infinite linear;
+}
+
+.images:hover .images-slide-rev {
+  animation-play-state: paused;
+}
+
+.journey {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.journey span {
+  background-color: white;
+  padding-right: 10px;
+}
+
+.journey-img {
+  z-index: -2;
+  background-color: transparent;
+}
+
+.journey:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 1%;
+  height: 0.55em;
+  border-top: 2px solid #4a4a4a;
+  z-index: -1;
+}
