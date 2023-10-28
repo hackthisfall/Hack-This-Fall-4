@@ -40,7 +40,7 @@ const Header = (props: { mode: string; position?: string }) => {
       top="0"
       left="0"
       px="5rem"
-      py="2.8rem"
+      py="2.5rem"
       justifyContent="space-between"
       alignItems="center"
     >

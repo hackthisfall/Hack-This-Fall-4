@@ -161,14 +161,16 @@ const FAQ = () => {
           <Flex
             w="full"
             h="full"
-            alignItems="center"
+            pt="4rem"
             justifyContent="center"
+            overflowY="scroll"
           >
             <Accordion
               w="85%"
               display="grid"
               gridTemplateColumns="1fr 1fr"
-              rowGap="4rem"
+              rowGap="2rem"
+              h="fit-content"
               columnGap="4rem"
               allowToggle
             >
