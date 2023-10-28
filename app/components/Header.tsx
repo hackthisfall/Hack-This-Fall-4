@@ -1,41 +1,41 @@
-import { Flex, Image, Link } from '@chakra-ui/react';
-import { usePathname } from 'next/navigation';
-import NextLink from 'next/link';
+import { Flex, Image, Link, ResponsiveValue } from "@chakra-ui/react";
+import { usePathname } from "next/navigation";
+import NextLink from "next/link";
 
 const headerRoutes = [
   {
-    name: 'Home',
-    href: '/',
+    name: "Home",
+    href: "/",
   },
   {
-    name: 'Partners',
-    href: '/partners',
+    name: "Partners",
+    href: "/partners",
   },
   {
-    name: 'Tracks',
-    href: '/tracks',
+    name: "Tracks",
+    href: "/tracks",
   },
   {
-    name: 'Humans',
-    href: '/humans',
+    name: "Humans",
+    href: "/humans",
   },
   {
-    name: 'About Us',
-    href: '/about',
+    name: "About Us",
+    href: "/about",
   },
   {
-    name: 'FAQ',
-    href: '/faq',
+    name: "FAQ",
+    href: "/faq",
   },
 ];
 
-const Header = () => {
+const Header = (props: { mode: string; position?: string }) => {
   const pathName = usePathname();
 
   return (
     <Flex
       w="full"
-      position="absolute"
+      position={(props.position as unknown) || "absolute"}
       height="110px"
       zIndex="3"
       top="0"
@@ -46,7 +46,7 @@ const Header = () => {
       alignItems="center"
     >
       <Link as={NextLink} href="/">
-        <Image src="/assets/logo.svg" alt="logo" />
+        <Image src={`/assets/logo-${props.mode}.svg`} alt="logo" />
       </Link>
       <Flex gap="3rem">
         {headerRoutes.map((route) => (
@@ -54,13 +54,14 @@ const Header = () => {
             fontSize="1.1rem"
             fontWeight="500"
             fontFamily="var(--font-popins)"
+            color={props.mode === "light" ? "black" : "white"}
             key={route.name}
             as={NextLink}
             href={route.href}
-            textDecoration={pathName === route.href ? 'underline' : 'none'}
+            textDecoration={pathName === route.href ? "underline" : "none"}
             textUnderlineOffset="4px"
             _hover={{
-              textDecoration: pathName === route.href ? 'underline' : 'none',
+              textDecoration: pathName === route.href ? "underline" : "none",
             }}
           >
             {route.name}

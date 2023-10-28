@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { Flex, Heading, Text, Image, Button } from '@chakra-ui/react';
-import Header from './components/Header';
+import { Flex, Heading, Text, Image, Button } from "@chakra-ui/react";
+import Header from "./components/Header";
 
 const Page = () => {
   return (
@@ -50,7 +50,7 @@ const Page = () => {
             alt="mandala"
           />
         </Flex>
-        <Header />
+        <Header mode="dark" />
         <Flex
           alignItems="center"
           pos="absolute"
@@ -92,7 +92,7 @@ const Page = () => {
                 fontSize="1.6rem"
                 fontWeight="400"
                 lineHeight="90%"
-                _hover={{ background: '#fff', color: '#0D2129' }}
+                _hover={{ background: "#fff", color: "#0D2129" }}
               >
                 Register
               </Button>
