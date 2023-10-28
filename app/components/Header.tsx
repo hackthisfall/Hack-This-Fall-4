@@ -36,12 +36,11 @@ const Header = (props: { mode: string; position?: string }) => {
     <Flex
       w="full"
       position={(props.position as unknown) || "absolute"}
-      height="150px"
       zIndex="3"
       top="0"
       left="0"
       px="5rem"
-      py="1.5rem"
+      py="2.8rem"
       justifyContent="space-between"
       alignItems="center"
     >
