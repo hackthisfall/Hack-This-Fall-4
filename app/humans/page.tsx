@@ -295,7 +295,7 @@ const Humans = () => {
               </Flex>
             ))}
         </Flex>
-        <Footer />
+        <Footer mode="light" />
       </Flex>
     </Flex>
   );

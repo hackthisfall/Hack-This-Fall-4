@@ -103,7 +103,7 @@ const About = () => {
           columnGap="0.2rem"
           rowGap="0.5rem"
           overflow="auto"
-          marginTop="2rem"
+          marginTop="4rem"
         >
           <Flex flexDirection="column" maxWidth={"40vw"} minWidth={"40vw"}>
             <Heading
@@ -238,7 +238,7 @@ const About = () => {
             </div>
           </Box>
         </Flex>
-        <Footer />
+        <Footer mode="light" />
       </Flex>
     </Flex>
   );
