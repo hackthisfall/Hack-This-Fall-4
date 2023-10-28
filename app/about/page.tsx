@@ -63,7 +63,7 @@ const About = () => {
           zIndex="1"
         >
           <Image
-            animation="rotateImg 30s linear infinite"
+            animation="clockwiseSpin 30s linear infinite"
             opacity="0.1"
             src="/assets/mandala-main-light.svg"
             h="90%"
@@ -73,7 +73,7 @@ const About = () => {
             position="absolute"
             right="-18vh"
             top="0"
-            animation="rotateImg 30s linear infinite"
+            animation="antiClockwiseSpin 30s linear infinite"
             opacity="0.1"
             src="/assets/mandala-right-light.svg"
             h="36vh"
@@ -83,7 +83,7 @@ const About = () => {
             position="absolute"
             left="-15vh"
             bottom="-10vh"
-            animation="rotateImg 30s linear infinite"
+            animation="antiClockwiseSpin 30s linear infinite"
             opacity="0.1"
             src="/assets/mandala-left-light.svg"
             h="40vh"
@@ -202,7 +202,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="image-container mt-10">
+            <div className="image-container mt-10 relative ">
               <div className="images">
                 <div className="images-slide-rev">
                   <Image
@@ -234,6 +234,13 @@ const About = () => {
                     src="/assets/about/2.svg"
                   />
                 </div>
+              </div>
+              <div className="rotating-text absolute z-[-10]">
+                <Image
+                  animation="clockwiseSpin 15s linear infinite"
+                  src="/assets/about/circular-text.svg"
+                  width="10rem"
+                />
               </div>
             </div>
           </Box>
