@@ -67,7 +67,7 @@ const partnerMapping = [
   { slug: "community", heading: "Community", sponsors: [] },
 ];
 
-const Page = () => {
+const Partners = () => {
   const [currentSection, setCurrentSection] = useState("powered-by");
 
   return (
@@ -150,7 +150,7 @@ const Page = () => {
                     currentSection === section.slug ? "black" : "transparent"
                   }
                   color={currentSection === section.slug ? "white" : "black"}
-                  fontFamily="var(--font-dmsans)"
+                  fontFamily="var(--font-dm-sans)"
                   borderRadius="full"
                   fontSize="1.1rem"
                   alignItems="center"
@@ -208,4 +208,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Partners;
