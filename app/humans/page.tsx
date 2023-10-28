@@ -13,7 +13,92 @@ const humansMapping = [
       {
         name: "Shambhav Mishra",
         title: "Web publisher",
-        image: "/assets/speakers/shambhav.jpg",
+        image: "/assets/humans/P1.jpeg",
+      },
+      {
+        name: "Shambhav Mishra",
+        title: "Web publisher",
+        image: "/assets/humans/P1.jpeg",
+      },
+      {
+        name: "Shambhav Mishra",
+        title: "Web publisher",
+        image: "/assets/humans/P1.jpeg",
+      },
+      {
+        name: "Shambhav Mishra",
+        title: "Web publisher",
+        image: "/assets/humans/P1.jpeg",
+      },
+      {
+        name: "Shambhav Mishra",
+        title: "Web publisher",
+        image: "/assets/humans/P1.jpeg",
+      },
+      {
+        name: "Shambhav Mishra",
+        title: "Web publisher",
+        image: "/assets/humans/P1.jpeg",
+      },
+      {
+        name: "Shambhav Mishra",
+        title: "Web publisher",
+        image: "/assets/humans/P1.jpeg",
+      },
+      {
+        name: "Shambhav Mishra",
+        title: "Web publisher",
+        image: "/assets/humans/P1.jpeg",
+      },
+      {
+        name: "Shambhav Mishra",
+        title: "Web publisher",
+        image: "/assets/humans/P1.jpeg",
+      },
+      {
+        name: "Shambhav Mishra",
+        title: "Web publisher",
+        image: "/assets/humans/P1.jpeg",
+      },
+      {
+        name: "Shambhav Mishra",
+        title: "Web publisher",
+        image: "/assets/humans/P1.jpeg",
+      },
+      {
+        name: "Shambhav Mishra",
+        title: "Web publisher",
+        image: "/assets/humans/P1.jpeg",
+      },
+      {
+        name: "Shambhav Mishra",
+        title: "Web publisher",
+        image: "/assets/humans/P1.jpeg",
+      },
+      {
+        name: "Shambhav Mishra",
+        title: "Web publisher",
+        image: "/assets/humans/P1.jpeg",
+      },
+      {
+        name: "Shambhav Mishra",
+        title: "Web publisher",
+        image: "/assets/humans/P1.jpeg",
+      },
+      {
+        name: "Shambhav Mishra",
+        title: "Web publisher",
+        image: "/assets/humans/P1.jpeg",
+      },
+      {
+        name: "Shambhav Mishra",
+        title: "Web publisher",
+        image: "/assets/humans/P1.jpeg",
+      },
+      {
+        name: "Shambhav Mishra",
+        title: "Web publisher",
+        image: "/assets/humans/P1.jpeg",
       },
     ],
   },
@@ -23,8 +108,8 @@ const humansMapping = [
     people: [
       {
         name: "Shambhav Mishra",
-        title: "Web publisher",
-        image: "/assets/speakers/shambhav.jpg",
+        title: "Judging publisher",
+        image: "/assets/humans/P1.jpeg",
       },
     ],
   },
@@ -34,8 +119,8 @@ const humansMapping = [
     people: [
       {
         name: "Shambhav Mishra",
-        title: "Web publisher",
-        image: "/assets/speakers/shambhav.jpg",
+        title: "M publisher",
+        image: "/assets/humans/P1.jpeg",
       },
     ],
   },
@@ -45,8 +130,8 @@ const humansMapping = [
     people: [
       {
         name: "Shambhav Mishra",
-        title: "Web publisher",
-        image: "/assets/speakers/shambhav.jpg",
+        title: "E publisher",
+        image: "/assets/humans/P1.jpeg",
       },
     ],
   },
@@ -56,8 +141,8 @@ const humansMapping = [
     people: [
       {
         name: "Shambhav Mishra",
-        title: "Web publisher",
-        image: "/assets/speakers/shambhav.jpg",
+        title: "HTF publisher",
+        image: "/assets/humans/P1.jpeg",
       },
     ],
   },
@@ -90,8 +175,8 @@ const Humans = () => {
         >
           <Image
             animation="rotateImg 30s linear infinite"
-            opacity="0.15"
-            src="/assets/mainMandala.svg"
+            opacity="0.1"
+            src="/assets/mandala-main-light.svg"
             h="90%"
             alt="mandala"
           />
@@ -100,8 +185,8 @@ const Humans = () => {
             right="-18vh"
             top="0"
             animation="rotateImg 30s linear infinite"
-            opacity="0.15"
-            src="/assets/rightMandala.svg"
+            opacity="0.1"
+            src="/assets/mandala-right-light.svg"
             h="36vh"
             alt="mandala"
           />
@@ -110,8 +195,8 @@ const Humans = () => {
             left="-15vh"
             bottom="-10vh"
             animation="rotateImg 30s linear infinite"
-            opacity="0.15"
-            src="/assets/leftMandala.svg"
+            opacity="0.1"
+            src="/assets/mandala-left-light.svg"
             h="40vh"
             alt="mandala"
           />
@@ -168,66 +253,47 @@ const Humans = () => {
           </Flex>
         </Flex>
         <Flex
-          flexDirection="column"
-          alignItems="center"
+          flexDirection="row"
+          flexWrap="wrap"
+          justifyContent="center"
+          alignItems="flex-start"
+          alignContent="flex-start"
           w="full"
           h="full"
           zIndex="20000"
           px="5rem"
-          overflow={"auto"}
+          columnGap="0.2rem"
+          rowGap="0.5rem"
+          overflow="auto"
+          marginTop="2rem"
         >
-          <p className="text-4xl" color="black">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-            fermentum, erat vitae tincidunt blandit, sapien elit ultricies ante,
-            vel condimentum ante arcu ut elit. Maecenas dignissim arcu vitae mi
-            tristique, vel iaculis dui varius. Nulla sem eros, vehicula sed
-            finibus a, venenatis a lectus. Nullam sed rhoncus ex, a mattis
-            ipsum. Nullam nec sodales leo. Donec dignissim accumsan rutrum.
-            Pellentesque habitant morbi tristique senectus et netus et malesuada
-            fames ac turpis egestas. Phasellus tortor purus, suscipit at cursus
-            sit amet, tempus pretium nulla. Aliquam dictum leo a suscipit
-            ultrices. Mauris at dapibus turpis. Suspendisse potenti. Duis
-            porttitor leo ac egestas elementum. Duis at pharetra dui. Cras
-            vehicula arcu et varius accumsan. Quisque nulla lectus, euismod quis
-            dignissim ac, euismod vel neque. Nulla accumsan efficitur nulla, vel
-            dictum urna malesuada in. Sed vel feugiat diam. Cras arcu erat,
-            venenatis vitae iaculis id, scelerisque nec dolor. Curabitur est
-            risus, malesuada non suscipit quis, convallis eget sapien. Duis
-            lobortis bibendum turpis, a facilisis risus maximus quis. Phasellus
-            in est felis. Donec lobortis nulla ac arcu venenatis, eu vehicula
-            nulla suscipit. Curabitur at ipsum sagittis, rutrum dui nec,
-            accumsan metus. Donec eu ante vel arcu eleifend efficitur ac
-            molestie massa. Morbi dui dui, aliquam nec vulputate et, gravida a
-            risus. Nulla facilisi. Proin porta lectus risus. Sed tincidunt enim
-            nec tincidunt placerat. Cras sollicitudin scelerisque nulla varius
-            luctus. Aliquam ultrices justo at turpis euismod blandit et in mi.
-            Vivamus vitae eleifend metus. Etiam lacus mi, placerat sed euismod
-            eget, faucibus vel justo. Sed ullamcorper lectus libero, ut dapibus
-            augue volutpat nec. Maecenas volutpat bibendum laoreet. Praesent
-            imperdiet pretium tellus, et bibendum nunc consectetur sit amet. Sed
-            lobortis dapibus lorem. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Nullam a varius quam. Donec dolor odio, feugiat eu
-            magna eget, viverra pretium sem. Vestibulum ante ipsum primis in
-            faucibus orci luctus et ultrices posuere cubilia curae; Fusce ac
-            gravida urna. Cras finibus nunc quis semper elementum. Maecenas
-            tempor elit sollicitudin vehicula dapibus. Quisque nec nibh quis
-            diam fringilla mollis eu lacinia turpis. Proin id ornare dolor.
-            Nulla lobortis congue elit nec feugiat. Maecenas pretium vehicula
-            diam, sit amet cursus lorem. Sed sed pretium orci. Sed id augue
-            vitae quam posuere tempor at a enim. Nullam metus nibh, laoreet ut
-            mauris vel, tempus sodales justo. Pellentesque et nunc in nulla
-            interdum aliquam. Pellentesque consequat euismod purus at pulvinar.
-            Sed sed malesuada odio. Vestibulum sed augue massa. Sed tincidunt
-            tortor ipsum, a mattis nisi sodales sed. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Aliquam euismod quam nec sem blandit
-            vulputate. Nunc eu sollicitudin nisi. Donec at fermentum odio. Donec
-            non erat nibh. Cras iaculis bibendum ipsum et tincidunt. Aliquam sed
-            tortor eget arcu cursus pharetra. Pellentesque congue pellentesque
-            risus, vel ornare turpis. Cras condimentum posuere posuere. Aliquam
-            dictum convallis vehicula. Quisque luctus placerat justo non
-            elementum. Fusce dignissim justo mauris, vitae hendrerit leo euismod
-            quis.
-          </p>
+          {humansMapping
+            .find((p) => p.slug === currentSection)
+            ?.people.map((s, i) => (
+              <Flex
+                key={i}
+                justifyContent="center"
+                px="1.5rem"
+                py="1rem"
+                borderRadius="0.5rem"
+                flexDirection="column"
+                fontFamily="var(--font-nohemi)"
+              >
+                <Image
+                  src={s.image}
+                  w="14rem"
+                  h="14rem"
+                  alt="logo"
+                  borderRadius="5.5rem 1.25rem"
+                />
+                <Text color="#333333" fontWeight="600" letterSpacing="0.05rem">
+                  {s.name}
+                </Text>
+                <Text color="#676565" letterSpacing="0.06rem">
+                  {s.title}
+                </Text>
+              </Flex>
+            ))}
         </Flex>
         <Footer />
       </Flex>

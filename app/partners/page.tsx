@@ -13,6 +13,49 @@ const partnerMapping = [
       {
         logo: "/assets/logo-light.svg",
       },
+      {
+        logo: "/assets/logo-light.svg",
+      },
+      {
+        logo: "/assets/logo-dark.svg",
+      },
+      {
+        logo: "/assets/logo-light.svg",
+      },
+      {
+        logo: "/assets/logo-light.svg",
+      },
+      {
+        logo: "/assets/logo-light.svg",
+      },
+      {
+        logo: "/assets/logo-light.svg",
+      },
+      {
+        logo: "/assets/logo-light.svg",
+      },
+      {
+        logo: "/assets/logo-light.svg",
+      },
+      {
+        logo: "/assets/logo-light.svg",
+      },
+      {
+        logo: "/assets/logo-light.svg",
+      },
+      {
+        logo: "/assets/logo-light.svg",
+      },
+      {
+        logo: "/assets/logo-light.svg",
+      },
+      {
+        logo: "/assets/logo-light.svg",
+      },
+
+      {
+        logo: "/assets/logo-light.svg",
+      },
     ],
   },
   { slug: "diamond", heading: "Diamond", sponsors: [] },
@@ -51,8 +94,8 @@ const Page = () => {
         >
           <Image
             animation="rotateImg 30s linear infinite"
-            opacity="0.15"
-            src="/assets/mainMandala.svg"
+            opacity="0.1"
+            src="/assets/mandala-main-light.svg"
             h="90%"
             alt="mandala"
           />
@@ -61,8 +104,8 @@ const Page = () => {
             right="-18vh"
             top="0"
             animation="rotateImg 30s linear infinite"
-            opacity="0.15"
-            src="/assets/rightMandala.svg"
+            opacity="0.1"
+            src="/assets/mandala-right-light.svg"
             h="36vh"
             alt="mandala"
           />
@@ -71,8 +114,8 @@ const Page = () => {
             left="-15vh"
             bottom="-10vh"
             animation="rotateImg 30s linear infinite"
-            opacity="0.15"
-            src="/assets/leftMandala.svg"
+            opacity="0.1"
+            src="/assets/mandala-left-light.svg"
             h="40vh"
             alt="mandala"
           />
@@ -85,7 +128,7 @@ const Page = () => {
             fontSize="2rem"
             color={"#000000"}
             fontWeight="600"
-            letterSpacing="0.3rem"
+            letterSpacing="0.1rem"
           >
             Partners
           </Heading>
@@ -97,7 +140,7 @@ const Page = () => {
             justifyContent="space-evenly"
             className="navbar"
             zIndex={10000}
-            marginTop="1rem"
+            marginTop="2rem"
           >
             {partnerMapping.map((section, index) => {
               return (
@@ -129,25 +172,35 @@ const Page = () => {
           </Flex>
         </Flex>
         <Flex
-          flexDirection="column"
-          alignItems="center"
+          flexDirection="row"
+          flexWrap="wrap"
+          justifyContent="center"
+          alignItems="flex-start"
+          alignContent="flex-start"
           w="full"
           h="full"
           zIndex="20000"
           px="5rem"
+          columnGap="2rem"
+          rowGap="2rem"
           overflow="auto"
-          marginTop="5rem"
+          marginTop="2rem"
         >
-          <Heading
-            lineHeight="90%"
-            fontFamily="var(--font-nohemi)"
-            fontSize="2rem"
-            color={"#000000"}
-            fontWeight="600"
-            letterSpacing="0.3rem"
-          >
-            Hello World
-          </Heading>
+          {partnerMapping
+            .find((p) => p.slug === currentSection)
+            ?.sponsors.map((s, i) => (
+              <Flex
+                backgroundColor="#F7F7F7"
+                key={i}
+                width="12rem"
+                justifyContent="center"
+                px="1.5rem"
+                py="1rem"
+                borderRadius="0.5rem"
+              >
+                <Image src={s.logo} alt="logo" />
+              </Flex>
+            ))}
         </Flex>
         <Footer />
       </Flex>

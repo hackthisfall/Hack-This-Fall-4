@@ -25,7 +25,7 @@ const Page = () => {
           <Image
             animation="rotateImg 30s linear infinite"
             opacity="0.15"
-            src="/assets/mainMandala.svg"
+            src="/assets/mandala-main-dark.svg"
             h="90%"
             alt="mandala"
           />
@@ -35,7 +35,7 @@ const Page = () => {
             top="0"
             animation="rotateImg 30s linear infinite"
             opacity="0.15"
-            src="/assets/rightMandala.svg"
+            src="/assets/mandala-right-dark.svg"
             h="36vh"
             alt="mandala"
           />
@@ -45,7 +45,7 @@ const Page = () => {
             bottom="-10vh"
             animation="rotateImg 30s linear infinite"
             opacity="0.15"
-            src="/assets/leftMandala.svg"
+            src="/assets/mandala-left-dark.svg"
             h="40vh"
             alt="mandala"
           />
