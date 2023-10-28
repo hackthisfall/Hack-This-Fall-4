@@ -1,37 +1,37 @@
-'use client';
+"use client";
 
-import { Flex, Heading, Text, Image, Button } from '@chakra-ui/react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { Flex, Heading, Text, Image, Button } from "@chakra-ui/react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const tracksMapping = [
   {
-    heading: 'Generative Artificial Intelligence',
-    image: '/assets/tracks/gen-ai.svg',
+    heading: "Generative Artificial Intelligence",
+    image: "/assets/tracks/gen-ai.svg",
   },
   {
-    heading: 'Blockchain & Crypto',
-    image: '/assets/tracks/blockchain.svg',
+    heading: "Blockchain & Crypto",
+    image: "/assets/tracks/blockchain.svg",
   },
   {
-    heading: 'Cloud and DevOps',
-    image: '/assets/tracks/cloud.svg',
+    heading: "Cloud and DevOps",
+    image: "/assets/tracks/cloud.svg",
   },
   {
-    heading: 'Security & Audits',
-    image: '/assets/tracks/security.svg',
+    heading: "Security & Audits",
+    image: "/assets/tracks/security.svg",
   },
   {
-    heading: 'Internet of Things',
-    image: '/assets/tracks/iot.svg',
+    heading: "Internet of Things",
+    image: "/assets/tracks/iot.svg",
   },
   {
-    heading: 'Augmented & Virtual Reality',
-    image: '/assets/tracks/ar-vr.svg',
+    heading: "Augmented & Virtual Reality",
+    image: "/assets/tracks/ar-vr.svg",
   },
   {
-    heading: 'Open Innovation',
-    image: '/assets/tracks/open-innovation.svg',
+    heading: "Open Innovation",
+    image: "/assets/tracks/open-innovation.svg",
   },
 ];
 
@@ -134,7 +134,7 @@ const Page = () => {
               </Flex>
             ))}
           </Flex>
-          <Footer />
+          <Footer mode="dark" />
         </Flex>
       </Flex>
     </Flex>

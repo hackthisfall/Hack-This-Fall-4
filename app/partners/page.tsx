@@ -202,7 +202,7 @@ const Partners = () => {
               </Flex>
             ))}
         </Flex>
-        <Footer />
+        <Footer mode="light" />
       </Flex>
     </Flex>
   );
