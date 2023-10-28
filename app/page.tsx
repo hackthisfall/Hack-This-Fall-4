@@ -66,6 +66,7 @@ const Page = () => {
                 fontFamily="var(--font-nohemi)"
                 fontSize="11rem"
                 fontWeight="600"
+                color="#FFF"
                 letterSpacing="0.3rem"
               >
                 Innovate
