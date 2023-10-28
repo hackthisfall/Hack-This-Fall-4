@@ -220,7 +220,7 @@ const FAQ = () => {
               })}
             </Accordion>
           </Flex>
-          <Footer />
+          <Footer mode='light' />
         </Flex>
       </Flex>
     </Flex>
