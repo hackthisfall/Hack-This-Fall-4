@@ -166,7 +166,7 @@ const Partners = () => {
                     alignItems="center"
                     justifyContent="center"
                     fontWeight="500"
-                    px={{ md: "1rem", lg: "2rem", "2xl": "4rem" }}
+                    px={{ md: "1rem", lg: "2rem" }}
                     py="1rem"
                     key={index}
                     cursor="pointer"

@@ -104,11 +104,13 @@ const About = () => {
           rowGap="0.5rem"
           overflow="auto"
           marginTop={{ base: "0rem", lg: "4rem" }}
+          maxWidth={"1440px"}
         >
           <Flex
             flexDirection="column"
-            maxWidth={{ base: "full", lg: "40vw" }}
-            minWidth={"40vw"}
+            alignSelf={{ base: "unset", "2xl": "center" }}
+            maxWidth={{ base: "full", lg: "min(40vw,0.40*1440px)" }}
+            minWidth={"min(40vw,0.40*1440px)"}
           >
             <Heading
               fontFamily="var(--font-nohemi)"
@@ -182,7 +184,11 @@ const About = () => {
               ))}
             </Grid>
           </Flex>
-          <Box maxWidth={{ base: "full", lg: "40vw" }} minWidth={"40vw"}>
+          <Box
+            alignSelf={{ base: "unset", "2xl": "center" }}
+            maxWidth={{ base: "full", lg: "min(40vw,0.40*1440px)" }}
+            minWidth={"min(40vw,0.40*1440px)"}
+          >
             <Box className="image-container">
               <div className="images">
                 <div className="images-slide">
@@ -256,7 +262,7 @@ const About = () => {
               </div>
               <Box
                 className={`rotating-text${
-                  isMobile && "-mobile"
+                  isMobile ? "-mobile" : ""
                 } absolute z-[-10]`}
               >
                 <Image

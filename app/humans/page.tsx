@@ -212,6 +212,7 @@ const Humans = () => {
                 pr="1rem"
                 justifyContent="space-evenly"
                 className="navbar"
+                position={"relative"}
                 zIndex={10}
               >
                 {humansMapping.map((section, index) => {
