@@ -149,7 +149,7 @@ const Header = (props: { mode: string; position?: string }) => {
                 </Flex>
               </DrawerBody>
               <DrawerFooter p="0">
-                <Footer mode="dark" />
+                <Footer marginY="0" mode="dark" />
               </DrawerFooter>
             </DrawerContent>
           </Drawer>

@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import { Box, Flex, Heading, Image } from "@chakra-ui/react";
-import Link from "next/link";
+import { Box, Flex, Heading, Image } from '@chakra-ui/react';
+import Link from 'next/link';
 
-const Footer = (props: { mode: string }) => {
+const Footer = (props: { mode: string; marginY?: string }) => {
   return (
     <Flex
       w="full"
-      h={{ base: "20px", lg: "80px" }}
-      px={{ base: "2rem", lg: "5rem" }}
+      h={{ base: '20px', lg: '80px' }}
+      px={{ base: '0rem', lg: '5rem' }}
       alignItems="center"
-      justifyContent={{ base: "space-between", lg: "flex-end" }}
-      columnGap={{ base: "0.5rem", lg: "4rem" }}
-      marginY="1rem"
+      justifyContent={{ base: 'space-evenly', lg: 'flex-end' }}
+      columnGap={{ base: '0.5rem', lg: '4rem' }}
+      marginY={props.marginY || '1.5rem'}
       zIndex={10}
     >
       <Link href="https://x.com/hackthisfall">

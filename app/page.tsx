@@ -68,7 +68,7 @@ const Page = () => {
               <Heading
                 lineHeight={{ base: '110%', lg: '90%' }}
                 fontFamily="var(--font-nohemi)"
-                fontSize={{ base: '4.15rem', xl: '11rem' }}
+                fontSize={{ base: '4.15rem', lg: "7rem", xl: '11rem' }}
                 fontWeight="600"
                 color="#FFF"
                 letterSpacing="0.3rem"
@@ -77,16 +77,16 @@ const Page = () => {
                 <br /> For Good
               </Heading>
               <Flex
-                gap={{ base: '2rem', lg: '0' }}
-                flexDir={{ base: 'column', lg: 'row' }}
+                gap={{ base: '2rem', xl: '0' }}
+                flexDir={{ base: 'column', xl: 'row' }}
                 justifyContent="space-between"
-                alignItems={{ base: 'flex-start', lg: 'center' }}
+                alignItems={{ base: 'flex-start', xl: 'center' }}
               >
-                <Flex gap={{ base: '1rem', lg: '1.5rem' }}>
+                <Flex gap={{ base: '1rem', xl: '1.5rem' }}>
                   <Image src="/assets/icons/location.svg" alt="location" />
                   <Text
                     fontFamily="var(--font-nohemi)"
-                    fontSize={{ base: '1.4rem', lg: '1.6rem' }}
+                    fontSize={{ base: '1.4rem', xl: '1.6rem' }}
                   >
                     2 - 5 February, 2024
                     <br />

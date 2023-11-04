@@ -1,37 +1,37 @@
-"use client";
+'use client';
 
-import { Flex, Heading, Text, Image, Button } from "@chakra-ui/react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { Flex, Heading, Text, Image, Button } from '@chakra-ui/react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const tracksMapping = [
   {
-    heading: "Generative Artificial Intelligence",
-    image: "/assets/tracks/gen-ai.svg",
+    heading: 'Generative Artificial Intelligence',
+    image: '/assets/tracks/gen-ai.svg',
   },
   {
-    heading: "Blockchain & Crypto",
-    image: "/assets/tracks/blockchain.svg",
+    heading: 'Blockchain & Crypto',
+    image: '/assets/tracks/blockchain.svg',
   },
   {
-    heading: "Cloud and DevOps",
-    image: "/assets/tracks/cloud.svg",
+    heading: 'Cloud and DevOps',
+    image: '/assets/tracks/cloud.svg',
   },
   {
-    heading: "Security & Audits",
-    image: "/assets/tracks/security.svg",
+    heading: 'Security & Audits',
+    image: '/assets/tracks/security.svg',
   },
   {
-    heading: "Internet of Things",
-    image: "/assets/tracks/iot.svg",
+    heading: 'Internet of Things',
+    image: '/assets/tracks/iot.svg',
   },
   {
-    heading: "Augmented & Virtual Reality",
-    image: "/assets/tracks/ar-vr.svg",
+    heading: 'Augmented & Virtual Reality',
+    image: '/assets/tracks/ar-vr.svg',
   },
   {
-    heading: "Open Innovation",
-    image: "/assets/tracks/open-innovation.svg",
+    heading: 'Open Innovation',
+    image: '/assets/tracks/open-innovation.svg',
   },
 ];
 
@@ -95,18 +95,22 @@ const Page = () => {
             color="#FFFFFF"
             fontWeight="600"
             letterSpacing="0.3rem"
+            mb="2rem"
           >
             Tracks
           </Heading>
           <Flex
             flexWrap="wrap"
             columnGap="10rem"
+            px={{ base: '0rem', md: '2rem' }}
+            pt={{ base: '2rem', lg: '0' }}
+            pb={{ base: '2rem', md: '0' }}
             rowGap="6rem"
             h="full"
             w="min(1440px, 100vw)"
             alignItems="center"
             justifyContent="center"
-            alignContent="center"
+            overflowY="auto"
           >
             {tracksMapping.map((track) => (
               <Flex
@@ -117,7 +121,7 @@ const Page = () => {
                 mt="2rem"
                 w="240px"
               >
-                <Image height="150px" src={track.image} alt={track.heading} />
+                <Image height="20%" src={track.image} alt={track.heading} />
                 <Text
                   mt="2rem"
                   lineHeight="130%"

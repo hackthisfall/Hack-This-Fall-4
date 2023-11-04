@@ -161,14 +161,14 @@ const FAQ = () => {
           <Flex
             w="full"
             h="full"
-            pt="4rem"
+            pt={{base: "2rem", lg: "4rem"}}
             justifyContent="center"
             overflowY="scroll"
           >
             <Accordion
               w="85%"
               display="grid"
-              gridTemplateColumns="1fr 1fr"
+              gridTemplateColumns={{base: "1fr", lg:"1fr 1fr"}}
               rowGap="2rem"
               h="fit-content"
               columnGap="4rem"
@@ -179,7 +179,7 @@ const FAQ = () => {
                   <AccordionItem key={index} border="none">
                     {({ isExpanded }) => (
                       <>
-                        <AccordionButton>
+                        <AccordionButton p={{base: "0", md: "1rem"}}>
                           <Flex
                             color="#000"
                             fontSize="1.2rem"
@@ -189,13 +189,13 @@ const FAQ = () => {
                             alignItems="center"
                             justifyContent="space-between"
                           >
-                            <Flex alignItems="center" gap="1.5rem">
+                            <Flex alignItems="center" gap={{base: "1rem", lg: "1.5rem"}}>
                               <Image
                                 src="/assets/faq/icon.svg"
                                 alt="initial icon"
                                 w="1rem"
                               />
-                              <Text>{section.question}</Text>
+                              <Text textAlign={{base: "left", lg: "center"}}>{section.question}</Text>
                             </Flex>
                             {isExpanded ? (
                               <MinusIcon fontSize="1rem" />
