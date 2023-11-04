@@ -202,7 +202,9 @@ const Humans = () => {
               flexDirection="column"
               bgColor="#F0F0F0"
               marginTop="1rem"
-              borderRadius="2rem"
+              borderTopRadius="2rem"
+              borderBottomRadius={isDropdownOpen ? "0rem" : "2rem"}
+              position="relative"
             >
               <Flex
                 bgColor="#d6d6d6"
@@ -233,6 +235,10 @@ const Humans = () => {
                         key={index}
                         cursor="pointer"
                         className="font-dm-sans"
+                        onClick={() => {
+                          setIsDropdownOpen(!isDropdownOpen);
+                        }}
+                        minWidth="200px"
                       >
                         {section.heading}
                       </Flex>
@@ -246,33 +252,44 @@ const Humans = () => {
                   <Image src="/assets/icons/dropdown.svg" alt="logo" />
                 </Flex>
               </Flex>
-              {isDropdownOpen &&
-                humansMapping.map((section, index) => {
-                  if (currentSection !== section.slug)
-                    return (
-                      <Flex
-                        zIndex={10}
-                        bgColor="#f0f0f0"
-                        color="black"
-                        fontFamily="var(--font-dm-sans)"
-                        borderRadius="full"
-                        fontSize="1.1rem"
-                        alignItems="center"
-                        justifyContent="center"
-                        fontWeight="500"
-                        px="2rem"
-                        py="1rem"
-                        key={index}
-                        cursor="pointer"
-                        className="font-dm-sans"
-                        onClick={() => {
-                          selectSection(section.slug);
-                        }}
-                      >
-                        {section.heading}
-                      </Flex>
-                    );
-                })}
+              {isDropdownOpen && (
+                <Flex
+                  flexDirection={"column"}
+                  position="absolute"
+                  zIndex={40}
+                  top="100%"
+                  width="100%"
+                  bgColor="#F0F0F0"
+                  borderBottomRadius="2rem"
+                >
+                  {humansMapping.map((section, index) => {
+                    if (currentSection !== section.slug)
+                      return (
+                        <Flex
+                          zIndex={10}
+                          bgColor="#f0f0f0"
+                          color="black"
+                          fontFamily="var(--font-dm-sans)"
+                          borderRadius="full"
+                          fontSize="1.1rem"
+                          alignItems="center"
+                          justifyContent="center"
+                          fontWeight="500"
+                          px="2rem"
+                          py="1rem"
+                          key={index}
+                          cursor="pointer"
+                          className="font-dm-sans"
+                          onClick={() => {
+                            selectSection(section.slug);
+                          }}
+                        >
+                          {section.heading}
+                        </Flex>
+                      );
+                  })}
+                </Flex>
+              )}
             </Flex>
           )}
         </Flex>
