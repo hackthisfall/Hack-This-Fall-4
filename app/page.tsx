@@ -68,7 +68,7 @@ const Page = () => {
               <Heading
                 lineHeight={{ base: '110%', lg: '90%' }}
                 fontFamily="var(--font-nohemi)"
-                fontSize={{ base: '4.15rem', lg: "7rem", xl: '11rem' }}
+                fontSize={{ base: '4.15rem', lg: '7rem', xl: '11rem' }}
                 fontWeight="600"
                 color="#FFF"
                 letterSpacing="0.3rem"
@@ -85,6 +85,7 @@ const Page = () => {
                 <Flex gap={{ base: '1rem', xl: '1.5rem' }}>
                   <Image src="/assets/icons/location.svg" alt="location" />
                   <Text
+                    color="#FFF"
                     fontFamily="var(--font-nohemi)"
                     fontSize={{ base: '1.4rem', xl: '1.6rem' }}
                   >

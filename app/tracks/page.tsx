@@ -129,6 +129,7 @@ const Page = () => {
                   fontSize="1.3rem"
                   letterSpacing="0.1rem"
                   textAlign="center"
+                  color="#FFF"
                 >
                   {track.heading}
                 </Text>
