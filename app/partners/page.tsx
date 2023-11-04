@@ -136,13 +136,13 @@ const Partners = () => {
             gap="1rem"
             justifyContent="space-evenly"
             className="navbar"
-            zIndex={10000}
+            zIndex={10}
             marginTop="2rem"
           >
             {partnerMapping.map((section, index) => {
               return (
                 <Flex
-                  zIndex={100}
+                  zIndex={10}
                   bgColor={
                     currentSection === section.slug ? "black" : "transparent"
                   }
@@ -176,7 +176,7 @@ const Partners = () => {
           alignContent="flex-start"
           w="full"
           h="full"
-          zIndex="20000"
+          zIndex="20"
           px="5rem"
           columnGap="2rem"
           rowGap="2rem"

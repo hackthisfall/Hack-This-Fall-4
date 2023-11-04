@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { Flex, Heading, Text, Image, Button } from "@chakra-ui/react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import { Flex, Heading, Text, Image, Button } from '@chakra-ui/react';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 const Page = () => {
   return (
@@ -27,13 +27,13 @@ const Page = () => {
             animation="clockwiseSpin 30s linear infinite"
             opacity="0.15"
             src="/assets/mandala-main-dark.svg"
-            h="90%"
+            h="min(90%, 100vw)"
             alt="mandala"
           />
           <Image
             position="absolute"
             right="-18vh"
-            top="0"
+            top={{ base: '-18vh', lg: '0' }}
             animation="antiClockwiseSpin 30s linear infinite"
             opacity="0.15"
             src="/assets/mandala-right-dark.svg"
@@ -42,8 +42,8 @@ const Page = () => {
           />
           <Image
             position="absolute"
-            left="-15vh"
-            bottom="-10vh"
+            left={{ base: '-20vh', lg: '-15vh' }}
+            bottom={{ base: '-20vh', lg: '-10vh' }}
             animation="antiClockwiseSpin 30s linear infinite"
             opacity="0.15"
             src="/assets/mandala-left-dark.svg"
@@ -59,12 +59,16 @@ const Page = () => {
           flexDirection="column"
         >
           <Header mode="dark" position="relative" />
-          <Flex px="5rem" h="full" alignItems="center">
-            <Flex gap="2rem" flexDirection="column">
+          <Flex
+            px={{ base: '2rem', md: '3rem', xl: '5rem' }}
+            h="full"
+            alignItems="center"
+          >
+            <Flex gap={{ base: '1rem', lg: '2rem' }} flexDirection="column">
               <Heading
-                lineHeight="90%"
+                lineHeight={{ base: '110%', lg: '90%' }}
                 fontFamily="var(--font-nohemi)"
-                fontSize="11rem"
+                fontSize={{ base: '4.15rem', xl: '11rem' }}
                 fontWeight="600"
                 color="#FFF"
                 letterSpacing="0.3rem"
@@ -72,10 +76,18 @@ const Page = () => {
                 Innovate
                 <br /> For Good
               </Heading>
-              <Flex justifyContent="space-between" alignItems="center">
-                <Flex gap="1.5rem">
+              <Flex
+                gap={{ base: '2rem', lg: '0' }}
+                flexDir={{ base: 'column', lg: 'row' }}
+                justifyContent="space-between"
+                alignItems={{ base: 'flex-start', lg: 'center' }}
+              >
+                <Flex gap={{ base: '1rem', lg: '1.5rem' }}>
                   <Image src="/assets/icons/location.svg" alt="location" />
-                  <Text fontFamily="var(--font-nohemi)" fontSize="1.6rem">
+                  <Text
+                    fontFamily="var(--font-nohemi)"
+                    fontSize={{ base: '1.4rem', lg: '1.6rem' }}
+                  >
                     2 - 5 February, 2024
                     <br />
                     Gandhinagar, India
@@ -83,18 +95,18 @@ const Page = () => {
                 </Flex>
                 <Button
                   color="#fff"
-                  px="6rem"
-                  py="2rem"
+                  px={{ base: '2rem', lg: '6rem' }}
+                  py={{ base: '1.5rem', lg: '2rem' }}
                   display="flex"
                   justifyContent="center"
                   alignItems="center"
                   border="1.5px solid #fff"
                   borderRadius="full"
                   fontFamily="var(--font-nohemi)"
-                  fontSize="1.6rem"
+                  fontSize={{ base: '1.4rem', lg: '1.6rem' }}
                   fontWeight="400"
                   lineHeight="90%"
-                  _hover={{ background: "#fff", color: "#0D2129" }}
+                  _hover={{ background: '#fff', color: '#0D2129' }}
                 >
                   Register
                 </Button>
