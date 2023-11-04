@@ -121,3 +121,9 @@ body {
   left: 0;
   transform: translate(-50%, 50%);
 }
+
+.rotating-text-mobile {
+  bottom: 0;
+  right: 0;
+  transform: translate(5%, 50%);
+}

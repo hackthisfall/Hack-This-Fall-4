@@ -1,6 +1,12 @@
 "use client";
 
-import { Box, Flex, Heading, Image } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -69,10 +75,16 @@ const partnerMapping = [
 
 const Partners = () => {
   const [currentSection, setCurrentSection] = useState("powered-by");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const selectSection = (section: string) => {
+    setCurrentSection(section);
+    setIsDropdownOpen(false);
+  };
+
+  const isMobile = useBreakpointValue({ base: true, lg: false });
 
   return (
-    // <div className="flex flex-col items-center h-[100vh] justify-between">
-
     <Flex background="#ffffff" w="100vw" h="100vh">
       <Flex
         overflow="hidden"
@@ -122,51 +134,130 @@ const Partners = () => {
           <Heading
             lineHeight="90%"
             fontFamily="var(--font-nohemi)"
-            fontSize="3rem"
+            fontSize={{ base: "2rem", lg: "3rem" }}
             color={"#000000"}
             fontWeight="600"
             letterSpacing="0.1rem"
           >
             Partners
           </Heading>
-          <Flex
-            bgColor="#F0F0F0"
-            borderRadius="full"
-            w="fit-content"
-            gap="1rem"
-            justifyContent="space-evenly"
-            className="navbar"
-            zIndex={10}
-            marginTop="2rem"
-          >
-            {partnerMapping.map((section, index) => {
-              return (
+          {!isMobile && (
+            <Flex
+              bgColor="#F0F0F0"
+              borderRadius="full"
+              w="fit-content"
+              gap="1rem"
+              justifyContent="space-evenly"
+              className="navbar"
+              zIndex={10}
+              marginTop="2rem"
+            >
+              {partnerMapping.map((section, index) => {
+                return (
+                  <Flex
+                    zIndex={10}
+                    bgColor={
+                      currentSection === section.slug ? "black" : "transparent"
+                    }
+                    color={currentSection === section.slug ? "white" : "black"}
+                    fontFamily="var(--font-dm-sans)"
+                    borderRadius="full"
+                    fontSize="1.1rem"
+                    alignItems="center"
+                    justifyContent="center"
+                    fontWeight="500"
+                    px={{ md: "1rem", lg: "2rem", "2xl": "4rem" }}
+                    py="1rem"
+                    key={index}
+                    cursor="pointer"
+                    onClick={() => {
+                      setCurrentSection(section.slug);
+                    }}
+                    className="font-dm-sans"
+                  >
+                    {section.heading}
+                  </Flex>
+                );
+              })}
+            </Flex>
+          )}
+          {isMobile && (
+            <Flex
+              flexDirection="column"
+              bgColor="#F0F0F0"
+              marginTop="1rem"
+              borderRadius="2rem"
+            >
+              <Flex
+                bgColor="#d6d6d6"
+                borderRadius="full"
+                w="fit-content"
+                gap="1rem"
+                pr="1rem"
+                justifyContent="space-evenly"
+                className="navbar"
+                zIndex={10}
+              >
+                {partnerMapping.map((section, index) => {
+                  if (currentSection === section.slug)
+                    return (
+                      <Flex
+                        zIndex={10}
+                        bgColor="black"
+                        color="white"
+                        fontFamily="var(--font-dm-sans)"
+                        borderRadius="full"
+                        fontSize="1.1rem"
+                        alignItems="center"
+                        justifyContent="center"
+                        fontWeight="500"
+                        px="2rem"
+                        py="1rem"
+                        key={index}
+                        cursor="pointer"
+                        className="font-dm-sans"
+                      >
+                        {section.heading}
+                      </Flex>
+                    );
+                })}
                 <Flex
-                  zIndex={10}
-                  bgColor={
-                    currentSection === section.slug ? "black" : "transparent"
-                  }
-                  color={currentSection === section.slug ? "white" : "black"}
-                  fontFamily="var(--font-dm-sans)"
-                  borderRadius="full"
-                  fontSize="1.1rem"
-                  alignItems="center"
-                  justifyContent="center"
-                  fontWeight="500"
-                  px={{ md: "1rem", lg: "2rem", "2xl": "4rem" }}
-                  py="1rem"
-                  key={index}
-                  cursor="pointer"
                   onClick={() => {
-                    setCurrentSection(section.slug);
+                    setIsDropdownOpen(!isDropdownOpen);
                   }}
-                  className="font-dm-sans"
                 >
-                  {section.heading}
+                  <Image src="/assets/icons/dropdown.svg" alt="logo" />
                 </Flex>
-              );
-            })}
-          </Flex>
+              </Flex>
+              {isDropdownOpen &&
+                partnerMapping.map((section, index) => {
+                  if (currentSection !== section.slug)
+                    return (
+                      <Flex
+                        zIndex={10}
+                        bgColor="#f0f0f0"
+                        color="black"
+                        fontFamily="var(--font-dm-sans)"
+                        borderRadius="full"
+                        fontSize="1.1rem"
+                        alignItems="center"
+                        justifyContent="center"
+                        fontWeight="500"
+                        px="2rem"
+                        py="1rem"
+                        key={index}
+                        cursor="pointer"
+                        className="font-dm-sans"
+                        onClick={() => {
+                          selectSection(section.slug);
+                        }}
+                      >
+                        {section.heading}
+                      </Flex>
+                    );
+                })}
+            </Flex>
+          )}
         </Flex>
         <Flex
           flexDirection="row"
@@ -177,9 +268,9 @@ const Partners = () => {
           w="full"
           h="full"
           zIndex="20"
-          px="5rem"
-          columnGap="2rem"
-          rowGap="2rem"
+          px={{ base: "2rem", lg: "5rem" }}
+          columnGap={{ base: "1rem", lg: "2rem" }}
+          rowGap={{ base: "1rem", lg: "2rem" }}
           overflow="auto"
           marginTop="2rem"
         >
@@ -189,10 +280,10 @@ const Partners = () => {
               <Flex
                 backgroundColor="#F7F7F7"
                 key={i}
-                width="12rem"
+                width={{ base: "7rem", lg: "12rem" }}
                 justifyContent="center"
-                px="1.5rem"
-                py="1rem"
+                px={{ base: "0.75rem", lg: "1.5rem" }}
+                py={{ base: "0.5rem", lg: "1rem" }}
                 borderRadius="0.5rem"
               >
                 <Image src={s.logo} alt="logo" />

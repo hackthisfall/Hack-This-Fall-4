@@ -7,13 +7,13 @@ const Footer = (props: { mode: string }) => {
   return (
     <Flex
       w="full"
-      h="80px"
-      px="5rem"
+      h={{ base: "20px", lg: "80px" }}
+      px={{ base: "2rem", lg: "5rem" }}
       alignItems="center"
-      justifyContent="flex-end"
-      columnGap="4rem"
+      justifyContent={{ base: "space-between", lg: "flex-end" }}
+      columnGap={{ base: "0.5rem", lg: "4rem" }}
       marginY="1rem"
-      zIndex={100}
+      zIndex={10}
     >
       <Link href="https://x.com/hackthisfall">
         <Image src={`/assets/footer/x-${props.mode}.svg`} alt="x"></Image>

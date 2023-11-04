@@ -1,6 +1,13 @@
 "use client";
 
-import { Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import Header from "../components/Header";
 import { useState } from "react";
 import Footer from "../components/Footer";
@@ -10,71 +17,6 @@ const humansMapping = [
     slug: "speakers",
     heading: "Speakers",
     people: [
-      {
-        name: "Shambhav Mishra",
-        title: "Web publisher",
-        image: "/assets/humans/P1.jpeg",
-      },
-      {
-        name: "Shambhav Mishra",
-        title: "Web publisher",
-        image: "/assets/humans/P1.jpeg",
-      },
-      {
-        name: "Shambhav Mishra",
-        title: "Web publisher",
-        image: "/assets/humans/P1.jpeg",
-      },
-      {
-        name: "Shambhav Mishra",
-        title: "Web publisher",
-        image: "/assets/humans/P1.jpeg",
-      },
-      {
-        name: "Shambhav Mishra",
-        title: "Web publisher",
-        image: "/assets/humans/P1.jpeg",
-      },
-      {
-        name: "Shambhav Mishra",
-        title: "Web publisher",
-        image: "/assets/humans/P1.jpeg",
-      },
-      {
-        name: "Shambhav Mishra",
-        title: "Web publisher",
-        image: "/assets/humans/P1.jpeg",
-      },
-      {
-        name: "Shambhav Mishra",
-        title: "Web publisher",
-        image: "/assets/humans/P1.jpeg",
-      },
-      {
-        name: "Shambhav Mishra",
-        title: "Web publisher",
-        image: "/assets/humans/P1.jpeg",
-      },
-      {
-        name: "Shambhav Mishra",
-        title: "Web publisher",
-        image: "/assets/humans/P1.jpeg",
-      },
-      {
-        name: "Shambhav Mishra",
-        title: "Web publisher",
-        image: "/assets/humans/P1.jpeg",
-      },
-      {
-        name: "Shambhav Mishra",
-        title: "Web publisher",
-        image: "/assets/humans/P1.jpeg",
-      },
-      {
-        name: "Shambhav Mishra",
-        title: "Web publisher",
-        image: "/assets/humans/P1.jpeg",
-      },
       {
         name: "Shambhav Mishra",
         title: "Web publisher",
@@ -150,10 +92,15 @@ const humansMapping = [
 
 const Humans = () => {
   const [currentSection, setCurrentSection] = useState("speakers");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  const selectSection = (section: string) => {
+    setCurrentSection(section);
+    setIsDropdownOpen(false);
+  };
+
+  const isMobile = useBreakpointValue({ base: true, lg: false });
   return (
-    // <div className="flex flex-col items-center h-[100vh] justify-between">
-
     <Flex background="#ffffff" w="100vw" h="100vh">
       <Flex
         overflow="hidden"
@@ -203,51 +150,130 @@ const Humans = () => {
           <Heading
             lineHeight="90%"
             fontFamily="var(--font-nohemi)"
-            fontSize="3rem"
+            fontSize={{ base: "2rem", lg: "3rem" }}
             color={"#000000"}
             fontWeight="600"
             letterSpacing="0.3rem"
           >
             Humans
           </Heading>
-          <Flex
-            bgColor="#F0F0F0"
-            borderRadius="full"
-            w="fit-content"
-            gap="1rem"
-            justifyContent="space-evenly"
-            className="navbar"
-            zIndex={10000}
-            marginTop="1rem"
-          >
-            {humansMapping.map((section, index) => {
-              return (
+          {!isMobile && (
+            <Flex
+              bgColor="#F0F0F0"
+              borderRadius="full"
+              w="fit-content"
+              gap="1rem"
+              justifyContent="space-evenly"
+              className="navbar"
+              zIndex={10}
+              marginTop="1rem"
+            >
+              {humansMapping.map((section, index) => {
+                return (
+                  <Flex
+                    zIndex={10}
+                    bgColor={
+                      currentSection === section.slug ? "black" : "transparent"
+                    }
+                    color={currentSection === section.slug ? "white" : "black"}
+                    fontFamily="var(--font-dm-sans)"
+                    borderRadius="full"
+                    fontSize="1.1rem"
+                    alignItems="center"
+                    justifyContent="center"
+                    fontWeight="500"
+                    px={{ md: "1rem", lg: "2rem", "2xl": "4rem" }}
+                    py="1rem"
+                    key={index}
+                    cursor="pointer"
+                    onClick={() => {
+                      setCurrentSection(section.slug);
+                    }}
+                    className="font-dm-sans"
+                  >
+                    {section.heading}
+                  </Flex>
+                );
+              })}
+            </Flex>
+          )}
+          {isMobile && (
+            <Flex
+              flexDirection="column"
+              bgColor="#F0F0F0"
+              marginTop="1rem"
+              borderRadius="2rem"
+            >
+              <Flex
+                bgColor="#d6d6d6"
+                borderRadius="full"
+                w="fit-content"
+                gap="1rem"
+                pr="1rem"
+                justifyContent="space-evenly"
+                className="navbar"
+                zIndex={10}
+              >
+                {humansMapping.map((section, index) => {
+                  if (currentSection === section.slug)
+                    return (
+                      <Flex
+                        zIndex={10}
+                        bgColor="black"
+                        color="white"
+                        fontFamily="var(--font-dm-sans)"
+                        borderRadius="full"
+                        fontSize="1.1rem"
+                        alignItems="center"
+                        justifyContent="center"
+                        fontWeight="500"
+                        px="2rem"
+                        py="1rem"
+                        key={index}
+                        cursor="pointer"
+                        className="font-dm-sans"
+                      >
+                        {section.heading}
+                      </Flex>
+                    );
+                })}
                 <Flex
-                  zIndex={100}
-                  bgColor={
-                    currentSection === section.slug ? "black" : "transparent"
-                  }
-                  color={currentSection === section.slug ? "white" : "black"}
-                  fontFamily="var(--font-dm-sans)"
-                  borderRadius="full"
-                  fontSize="1.1rem"
-                  alignItems="center"
-                  justifyContent="center"
-                  fontWeight="500"
-                  px={{ md: "1rem", lg: "2rem", "2xl": "4rem" }}
-                  py="1rem"
-                  key={index}
-                  cursor="pointer"
                   onClick={() => {
-                    setCurrentSection(section.slug);
+                    setIsDropdownOpen(!isDropdownOpen);
                   }}
-                  className="font-dm-sans"
                 >
-                  {section.heading}
+                  <Image src="/assets/icons/dropdown.svg" alt="logo" />
                 </Flex>
-              );
-            })}
-          </Flex>
+              </Flex>
+              {isDropdownOpen &&
+                humansMapping.map((section, index) => {
+                  if (currentSection !== section.slug)
+                    return (
+                      <Flex
+                        zIndex={10}
+                        bgColor="#f0f0f0"
+                        color="black"
+                        fontFamily="var(--font-dm-sans)"
+                        borderRadius="full"
+                        fontSize="1.1rem"
+                        alignItems="center"
+                        justifyContent="center"
+                        fontWeight="500"
+                        px="2rem"
+                        py="1rem"
+                        key={index}
+                        cursor="pointer"
+                        className="font-dm-sans"
+                        onClick={() => {
+                          selectSection(section.slug);
+                        }}
+                      >
+                        {section.heading}
+                      </Flex>
+                    );
+                })}
+            </Flex>
+          )}
         </Flex>
         <Flex
           flexDirection="row"
@@ -257,10 +283,9 @@ const Humans = () => {
           alignContent="flex-start"
           w="full"
           h="full"
-          zIndex="20000"
-          px="5rem"
-          columnGap="0.2rem"
-          rowGap="0.5rem"
+          zIndex="20"
+          px={{ base: "2rem", lg: "5rem" }}
+          rowGap={{ base: "0.25rem", lg: "0.5rem" }}
           overflow="auto"
           marginTop="2rem"
         >
@@ -270,23 +295,35 @@ const Humans = () => {
               <Flex
                 key={i}
                 justifyContent="center"
-                px="1.5rem"
-                py="1rem"
+                px={{ base: "0.5rem", lg: "1.5rem" }}
+                py={{ base: "0.5rem", lg: "1rem" }}
                 borderRadius="0.5rem"
                 flexDirection="column"
                 fontFamily="var(--font-nohemi)"
               >
                 <Image
                   src={s.image}
-                  w="14rem"
-                  h="14rem"
+                  w={{ base: "7rem", lg: "14rem" }}
+                  h={{ base: "7rem", lg: "14rem" }}
                   alt="logo"
-                  borderRadius="5.5rem 1.25rem"
+                  borderRadius={{
+                    base: "3.5rem 1rem",
+                    lg: "5.5rem 1.25rem",
+                  }}
                 />
-                <Text color="#333333" fontWeight="600" letterSpacing="0.05rem">
+                <Text
+                  color="#333333"
+                  fontWeight="600"
+                  letterSpacing="0.05rem"
+                  fontSize={{ base: "0.5rem", lg: "unset" }}
+                >
                   {s.name}
                 </Text>
-                <Text color="#676565" letterSpacing="0.06rem">
+                <Text
+                  color="#676565"
+                  letterSpacing="0.06rem"
+                  fontSize={{ base: "0.5rem", lg: "unset" }}
+                >
                   {s.title}
                 </Text>
               </Flex>
