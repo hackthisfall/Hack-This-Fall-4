@@ -45,8 +45,10 @@ const metrics = [
 const About = () => {
   const isMobile = useBreakpointValue({ base: true, lg: false });
 
-  var element = document.getElementById('aboutInternalDiv');
-  if (element) element.scrollTop = -element.scrollHeight;
+  if (typeof window !== 'undefined') {
+    var element = document.getElementById('aboutInternalDiv');
+    if (element) element.scrollTop = -element.scrollHeight;
+  }
 
   return (
     <Flex background="#ffffff" w="100vw" h="100dvh">
@@ -155,7 +157,11 @@ const About = () => {
             >
               <span>Our journey so far</span>
               {!isMobile && (
-                <Image className="journey-img" src="/assets/about/star.svg" />
+                <Image
+                  className="journey-img"
+                  src="/assets/about/star.svg"
+                  alt="star"
+                />
               )}
             </Heading>
             <Grid
@@ -194,6 +200,7 @@ const About = () => {
               <div className="images">
                 <div className="images-slide">
                   <Image
+                    alt="1"
                     className="img"
                     width={{ base: '17rem', lg: '34rem' }}
                     display="inline-block"
@@ -201,6 +208,7 @@ const About = () => {
                     src="/assets/about/1.svg"
                   />
                   <Image
+                    alt="2"
                     className="img"
                     width={{ base: '17rem', lg: '34rem' }}
                     display="inline-block"
@@ -208,6 +216,7 @@ const About = () => {
                     src="/assets/about/2.svg"
                   />
                   <Image
+                    alt="1"
                     className="img"
                     width={{ base: '17rem', lg: '34rem' }}
                     display="inline-block"
@@ -215,6 +224,7 @@ const About = () => {
                     src="/assets/about/1.svg"
                   />
                   <Image
+                    alt="2"
                     className="img"
                     width={{ base: '17rem', lg: '34rem' }}
                     display="inline-block"
@@ -232,6 +242,7 @@ const About = () => {
               <div className="images">
                 <div className="images-slide-rev">
                   <Image
+                    alt="1"
                     className="img"
                     width={{ base: '17rem', lg: '34rem' }}
                     display="inline-block"
@@ -239,6 +250,7 @@ const About = () => {
                     src="/assets/about/1.svg"
                   />
                   <Image
+                    alt="2"
                     className="img"
                     width={{ base: '17rem', lg: '34rem' }}
                     display="inline-block"
@@ -246,6 +258,7 @@ const About = () => {
                     src="/assets/about/2.svg"
                   />
                   <Image
+                    alt="1"
                     className="img"
                     width={{ base: '17rem', lg: '34rem' }}
                     display="inline-block"
@@ -253,6 +266,7 @@ const About = () => {
                     src="/assets/about/1.svg"
                   />
                   <Image
+                    alt="2"
                     className="img"
                     width={{ base: '17rem', lg: '34rem' }}
                     display="inline-block"
