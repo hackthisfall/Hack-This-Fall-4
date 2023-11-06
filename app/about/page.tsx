@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   Box,
@@ -10,35 +10,35 @@ import {
   Image,
   Text,
   useBreakpointValue,
-} from "@chakra-ui/react";
-import Header from "../components/Header";
-import { useState } from "react";
-import Footer from "../components/Footer";
+} from '@chakra-ui/react';
+import Header from '../components/Header';
+import { useState } from 'react';
+import Footer from '../components/Footer';
 
 const metrics = [
   {
-    number: "48",
-    text: "Hours",
+    number: '48',
+    text: 'Hours',
   },
   {
-    number: "6000+",
-    text: "Hackers",
+    number: '6000+',
+    text: 'Hackers',
   },
   {
-    number: "40+",
-    text: "Workshops",
+    number: '40+',
+    text: 'Workshops',
   },
   {
-    number: "460+",
-    text: "Projects",
+    number: '460+',
+    text: 'Projects',
   },
   {
-    number: "60+",
-    text: "Mentors",
+    number: '60+',
+    text: 'Mentors',
   },
   {
-    number: "55+",
-    text: "Countries",
+    number: '55+',
+    text: 'Countries',
   },
 ];
 
@@ -92,32 +92,30 @@ const About = () => {
         </Flex>
         <Header mode="light" position="relative" />
         <Flex
-          flexDirection={{ base: "column-reverse", lg: "row" }}
-          justifyContent="space-between"
-          alignItems="flex-start"
-          alignContent="flex-start"
+          flexDirection={{ base: 'column-reverse', lg: 'row' }}
+          alignItems="center"
+          justifyContent={{ base: 'space-between', lg: 'center' }}
+          flexWrap={{ 'lg': 'wrap' }}
+          px={{ base: '2rem', lg: 0 }}
           w="full"
           h="full"
           zIndex="20"
-          px={{ base: "2rem", lg: "5rem" }}
-          columnGap="0.2rem"
+          columnGap={{ "md": "4rem", "2xl": "5rem"}}
           rowGap="0.5rem"
           overflow="auto"
-          marginTop={{ base: "0rem", lg: "4rem" }}
-          maxWidth={"1440px"}
+          marginTop={{ base: '0rem', lg: '4rem' }}
         >
           <Flex
             flexDirection="column"
-            alignSelf={{ base: "unset", "2xl": "center" }}
-            maxWidth={{ base: "full", lg: "min(40vw,0.40*1440px)" }}
-            minWidth={"min(40vw,0.40*1440px)"}
+            maxWidth={{ base: 'full', lg: 'min(40vw,0.40*1440px)' }}
+            minWidth={'min(40vw,0.40*1440px)'}
           >
             <Heading
               fontFamily="var(--font-nohemi)"
               fontWeight="600"
               letterSpacing="0.15rem"
-              fontSize={{ base: "2rem", lg: "4rem" }}
-              marginTop={{ base: "2rem", lg: "unset" }}
+              fontSize={{ base: '2rem', lg: '4rem' }}
+              marginTop={{ base: '2rem', lg: 'unset' }}
             >
               <span className="text-[#000000]">What sets us </span>
               <span className="text-[#F25B2A]">apart</span>
@@ -125,7 +123,7 @@ const About = () => {
             <Box
               color="#000000"
               fontFamily="var(--font-dm-sans)"
-              marginTop={{ base: "0.5rem", lg: "2rem" }}
+              marginTop={{ base: '0.5rem', lg: '2rem' }}
               fontSize="1.25rem"
               textAlign="justify"
             >
@@ -148,7 +146,7 @@ const About = () => {
               className="journey"
               fontSize="1.25rem"
               color="#4A4A4A"
-              marginTop={{ base: "2rem", lg: "4rem" }}
+              marginTop={{ base: '2rem', lg: '4rem' }}
               position="relative"
             >
               <span>Our journey so far</span>
@@ -159,23 +157,23 @@ const About = () => {
             <Grid
               color="#2C2C2C"
               fontFamily="var(--font-nohemi)"
-              templateColumns={{ base: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }}
+              templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}
               rowGap="1rem"
-              columnGap={{ base: "2rem", lg: "unset" }}
+              columnGap={{ base: '2rem', lg: 'unset' }}
               marginTop="2rem"
             >
               {metrics.map((m, i) => (
                 <GridItem key={i}>
                   <Text
                     fontWeight={800}
-                    fontSize={{ base: "1.75rem", lg: "2rem" }}
+                    fontSize={{ base: '1.75rem', lg: '2rem' }}
                     lineHeight="3rem"
                   >
                     {m.number}
                   </Text>
                   <Text
                     fontWeight={500}
-                    fontSize={{ base: "1.4rem", lg: "1.5rem" }}
+                    fontSize={{ base: '1.4rem', lg: '1.5rem' }}
                     lineHeight="1.75rem"
                   >
                     {m.text}
@@ -185,39 +183,38 @@ const About = () => {
             </Grid>
           </Flex>
           <Box
-            alignSelf={{ base: "unset", "2xl": "center" }}
-            maxWidth={{ base: "full", lg: "min(40vw,0.40*1440px)" }}
-            minWidth={"min(40vw,0.40*1440px)"}
+            maxWidth={{ base: 'full', lg: 'min(40vw,0.40*1440px)' }}
+            minWidth={'min(40vw,0.40*1440px)'}
           >
             <Box className="image-container">
               <div className="images">
                 <div className="images-slide">
                   <Image
                     className="img"
-                    width={{ base: "17rem", lg: "34rem" }}
+                    width={{ base: '17rem', lg: '34rem' }}
                     display="inline-block"
-                    marginX={{ base: "0.5rem", lg: "1rem" }}
+                    marginX={{ base: '0.5rem', lg: '1rem' }}
                     src="/assets/about/1.svg"
                   />
                   <Image
                     className="img"
-                    width={{ base: "17rem", lg: "34rem" }}
+                    width={{ base: '17rem', lg: '34rem' }}
                     display="inline-block"
-                    marginX={{ base: "0.5rem", lg: "1rem" }}
+                    marginX={{ base: '0.5rem', lg: '1rem' }}
                     src="/assets/about/2.svg"
                   />
                   <Image
                     className="img"
-                    width={{ base: "17rem", lg: "34rem" }}
+                    width={{ base: '17rem', lg: '34rem' }}
                     display="inline-block"
-                    marginX={{ base: "0.5rem", lg: "1rem" }}
+                    marginX={{ base: '0.5rem', lg: '1rem' }}
                     src="/assets/about/1.svg"
                   />
                   <Image
                     className="img"
-                    width={{ base: "17rem", lg: "34rem" }}
+                    width={{ base: '17rem', lg: '34rem' }}
                     display="inline-block"
-                    marginX={{ base: "0.5rem", lg: "1rem" }}
+                    marginX={{ base: '0.5rem', lg: '1rem' }}
                     src="/assets/about/2.svg"
                   />
                 </div>
@@ -226,49 +223,49 @@ const About = () => {
 
             <Box
               className="image-container relative"
-              marginTop={{ base: "1rem", lg: "2.5rem" }}
+              marginTop={{ base: '1rem', lg: '2.5rem' }}
             >
               <div className="images">
                 <div className="images-slide-rev">
                   <Image
                     className="img"
-                    width={{ base: "17rem", lg: "34rem" }}
+                    width={{ base: '17rem', lg: '34rem' }}
                     display="inline-block"
-                    marginX={{ base: "0.5rem", lg: "1rem" }}
+                    marginX={{ base: '0.5rem', lg: '1rem' }}
                     src="/assets/about/1.svg"
                   />
                   <Image
                     className="img"
-                    width={{ base: "17rem", lg: "34rem" }}
+                    width={{ base: '17rem', lg: '34rem' }}
                     display="inline-block"
-                    marginX={{ base: "0.5rem", lg: "1rem" }}
+                    marginX={{ base: '0.5rem', lg: '1rem' }}
                     src="/assets/about/2.svg"
                   />
                   <Image
                     className="img"
-                    width={{ base: "17rem", lg: "34rem" }}
+                    width={{ base: '17rem', lg: '34rem' }}
                     display="inline-block"
-                    marginX={{ base: "0.5rem", lg: "1rem" }}
+                    marginX={{ base: '0.5rem', lg: '1rem' }}
                     src="/assets/about/1.svg"
                   />
                   <Image
                     className="img"
-                    width={{ base: "17rem", lg: "34rem" }}
+                    width={{ base: '17rem', lg: '34rem' }}
                     display="inline-block"
-                    marginX={{ base: "0.5rem", lg: "1rem" }}
+                    marginX={{ base: '0.5rem', lg: '1rem' }}
                     src="/assets/about/2.svg"
                   />
                 </div>
               </div>
               <Box
                 className={`rotating-text${
-                  isMobile ? "-mobile" : ""
+                  isMobile ? '-mobile' : ''
                 } absolute z-[-10]`}
               >
                 <Image
                   animation="clockwiseSpin 15s linear infinite"
                   src="/assets/about/circular-text.svg"
-                  width={{ base: "6rem", lg: "10rem" }}
+                  width={{ base: '6rem', lg: '10rem' }}
                 />
               </Box>
             </Box>
