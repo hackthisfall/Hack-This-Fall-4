@@ -37,7 +37,7 @@ const tracksMapping = [
 
 const Page = () => {
   return (
-    <Flex background="#0D2129" w="100vw" h="100vh">
+    <Flex background="#0D2129" w="100vw" h="100dvh">
       <Flex
         overflow="hidden"
         position="relative"

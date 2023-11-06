@@ -92,7 +92,7 @@ const FAQ = () => {
   const [currentSection, setCurrentSection] = useState('speakers');
 
   return (
-    <Flex background="#ffffff" w="100vw" h="100vh">
+    <Flex background="#ffffff" w="100vw" h="100dvh">
       <Flex
         overflow="hidden"
         position="relative"
