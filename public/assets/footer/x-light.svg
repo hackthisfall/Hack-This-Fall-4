@@ -1,12 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48">
-  <g id="Group_252" data-name="Group 252" transform="translate(-6502 21396)">
-    <g id="Rectangle_350" data-name="Rectangle 350" transform="translate(6502 -21396)" fill="#fff" stroke="#707070"
-      stroke-width="1" opacity="0">
-      <rect width="48" height="48" stroke="none" />
-      <rect x="0.5" y="0.5" width="47" height="47" fill="none" />
-    </g>
-    <path id="X_logo_2023_original"
-      d="M14.286,10.172,23.222,0H21.1L13.342,8.83,7.147,0H0L9.37,13.354,0,24.02H2.117l8.192-9.327,6.544,9.327H24M2.881,1.563H6.133L21.1,22.534H17.85"
-      transform="translate(6514 -21384)" />
-  </g>
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1141_18626)">
+<path d="M19.9149 16.425L27.4084 7.71429H25.6325L19.1262 15.2775L13.9293 7.71429H7.9353L15.7939 19.1514L7.9353 28.2857H9.71119L16.5824 20.2987L22.0704 28.2857H28.0644L19.9145 16.425H19.9149ZM17.4827 19.252L16.6863 18.1132L10.351 9.05112H13.0786L18.1911 16.3646L18.9873 17.5034L25.6333 27.0097H22.906L17.4827 19.2525V19.252Z" fill="#1E1E1E"/>
+</g>
+<defs>
+<clipPath id="clip0_1141_18626">
+<rect width="20.5714" height="20.5714" fill="white" transform="translate(7.71436 7.71429)"/>
+</clipPath>
+</defs>
 </svg>
