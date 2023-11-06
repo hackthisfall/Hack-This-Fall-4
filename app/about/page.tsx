@@ -55,7 +55,7 @@ const About = () => {
         justifyContent="space-between"
         alignItems="center"
         flexDirection="column"
-        height="100vh"
+        height="100dvh"
       >
         <Flex
           justifyContent="center"
