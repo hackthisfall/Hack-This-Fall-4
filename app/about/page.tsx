@@ -281,6 +281,7 @@ const About = () => {
                 } absolute z-[-10]`}
               >
                 <Image
+                  alt="circular text"
                   animation="clockwiseSpin 15s linear infinite"
                   src="/assets/about/circular-text.svg"
                   width={{ base: '6rem', lg: '10rem' }}
