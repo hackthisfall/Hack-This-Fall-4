@@ -145,6 +145,12 @@ const Header = (props: { mode: string; position?: string }) => {
                         pathName === route.href ? 'underline' : 'none'
                       }
                       textDecorationColor="#F7B141"
+                      _hover={{
+                        textDecoration:
+                          pathName === route.href ? 'underline' : 'none',
+                        textDecorationColor: '#F7B141',
+                        color: '#F7B141',
+                      }}
                       textUnderlineOffset="4px"
                     >
                       {route.name}

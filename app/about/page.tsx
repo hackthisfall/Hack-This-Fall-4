@@ -12,7 +12,7 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react';
 import Header from '../components/Header';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Footer from '../components/Footer';
 
 const metrics = [
@@ -44,6 +44,9 @@ const metrics = [
 
 const About = () => {
   const isMobile = useBreakpointValue({ base: true, lg: false });
+
+  var element = document.getElementById('aboutInternalDiv');
+  if (element) element.scrollTop = -element.scrollHeight;
 
   return (
     <Flex background="#ffffff" w="100vw" h="100dvh">
@@ -92,15 +95,16 @@ const About = () => {
         </Flex>
         <Header mode="light" position="relative" />
         <Flex
+          id="aboutInternalDiv"
           flexDirection={{ base: 'column-reverse', lg: 'row' }}
           alignItems="center"
           justifyContent={{ base: 'space-between', lg: 'center' }}
-          flexWrap={{ 'lg': 'wrap' }}
+          flexWrap={{ lg: 'wrap' }}
           px={{ base: '2rem', lg: 0 }}
           w="full"
           h="full"
           zIndex="20"
-          columnGap={{ "md": "4rem", "2xl": "5rem"}}
+          columnGap={{ md: '4rem', '2xl': '5rem' }}
           rowGap="0.5rem"
           overflow="auto"
           marginTop={{ base: '0rem', lg: '4rem' }}

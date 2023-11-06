@@ -161,7 +161,7 @@ const FAQ = () => {
           <Flex
             w="full"
             h="full"
-            pt={{base: "2rem", lg: "4rem"}}
+            pt={{base: "3rem", lg: "4rem"}}
             justifyContent="center"
             overflowY="scroll"
           >
