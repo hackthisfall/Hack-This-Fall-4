@@ -10,35 +10,35 @@ import {
   Image,
   Link,
   useDisclosure,
-} from "@chakra-ui/react";
-import { usePathname } from "next/navigation";
-import NextLink from "next/link";
-import Footer from "./Footer";
+} from '@chakra-ui/react';
+import { usePathname } from 'next/navigation';
+import NextLink from 'next/link';
+import Footer from './Footer';
 
 const headerRoutes = [
   {
-    name: "Home",
-    href: "/",
+    name: 'Home',
+    href: '/',
   },
   {
-    name: "Partners",
-    href: "/partners",
+    name: 'Partners',
+    href: '/partners',
   },
   {
-    name: "Tracks",
-    href: "/tracks",
+    name: 'Tracks',
+    href: '/tracks',
   },
   {
-    name: "Humans",
-    href: "/humans",
+    name: 'Humans',
+    href: '/humans',
   },
   {
-    name: "About Us",
-    href: "/about",
+    name: 'About Us',
+    href: '/about',
   },
   {
-    name: "FAQ",
-    href: "/faq",
+    name: 'FAQ',
+    href: '/faq',
   },
 ];
 
@@ -51,18 +51,18 @@ const Header = (props: { mode: string; position?: string }) => {
   return (
     <Flex
       w="full"
-      position={(props.position as unknown) || "absolute"}
+      position={(props.position as unknown) || 'absolute'}
       zIndex="3"
       top="0"
       left="0"
-      px={{ base: "2rem", md: "3rem", xl: "5rem" }}
-      py={{ base: "1.8rem", md: "2rem", xl: "2.5rem" }}
+      px={{ base: '2rem', md: '3rem', xl: '5rem' }}
+      py={{ base: '1.8rem', md: '2rem', xl: '2.5rem' }}
       justifyContent="space-between"
       alignItems="center"
     >
       <Link as={NextLink} href="/">
         <Image
-          height={{ base: "3rem", lg: "4rem" }}
+          height={{ base: '3rem', lg: '4rem' }}
           src={`/assets/logo-${props.mode}.svg`}
           alt="logo"
         />
@@ -73,14 +73,17 @@ const Header = (props: { mode: string; position?: string }) => {
             fontSize="1.1rem"
             fontWeight="500"
             fontFamily="var(--font-popins)"
-            color={props.mode === "light" ? "black" : "white"}
+            color={props.mode === 'light' ? 'black' : 'white'}
             key={route.name}
             as={NextLink}
             href={route.href}
-            textDecoration={pathName === route.href ? "underline" : "none"}
+            textDecoration={pathName === route.href ? 'underline' : 'none'}
+            textDecorationColor="#F7B141"
             textUnderlineOffset="4px"
             _hover={{
-              textDecoration: pathName === route.href ? "underline" : "none",
+              textDecoration: pathName === route.href ? 'underline' : 'none',
+              textDecorationColor: '#F7B141',
+              color: '#F7B141',
             }}
           >
             {route.name}
@@ -98,9 +101,9 @@ const Header = (props: { mode: string; position?: string }) => {
             <DrawerOverlay />
             <DrawerContent
               zIndex={150}
-              px={{ base: "2rem", md: "3rem", xl: "5rem" }}
-              py={{ base: "1.8rem", md: "2rem", xl: "2.5rem" }}
-              background={props.mode === "light" ? "#FFFFFF" : "#0E2029"}
+              px={{ base: '2rem', md: '3rem', xl: '5rem' }}
+              py={{ base: '1.8rem', md: '2rem', xl: '2.5rem' }}
+              background={props.mode === 'light' ? '#FFFFFF' : '#0E2029'}
             >
               <DrawerHeader
                 pt="0"
@@ -109,10 +112,10 @@ const Header = (props: { mode: string; position?: string }) => {
                 justifyContent="space-between"
                 px="0"
               >
-                {" "}
+                {' '}
                 <Link as={NextLink} href="/">
                   <Image
-                    height={{ base: "3rem", lg: "4rem" }}
+                    height={{ base: '3rem', lg: '4rem' }}
                     src={`/assets/logo-${props.mode}.svg`}
                     alt="logo"
                   />
@@ -134,13 +137,14 @@ const Header = (props: { mode: string; position?: string }) => {
                       fontSize="2.5rem"
                       fontWeight="500"
                       fontFamily="var(--font-popins)"
-                      color={props.mode === "light" ? "black" : "white"}
+                      color={props.mode === 'light' ? 'black' : 'white'}
                       key={route.name}
                       as={NextLink}
                       href={route.href}
                       textDecoration={
-                        pathName === route.href ? "underline" : "none"
+                        pathName === route.href ? 'underline' : 'none'
                       }
+                      textDecorationColor="#F7B141"
                       textUnderlineOffset="4px"
                     >
                       {route.name}

@@ -68,7 +68,7 @@ const Page = () => {
               <Heading
                 lineHeight={{ base: '110%', lg: '90%' }}
                 fontFamily="var(--font-nohemi)"
-                fontSize={{ base: '4.15rem', lg: '7rem', xl: '11rem' }}
+                fontSize={{ base: '3.5rem', lg: '7rem', xl: '11rem' }}
                 fontWeight="600"
                 color="#FFF"
                 letterSpacing="0.3rem"
@@ -87,7 +87,7 @@ const Page = () => {
                   <Text
                     color="#FFF"
                     fontFamily="var(--font-nohemi)"
-                    fontSize={{ base: '1.4rem', xl: '1.6rem' }}
+                    fontSize={{ base: '1.3rem', xl: '1.6rem' }}
                   >
                     2 - 5 February, 2024
                     <br />

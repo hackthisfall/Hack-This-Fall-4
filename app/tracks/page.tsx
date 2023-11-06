@@ -101,16 +101,17 @@ const Page = () => {
           </Heading>
           <Flex
             flexWrap="wrap"
-            columnGap="10rem"
+            columnGap="4rem"
             px={{ base: '0rem', md: '2rem' }}
             pt={{ base: '2rem', lg: '0' }}
             pb={{ base: '2rem', md: '0' }}
-            rowGap="6rem"
+            rowGap={{base: "3rem", lg: "1rem"}}
             h="full"
             w="min(1440px, 100vw)"
-            alignItems="center"
+            alignItems="baseline"
             justifyContent="center"
-            overflowY="auto"
+            alignContent={{"2xl": "center"}}
+            overflowY={{base: "auto", xl: "hidden"}}
           >
             {tracksMapping.map((track) => (
               <Flex
@@ -121,7 +122,7 @@ const Page = () => {
                 mt="2rem"
                 w="240px"
               >
-                <Image height="20%" src={track.image} alt={track.heading} />
+                <Image height="100px" src={track.image} alt={track.heading} />
                 <Text
                   mt="2rem"
                   lineHeight="130%"
