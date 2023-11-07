@@ -64,7 +64,7 @@ const Header = (props: { mode: string; position?: string }) => {
     return {
       activeColor,
       hoverColor,
-    }
+    };
   };
 
   const [color] = useState(() => getRandomColor());
@@ -100,7 +100,13 @@ const Header = (props: { mode: string; position?: string }) => {
             href={route.href}
             textDecoration={pathName === route.href ? 'underline' : 'none'}
             textDecorationColor={color.activeColor}
-            textColor={pathName === route.href ? color.activeColor : '#FFF'}
+            textColor={
+              pathName === route.href
+                ? color.activeColor
+                : props.mode === 'light'
+                ? '#000'
+                : '#FFF'
+            }
             textUnderlineOffset="4px"
             _hover={{
               textDecoration: pathName === route.href ? 'underline' : 'none',
@@ -168,7 +174,11 @@ const Header = (props: { mode: string; position?: string }) => {
                       }
                       textDecorationColor={color.activeColor}
                       textColor={
-                        pathName === route.href ? color.activeColor : '#FFF'
+                        pathName === route.href
+                          ? color.activeColor
+                          : props.mode === 'light'
+                          ? '#000'
+                          : '#FFF'
                       }
                       _hover={{
                         textDecoration:
