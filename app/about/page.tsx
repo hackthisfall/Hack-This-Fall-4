@@ -12,7 +12,6 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import Header from "../components/Header";
-import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 
 const metrics = [

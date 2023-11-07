@@ -14,6 +14,7 @@ import {
 import { usePathname } from 'next/navigation';
 import NextLink from 'next/link';
 import Footer from './Footer';
+import { useEffect, useState } from 'react';
 
 const headerRoutes = [
   {
@@ -48,6 +49,26 @@ const Header = (props: { mode: string; position?: string }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const isMobile = useBreakpointValue({ base: true, lg: false });
 
+  const getRandomColor = () => {
+    const colorList = ['#64B7B5', '#ECB258', '#E36941'];
+    if (props.mode === 'light') {
+      colorList.push('#2D5564');
+    }
+    const activeColor = colorList[Math.floor(Math.random() * colorList.length)];
+    let hoverColor = colorList[Math.floor(Math.random() * colorList.length)];
+
+    while (activeColor === hoverColor) {
+      hoverColor = colorList[Math.floor(Math.random() * colorList.length)];
+    }
+
+    return {
+      activeColor,
+      hoverColor,
+    }
+  };
+
+  const [color] = useState(() => getRandomColor());
+
   return (
     <Flex
       w="full"
@@ -78,12 +99,13 @@ const Header = (props: { mode: string; position?: string }) => {
             as={NextLink}
             href={route.href}
             textDecoration={pathName === route.href ? 'underline' : 'none'}
-            textDecorationColor="#F7B141"
+            textDecorationColor={color.activeColor}
+            textColor={pathName === route.href ? color.activeColor : '#FFF'}
             textUnderlineOffset="4px"
             _hover={{
               textDecoration: pathName === route.href ? 'underline' : 'none',
-              textDecorationColor: '#F7B141',
-              color: '#F7B141',
+              textDecorationColor: color.hoverColor,
+              color: color.hoverColor,
             }}
           >
             {route.name}
@@ -144,12 +166,15 @@ const Header = (props: { mode: string; position?: string }) => {
                       textDecoration={
                         pathName === route.href ? 'underline' : 'none'
                       }
-                      textDecorationColor="#F7B141"
+                      textDecorationColor={color.activeColor}
+                      textColor={
+                        pathName === route.href ? color.activeColor : '#FFF'
+                      }
                       _hover={{
                         textDecoration:
                           pathName === route.href ? 'underline' : 'none',
-                        textDecorationColor: '#F7B141',
-                        color: '#F7B141',
+                        textDecorationColor: color.hoverColor,
+                        color: color.hoverColor,
                       }}
                       textUnderlineOffset="4px"
                     >
