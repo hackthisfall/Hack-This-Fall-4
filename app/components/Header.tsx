@@ -67,7 +67,11 @@ const Header = (props: { mode: string; position?: string }) => {
     };
   };
 
-  const [color] = useState(() => getRandomColor());
+  const [color, setColor] = useState(getRandomColor());
+
+  useEffect(() => {
+    setColor(getRandomColor());
+  }, [])
 
   return (
     <Flex
