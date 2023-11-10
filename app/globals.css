@@ -52,13 +52,13 @@
 .images-slide {
   width: max-content;
   display: inline-block;
-  animation: 10s slide infinite linear;
+  animation: 40s slide infinite linear;
 }
 
 .images-slide-rev {
   width: max-content;
   display: inline-block;
-  animation: 10s slide-rev infinite linear;
+  animation: 40s slide-rev infinite linear;
 }
 
 .images:hover .images-slide-rev {

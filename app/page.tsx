@@ -89,7 +89,7 @@ const Page = () => {
                     fontFamily="var(--font-nohemi)"
                     fontSize={{ base: "1.3rem", xl: "1.6rem" }}
                   >
-                    9 - 11 February, 2024
+                    9 - 11 February 2024
                     <br />
                     Gandhinagar (GJ), India
                   </Text>

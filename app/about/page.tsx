@@ -16,30 +16,32 @@ import Footer from "../components/Footer";
 
 const metrics = [
   {
-    number: "48",
-    text: "Hours",
-  },
-  {
-    number: "6000+",
+    number: "5000+",
     text: "Hackers",
   },
   {
-    number: "40+",
-    text: "Workshops",
+    number: "90+",
+    text: "Cities",
+  },
+  {
+    number: "48+",
+    text: "Hack Hours",
   },
   {
     number: "460+",
     text: "Projects",
   },
   {
+    number: "40+",
+    text: "Workshops",
+  },
+  {
     number: "60+",
     text: "Mentors",
   },
-  {
-    number: "55+",
-    text: "Countries",
-  },
 ];
+
+const imagesCounter = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
 
 const ImageContainer = () => {
   const isMobile = useBreakpointValue({ base: true, lg: false });
@@ -53,38 +55,18 @@ const ImageContainer = () => {
       <Box className="image-container">
         <div className="images">
           <div className="images-slide">
-            <Image
-              alt="1"
-              className="img"
-              height={{ base: "10rem", lg: "20rem" }}
-              display="inline-block"
-              marginX={{ base: "0.5rem", lg: "1rem" }}
-              src="/assets/about/1.svg"
-            />
-            <Image
-              alt="2"
-              className="img"
-              height={{ base: "10rem", lg: "20rem" }}
-              display="inline-block"
-              marginX={{ base: "0.5rem", lg: "1rem" }}
-              src="/assets/about/2.svg"
-            />
-            <Image
-              alt="1"
-              className="img"
-              height={{ base: "10rem", lg: "20rem" }}
-              display="inline-block"
-              marginX={{ base: "0.5rem", lg: "1rem" }}
-              src="/assets/about/1.svg"
-            />
-            <Image
-              alt="2"
-              className="img"
-              height={{ base: "10rem", lg: "20rem" }}
-              display="inline-block"
-              marginX={{ base: "0.5rem", lg: "1rem" }}
-              src="/assets/about/2.svg"
-            />
+            {imagesCounter.map((n) => (
+              <Image
+                borderRadius={"0.75rem"}
+                key={n}
+                alt={`${n}`}
+                className="img"
+                height={{ base: "10rem", lg: "20rem" }}
+                display="inline-block"
+                marginX={{ base: "0.5rem", lg: "1rem" }}
+                src={`/assets/about/1-${n}.png`}
+              />
+            ))}
           </div>
         </div>
       </Box>
@@ -95,38 +77,18 @@ const ImageContainer = () => {
       >
         <div className="images">
           <div className="images-slide-rev">
-            <Image
-              alt="1"
-              className="img"
-              height={{ base: "10rem", lg: "20rem" }}
-              display="inline-block"
-              marginX={{ base: "0.5rem", lg: "1rem" }}
-              src="/assets/about/1.svg"
-            />
-            <Image
-              alt="2"
-              className="img"
-              height={{ base: "10rem", lg: "20rem" }}
-              display="inline-block"
-              marginX={{ base: "0.5rem", lg: "1rem" }}
-              src="/assets/about/2.svg"
-            />
-            <Image
-              alt="1"
-              className="img"
-              height={{ base: "10rem", lg: "20rem" }}
-              display="inline-block"
-              marginX={{ base: "0.5rem", lg: "1rem" }}
-              src="/assets/about/1.svg"
-            />
-            <Image
-              alt="2"
-              className="img"
-              height={{ base: "10rem", lg: "20rem" }}
-              display="inline-block"
-              marginX={{ base: "0.5rem", lg: "1rem" }}
-              src="/assets/about/2.svg"
-            />
+            {imagesCounter.map((n) => (
+              <Image
+                borderRadius={"0.75rem"}
+                key={n}
+                alt={`${n}`}
+                className="img"
+                height={{ base: "10rem", lg: "20rem" }}
+                display="inline-block"
+                marginX={{ base: "0.5rem", lg: "1rem" }}
+                src={`/assets/about/2-${n}.png`}
+              />
+            ))}
           </div>
         </div>
         <Box className={`rotating-text${isMobile ? "-mobile" : ""} absolute `}>
@@ -230,18 +192,16 @@ const About = () => {
               textAlign="justify"
             >
               <p>
-                Hack This Fall began with a mindset of encouraging new hackers
-                to build unique projects regardless of the tech or field. The
-                only focus was to create something meaningful and enjoy the
-                process of building, while also solving the shared struggles of
-                our surroundings.
+                We initiated the Hack This Fall Hackathon with the goal of
+                fostering a beginner-friendly environment where people of
+                diverse backgrounds can collaborate and create meaningful
+                projects, offering a true hackathon experience.
               </p>
               <br />
               <p>
-                For this season, we are breaking the virtual barrier and will be
-                hosting a 36 Hours In-person Hackathon; where we are aiming to
-                promote hackers and help them nurture their new ideas and
-                prototypes in various domains.
+                With three successful seasons of our flagship event in the bag,
+                we are thrilled to welcome hackers from all backgrounds and
+                skills at <b> Hack This Fall Hackathon Season 4</b>.
               </p>
             </Box>
             <Heading
