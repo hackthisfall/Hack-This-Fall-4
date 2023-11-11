@@ -15,42 +15,42 @@ const Footer = (props: { mode: string; marginY?: string }) => {
       marginY={props.marginY || "1.5rem"}
       zIndex={10}
     >
-      <Link href="https://x.com/hackthisfall">
+      <Link href="https://x.com/hackthisfall" target="_blank">
         <Image
           width="2rem"
           src={`/assets/footer/x-${props.mode}.svg`}
           alt="x"
         ></Image>
       </Link>
-      <Link href="https://discord.hackthisfall.tech">
+      <Link href="https://discord.hackthisfall.tech" target="_blank">
         <Image
           width="2rem"
           src={`/assets/footer/discord-${props.mode}.svg`}
           alt="discord"
         ></Image>
       </Link>
-      <Link href="https://instagram.com/hackthisfall">
+      <Link href="https://instagram.com/hackthisfall" target="_blank">
         <Image
           width="2rem"
           src={`/assets/footer/instagram-${props.mode}.svg`}
           alt="instagram"
         ></Image>
       </Link>
-      <Link href="https://discord.hackthisfall.tech">
+      <Link href="https://discord.hackthisfall.tech" target="_blank">
         <Image
           width="2rem"
           src={`/assets/footer/youtube-${props.mode}.svg`}
           alt="youtube"
         ></Image>
       </Link>
-      <Link href="mailto:contact@hackthisfall.tech">
+      <Link href="mailto:hackthisfall@gmail.com" target="_blank">
         <Image
           width="2rem"
           src={`/assets/footer/email-${props.mode}.svg`}
           alt="email"
         ></Image>
       </Link>
-      <Link href="https://linkedin.com/company/hackthisfall">
+      <Link href="https://linkedin.com/company/hackthisfall" target="_blank">
         <Image
           width="2rem"
           src={`/assets/footer/linkedin-${props.mode}.svg`}
