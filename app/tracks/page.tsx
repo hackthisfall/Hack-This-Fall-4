@@ -1,33 +1,40 @@
-"use client";
+'use client';
 
-import { Flex, Heading, Text, Image, Button } from "@chakra-ui/react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import {
+  Flex,
+  Heading,
+  Text,
+  Image,
+  Button,
+  SimpleGrid,
+} from '@chakra-ui/react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const tracksMapping = [
   {
-    heading: "Generative Artificial Intelligence",
-    image: "/assets/tracks/gen-ai.svg",
+    heading: 'Generative Artificial Intelligence',
+    image: '/assets/tracks/gen-ai.svg',
   },
   {
-    heading: "Blockchain & Crypto",
-    image: "/assets/tracks/blockchain.svg",
+    heading: 'Blockchain & Crypto',
+    image: '/assets/tracks/blockchain.svg',
   },
   {
-    heading: "Cloud and DevOps",
-    image: "/assets/tracks/cloud.svg",
+    heading: 'Cloud and DevOps',
+    image: '/assets/tracks/cloud.svg',
   },
   {
-    heading: "Internet of Things",
-    image: "/assets/tracks/iot.svg",
+    heading: 'Internet of Things',
+    image: '/assets/tracks/iot.svg',
   },
   {
-    heading: "Augmented & Virtual Reality",
-    image: "/assets/tracks/ar-vr.svg",
+    heading: 'Augmented & Virtual Reality',
+    image: '/assets/tracks/ar-vr.svg',
   },
   {
-    heading: "Open Innovation",
-    image: "/assets/tracks/open-innovation.svg",
+    heading: 'Open Innovation',
+    image: '/assets/tracks/open-innovation.svg',
   },
 ];
 
@@ -96,42 +103,45 @@ const Page = () => {
             Tracks
           </Heading>
           <Flex
-            flexWrap="wrap"
-            columnGap="4rem"
-            px={{ base: "0rem", md: "2rem" }}
-            pt={{ base: "2rem", lg: "0" }}
-            pb={{ base: "2rem", md: "0" }}
-            rowGap={{ base: "3rem", lg: "1rem" }}
+            px={{ base: '0rem', md: '2rem' }}
+            pt={{ base: '2rem', lg: '0' }}
+            pb={{ base: '2rem', md: '0' }}
             h="full"
-            w="min(1440px, 100vw)"
-            alignItems="baseline"
+            w="full"
+            alignItems="center"
             justifyContent="center"
-            alignContent={{ "2xl": "center" }}
-            overflowY={{ base: "auto", xl: "hidden" }}
+            overflowY={{ base: 'auto', xl: 'hidden' }}
           >
-            {tracksMapping.map((track) => (
-              <Flex
-                key={track.heading}
-                justifyContent="center"
-                alignItems="center"
-                flexDir="column"
-                mt="2rem"
-                w="240px"
-              >
-                <Image height="100px" src={track.image} alt={track.heading} />
-                <Text
+            <SimpleGrid
+              columnGap="6rem"
+              rowGap="3rem"
+              alignItems="baseline"
+              columns={{ base: 1, md: 2, lg: 3 }}
+            >
+              {tracksMapping.map((track) => (
+                <Flex
+                  key={track.heading}
+                  justifyContent="center"
+                  alignItems="center"
+                  flexDir="column"
                   mt="2rem"
-                  lineHeight="130%"
-                  fontFamily="var(--font-nohemi)"
-                  fontSize="1.3rem"
-                  letterSpacing="0.1rem"
-                  textAlign="center"
-                  color="#FFF"
+                  w="240px"
                 >
-                  {track.heading}
-                </Text>
-              </Flex>
-            ))}
+                  <Image height="100px" src={track.image} alt={track.heading} />
+                  <Text
+                    mt="2rem"
+                    lineHeight="130%"
+                    fontFamily="var(--font-nohemi)"
+                    fontSize="1.3rem"
+                    letterSpacing="0.1rem"
+                    textAlign="center"
+                    color="#FFF"
+                  >
+                    {track.heading}
+                  </Text>
+                </Flex>
+              ))}
+            </SimpleGrid>
           </Flex>
           <Footer mode="dark" />
         </Flex>
