@@ -104,11 +104,11 @@ const Page = () => {
           </Heading>
           <Flex
             px={{ base: "0rem", md: "2rem" }}
-            pt={{ base: "2rem", lg: "0" }}
+            pt="0"
             pb={{ base: "2rem", md: "0" }}
             h="full"
             w="full"
-            alignItems="center"
+            alignItems={{base: "flex-start", lg:"center"}}
             justifyContent="center"
             overflowY={{ base: "auto", xl: "hidden" }}
           >
@@ -127,7 +127,7 @@ const Page = () => {
                   mt="2rem"
                   w="240px"
                 >
-                  <Image height="100px" src={track.image} alt={track.heading} />
+                  <Image height="150px" src={track.image} alt={track.heading} />
                   <Text
                     mt="2rem"
                     lineHeight="130%"
