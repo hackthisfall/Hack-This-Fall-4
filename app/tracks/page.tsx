@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Flex,
@@ -7,34 +7,34 @@ import {
   Image,
   Button,
   SimpleGrid,
-} from '@chakra-ui/react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+} from "@chakra-ui/react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const tracksMapping = [
   {
-    heading: 'Generative Artificial Intelligence',
-    image: '/assets/tracks/gen-ai.svg',
+    heading: "Generative AI & Machine Learning",
+    image: "/assets/tracks/gen-ai.gif",
   },
   {
-    heading: 'Blockchain & Crypto',
-    image: '/assets/tracks/blockchain.svg',
+    heading: "Blockchain & Web3",
+    image: "/assets/tracks/blockchain.gif",
   },
   {
-    heading: 'Cloud and DevOps',
-    image: '/assets/tracks/cloud.svg',
+    heading: "Cloud & DevOps",
+    image: "/assets/tracks/cloud.gif",
   },
   {
-    heading: 'Internet of Things',
-    image: '/assets/tracks/iot.svg',
+    heading: "IoT & Embedded Systems",
+    image: "/assets/tracks/iot.gif",
   },
   {
-    heading: 'Augmented & Virtual Reality',
-    image: '/assets/tracks/ar-vr.svg',
+    heading: "Augmented/Virtual Reality",
+    image: "/assets/tracks/ar-vr.gif",
   },
   {
-    heading: 'Open Innovation',
-    image: '/assets/tracks/open-innovation.svg',
+    heading: "Open Track: Innovate for Good",
+    image: "/assets/tracks/open-innovation.gif",
   },
 ];
 
@@ -103,14 +103,14 @@ const Page = () => {
             Tracks
           </Heading>
           <Flex
-            px={{ base: '0rem', md: '2rem' }}
-            pt={{ base: '2rem', lg: '0' }}
-            pb={{ base: '2rem', md: '0' }}
+            px={{ base: "0rem", md: "2rem" }}
+            pt={{ base: "2rem", lg: "0" }}
+            pb={{ base: "2rem", md: "0" }}
             h="full"
             w="full"
             alignItems="center"
             justifyContent="center"
-            overflowY={{ base: 'auto', xl: 'hidden' }}
+            overflowY={{ base: "auto", xl: "hidden" }}
           >
             <SimpleGrid
               columnGap="6rem"
