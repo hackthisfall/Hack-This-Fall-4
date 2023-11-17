@@ -13,7 +13,18 @@ import Header from "../components/Header";
 import { useState } from "react";
 import Footer from "../components/Footer";
 
-const humansMapping = [
+type humansMappingType = {
+  slug: string;
+  heading: string;
+  people: {
+    name: string;
+    image: string;
+    title?: string;
+    link?: string;
+  }[];
+};
+
+const humansMapping: humansMappingType[] = [
   // {
   //   slug: "speakers",
   //   heading: "Speakers",
