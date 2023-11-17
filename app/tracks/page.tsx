@@ -21,16 +21,16 @@ const tracksMapping = [
     image: "/assets/tracks/blockchain.gif",
   },
   {
-    heading: "Cloud & DevOps",
-    image: "/assets/tracks/cloud.gif",
-  },
-  {
     heading: "IoT & Embedded Systems",
     image: "/assets/tracks/iot.gif",
   },
   {
     heading: "Augmented/Virtual Reality",
     image: "/assets/tracks/ar-vr.gif",
+  },
+  {
+    heading: "Cloud & DevOps",
+    image: "/assets/tracks/cloud.gif",
   },
   {
     heading: "Open Track: Innovate for Good",
