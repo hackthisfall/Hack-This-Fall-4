@@ -17,60 +17,71 @@ const partnerMapping = [
     heading: "Powered By",
     sponsors: [
       {
-        logo: "/assets/logo-light.svg",
-      },
-      {
-        logo: "/assets/logo-light.svg",
-      },
-      {
-        logo: "/assets/logo-dark.svg",
-      },
-      {
-        logo: "/assets/logo-light.svg",
-      },
-      {
-        logo: "/assets/logo-light.svg",
-      },
-      {
-        logo: "/assets/logo-light.svg",
-      },
-      {
-        logo: "/assets/logo-light.svg",
-      },
-      {
-        logo: "/assets/logo-light.svg",
-      },
-      {
-        logo: "/assets/logo-light.svg",
-      },
-      {
-        logo: "/assets/logo-light.svg",
-      },
-      {
-        logo: "/assets/logo-light.svg",
-      },
-      {
-        logo: "/assets/logo-light.svg",
-      },
-      {
-        logo: "/assets/logo-light.svg",
-      },
-      {
-        logo: "/assets/logo-light.svg",
-      },
-
-      {
-        logo: "/assets/logo-light.svg",
+        logo: "/assets/partners/powered-by/orkes.svg",
+        url: "https://orkes.io/",
       },
     ],
   },
-  { slug: "diamond", heading: "Diamond", sponsors: [] },
-  { slug: "platinum", heading: "Platinum", sponsors: [] },
-  { slug: "gold", heading: "Gold", sponsors: [] },
-  { slug: "silver", heading: "Silver", sponsors: [] },
-  { slug: "bronze", heading: "Bronze", sponsors: [] },
-  { slug: "in-kind", heading: "In-Kind", sponsors: [] },
-  { slug: "community", heading: "Community", sponsors: [] },
+  // { slug: "diamond", heading: "Diamond", sponsors: [] },
+  {
+    slug: "platinum",
+    heading: "Platinum",
+    sponsors: [
+      {
+        logo: "/assets/partners/platinum/vonage.svg",
+        url: "https://vonage.dev/hackthisfall",
+      },
+    ],
+  },
+  {
+    slug: "gold",
+    heading: "Gold",
+    sponsors: [
+      {
+        logo: "/assets/partners/gold/github.svg",
+        url: "https://education.github.com/benefits?utm_source=2024-02-09-HackThisFall",
+      },
+    ],
+  },
+  {
+    slug: "silver",
+    heading: "Silver",
+    sponsors: [
+      {
+        logo: "/assets/partners/silver/postman.svg",
+        url: "https://www.postman.com",
+      },
+    ],
+  },
+  {
+    slug: "sponsors",
+    heading: "Sponsors",
+    sponsors: [
+      {
+        logo: "/assets/partners/silver/postman.svg",
+        url: "https://www.postman.com",
+      },
+      {
+        logo: "/assets/partners/powered-by/orkes.svg",
+        url: "https://orkes.io/",
+      },
+      {
+        logo: "/assets/partners/platinum/vonage.svg",
+        url: "https://vonage.dev/hackthisfall",
+      },
+      {
+        logo: "/assets/partners/gold/github.svg",
+        url: "https://education.github.com/benefits?utm_source=2024-02-09-HackThisFall",
+      },
+      {
+        logo: "/assets/partners/silver/postman.svg",
+        url: "https://www.postman.com",
+      },
+    ],
+  },
+  // { slug: "bronze", heading: "Bronze", sponsors: [] },
+  // { slug: "in-kind", heading: "In-Kind", sponsors: [] },
+  // { slug: "community", heading: "Community", sponsors: [] },
 ];
 
 const Partners = () => {

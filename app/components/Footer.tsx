@@ -2,7 +2,11 @@
 
 import { Box, Flex, Text, Image, Link } from '@chakra-ui/react';
 
-const Footer = (props: { mode: string; marginY?: string }) => {
+const Footer = (props: {
+  mode: string;
+  marginY?: string;
+  isHomePage?: string;
+}) => {
   return (
     <Flex
       flexDir={{ base: 'column', lg: 'row' }}
