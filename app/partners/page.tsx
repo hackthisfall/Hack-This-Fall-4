@@ -118,13 +118,13 @@ const Partners = () => {
           <Image
             opacity="0.1"
             src="/assets/mandala-main-light.svg"
-            h="90%"
+            h="min(90%, 100vw)"
             alt="mandala"
           />
           <Image
             position="absolute"
             right="-18vh"
-            top="0"
+            top={{ base: "-18vh", lg: "0" }}
             opacity="0.1"
             src="/assets/mandala-right-light.svg"
             h="36vh"
@@ -132,8 +132,8 @@ const Partners = () => {
           />
           <Image
             position="absolute"
-            left="-15vh"
-            bottom="-10vh"
+            left={{ base: "-20vh", lg: "-15vh" }}
+            bottom={{ base: "-20vh", lg: "-10vh" }}
             opacity="0.1"
             src="/assets/mandala-left-light.svg"
             h="40vh"

@@ -60,13 +60,13 @@ const Page = () => {
           <Image
             opacity="0.15"
             src="/assets/mandala-main-dark.svg"
-            h="90%"
+            h="min(90%, 100vw)"
             alt="mandala"
           />
           <Image
             position="absolute"
             right="-18vh"
-            top="0"
+            top={{ base: "-18vh", lg: "0" }}
             opacity="0.15"
             src="/assets/mandala-right-dark.svg"
             h="36vh"
@@ -74,8 +74,8 @@ const Page = () => {
           />
           <Image
             position="absolute"
-            left="-15vh"
-            bottom="-10vh"
+            left={{ base: "-20vh", lg: "-15vh" }}
+            bottom={{ base: "-20vh", lg: "-10vh" }}
             opacity="0.15"
             src="/assets/mandala-left-dark.svg"
             h="40vh"
