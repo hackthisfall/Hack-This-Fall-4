@@ -14,7 +14,14 @@ import { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
-const partnerMapping = [
+const partnerMapping: Array<{
+  slug: string;
+  heading: string;
+  sponsors: Array<{
+    logo: string;
+    url: string;
+  }>;
+}> = [
   // {
   //   slug: "powered-by",
   //   heading: "Powered By",
@@ -59,28 +66,7 @@ const partnerMapping = [
   {
     slug: "sponsors",
     heading: "Sponsors",
-    sponsorss: [
-      {
-        logo: "/assets/partners/silver/postman.svg",
-        url: "https://www.postman.com",
-      },
-      {
-        logo: "/assets/partners/powered-by/orkes.svg",
-        url: "https://orkes.io/",
-      },
-      {
-        logo: "/assets/partners/platinum/vonage.svg",
-        url: "https://vonage.dev/hackthisfall",
-      },
-      {
-        logo: "/assets/partners/gold/github.svg",
-        url: "https://education.github.com/benefits?utm_source=2024-02-09-HackThisFall",
-      },
-      {
-        logo: "/assets/partners/silver/postman.svg",
-        url: "https://www.postman.com",
-      },
-    ],
+    sponsors: [],
   },
   // { slug: "bronze", heading: "Bronze", sponsors: [] },
   // { slug: "in-kind", heading: "In-Kind", sponsors: [] },
