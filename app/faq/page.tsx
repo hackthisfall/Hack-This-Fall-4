@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   Flex,
@@ -9,88 +9,69 @@ import {
   AccordionItem,
   AccordionButton,
   AccordionPanel,
-} from "@chakra-ui/react";
-import { MinusIcon, AddIcon } from "@chakra-ui/icons";
-import Header from "../components/Header";
-import { useState } from "react";
-import Footer from "../components/Footer";
+} from '@chakra-ui/react';
+import { MinusIcon, AddIcon } from '@chakra-ui/icons';
+import Header from '../components/Header';
+import { useState } from 'react';
+import Footer from '../components/Footer';
 
 const faqs = [
   {
-    question: "Lorem ipsum dolor sit amet consectetur?",
+    question: 'Can I participate remotely?',
     answer:
-      "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu lacus imperdiet urna amet congue adipiscing. Faucibus magna nisl ullamcorper in facilisis consequat aliquam.",
+      'Hack This Fall 4.0 is an in-person hackathon. So remote participation is not applicable.',
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur?",
+    question: 'How much does it cost to participate?',
     answer:
-      "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu lacus imperdiet urna amet congue adipiscing. Faucibus magna nisl ullamcorper in facilisis consequat aliquam.",
+      'Nothing, participation in Hack This Fall 4.0 is absolutely FREE!!🎉 We’ll have meals, snacks, and beverages onsite at the hackathon, in addition to swags, prizes, fun mini-events and more.',
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur?",
+    question:
+      'My parent/guardian will be coming along with me. Can they stay at the venue?',
     answer:
-      "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu lacus imperdiet urna amet congue adipiscing. Faucibus magna nisl ullamcorper in facilisis consequat aliquam.",
+      "The answer is No. Arrangements like sleeping area, food, etc., are only for the attendees. We recommend you to find a stay option for them near the venue. They can drop you at the hackathon venue on 9th Feb and can pick you on 11th Feb but can't stay at venue during the hackathon as we do not have any provision for them.",
+  },
+
+  {
+    question:
+      'What is the maximum team size? Can I participate as a Solo Hacker?',
+    answer:
+      'We encourage you to make a team of minimum 2 and maximum 4 members. If you are a Solo Hacker and do not have a team, you can still register and find team members on our Discord server.',
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur?",
+    question: 'I am a beginner, can I participate?',
     answer:
-      "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu lacus imperdiet urna amet congue adipiscing. Faucibus magna nisl ullamcorper in facilisis consequat aliquam.",
+      'Absolutely. We will have mentors and resources available, along with several workshops targeted for beginners. Come learn and experience your first hackathon at Hack This Fall.',
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur?",
+    question: 'Will you support or reimburse our travel expenses?',
     answer:
-      "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu lacus imperdiet urna amet congue adipiscing. Faucibus magna nisl ullamcorper in facilisis consequat aliquam.",
+      'Since Hack This Fall 4.0 is a community-driven hackathon, unfortunately we will not be able to support you with travel.',
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur?",
+    question: 'What are the sleeping arrangements?',
     answer:
-      "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu lacus imperdiet urna amet congue adipiscing. Faucibus magna nisl ullamcorper in facilisis consequat aliquam.",
+      'On both nights (9th Feb & 10th Feb) we will have a supervised sleeping space for hackers to rest and sleep at the venue. We recommend bringing your own blanket if you need one.',
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur?",
+    question: 'I am below 18 years of age, can I participate in the hackathon?',
     answer:
-      "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu lacus imperdiet urna amet congue adipiscing. Faucibus magna nisl ullamcorper in facilisis consequat aliquam.",
+      'Yes! You can participate in the hackathon but we would need written consent from your parent/guardian and you wouldn’t be allowed to leave the venue during the hackathon.',
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur?",
+    question: 'What is the event Code of Conduct?',
     answer:
-      "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu lacus imperdiet urna amet congue adipiscing. Faucibus magna nisl ullamcorper in facilisis consequat aliquam.",
+      'We want to ensure a positive experience for all participants. We will be following <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">MLH’s Code of Conduct</a>, we encourage you to read it.',
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur?",
+    question: 'I have more questions, how and where can I reach out?',
     answer:
-      "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu lacus imperdiet urna amet congue adipiscing. Faucibus magna nisl ullamcorper in facilisis consequat aliquam.",
-  },
-  {
-    question: "Lorem ipsum dolor sit amet consectetur?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu lacus imperdiet urna amet congue adipiscing. Faucibus magna nisl ullamcorper in facilisis consequat aliquam.",
-  },
-  {
-    question: "Lorem ipsum dolor sit amet consectetur?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu lacus imperdiet urna amet congue adipiscing. Faucibus magna nisl ullamcorper in facilisis consequat aliquam.",
-  },
-  {
-    question: "Lorem ipsum dolor sit amet consectetur?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu lacus imperdiet urna amet congue adipiscing. Faucibus magna nisl ullamcorper in facilisis consequat aliquam.",
-  },
-  {
-    question: "Lorem ipsum dolor sit amet consectetur?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu lacus imperdiet urna amet congue adipiscing. Faucibus magna nisl ullamcorper in facilisis consequat aliquam.",
-  },
-  {
-    question: "Lorem ipsum dolor sit amet consectetur?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu lacus imperdiet urna amet congue adipiscing. Faucibus magna nisl ullamcorper in facilisis consequat aliquam.",
+      'You can reach out to us on our <a href="https://discord.hackthisfall.tech" target="_blank">Discord Server</a> in #🍁〡ask-htf-team or email us at <a href="mailto:hackthisfall@gmail.com" target="_blank">hackthisfall@gmail.com</a>! We\'re always ready to answer all your questions.',
   },
 ];
 
 const FAQ = () => {
-  const [currentSection, setCurrentSection] = useState("speakers");
-
   return (
     <Flex background="#ffffff" w="100vw" h="100dvh">
       <Flex
@@ -120,7 +101,7 @@ const FAQ = () => {
           <Image
             position="absolute"
             right="-18vh"
-            top={{ base: "-18vh", lg: "0" }}
+            top={{ base: '-18vh', lg: '0' }}
             opacity="0.1"
             src="/assets/mandala-right-light.svg"
             h="36vh"
@@ -128,8 +109,8 @@ const FAQ = () => {
           />
           <Image
             position="absolute"
-            left={{ base: "-20vh", lg: "-15vh" }}
-            bottom={{ base: "-20vh", lg: "-10vh" }}
+            left={{ base: '-20vh', lg: '-15vh' }}
+            bottom={{ base: '-20vh', lg: '-10vh' }}
             opacity="0.1"
             src="/assets/mandala-left-light.svg"
             h="40vh"
@@ -149,7 +130,7 @@ const FAQ = () => {
             lineHeight="90%"
             fontFamily="var(--font-nohemi)"
             fontSize="3rem"
-            color={"#000000"}
+            color={'#000000'}
             fontWeight="600"
             letterSpacing="0.3rem"
           >
@@ -158,14 +139,14 @@ const FAQ = () => {
           <Flex
             w="full"
             h="full"
-            mt={{ base: "2rem", lg: "4rem" }}
+            mt={{ base: '2rem', lg: '4rem' }}
             justifyContent="center"
-            overflowY="scroll"
+            overflowY="auto"
           >
             <Accordion
               w="85%"
               display="grid"
-              gridTemplateColumns={{ base: "1fr", lg: "1fr 1fr" }}
+              gridTemplateColumns={{ base: '1fr', lg: '1fr 1fr' }}
               rowGap="2rem"
               h="fit-content"
               columnGap="4rem"
@@ -176,7 +157,7 @@ const FAQ = () => {
                   <AccordionItem key={index} border="none">
                     {({ isExpanded }) => (
                       <>
-                        <AccordionButton p={{ base: "0", md: "1rem" }}>
+                        <AccordionButton p={{ base: '0', md: '1rem' }}>
                           <Flex
                             color="#000"
                             fontSize="1.2rem"
@@ -184,20 +165,19 @@ const FAQ = () => {
                             lineHeight="100%"
                             w="full"
                             alignItems="center"
+                            gap={'1rem'}
                             justifyContent="space-between"
                           >
                             <Flex
                               alignItems="center"
-                              gap={{ base: "1rem", lg: "1.5rem" }}
+                              gap={{ base: '1rem', lg: '1.5rem' }}
                             >
                               <Image
                                 src="/assets/faq/icon.svg"
                                 alt="initial icon"
                                 w="1rem"
                               />
-                              <Text textAlign={{ base: "left", lg: "center" }}>
-                                {section.question}
-                              </Text>
+                              <Text lineHeight="150%" textAlign="left">{section.question}</Text>
                             </Flex>
                             {isExpanded ? (
                               <MinusIcon fontSize="1rem" />
@@ -213,9 +193,15 @@ const FAQ = () => {
                             lineHeight="150%"
                             fontWeight="400"
                             color="#000"
-                          >
-                            {section.answer}
-                          </Text>
+                            sx={{
+                              a: {
+                                textDecoration: 'underline',
+                              }
+                            }}
+                            dangerouslySetInnerHTML={{
+                              __html: section.answer,
+                            }}
+                          />
                         </AccordionPanel>
                       </>
                     )}
