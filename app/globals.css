@@ -103,3 +103,7 @@
   right: 0;
   transform: translate(5%, 50%);
 }
+
+.no-underline:hover {
+  text-decoration: none;
+}

@@ -7,6 +7,7 @@ import {
   GridItem,
   Heading,
   Image,
+  Link,
   Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
@@ -361,16 +362,22 @@ const Partners = () => {
                     applications and eliminate the complexity of building and
                     managing orchestration infrastructure.
                   </Text>
-                  <Flex
-                    justifyContent="center"
-                    marginTop={"1rem"}
-                    padding={"0.75rem 3rem"}
-                    border={"1.5px solid #000000"}
-                    width={{ base: "unset", lg: "fit-content" }}
-                    borderRadius="2rem"
+                  <Link
+                    href="https://bit.ly/htf4-onc-repo"
+                    target="blank"
+                    className="no-underline"
                   >
-                    visit website
-                  </Flex>
+                    <Flex
+                      justifyContent="center"
+                      marginTop={"1rem"}
+                      padding={"0.75rem 3rem"}
+                      border={"1.5px solid #000000"}
+                      width={{ base: "unset", lg: "fit-content" }}
+                      borderRadius="2rem"
+                    >
+                      visit website
+                    </Flex>
+                  </Link>
                 </Flex>
               </Flex>
 
@@ -407,11 +414,16 @@ const Partners = () => {
                       justifyContent={"center"}
                       alignItems="center"
                     >
-                      <Image
-                        src="/assets/partners/platinum/vonage.svg"
-                        alt="logo"
-                        width={"100%"}
-                      />
+                      <Link
+                        target="blank"
+                        href="https://vonage.dev/hackthisfall"
+                      >
+                        <Image
+                          src="/assets/partners/platinum/vonage.svg"
+                          alt="logo"
+                          width={"100%"}
+                        />
+                      </Link>
                     </Flex>
                   </Flex>
                 </GridItem>
@@ -434,12 +446,14 @@ const Partners = () => {
                       justifyContent={"center"}
                       alignItems="center"
                     >
-                      <Image
-                        src="/assets/partners/gold/github.svg"
-                        alt="logo"
-                        marginY="1rem"
-                        width="100%"
-                      />
+                      <Link target="blank" href="https://bit.ly/htf4-sdp">
+                        <Image
+                          src="/assets/partners/gold/github.svg"
+                          alt="logo"
+                          marginY="1rem"
+                          width="100%"
+                        />
+                      </Link>
                     </Flex>
                   </Flex>
                 </GridItem>
@@ -463,11 +477,13 @@ const Partners = () => {
                       alignItems="center"
                       marginY="1rem"
                     >
-                      <Image
-                        src="/assets/partners/silver/postman.svg"
-                        alt="logo"
-                        width={"100%"}
-                      />
+                      <Link target="blank" href="https://www.postman.com">
+                        <Image
+                          src="/assets/partners/silver/postman.svg"
+                          alt="logo"
+                          width={"100%"}
+                        />
+                      </Link>
                     </Flex>
                   </Flex>
                 </GridItem>
