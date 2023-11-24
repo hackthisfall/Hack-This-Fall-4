@@ -200,9 +200,9 @@ const humansMapping: humansMappingType[] = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "Hack This Fall 4.0 | Humans",
-};
+// export const metadata: Metadata = {
+//   title: "Hack This Fall 4.0 | Humans",
+// };
 
 const Humans = () => {
   const [currentSection, setCurrentSection] = useState("organizers");

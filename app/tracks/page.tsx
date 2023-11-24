@@ -39,9 +39,9 @@ const tracksMapping = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "Hack This Fall 4.0 | Tracks",
-};
+// export const metadata: Metadata = {
+//   title: "Hack This Fall 4.0 | Tracks",
+// };
 
 const Tracks = () => {
   return (

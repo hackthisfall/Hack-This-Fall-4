@@ -75,9 +75,9 @@ const partnerMapping: Array<{
   // { slug: "community", heading: "Community", sponsors: [] },
 ];
 
-export const metadata: Metadata = {
-  title: "Hack This Fall 4.0 | Partners",
-};
+// export const metadata: Metadata = {
+//   title: "Hack This Fall 4.0 | Partners",
+// };
 
 const Partners = () => {
   const [currentSection, setCurrentSection] = useState("sponsors");
@@ -119,7 +119,7 @@ const Partners = () => {
           <Image
             position="absolute"
             right="-18vh"
-            top={{ base: '-18vh', lg: '0' }}
+            top={{ base: "-18vh", lg: "0" }}
             opacity="0.1"
             src="/assets/mandala-right-light.svg"
             h="36vh"
@@ -127,8 +127,8 @@ const Partners = () => {
           />
           <Image
             position="absolute"
-            left={{ base: '-20vh', lg: '-15vh' }}
-            bottom={{ base: '-20vh', lg: '-10vh' }}
+            left={{ base: "-20vh", lg: "-15vh" }}
+            bottom={{ base: "-20vh", lg: "-10vh" }}
             opacity="0.1"
             src="/assets/mandala-left-light.svg"
             h="40vh"
@@ -140,8 +140,8 @@ const Partners = () => {
           <Heading
             lineHeight="90%"
             fontFamily="var(--font-nohemi)"
-            fontSize={{ base: '2rem', lg: '3rem' }}
-            color={'#000000'}
+            fontSize={{ base: "2rem", lg: "3rem" }}
+            color={"#000000"}
             fontWeight="600"
             letterSpacing="0.1rem"
           >
@@ -163,16 +163,16 @@ const Partners = () => {
                   <Flex
                     zIndex={10}
                     bgColor={
-                      currentSection === section.slug ? 'black' : 'transparent'
+                      currentSection === section.slug ? "black" : "transparent"
                     }
-                    color={currentSection === section.slug ? 'white' : 'black'}
+                    color={currentSection === section.slug ? "white" : "black"}
                     fontFamily="var(--font-dm-sans)"
                     borderRadius="full"
                     fontSize="1.1rem"
                     alignItems="center"
                     justifyContent="center"
                     fontWeight="500"
-                    px={{ md: '1rem', lg: '2rem' }}
+                    px={{ md: "1rem", lg: "2rem" }}
                     py="1rem"
                     key={index}
                     cursor="pointer"
@@ -193,7 +193,7 @@ const Partners = () => {
               bgColor="#F0F0F0"
               marginTop="1rem"
               borderTopRadius="2rem"
-              borderBottomRadius={isDropdownOpen ? '0rem' : '2rem'}
+              borderBottomRadius={isDropdownOpen ? "0rem" : "2rem"}
               position="relative"
             >
               <Flex
@@ -201,7 +201,7 @@ const Partners = () => {
                 borderRadius="full"
                 w="fit-content"
                 gap="1rem"
-                pr={partnerMapping.length > 1 ? '1rem' : '0rem'}
+                pr={partnerMapping.length > 1 ? "1rem" : "0rem"}
                 justifyContent="space-evenly"
                 className="navbar"
                 zIndex={10}
@@ -245,7 +245,7 @@ const Partners = () => {
               </Flex>
               {isDropdownOpen && (
                 <Flex
-                  flexDirection={'column'}
+                  flexDirection={"column"}
                   position="absolute"
                   zIndex={40}
                   top="100%"
@@ -293,9 +293,9 @@ const Partners = () => {
           w="full"
           h="full"
           zIndex="20"
-          px={{ base: '2rem', lg: '5rem' }}
-          columnGap={{ base: '1rem', lg: '2rem' }}
-          rowGap={{ base: '1rem', lg: '2rem' }}
+          px={{ base: "2rem", lg: "5rem" }}
+          columnGap={{ base: "1rem", lg: "2rem" }}
+          rowGap={{ base: "1rem", lg: "2rem" }}
           overflow="auto"
           marginTop="2rem"
         >
@@ -305,44 +305,44 @@ const Partners = () => {
               <Flex
                 backgroundColor="#F7F7F7"
                 key={i}
-                width={{ base: '7rem', lg: '12rem' }}
+                width={{ base: "7rem", lg: "12rem" }}
                 justifyContent="center"
-                px={{ base: '0.75rem', lg: '1.5rem' }}
-                py={{ base: '0.5rem', lg: '1rem' }}
+                px={{ base: "0.75rem", lg: "1.5rem" }}
+                py={{ base: "0.5rem", lg: "1rem" }}
                 borderRadius="0.5rem"
               >
                 <Image src={s.logo} alt="logo" />
               </Flex>
             ))}
-          {currentSection === 'sponsors' && (
-            <Flex flexDirection="column" maxWidth={'1280px'}>
+          {currentSection === "sponsors" && (
+            <Flex flexDirection="column" maxWidth={"1280px"}>
               <Flex
-                flexDirection={{ base: 'column', lg: 'row' }}
+                flexDirection={{ base: "column", lg: "row" }}
                 backgroundColor="#F7F7F7"
                 justifyContent="center"
                 // px={{ base: "0.75rem", lg: "1.5rem" }}
                 // py={{ base: "0.5rem", lg: "1rem" }}
                 columnGap="5rem"
-                borderRadius={{ base: '0.75rem 2rem', lg: '1rem 5.75rem' }}
-                paddingX={{ base: '1rem', lg: '3rem' }}
-                paddingY={{ base: '0.5rem', lg: '3.5rem' }}
+                borderRadius={{ base: "0.75rem 2rem", lg: "1rem 5.75rem" }}
+                paddingX={{ base: "1rem", lg: "3rem" }}
+                paddingY={{ base: "0.5rem", lg: "3.5rem" }}
               >
                 <Flex
                   flexDirection="column"
-                  alignItems={{ base: 'center', lg: 'unset' }}
+                  alignItems={{ base: "center", lg: "unset" }}
                 >
                   <Text
                     fontFamily="var(--font-nohemi)"
                     color="#9B9B9B"
                     fontWeight={500}
-                    fontSize={{ base: '1rem', lg: '1.5rem' }}
+                    fontSize={{ base: "1rem", lg: "1.5rem" }}
                     letterSpacing="0.64px"
                   >
                     Powered-by
                   </Text>
                   <Flex
                     flexGrow={1}
-                    justifyContent={'center'}
+                    justifyContent={"center"}
                     alignItems="center"
                   >
                     <Link
@@ -351,8 +351,8 @@ const Partners = () => {
                       className="no-underline"
                     >
                       <Image
-                        minWidth={{ base: '60vw', lg: 'min(25vw, 320px)' }}
-                        marginTop={{ base: '1rem', lg: 'unset' }}
+                        minWidth={{ base: "60vw", lg: "min(25vw, 320px)" }}
+                        marginTop={{ base: "1rem", lg: "unset" }}
                         src="/assets/partners/powered-by/orkes.svg"
                         alt="logo"
                       />
@@ -361,11 +361,11 @@ const Partners = () => {
                 </Flex>
                 <Flex
                   flexDirection="column"
-                  marginTop={{ base: '1rem', lg: 'unset' }}
+                  marginTop={{ base: "1rem", lg: "unset" }}
                 >
                   <Text
                     fontFamily="var(--font-dm-sams)"
-                    align={{ base: 'center', lg: 'unset' }}
+                    align={{ base: "center", lg: "unset" }}
                   >
                     Orkes, the enterprise-grade Conductor platform, simplifies
                     developing and scaling distributed workflows, microservices
@@ -380,12 +380,12 @@ const Partners = () => {
                   >
                     <Flex
                       justifyContent="center"
-                      marginTop={'1rem'}
-                      padding={'0.75rem 3rem'}
-                      border={'1.5px solid #000000'}
-                      width={{ base: 'unset', lg: 'fit-content' }}
+                      marginTop={"1rem"}
+                      padding={"0.75rem 3rem"}
+                      border={"1.5px solid #000000"}
+                      width={{ base: "unset", lg: "fit-content" }}
                       borderRadius="2rem"
-                      _hover={{ bg: 'black', color: 'white' }}
+                      _hover={{ bg: "black", color: "white" }}
                       cursor="pointer"
                     >
                       Learn more
@@ -399,13 +399,13 @@ const Partners = () => {
                 fontFamily="var(--font-nohemi)"
                 color="#9B9B9B"
                 fontWeight={500}
-                fontSize={{ base: '1rem', lg: '1.5rem' }}
+                fontSize={{ base: "1rem", lg: "1.5rem" }}
                 letterSpacing="0.64px"
                 templateColumns={{
-                  base: 'repeat(2, 1fr)',
-                  lg: 'repeat(4, 1fr)',
+                  base: "repeat(2, 1fr)",
+                  lg: "repeat(4, 1fr)",
                 }}
-                gridAutoRows={{ base: 'unset', lg: '1fr' }}
+                gridAutoRows={{ base: "unset", lg: "1fr" }}
                 columnGap="1.5rem"
                 rowGap="1.5rem"
               >
@@ -416,22 +416,22 @@ const Partners = () => {
                     width="100%"
                     // justifyContent="space-between"
                     alignItems="center"
-                    paddingX={{ base: '1rem', lg: '3rem' }}
-                    paddingY={{ base: '0.5rem', lg: '3rem' }}
-                    borderRadius={{ base: '0.75rem 2rem', lg: '1rem 5.75rem' }}
+                    paddingX={{ base: "1rem", lg: "3rem" }}
+                    paddingY={{ base: "0.5rem", lg: "3rem" }}
+                    borderRadius={{ base: "0.75rem 2rem", lg: "1rem 5.75rem" }}
                     flexDirection="column"
                   >
                     <Text>Platinum</Text>
                     <Flex
                       flexGrow={1}
-                      justifyContent={'center'}
+                      justifyContent={"center"}
                       alignItems="center"
                     >
                       <Link target="blank" href="https://bit.ly/htf4-vonage">
                         <Image
                           src="/assets/partners/platinum/vonage.svg"
                           alt="logo"
-                          width={'100%'}
+                          width={"100%"}
                         />
                       </Link>
                     </Flex>
@@ -445,15 +445,15 @@ const Partners = () => {
                     alignItems="center"
                     height="100%"
                     // justifyContent="space-between"
-                    paddingX={{ base: '1rem', lg: '3rem' }}
-                    paddingY={{ base: '0.5rem', lg: '3rem' }}
-                    borderRadius={{ base: '0.75rem 2rem', lg: '1rem 5.75rem' }}
+                    paddingX={{ base: "1rem", lg: "3rem" }}
+                    paddingY={{ base: "0.5rem", lg: "3rem" }}
+                    borderRadius={{ base: "0.75rem 2rem", lg: "1rem 5.75rem" }}
                     flexDirection="column"
                   >
                     <Text>Gold</Text>
                     <Flex
                       flexGrow={1}
-                      justifyContent={'center'}
+                      justifyContent={"center"}
                       alignItems="center"
                     >
                       <Link target="blank" href="https://bit.ly/htf4-sdp">
@@ -475,15 +475,15 @@ const Partners = () => {
                     width="100%"
                     alignItems="center"
                     // justifyContent="space-between"
-                    paddingX={{ base: '1rem', lg: '3rem' }}
-                    paddingY={{ base: '0.5rem', lg: '3rem' }}
-                    borderRadius={{ base: '0.75rem 2rem', lg: '1rem 5.75rem' }}
+                    paddingX={{ base: "1rem", lg: "3rem" }}
+                    paddingY={{ base: "0.5rem", lg: "3rem" }}
+                    borderRadius={{ base: "0.75rem 2rem", lg: "1rem 5.75rem" }}
                     flexDirection="column"
                   >
                     <Text>Silver</Text>
                     <Flex
                       flexGrow={1}
-                      justifyContent={'center'}
+                      justifyContent={"center"}
                       alignItems="center"
                       marginY="1rem"
                     >
@@ -491,7 +491,7 @@ const Partners = () => {
                         <Image
                           src="/assets/partners/silver/postman.svg"
                           alt="logo"
-                          width={'100%'}
+                          width={"100%"}
                         />
                       </Link>
                     </Flex>

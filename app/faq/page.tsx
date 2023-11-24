@@ -72,9 +72,9 @@ const faqs = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "Hack This Fall 4.0 | FAQ",
-};
+// export const metadata: Metadata = {
+//   title: "Hack This Fall 4.0 | FAQ",
+// };
 
 const FAQ = () => {
   return (

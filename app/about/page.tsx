@@ -44,9 +44,9 @@ const metrics = [
 
 const imagesCounter = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
 
-export const metadata: Metadata = {
-  title: "Hack This Fall 4.0 | About",
-};
+// export const metadata: Metadata = {
+//   title: "Hack This Fall 4.0 | About",
+// };
 
 const ImageContainer = () => {
   const isMobile = useBreakpointValue({ base: true, lg: false });
