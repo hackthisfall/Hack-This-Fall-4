@@ -422,10 +422,7 @@ const Partners = () => {
                       justifyContent={'center'}
                       alignItems="center"
                     >
-                      <Link
-                        target="blank"
-                        href="https://vonage.dev/hackthisfall"
-                      >
+                      <Link target="blank" href="https://bit.ly/htf4-vonage">
                         <Image
                           src="/assets/partners/platinum/vonage.svg"
                           alt="logo"
@@ -485,7 +482,7 @@ const Partners = () => {
                       alignItems="center"
                       marginY="1rem"
                     >
-                      <Link target="blank" href="https://www.postman.com">
+                      <Link target="blank" href="https://bit.ly/htf4-postman">
                         <Image
                           src="/assets/partners/silver/postman.svg"
                           alt="logo"
