@@ -25,7 +25,7 @@ const Footer = (props: {
         fontSize="1rem"
         color={!props.isHomePage ? "transparent" : "#FFF"}
         pointerEvents={!props.isHomePage ? "none" : "auto"}
-        href="https://bit.ly/htf3-sponsor"
+        href="https://bit.ly/htf-sponsor"
         target="_blank"
       >
         Interested in sponsoring? Reach out to us!
