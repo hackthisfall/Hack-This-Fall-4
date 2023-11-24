@@ -14,6 +14,7 @@ import {
 import { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import { Metadata } from "next";
 
 const partnerMapping: Array<{
   slug: string;
@@ -73,6 +74,10 @@ const partnerMapping: Array<{
   // { slug: "in-kind", heading: "In-Kind", sponsors: [] },
   // { slug: "community", heading: "Community", sponsors: [] },
 ];
+
+export const metadata: Metadata = {
+  title: "Hack This Fall 4.0 | Partners",
+};
 
 const Partners = () => {
   const [currentSection, setCurrentSection] = useState("sponsors");

@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { Metadata } from "next";
 
 const metrics = [
   {
@@ -42,6 +43,10 @@ const metrics = [
 ];
 
 const imagesCounter = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
+
+export const metadata: Metadata = {
+  title: "Hack This Fall 4.0 | About",
+};
 
 const ImageContainer = () => {
   const isMobile = useBreakpointValue({ base: true, lg: false });

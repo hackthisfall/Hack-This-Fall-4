@@ -12,6 +12,7 @@ import {
 import Header from "../components/Header";
 import { useState } from "react";
 import Footer from "../components/Footer";
+import { Metadata } from "next";
 
 type humansMappingType = {
   slug: string;
@@ -198,6 +199,10 @@ const humansMapping: humansMappingType[] = [
     ].sort((a, b) => a.name.localeCompare(b.name)),
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Hack This Fall 4.0 | Humans",
+};
 
 const Humans = () => {
   const [currentSection, setCurrentSection] = useState("organizers");

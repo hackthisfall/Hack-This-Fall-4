@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { Metadata } from "next";
 
 const tracksMapping = [
   {
@@ -38,7 +39,11 @@ const tracksMapping = [
   },
 ];
 
-const Page = () => {
+export const metadata: Metadata = {
+  title: "Hack This Fall 4.0 | Tracks",
+};
+
+const Tracks = () => {
   return (
     <Flex background="#0D2129" w="100vw" h="100dvh">
       <Flex
@@ -108,7 +113,7 @@ const Page = () => {
             pb={{ base: "2rem", md: "0" }}
             h="full"
             w="full"
-            alignItems={{base: "flex-start", lg:"center"}}
+            alignItems={{ base: "flex-start", lg: "center" }}
             justifyContent="center"
             overflowY={{ base: "auto", xl: "hidden" }}
           >
@@ -150,4 +155,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Tracks;
