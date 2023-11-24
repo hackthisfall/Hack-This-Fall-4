@@ -3,8 +3,11 @@
 import {
   Box,
   Flex,
+  Grid,
+  GridItem,
   Heading,
   Image,
+  Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { useState } from "react";
@@ -12,51 +15,51 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 const partnerMapping = [
-  {
-    slug: "powered-by",
-    heading: "Powered By",
-    sponsors: [
-      {
-        logo: "/assets/partners/powered-by/orkes.svg",
-        url: "https://orkes.io/",
-      },
-    ],
-  },
-  // { slug: "diamond", heading: "Diamond", sponsors: [] },
-  {
-    slug: "platinum",
-    heading: "Platinum",
-    sponsors: [
-      {
-        logo: "/assets/partners/platinum/vonage.svg",
-        url: "https://vonage.dev/hackthisfall",
-      },
-    ],
-  },
-  {
-    slug: "gold",
-    heading: "Gold",
-    sponsors: [
-      {
-        logo: "/assets/partners/gold/github.svg",
-        url: "https://education.github.com/benefits?utm_source=2024-02-09-HackThisFall",
-      },
-    ],
-  },
-  {
-    slug: "silver",
-    heading: "Silver",
-    sponsors: [
-      {
-        logo: "/assets/partners/silver/postman.svg",
-        url: "https://www.postman.com",
-      },
-    ],
-  },
+  // {
+  //   slug: "powered-by",
+  //   heading: "Powered By",
+  //   sponsors: [
+  //     {
+  //       logo: "/assets/partners/powered-by/orkes.svg",
+  //       url: "https://orkes.io/",
+  //     },
+  //   ],
+  // },
+  // // { slug: "diamond", heading: "Diamond", sponsors: [] },
+  // {
+  //   slug: "platinum",
+  //   heading: "Platinum",
+  //   sponsors: [
+  //     {
+  //       logo: "/assets/partners/platinum/vonage.svg",
+  //       url: "https://vonage.dev/hackthisfall",
+  //     },
+  //   ],
+  // },
+  // {
+  //   slug: "gold",
+  //   heading: "Gold",
+  //   sponsors: [
+  //     {
+  //       logo: "/assets/partners/gold/github.svg",
+  //       url: "https://education.github.com/benefits?utm_source=2024-02-09-HackThisFall",
+  //     },
+  //   ],
+  // },
+  // {
+  //   slug: "silver",
+  //   heading: "Silver",
+  //   sponsors: [
+  //     {
+  //       logo: "/assets/partners/silver/postman.svg",
+  //       url: "https://www.postman.com",
+  //     },
+  //   ],
+  // },
   {
     slug: "sponsors",
     heading: "Sponsors",
-    sponsors: [
+    sponsorss: [
       {
         logo: "/assets/partners/silver/postman.svg",
         url: "https://www.postman.com",
@@ -85,7 +88,7 @@ const partnerMapping = [
 ];
 
 const Partners = () => {
-  const [currentSection, setCurrentSection] = useState("powered-by");
+  const [currentSection, setCurrentSection] = useState("sponsors");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const selectSection = (section: string) => {
@@ -206,7 +209,7 @@ const Partners = () => {
                 borderRadius="full"
                 w="fit-content"
                 gap="1rem"
-                pr="1rem"
+                pr={partnerMapping.length > 1 ? "1rem" : "0rem"}
                 justifyContent="space-evenly"
                 className="navbar"
                 zIndex={10}
@@ -238,13 +241,15 @@ const Partners = () => {
                       </Flex>
                     );
                 })}
-                <Flex
-                  onClick={() => {
-                    setIsDropdownOpen(!isDropdownOpen);
-                  }}
-                >
-                  <Image src="/assets/icons/dropdown.svg" alt="logo" />
-                </Flex>
+                {partnerMapping.length > 1 && (
+                  <Flex
+                    onClick={() => {
+                      setIsDropdownOpen(!isDropdownOpen);
+                    }}
+                  >
+                    <Image src="/assets/icons/dropdown.svg" alt="logo" />
+                  </Flex>
+                )}
               </Flex>
               {isDropdownOpen && (
                 <Flex
@@ -304,7 +309,7 @@ const Partners = () => {
         >
           {partnerMapping
             .find((p) => p.slug === currentSection)
-            ?.sponsors.map((s, i) => (
+            ?.sponsors?.map((s, i) => (
               <Flex
                 backgroundColor="#F7F7F7"
                 key={i}
@@ -317,6 +322,172 @@ const Partners = () => {
                 <Image src={s.logo} alt="logo" />
               </Flex>
             ))}
+          {currentSection === "sponsors" && (
+            <Flex flexDirection="column" maxWidth={"1280px"}>
+              <Flex
+                flexDirection={{ base: "column", lg: "row" }}
+                backgroundColor="#F7F7F7"
+                justifyContent="center"
+                // px={{ base: "0.75rem", lg: "1.5rem" }}
+                // py={{ base: "0.5rem", lg: "1rem" }}
+                columnGap="5rem"
+                borderRadius={{ base: "0.75rem 2rem", lg: "1rem 5.75rem" }}
+                paddingX={{ base: "1rem", lg: "3rem" }}
+                paddingY={{ base: "0.5rem", lg: "3rem" }}
+              >
+                <Flex
+                  flexDirection="column"
+                  alignItems={{ base: "center", lg: "unset" }}
+                >
+                  <Text
+                    fontFamily="var(--font-nohemi)"
+                    color="#9B9B9B"
+                    fontWeight={500}
+                    fontSize={{ base: "1rem", lg: "1.5rem" }}
+                    letterSpacing="0.64px"
+                  >
+                    Powered-by
+                  </Text>
+                  <Flex
+                    flexGrow={1}
+                    justifyContent={"center"}
+                    alignItems="center"
+                  >
+                    <Image
+                      minWidth={{ base: "60vw", lg: "min(25vw, 320px)" }}
+                      marginTop={{ base: "1rem", lg: "unset" }}
+                      src="/assets/partners/powered-by/orkes.svg"
+                      alt="logo"
+                    />
+                  </Flex>
+                </Flex>
+                <Flex
+                  flexDirection="column"
+                  marginTop={{ base: "1rem", lg: "unset" }}
+                >
+                  <Text
+                    fontFamily="var(--font-dm-sams)"
+                    align={{ base: "center", lg: "unset" }}
+                  >
+                    Orkes, the enterprise-grade Conductor platform, simplifies
+                    developing and scaling distributed workflows, microservices
+                    and events. Organizations can now accelerate delivering
+                    applications and eliminate the complexity of building and
+                    managing orchestration infrastructure.
+                  </Text>
+                  <Flex
+                    justifyContent="center"
+                    marginTop={"1rem"}
+                    padding={"0.75rem 3rem"}
+                    border={"1.5px solid #000000"}
+                    width={{ base: "unset", lg: "fit-content" }}
+                    borderRadius="2rem"
+                  >
+                    visit website
+                  </Flex>
+                </Flex>
+              </Flex>
+
+              <Grid
+                marginTop="1.5rem"
+                fontFamily="var(--font-nohemi)"
+                color="#9B9B9B"
+                fontWeight={500}
+                fontSize={{ base: "1rem", lg: "1.5rem" }}
+                letterSpacing="0.64px"
+                templateColumns={{
+                  base: "repeat(2, 1fr)",
+                  lg: "repeat(4, 1fr)",
+                }}
+                gridAutoRows={{ base: "unset", lg: "1fr" }}
+                columnGap="1.5rem"
+                rowGap="1.5rem"
+              >
+                <GridItem colSpan={2}>
+                  <Flex
+                    backgroundColor="#F7F7F7"
+                    height="100%"
+                    width="100%"
+                    // justifyContent="space-between"
+                    alignItems="center"
+                    paddingX={{ base: "1rem", lg: "3rem" }}
+                    paddingY={{ base: "0.5rem", lg: "3rem" }}
+                    borderRadius={{ base: "0.75rem 2rem", lg: "1rem 5.75rem" }}
+                    flexDirection="column"
+                  >
+                    <Text>Platinum</Text>
+                    <Flex
+                      flexGrow={1}
+                      justifyContent={"center"}
+                      alignItems="center"
+                    >
+                      <Image
+                        src="/assets/partners/platinum/vonage.svg"
+                        alt="logo"
+                        width={"100%"}
+                      />
+                    </Flex>
+                  </Flex>
+                </GridItem>
+
+                <GridItem>
+                  <Flex
+                    backgroundColor="#F7F7F7"
+                    width="100%"
+                    alignItems="center"
+                    height="100%"
+                    // justifyContent="space-between"
+                    paddingX={{ base: "1rem", lg: "3rem" }}
+                    paddingY={{ base: "0.5rem", lg: "3rem" }}
+                    borderRadius={{ base: "0.75rem 2rem", lg: "1rem 5.75rem" }}
+                    flexDirection="column"
+                  >
+                    <Text>Gold</Text>
+                    <Flex
+                      flexGrow={1}
+                      justifyContent={"center"}
+                      alignItems="center"
+                    >
+                      <Image
+                        src="/assets/partners/gold/github.svg"
+                        alt="logo"
+                        marginY="1rem"
+                        width="100%"
+                      />
+                    </Flex>
+                  </Flex>
+                </GridItem>
+
+                <GridItem>
+                  <Flex
+                    backgroundColor="#F7F7F7"
+                    height="100%"
+                    width="100%"
+                    alignItems="center"
+                    // justifyContent="space-between"
+                    paddingX={{ base: "1rem", lg: "3rem" }}
+                    paddingY={{ base: "0.5rem", lg: "3rem" }}
+                    borderRadius={{ base: "0.75rem 2rem", lg: "1rem 5.75rem" }}
+                    flexDirection="column"
+                  >
+                    <Text>Silver</Text>
+                    <Flex
+                      flexGrow={1}
+                      justifyContent={"center"}
+                      alignItems="center"
+                      marginY="1rem"
+                    >
+                      <Image
+                        src="/assets/partners/silver/postman.svg"
+                        alt="logo"
+                        width={"100%"}
+                      />
+                    </Flex>
+                  </Flex>
+                </GridItem>
+              </Grid>
+            </Flex>
+          )}
         </Flex>
         <Footer mode="light" />
       </Flex>

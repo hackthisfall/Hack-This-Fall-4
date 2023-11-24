@@ -114,7 +114,7 @@ const Page = () => {
               </Flex>
             </Flex>
           </Flex>
-          <Footer mode="dark" />
+          <Footer mode="dark" isHomePage={true} />
         </Flex>
       </Flex>
     </Flex>

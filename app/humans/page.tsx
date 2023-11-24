@@ -90,110 +90,110 @@ const humansMapping: humansMappingType[] = [
   //   ],
   // },
   {
-    slug: 'organizers',
-    heading: 'Organizers',
+    slug: "organizers",
+    heading: "Organizers",
     people: [
       {
-        name: 'Siddharth Dayalwal',
-        url: 'https://twitter.com/siddharth_hacks',
-        image: '/assets/humans/team/siddharth.jpg',
-        link: 'https://twitter.com/siddharth_hacks',
+        name: "Siddharth Dayalwal",
+        url: "https://twitter.com/siddharth_hacks",
+        image: "/assets/humans/team/siddharth.jpg",
+        link: "https://twitter.com/siddharth_hacks",
       },
       {
-        name: 'Sahil Sen',
-        url: 'https://www.linkedin.com/in/sahil-sen-528647ba/',
-        image: '/assets/humans/team/sahilsen.webp',
-        link: 'https://www.linkedin.com/in/sahil-sen-528647ba/',
+        name: "Sahil Sen",
+        url: "https://www.linkedin.com/in/sahil-sen-528647ba/",
+        image: "/assets/humans/team/sahilsen.webp",
+        link: "https://www.linkedin.com/in/sahil-sen-528647ba/",
       },
       {
         name: "Dennis D'mello",
-        url: 'https://www.linkedin.com/in/dendemello/',
-        image: '/assets/humans/team/dennis.jpeg',
-        link: 'https://www.linkedin.com/in/dendemello/',
+        url: "https://www.linkedin.com/in/dendemello/",
+        image: "/assets/humans/team/dennis.jpeg",
+        link: "https://www.linkedin.com/in/dendemello/",
       },
       {
-        name: 'Paras Gupta',
-        url: 'https://twitter.com/parasg1999/',
-        image: '/assets/humans/team/paras.jpeg',
-        link: 'https://twitter.com/parasg1999/',
+        name: "Paras Gupta",
+        url: "https://twitter.com/parasg1999/",
+        image: "/assets/humans/team/paras.jpeg",
+        link: "https://twitter.com/parasg1999/",
       },
       {
-        name: 'Vaibhav Toshniwal',
-        url: 'https://www.linkedin.com/in/vaibhav-vinay-toshniwal-252ba8187/',
-        image: '/assets/humans/team/vaibhav.jpeg',
-        link: 'https://www.linkedin.com/in/vaibhav-vinay-toshniwal-252ba8187/',
+        name: "Vaibhav Toshniwal",
+        url: "https://www.linkedin.com/in/vaibhav-vinay-toshniwal-252ba8187/",
+        image: "/assets/humans/team/vaibhav.jpeg",
+        link: "https://www.linkedin.com/in/vaibhav-vinay-toshniwal-252ba8187/",
       },
       {
-        name: 'Apoorv Dwivedi',
-        url: 'https://www.linkedin.com/in/apoorvdwi',
-        image: '/assets/humans/team/apoorv.jpg',
-        link: 'https://www.twitter.com/apoorvdwi',
+        name: "Apoorv Dwivedi",
+        url: "https://www.linkedin.com/in/apoorvdwi",
+        image: "/assets/humans/team/apoorv.jpg",
+        link: "https://www.twitter.com/apoorvdwi",
       },
       {
-        name: 'Shitiz Aggarwal',
-        url: 'https://twitter.com/Shitiz_Agg',
-        image: '/assets/humans/team/shitiz.jpg',
-        link: 'https://twitter.com/Shitiz_Agg',
+        name: "Shitiz Aggarwal",
+        url: "https://twitter.com/Shitiz_Agg",
+        image: "/assets/humans/team/shitiz.jpg",
+        link: "https://twitter.com/Shitiz_Agg",
       },
       {
-        name: 'Rohan Kambli',
-        url: 'https://twitter.com/rohannrk',
-        image: '/assets/humans/team/rohan.jpg',
-        link: 'https://twitter.com/rohannrk',
+        name: "Rohan Kambli",
+        url: "https://twitter.com/rohannrk",
+        image: "/assets/humans/team/rohan.jpg",
+        link: "https://twitter.com/rohannrk",
       },
       {
-        name: 'Priti Priya',
-        url: 'https://twitter.com/pritisinghhhh',
-        image: '/assets/humans/team/priti.jpeg',
-        link: 'https://twitter.com/pritisinghhhh',
+        name: "Priti Priya",
+        url: "https://twitter.com/pritisinghhhh",
+        image: "/assets/humans/team/priti.jpeg",
+        link: "https://twitter.com/pritisinghhhh",
       },
       {
-        name: 'Kriyanshi Shah',
-        url: 'https://twitter.com/ShahKriyanshi',
-        image: '/assets/humans/team/kriyanshi.jpg',
-        link: 'https://twitter.com/ShahKriyanshi',
+        name: "Kriyanshi Shah",
+        url: "https://twitter.com/ShahKriyanshi",
+        image: "/assets/humans/team/kriyanshi.jpg",
+        link: "https://twitter.com/ShahKriyanshi",
       },
       {
-        name: 'Vedant Kakde',
-        url: 'https://twitter.com/vedantstwt',
-        image: '/assets/humans/team/vedant.png',
-        link: 'https://twitter.com/vedantstwt',
+        name: "Vedant Kakde",
+        url: "https://twitter.com/vedantstwt",
+        image: "/assets/humans/team/vedant.png",
+        link: "https://twitter.com/vedantstwt",
       },
       {
-        name: 'Ali Mustufa Shaikh',
-        url: 'https://twitter.com/ialimustufa',
-        image: '/assets/humans/team/ali.jpg',
-        link: 'https://twitter.com/ialimustufa',
+        name: "Ali Mustufa Shaikh",
+        url: "https://twitter.com/ialimustufa",
+        image: "/assets/humans/team/ali.jpg",
+        link: "https://twitter.com/ialimustufa",
       },
       {
-        name: 'Devanshi Pandya',
-        url: 'https://twitter.com/DevanshiPandy11',
-        image: '/assets/humans/team/devanshi.jpeg',
-        link: 'https://twitter.com/DevanshiPandy11',
+        name: "Devanshi Pandya",
+        url: "https://twitter.com/DevanshiPandy11",
+        image: "/assets/humans/team/devanshi.jpeg",
+        link: "https://twitter.com/DevanshiPandy11",
       },
       {
-        name: 'Sakshi Hardwani',
-        url: 'https://www.linkedin.com/in/sakshi-hardwani/',
-        image: '/assets/humans/team/sakshi.jpeg',
-        link: 'https://www.linkedin.com/in/sakshi-hardwani/',
+        name: "Sakshi Hardwani",
+        url: "https://www.linkedin.com/in/sakshi-hardwani/",
+        image: "/assets/humans/team/sakshi.jpeg",
+        link: "https://www.linkedin.com/in/sakshi-hardwani/",
       },
       {
-        name: 'Toukir Khan',
-        url: 'https://twitter.com/_toukirkhan_',
-        image: '/assets/humans/team/toukir.jpeg',
-        link: 'https://twitter.com/_toukirkhan_',
+        name: "Toukir Khan",
+        url: "https://twitter.com/_toukirkhan_",
+        image: "/assets/humans/team/toukir.jpeg",
+        link: "https://twitter.com/_toukirkhan_",
       },
       {
-        name: 'Vishwa Mehta',
-        url: 'https://twitter.com/vishwamehta30/',
-        image: '/assets/humans/team/vishwa.jpeg',
-        link: 'https://twitter.com/vishwamehta30/',
+        name: "Vishwa Mehta",
+        url: "https://twitter.com/vishwamehta30/",
+        image: "/assets/humans/team/vishwa.jpeg",
+        link: "https://twitter.com/vishwamehta30/",
       },
       {
-        name: 'Bishwajeet Parhi',
-        url: 'https://twitter.com/biswa_20p',
-        image: '/assets/humans/team/biswa.jpg',
-        link: 'https://twitter.com/biswa_20p',
+        name: "Bishwajeet Parhi",
+        url: "https://twitter.com/biswa_20p",
+        image: "/assets/humans/team/biswa.jpg",
+        link: "https://twitter.com/biswa_20p",
       },
     ].sort((a, b) => a.name.localeCompare(b.name)),
   },
@@ -259,8 +259,8 @@ const Humans = () => {
           <Heading
             lineHeight="90%"
             fontFamily="var(--font-nohemi)"
-            fontSize={{ base: '2rem', lg: '3rem' }}
-            color={'#000000'}
+            fontSize={{ base: "2rem", lg: "3rem" }}
+            color={"#000000"}
             fontWeight="600"
             letterSpacing="0.3rem"
           >
@@ -282,16 +282,16 @@ const Humans = () => {
                   <Flex
                     zIndex={10}
                     bgColor={
-                      currentSection === section.slug ? 'black' : 'transparent'
+                      currentSection === section.slug ? "black" : "transparent"
                     }
-                    color={currentSection === section.slug ? 'white' : 'black'}
+                    color={currentSection === section.slug ? "white" : "black"}
                     fontFamily="var(--font-dm-sans)"
                     borderRadius="full"
                     fontSize="1.1rem"
                     alignItems="center"
                     justifyContent="center"
                     fontWeight="500"
-                    px={{ md: '1rem', lg: '2rem', '2xl': '4rem' }}
+                    px={{ md: "1rem", lg: "2rem", "2xl": "4rem" }}
                     py="1rem"
                     key={index}
                     cursor="pointer"
@@ -312,7 +312,7 @@ const Humans = () => {
               bgColor="#F0F0F0"
               marginTop="1rem"
               borderTopRadius="2rem"
-              borderBottomRadius={isDropdownOpen ? '0rem' : '2rem'}
+              borderBottomRadius={isDropdownOpen ? "0rem" : "2rem"}
               position="relative"
             >
               <Flex
@@ -320,10 +320,10 @@ const Humans = () => {
                 borderRadius="full"
                 w="fit-content"
                 gap="1rem"
-                pr="1rem"
+                pr={humansMapping.length > 1 ? "1rem" : "0rem"}
                 justifyContent="space-evenly"
                 className="navbar"
-                position={'relative'}
+                position={"relative"}
                 zIndex={10}
               >
                 {humansMapping.map((section, index) => {
@@ -353,17 +353,19 @@ const Humans = () => {
                       </Flex>
                     );
                 })}
-                <Flex
-                  onClick={() => {
-                    setIsDropdownOpen(!isDropdownOpen);
-                  }}
-                >
-                  <Image src="/assets/icons/dropdown.svg" alt="logo" />
-                </Flex>
+                {humansMapping.length > 1 && (
+                  <Flex
+                    onClick={() => {
+                      setIsDropdownOpen(!isDropdownOpen);
+                    }}
+                  >
+                    <Image src="/assets/icons/dropdown.svg" alt="logo" />
+                  </Flex>
+                )}
               </Flex>
               {isDropdownOpen && (
                 <Flex
-                  flexDirection={'column'}
+                  flexDirection={"column"}
                   position="absolute"
                   zIndex={40}
                   top="100%"
@@ -411,8 +413,8 @@ const Humans = () => {
           w="full"
           h="full"
           zIndex="20"
-          px={{ base: '2rem', lg: '5rem' }}
-          rowGap={{ base: '0.25rem', lg: '0.5rem' }}
+          px={{ base: "2rem", lg: "5rem" }}
+          rowGap={{ base: "0.25rem", lg: "0.5rem" }}
           overflow="auto"
           marginTop="2rem"
         >
@@ -422,8 +424,8 @@ const Humans = () => {
               <Flex
                 key={i}
                 justifyContent="center"
-                px={{ base: '0.5rem', lg: '1.5rem' }}
-                py={{ base: '0.5rem', lg: '1rem' }}
+                px={{ base: "0.5rem", lg: "1.5rem" }}
+                py={{ base: "0.5rem", lg: "1rem" }}
                 borderRadius="0.5rem"
                 flexDirection="column"
                 fontFamily="var(--font-nohemi)"
@@ -431,12 +433,12 @@ const Humans = () => {
                 <Link href={s.link} target="_blank">
                   <Image
                     src={s.image}
-                    w={{ base: '7rem', lg: '14rem' }}
-                    h={{ base: '7rem', lg: '14rem' }}
+                    w={{ base: "7rem", lg: "14rem" }}
+                    h={{ base: "7rem", lg: "14rem" }}
                     alt="logo"
                     borderRadius={{
-                      base: '3.5rem 1rem',
-                      lg: '5.5rem 1.25rem',
+                      base: "3.5rem 1rem",
+                      lg: "5.5rem 1.25rem",
                     }}
                   />
                 </Link>
@@ -449,13 +451,15 @@ const Humans = () => {
                 >
                   {s.name}
                 </Text>
-                {s && s.title && <Text
-                  color="#676565"
-                  letterSpacing="0.06rem"
-                  fontSize={{ base: '0.5rem', lg: 'unset' }}
-                >
-                  {s.title}
-                </Text>}
+                {s && s.title && (
+                  <Text
+                    color="#676565"
+                    letterSpacing="0.06rem"
+                    fontSize={{ base: "0.5rem", lg: "unset" }}
+                  >
+                    {s.title}
+                  </Text>
+                )}
               </Flex>
             ))}
         </Flex>
