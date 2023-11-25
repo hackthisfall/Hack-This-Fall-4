@@ -1,8 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Providers } from "./providers";
+import { Analytics } from "@vercel/analytics/react";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
+import { Providers } from "./providers";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -56,7 +57,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${nohemi.variable} ${poppins.variable}`}>
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <Analytics />
+        </Providers>
       </body>
     </html>
   );
