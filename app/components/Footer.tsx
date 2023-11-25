@@ -59,7 +59,7 @@ const Footer = (props: {
           ></Image>
         </Link>
         <Link
-          href="https://www.youtube.com/channel/UCpdsmUIkLpfopjURSYF1gaA"
+          href="https://www.youtube.com/hackthisfall?sub_confirmation=1"
           target="_blank"
         >
           <Image
