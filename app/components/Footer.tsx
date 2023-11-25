@@ -58,7 +58,10 @@ const Footer = (props: {
             alt="instagram"
           ></Image>
         </Link>
-        <Link href="https://discord.hackthisfall.tech" target="_blank">
+        <Link
+          href="https://www.youtube.com/channel/UCpdsmUIkLpfopjURSYF1gaA"
+          target="_blank"
+        >
           <Image
             width="2rem"
             src={`/assets/footer/youtube-${props.mode}.svg`}
