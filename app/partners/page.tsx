@@ -70,6 +70,12 @@ const partnerMapping: Array<{
     heading: "Sponsors",
     sponsors: [],
   },
+
+  {
+    slug: "featured",
+    heading: "Featured Partners",
+    sponsors: [],
+  },
   // { slug: "bronze", heading: "Bronze", sponsors: [] },
   // { slug: "in-kind", heading: "In-Kind", sponsors: [] },
   // { slug: "community", heading: "Community", sponsors: [] },
@@ -490,6 +496,122 @@ const Partners = () => {
                       <Link target="blank" href="https://bit.ly/htf4-postman">
                         <Image
                           src="/assets/partners/silver/postman.svg"
+                          alt="logo"
+                          width={"100%"}
+                        />
+                      </Link>
+                    </Flex>
+                  </Flex>
+                </GridItem>
+              </Grid>
+            </Flex>
+          )}
+
+          {currentSection === "featured" && (
+            <Flex flexDirection="column" maxWidth={"1280px"}>
+              <Grid
+                marginTop="1.5rem"
+                fontFamily="var(--font-nohemi)"
+                color="#9B9B9B"
+                fontWeight={500}
+                fontSize={{ base: "1rem", lg: "1.5rem" }}
+                letterSpacing="0.64px"
+                templateColumns={{
+                  base: "repeat(2, 1fr)",
+                  lg: "repeat(4, 1fr)",
+                }}
+                gridAutoRows={{ base: "unset", lg: "1fr" }}
+                columnGap="1.5rem"
+                rowGap="1.5rem"
+              >
+                <GridItem>
+                  <Flex
+                    backgroundColor="#F7F7F7"
+                    width="100%"
+                    alignItems="center"
+                    height="100%"
+                    // justifyContent="space-between"
+                    paddingX={{ base: "1rem", lg: "3rem" }}
+                    paddingY={{ base: "0.5rem", lg: "3rem" }}
+                    borderRadius={{ base: "0.75rem 2rem", lg: "1rem 5.75rem" }}
+                    flexDirection="column"
+                  >
+                    <Text align="center" lineHeight="1.5rem">
+                      Venue Partner
+                    </Text>
+                    <Flex
+                      flexGrow={1}
+                      justifyContent={"center"}
+                      alignItems="center"
+                    >
+                      <Link target="blank" href="https://bit.ly/htf4-sdp">
+                        <Image
+                          src="/assets/partners/featured/karnavati.svg"
+                          alt="logo"
+                          marginY="1rem"
+                          width="100%"
+                        />
+                      </Link>
+                    </Flex>
+                  </Flex>
+                </GridItem>
+
+                <GridItem>
+                  <Flex
+                    backgroundColor="#F7F7F7"
+                    width="100%"
+                    alignItems="center"
+                    height="100%"
+                    // justifyContent="space-between"
+                    paddingX={{ base: "1rem", lg: "3rem" }}
+                    paddingY={{ base: "0.5rem", lg: "3rem" }}
+                    borderRadius={{ base: "0.75rem 2rem", lg: "1rem 5.75rem" }}
+                    flexDirection="column"
+                  >
+                    <Text align="center" lineHeight="1.5rem">
+                      Incubation Partner
+                    </Text>
+                    <Flex
+                      flexGrow={1}
+                      justifyContent={"center"}
+                      alignItems="center"
+                    >
+                      <Link target="blank" href="https://bit.ly/htf4-sdp">
+                        <Image
+                          src="/assets/partners/featured/kiif.svg"
+                          alt="logo"
+                          marginY="1rem"
+                          width="100%"
+                        />
+                      </Link>
+                    </Flex>
+                  </Flex>
+                </GridItem>
+
+                <GridItem>
+                  <Flex
+                    backgroundColor="#F7F7F7"
+                    height="100%"
+                    width="100%"
+                    alignItems="center"
+                    // justifyContent="space-between"
+                    paddingX={{ base: "1rem", lg: "3rem" }}
+                    paddingY={{ base: "0.5rem", lg: "3rem" }}
+                    borderRadius={{ base: "0.75rem 2rem", lg: "1rem 5.75rem" }}
+                    flexDirection="column"
+                  >
+                    <Text align="center" lineHeight="1.5rem">
+                      Hackathon Partner
+                    </Text>
+                    <Flex
+                      flexGrow={1}
+                      justifyContent={"center"}
+                      alignItems="center"
+                      marginY="1rem"
+                    >
+                      <Link target="blank" href="https://bit.ly/htf4-postman">
+                        <Image
+                          src="/assets/partners/featured/mlh.svg"
                           alt="logo"
                           width={"100%"}
                         />

@@ -128,6 +128,21 @@ const Header = (props: {
         ))}
       </Flex>
 
+      {props.isHomePage && (
+        <Link
+          id="mlh-trust-badge"
+          href="https://mlh.io/apac?utm_source=apac-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white"
+          target="_blank"
+        >
+          <Image
+            src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-white.svg"
+            alt="Major League Hacking 2024 Hackathon Season"
+            width={{ base: "40px", lg: "60px" }}
+            marginLeft={{ base: "unset", lg: "3rem" }}
+            marginRight={{ base: "0.75rem", lg: "unset" }}
+          />
+        </Link>
+      )}
       {isMobile && (
         <>
           <Image
@@ -209,21 +224,6 @@ const Header = (props: {
             </DrawerContent>
           </Drawer>
         </>
-      )}
-
-      {props.isHomePage && (
-        <Link
-          id="mlh-trust-badge"
-          href="https://mlh.io/apac?utm_source=apac-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white"
-          target="_blank"
-        >
-          <Image
-            src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-white.svg"
-            alt="Major League Hacking 2024 Hackathon Season"
-            width={{ base: "40px", lg: "60px" }}
-            marginLeft={{ base: "0.75rem", lg: "3rem" }}
-          />
-        </Link>
       )}
     </Flex>
     // </Flex>
