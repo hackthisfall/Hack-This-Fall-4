@@ -379,11 +379,7 @@ const Partners = () => {
                     applications and eliminate the complexity of building and
                     managing orchestration infrastructure.
                   </Text>
-                  <Link
-                    href="https://bit.ly/htf4-onc-repo"
-                    target="_blank"
-                    className="no-underline"
-                  >
+                  <Flex flexDirection={{ base: "column", lg: "row" }}>
                     <Flex
                       justifyContent="center"
                       marginTop={"1rem"}
@@ -394,9 +390,35 @@ const Partners = () => {
                       _hover={{ bg: "black", color: "white" }}
                       cursor="pointer"
                     >
-                      Learn more
+                      <Link
+                        href="https://bit.ly/htf4-orkes"
+                        target="_blank"
+                        className="no-underline"
+                      >
+                        Learn more
+                      </Link>
                     </Flex>
-                  </Link>
+
+                    <Flex
+                      justifyContent="center"
+                      marginTop={"1rem"}
+                      marginLeft={{ base: "unset", lg: "1rem" }}
+                      padding={"0.75rem 3rem"}
+                      border={"1.5px solid #000000"}
+                      width={{ base: "unset", lg: "fit-content" }}
+                      borderRadius="2rem"
+                      _hover={{ bg: "black", color: "white" }}
+                      cursor="pointer"
+                    >
+                      <Link
+                        href="https://bit.ly/htf4-onc-repo"
+                        target="_blank"
+                        className="no-underline"
+                      >
+                        Star the Repository
+                      </Link>
+                    </Flex>
+                  </Flex>
                 </Flex>
               </Flex>
 
@@ -544,7 +566,10 @@ const Partners = () => {
                       justifyContent={"center"}
                       alignItems="center"
                     >
-                      <Link target="blank" href="https://bit.ly/htf4-sdp">
+                      <Link
+                        target="blank"
+                        href="https://karnavatiuniversity.edu.in/"
+                      >
                         <Image
                           src="/assets/partners/featured/karnavati.svg"
                           alt="logo"
@@ -576,7 +601,10 @@ const Partners = () => {
                       justifyContent={"center"}
                       alignItems="center"
                     >
-                      <Link target="blank" href="https://bit.ly/htf4-sdp">
+                      <Link
+                        target="blank"
+                        href="https://karnavatiuniversity.edu.in/kiif/"
+                      >
                         <Image
                           src="/assets/partners/featured/kiif.svg"
                           alt="logo"
@@ -609,7 +637,7 @@ const Partners = () => {
                       alignItems="center"
                       marginY="1rem"
                     >
-                      <Link target="blank" href="https://bit.ly/htf4-postman">
+                      <Link target="blank" href="https://mlh.io/">
                         <Image
                           src="/assets/partners/featured/mlh.svg"
                           alt="logo"
