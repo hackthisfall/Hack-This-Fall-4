@@ -415,7 +415,7 @@ const Partners = () => {
                         target="_blank"
                         className="no-underline"
                       >
-                        Star the Repository
+                        GitHub
                       </Link>
                     </Flex>
                   </Flex>
