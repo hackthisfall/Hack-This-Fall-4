@@ -143,6 +143,13 @@ const Partners = () => {
         </Flex>
         <Flex flexDirection="column" width="100%" alignItems="center">
           <Header mode="light" position="relative" />
+        </Flex>
+        <Flex
+          flexDirection="column"
+          alignItems="center"
+          overflow="auto"
+          h="full"
+        >
           <Heading
             lineHeight="90%"
             fontFamily="var(--font-nohemi)"
@@ -289,367 +296,386 @@ const Partners = () => {
               )}
             </Flex>
           )}
-        </Flex>
-        <Flex
-          flexDirection="row"
-          flexWrap="wrap"
-          justifyContent="center"
-          alignItems="flex-start"
-          alignContent="flex-start"
-          w="full"
-          h="full"
-          zIndex="20"
-          px={{ base: "2rem", lg: "5rem" }}
-          columnGap={{ base: "1rem", lg: "2rem" }}
-          rowGap={{ base: "1rem", lg: "2rem" }}
-          overflow="auto"
-          marginTop="2rem"
-        >
-          {partnerMapping
-            .find((p) => p.slug === currentSection)
-            ?.sponsors?.map((s, i) => (
-              <Flex
-                backgroundColor="#F7F7F7"
-                key={i}
-                width={{ base: "7rem", lg: "12rem" }}
-                justifyContent="center"
-                px={{ base: "0.75rem", lg: "1.5rem" }}
-                py={{ base: "0.5rem", lg: "1rem" }}
-                borderRadius="0.5rem"
-              >
-                <Image src={s.logo} alt="logo" />
-              </Flex>
-            ))}
-          {currentSection === "sponsors" && (
-            <Flex flexDirection="column" maxWidth={"1280px"}>
-              <Flex
-                flexDirection={{ base: "column", lg: "row" }}
-                backgroundColor="#F7F7F7"
-                justifyContent="center"
-                // px={{ base: "0.75rem", lg: "1.5rem" }}
-                // py={{ base: "0.5rem", lg: "1rem" }}
-                columnGap="5rem"
-                borderRadius={{ base: "0.75rem 2rem", lg: "1rem 5.75rem" }}
-                paddingX={{ base: "1rem", lg: "3rem" }}
-                paddingY={{ base: "0.5rem", lg: "3.5rem" }}
-              >
+          <Flex
+            flexGrow={1}
+            flexDirection="row"
+            flexWrap="wrap"
+            justifyContent="center"
+            alignItems="flex-start"
+            alignContent="flex-start"
+            w="full"
+            h="full"
+            zIndex="20"
+            px={{ base: "2rem", lg: "5rem" }}
+            columnGap={{ base: "1rem", lg: "2rem" }}
+            rowGap={{ base: "1rem", lg: "2rem" }}
+            overflow="auto"
+            marginTop="2rem"
+          >
+            {partnerMapping
+              .find((p) => p.slug === currentSection)
+              ?.sponsors?.map((s, i) => (
                 <Flex
-                  flexDirection="column"
-                  alignItems={{ base: "center", lg: "unset" }}
+                  backgroundColor="#F7F7F7"
+                  key={i}
+                  width={{ base: "7rem", lg: "12rem" }}
+                  justifyContent="center"
+                  px={{ base: "0.75rem", lg: "1.5rem" }}
+                  py={{ base: "0.5rem", lg: "1rem" }}
+                  borderRadius="0.5rem"
                 >
-                  <Text
-                    fontFamily="var(--font-nohemi)"
-                    color="#9B9B9B"
-                    fontWeight={500}
-                    fontSize={{ base: "1rem", lg: "1.5rem" }}
-                    letterSpacing="0.64px"
-                  >
-                    Powered-by
-                  </Text>
-                  <Flex
-                    flexGrow={1}
-                    justifyContent={"center"}
-                    alignItems="center"
-                  >
-                    <Link
-                      href="https://bit.ly/htf4-onc-repo"
-                      target="_blank"
-                      className="no-underline"
-                    >
-                      <Image
-                        minWidth={{ base: "60vw", lg: "min(25vw, 320px)" }}
-                        marginTop={{ base: "1rem", lg: "unset" }}
-                        src="/assets/partners/powered-by/orkes.svg"
-                        alt="logo"
-                      />
-                    </Link>
-                  </Flex>
+                  <Image src={s.logo} alt="logo" />
                 </Flex>
+              ))}
+            {currentSection === "sponsors" && (
+              <Flex flexDirection="column" maxWidth={"1280px"}>
                 <Flex
-                  flexDirection="column"
-                  marginTop={{ base: "1rem", lg: "unset" }}
+                  flexDirection={{ base: "column", lg: "row" }}
+                  backgroundColor="#F7F7F7"
+                  justifyContent="center"
+                  // px={{ base: "0.75rem", lg: "1.5rem" }}
+                  // py={{ base: "0.5rem", lg: "1rem" }}
+                  columnGap="5rem"
+                  borderRadius={{ base: "0.75rem 2rem", lg: "1rem 5.75rem" }}
+                  paddingX={{ base: "1rem", lg: "3rem" }}
+                  paddingY={{ base: "0.5rem", lg: "3.5rem" }}
                 >
-                  <Text
-                    fontFamily="var(--font-dm-sams)"
-                    align={{ base: "center", lg: "unset" }}
+                  <Flex
+                    flexDirection="column"
+                    alignItems={{ base: "center", lg: "unset" }}
                   >
-                    Orkes, the enterprise-grade Conductor platform, simplifies
-                    developing and scaling distributed workflows, microservices
-                    and events. Organizations can now accelerate delivering
-                    applications and eliminate the complexity of building and
-                    managing orchestration infrastructure.
-                  </Text>
-                  <Flex flexDirection={{ base: "column", lg: "row" }}>
-                    <Flex
-                      justifyContent="center"
-                      marginTop={"1rem"}
-                      padding={"0.75rem 3rem"}
-                      border={"1.5px solid #000000"}
-                      width={{ base: "unset", lg: "fit-content" }}
-                      borderRadius="2rem"
-                      _hover={{ bg: "black", color: "white" }}
-                      cursor="pointer"
+                    <Text
+                      fontFamily="var(--font-nohemi)"
+                      color="#9B9B9B"
+                      fontWeight={500}
+                      fontSize={{ base: "1rem", lg: "1.5rem" }}
+                      letterSpacing="0.64px"
                     >
-                      <Link
-                        href="https://bit.ly/htf4-orkes"
-                        target="_blank"
-                        className="no-underline"
-                      >
-                        Learn more
-                      </Link>
-                    </Flex>
-
+                      Powered-by
+                    </Text>
                     <Flex
-                      justifyContent="center"
-                      marginTop={"1rem"}
-                      marginLeft={{ base: "unset", lg: "1rem" }}
-                      padding={"0.75rem 3rem"}
-                      border={"1.5px solid #000000"}
-                      width={{ base: "unset", lg: "fit-content" }}
-                      borderRadius="2rem"
-                      _hover={{ bg: "black", color: "white" }}
-                      cursor="pointer"
+                      flexGrow={1}
+                      justifyContent={"center"}
+                      alignItems="center"
                     >
                       <Link
                         href="https://bit.ly/htf4-onc-repo"
                         target="_blank"
                         className="no-underline"
                       >
-                        GitHub
+                        <Image
+                          minWidth={{ base: "60vw", lg: "min(25vw, 320px)" }}
+                          marginTop={{ base: "1rem", lg: "unset" }}
+                          src="/assets/partners/powered-by/orkes.svg"
+                          alt="logo"
+                        />
                       </Link>
+                    </Flex>
+                  </Flex>
+                  <Flex
+                    flexDirection="column"
+                    marginTop={{ base: "1rem", lg: "unset" }}
+                  >
+                    <Text
+                      fontFamily="var(--font-dm-sams)"
+                      align={{ base: "center", lg: "unset" }}
+                    >
+                      Orkes, the enterprise-grade Conductor platform, simplifies
+                      developing and scaling distributed workflows,
+                      microservices and events. Organizations can now accelerate
+                      delivering applications and eliminate the complexity of
+                      building and managing orchestration infrastructure.
+                    </Text>
+                    <Flex flexDirection={{ base: "column", lg: "row" }}>
+                      <Flex
+                        justifyContent="center"
+                        marginTop={"1rem"}
+                        padding={"0.75rem 3rem"}
+                        border={"1.5px solid #000000"}
+                        width={{ base: "unset", lg: "fit-content" }}
+                        borderRadius="2rem"
+                        _hover={{ bg: "black", color: "white" }}
+                        cursor="pointer"
+                      >
+                        <Link
+                          href="https://bit.ly/htf4-orkes"
+                          target="_blank"
+                          className="no-underline"
+                        >
+                          Learn more
+                        </Link>
+                      </Flex>
+
+                      <Flex
+                        justifyContent="center"
+                        marginTop={"1rem"}
+                        marginLeft={{ base: "unset", lg: "1rem" }}
+                        padding={"0.75rem 3rem"}
+                        border={"1.5px solid #000000"}
+                        width={{ base: "unset", lg: "fit-content" }}
+                        borderRadius="2rem"
+                        _hover={{ bg: "black", color: "white" }}
+                        cursor="pointer"
+                      >
+                        <Link
+                          href="https://bit.ly/htf4-onc-repo"
+                          target="_blank"
+                          className="no-underline"
+                        >
+                          GitHub
+                        </Link>
+                      </Flex>
                     </Flex>
                   </Flex>
                 </Flex>
+
+                <Grid
+                  marginTop="1.5rem"
+                  fontFamily="var(--font-nohemi)"
+                  color="#9B9B9B"
+                  fontWeight={500}
+                  fontSize={{ base: "1rem", lg: "1.5rem" }}
+                  letterSpacing="0.64px"
+                  templateColumns={{
+                    base: "repeat(2, 1fr)",
+                    lg: "repeat(4, 1fr)",
+                  }}
+                  gridAutoRows={{ base: "unset", lg: "1fr" }}
+                  columnGap="1.5rem"
+                  rowGap="1.5rem"
+                >
+                  <GridItem colSpan={2}>
+                    <Flex
+                      backgroundColor="#F7F7F7"
+                      height="100%"
+                      width="100%"
+                      // justifyContent="space-between"
+                      alignItems="center"
+                      paddingX={{ base: "1rem", lg: "3rem" }}
+                      paddingY={{ base: "0.5rem", lg: "3rem" }}
+                      borderRadius={{
+                        base: "0.75rem 2rem",
+                        lg: "1rem 5.75rem",
+                      }}
+                      flexDirection="column"
+                    >
+                      <Text>Platinum</Text>
+                      <Flex
+                        flexGrow={1}
+                        justifyContent={"center"}
+                        alignItems="center"
+                      >
+                        <Link target="blank" href="https://bit.ly/htf4-vonage">
+                          <Image
+                            src="/assets/partners/platinum/vonage.svg"
+                            alt="logo"
+                            width={"100%"}
+                          />
+                        </Link>
+                      </Flex>
+                    </Flex>
+                  </GridItem>
+
+                  <GridItem>
+                    <Flex
+                      backgroundColor="#F7F7F7"
+                      width="100%"
+                      alignItems="center"
+                      height="100%"
+                      // justifyContent="space-between"
+                      paddingX={{ base: "1rem", lg: "3rem" }}
+                      paddingY={{ base: "0.5rem", lg: "3rem" }}
+                      borderRadius={{
+                        base: "0.75rem 2rem",
+                        lg: "1rem 5.75rem",
+                      }}
+                      flexDirection="column"
+                    >
+                      <Text>Gold</Text>
+                      <Flex
+                        flexGrow={1}
+                        justifyContent={"center"}
+                        alignItems="center"
+                      >
+                        <Link target="blank" href="https://bit.ly/htf4-sdp">
+                          <Image
+                            src="/assets/partners/gold/github.svg"
+                            alt="logo"
+                            marginY="1rem"
+                            width="100%"
+                          />
+                        </Link>
+                      </Flex>
+                    </Flex>
+                  </GridItem>
+
+                  <GridItem>
+                    <Flex
+                      backgroundColor="#F7F7F7"
+                      height="100%"
+                      width="100%"
+                      alignItems="center"
+                      // justifyContent="space-between"
+                      paddingX={{ base: "1rem", lg: "3rem" }}
+                      paddingY={{ base: "0.5rem", lg: "3rem" }}
+                      borderRadius={{
+                        base: "0.75rem 2rem",
+                        lg: "1rem 5.75rem",
+                      }}
+                      flexDirection="column"
+                    >
+                      <Text>Silver</Text>
+                      <Flex
+                        flexGrow={1}
+                        justifyContent={"center"}
+                        alignItems="center"
+                        marginY="1rem"
+                      >
+                        <Link target="blank" href="https://bit.ly/htf4-postman">
+                          <Image
+                            src="/assets/partners/silver/postman.svg"
+                            alt="logo"
+                            width={"100%"}
+                          />
+                        </Link>
+                      </Flex>
+                    </Flex>
+                  </GridItem>
+                </Grid>
               </Flex>
+            )}
 
-              <Grid
-                marginTop="1.5rem"
-                fontFamily="var(--font-nohemi)"
-                color="#9B9B9B"
-                fontWeight={500}
-                fontSize={{ base: "1rem", lg: "1.5rem" }}
-                letterSpacing="0.64px"
-                templateColumns={{
-                  base: "repeat(2, 1fr)",
-                  lg: "repeat(4, 1fr)",
-                }}
-                gridAutoRows={{ base: "unset", lg: "1fr" }}
-                columnGap="1.5rem"
-                rowGap="1.5rem"
-              >
-                <GridItem colSpan={2}>
-                  <Flex
-                    backgroundColor="#F7F7F7"
-                    height="100%"
-                    width="100%"
-                    // justifyContent="space-between"
-                    alignItems="center"
-                    paddingX={{ base: "1rem", lg: "3rem" }}
-                    paddingY={{ base: "0.5rem", lg: "3rem" }}
-                    borderRadius={{ base: "0.75rem 2rem", lg: "1rem 5.75rem" }}
-                    flexDirection="column"
-                  >
-                    <Text>Platinum</Text>
+            {currentSection === "featured" && (
+              <Flex flexDirection="column" maxWidth={"1280px"}>
+                <Grid
+                  marginTop="1.5rem"
+                  fontFamily="var(--font-nohemi)"
+                  color="#9B9B9B"
+                  fontWeight={500}
+                  fontSize={{ base: "1rem", lg: "1.5rem" }}
+                  letterSpacing="0.64px"
+                  templateColumns={{
+                    base: "repeat(2, 1fr)",
+                    lg: "repeat(4, 1fr)",
+                  }}
+                  gridAutoRows={{ base: "unset", lg: "1fr" }}
+                  columnGap="1.5rem"
+                  rowGap="1.5rem"
+                >
+                  <GridItem>
                     <Flex
-                      flexGrow={1}
-                      justifyContent={"center"}
+                      backgroundColor="#F7F7F7"
+                      width="100%"
                       alignItems="center"
+                      height="100%"
+                      // justifyContent="space-between"
+                      paddingX={{ base: "1rem", lg: "3rem" }}
+                      paddingY={{ base: "0.5rem", lg: "3rem" }}
+                      borderRadius={{
+                        base: "0.75rem 2rem",
+                        lg: "1rem 5.75rem",
+                      }}
+                      flexDirection="column"
                     >
-                      <Link target="blank" href="https://bit.ly/htf4-vonage">
-                        <Image
-                          src="/assets/partners/platinum/vonage.svg"
-                          alt="logo"
-                          width={"100%"}
-                        />
-                      </Link>
-                    </Flex>
-                  </Flex>
-                </GridItem>
-
-                <GridItem>
-                  <Flex
-                    backgroundColor="#F7F7F7"
-                    width="100%"
-                    alignItems="center"
-                    height="100%"
-                    // justifyContent="space-between"
-                    paddingX={{ base: "1rem", lg: "3rem" }}
-                    paddingY={{ base: "0.5rem", lg: "3rem" }}
-                    borderRadius={{ base: "0.75rem 2rem", lg: "1rem 5.75rem" }}
-                    flexDirection="column"
-                  >
-                    <Text>Gold</Text>
-                    <Flex
-                      flexGrow={1}
-                      justifyContent={"center"}
-                      alignItems="center"
-                    >
-                      <Link target="blank" href="https://bit.ly/htf4-sdp">
-                        <Image
-                          src="/assets/partners/gold/github.svg"
-                          alt="logo"
-                          marginY="1rem"
-                          width="100%"
-                        />
-                      </Link>
-                    </Flex>
-                  </Flex>
-                </GridItem>
-
-                <GridItem>
-                  <Flex
-                    backgroundColor="#F7F7F7"
-                    height="100%"
-                    width="100%"
-                    alignItems="center"
-                    // justifyContent="space-between"
-                    paddingX={{ base: "1rem", lg: "3rem" }}
-                    paddingY={{ base: "0.5rem", lg: "3rem" }}
-                    borderRadius={{ base: "0.75rem 2rem", lg: "1rem 5.75rem" }}
-                    flexDirection="column"
-                  >
-                    <Text>Silver</Text>
-                    <Flex
-                      flexGrow={1}
-                      justifyContent={"center"}
-                      alignItems="center"
-                      marginY="1rem"
-                    >
-                      <Link target="blank" href="https://bit.ly/htf4-postman">
-                        <Image
-                          src="/assets/partners/silver/postman.svg"
-                          alt="logo"
-                          width={"100%"}
-                        />
-                      </Link>
-                    </Flex>
-                  </Flex>
-                </GridItem>
-              </Grid>
-            </Flex>
-          )}
-
-          {currentSection === "featured" && (
-            <Flex flexDirection="column" maxWidth={"1280px"}>
-              <Grid
-                marginTop="1.5rem"
-                fontFamily="var(--font-nohemi)"
-                color="#9B9B9B"
-                fontWeight={500}
-                fontSize={{ base: "1rem", lg: "1.5rem" }}
-                letterSpacing="0.64px"
-                templateColumns={{
-                  base: "repeat(2, 1fr)",
-                  lg: "repeat(4, 1fr)",
-                }}
-                gridAutoRows={{ base: "unset", lg: "1fr" }}
-                columnGap="1.5rem"
-                rowGap="1.5rem"
-              >
-                <GridItem>
-                  <Flex
-                    backgroundColor="#F7F7F7"
-                    width="100%"
-                    alignItems="center"
-                    height="100%"
-                    // justifyContent="space-between"
-                    paddingX={{ base: "1rem", lg: "3rem" }}
-                    paddingY={{ base: "0.5rem", lg: "3rem" }}
-                    borderRadius={{ base: "0.75rem 2rem", lg: "1rem 5.75rem" }}
-                    flexDirection="column"
-                  >
-                    <Text align="center" lineHeight="1.5rem">
-                      Venue Partner
-                    </Text>
-                    <Flex
-                      flexGrow={1}
-                      justifyContent={"center"}
-                      alignItems="center"
-                    >
-                      <Link
-                        target="blank"
-                        href="https://karnavatiuniversity.edu.in/"
+                      <Text align="center" lineHeight="1.5rem">
+                        Venue Partner
+                      </Text>
+                      <Flex
+                        flexGrow={1}
+                        justifyContent={"center"}
+                        alignItems="center"
                       >
-                        <Image
-                          src="/assets/partners/featured/karnavati.svg"
-                          alt="logo"
-                          marginY="1rem"
-                          width="100%"
-                        />
-                      </Link>
+                        <Link
+                          target="blank"
+                          href="https://karnavatiuniversity.edu.in/"
+                        >
+                          <Image
+                            src="/assets/partners/featured/karnavati.svg"
+                            alt="logo"
+                            marginY="1rem"
+                            width="100%"
+                          />
+                        </Link>
+                      </Flex>
                     </Flex>
-                  </Flex>
-                </GridItem>
+                  </GridItem>
 
-                <GridItem>
-                  <Flex
-                    backgroundColor="#F7F7F7"
-                    width="100%"
-                    alignItems="center"
-                    height="100%"
-                    // justifyContent="space-between"
-                    paddingX={{ base: "1rem", lg: "3rem" }}
-                    paddingY={{ base: "0.5rem", lg: "3rem" }}
-                    borderRadius={{ base: "0.75rem 2rem", lg: "1rem 5.75rem" }}
-                    flexDirection="column"
-                  >
-                    <Text align="center" lineHeight="1.5rem">
-                      Incubation Partner
-                    </Text>
+                  <GridItem>
                     <Flex
-                      flexGrow={1}
-                      justifyContent={"center"}
+                      backgroundColor="#F7F7F7"
+                      width="100%"
                       alignItems="center"
+                      height="100%"
+                      // justifyContent="space-between"
+                      paddingX={{ base: "1rem", lg: "3rem" }}
+                      paddingY={{ base: "0.5rem", lg: "3rem" }}
+                      borderRadius={{
+                        base: "0.75rem 2rem",
+                        lg: "1rem 5.75rem",
+                      }}
+                      flexDirection="column"
                     >
-                      <Link
-                        target="blank"
-                        href="https://karnavatiuniversity.edu.in/kiif/"
+                      <Text align="center" lineHeight="1.5rem">
+                        Incubation Partner
+                      </Text>
+                      <Flex
+                        flexGrow={1}
+                        justifyContent={"center"}
+                        alignItems="center"
                       >
-                        <Image
-                          src="/assets/partners/featured/kiif.svg"
-                          alt="logo"
-                          marginY="1rem"
-                          width="100%"
-                        />
-                      </Link>
+                        <Link
+                          target="blank"
+                          href="https://karnavatiuniversity.edu.in/kiif/"
+                        >
+                          <Image
+                            src="/assets/partners/featured/kiif.svg"
+                            alt="logo"
+                            marginY="1rem"
+                            width="100%"
+                          />
+                        </Link>
+                      </Flex>
                     </Flex>
-                  </Flex>
-                </GridItem>
+                  </GridItem>
 
-                <GridItem>
-                  <Flex
-                    backgroundColor="#F7F7F7"
-                    height="100%"
-                    width="100%"
-                    alignItems="center"
-                    // justifyContent="space-between"
-                    paddingX={{ base: "1rem", lg: "3rem" }}
-                    paddingY={{ base: "0.5rem", lg: "3rem" }}
-                    borderRadius={{ base: "0.75rem 2rem", lg: "1rem 5.75rem" }}
-                    flexDirection="column"
-                  >
-                    <Text align="center" lineHeight="1.5rem">
-                      Hackathon Partner
-                    </Text>
+                  <GridItem>
                     <Flex
-                      flexGrow={1}
-                      justifyContent={"center"}
+                      backgroundColor="#F7F7F7"
+                      height="100%"
+                      width="100%"
                       alignItems="center"
-                      marginY="1rem"
+                      // justifyContent="space-between"
+                      paddingX={{ base: "1rem", lg: "3rem" }}
+                      paddingY={{ base: "0.5rem", lg: "3rem" }}
+                      borderRadius={{
+                        base: "0.75rem 2rem",
+                        lg: "1rem 5.75rem",
+                      }}
+                      flexDirection="column"
                     >
-                      <Link target="blank" href="https://mlh.io/">
-                        <Image
-                          src="/assets/partners/featured/mlh.svg"
-                          alt="logo"
-                          width={"100%"}
-                        />
-                      </Link>
+                      <Text align="center" lineHeight="1.5rem">
+                        Hackathon Partner
+                      </Text>
+                      <Flex
+                        flexGrow={1}
+                        justifyContent={"center"}
+                        alignItems="center"
+                        marginY="1rem"
+                      >
+                        <Link target="blank" href="https://mlh.io/">
+                          <Image
+                            src="/assets/partners/featured/mlh.svg"
+                            alt="logo"
+                            width={"100%"}
+                          />
+                        </Link>
+                      </Flex>
                     </Flex>
-                  </Flex>
-                </GridItem>
-              </Grid>
-            </Flex>
-          )}
+                  </GridItem>
+                </Grid>
+              </Flex>
+            )}
+          </Flex>
         </Flex>
         <Footer mode="light" />
       </Flex>

@@ -261,6 +261,13 @@ const Humans = () => {
         </Flex>
         <Flex flexDirection="column" width="100%" alignItems="center">
           <Header mode="light" position="relative" />
+        </Flex>
+        <Flex
+          flexDirection="column"
+          alignItems="center"
+          overflow="auto"
+          h="full"
+        >
           <Heading
             lineHeight="90%"
             fontFamily="var(--font-nohemi)"
@@ -408,65 +415,65 @@ const Humans = () => {
               )}
             </Flex>
           )}
-        </Flex>
-        <Flex
-          flexDirection="row"
-          flexWrap="wrap"
-          justifyContent="center"
-          alignItems="flex-start"
-          alignContent="flex-start"
-          w="full"
-          h="full"
-          zIndex="20"
-          px={{ base: "2rem", lg: "5rem" }}
-          rowGap={{ base: "0.25rem", lg: "0.5rem" }}
-          overflow="auto"
-          marginTop="2rem"
-        >
-          {humansMapping
-            .find((p) => p.slug === currentSection)
-            ?.people.map((s, i) => (
-              <Flex
-                key={i}
-                justifyContent="center"
-                px={{ base: "0.5rem", lg: "1.5rem" }}
-                py={{ base: "0.5rem", lg: "1rem" }}
-                borderRadius="0.5rem"
-                flexDirection="column"
-                fontFamily="var(--font-nohemi)"
-              >
-                <Link href={s.link} target="_blank">
-                  <Image
-                    src={s.image}
-                    w={{ base: "7rem", lg: "14rem" }}
-                    h={{ base: "7rem", lg: "14rem" }}
-                    alt="logo"
-                    borderRadius={{
-                      base: "3.5rem 1rem",
-                      lg: "5.5rem 1.25rem",
-                    }}
-                  />
-                </Link>
-                <Text
-                  color="#333333"
-                  fontWeight="600"
-                  letterSpacing="0.05rem"
-                  fontSize={{ base: "0.5rem", lg: "unset" }}
-                  marginTop="0.5rem"
+
+          <Flex
+            flexDirection="row"
+            flexWrap="wrap"
+            justifyContent="center"
+            alignItems="flex-start"
+            alignContent="flex-start"
+            w="full"
+            h="full"
+            zIndex="20"
+            px={{ base: "2rem", lg: "5rem" }}
+            rowGap={{ base: "0.25rem", lg: "0.5rem" }}
+            marginTop="2rem"
+          >
+            {humansMapping
+              .find((p) => p.slug === currentSection)
+              ?.people.map((s, i) => (
+                <Flex
+                  key={i}
+                  justifyContent="center"
+                  px={{ base: "0.5rem", lg: "1.5rem" }}
+                  py={{ base: "0.5rem", lg: "1rem" }}
+                  borderRadius="0.5rem"
+                  flexDirection="column"
+                  fontFamily="var(--font-nohemi)"
                 >
-                  {s.name}
-                </Text>
-                {s && s.title && (
+                  <Link href={s.link} target="_blank">
+                    <Image
+                      src={s.image}
+                      w={{ base: "7rem", lg: "14rem" }}
+                      h={{ base: "7rem", lg: "14rem" }}
+                      alt="logo"
+                      borderRadius={{
+                        base: "3rem 1rem",
+                        lg: "5.5rem 1.25rem",
+                      }}
+                    />
+                  </Link>
                   <Text
-                    color="#676565"
-                    letterSpacing="0.06rem"
+                    color="#333333"
+                    fontWeight="600"
+                    letterSpacing="0.05rem"
                     fontSize={{ base: "0.5rem", lg: "unset" }}
+                    marginTop="0.5rem"
                   >
-                    {s.title}
+                    {s.name}
                   </Text>
-                )}
-              </Flex>
-            ))}
+                  {s && s.title && (
+                    <Text
+                      color="#676565"
+                      letterSpacing="0.06rem"
+                      fontSize={{ base: "0.5rem", lg: "unset" }}
+                    >
+                      {s.title}
+                    </Text>
+                  )}
+                </Flex>
+              ))}
+          </Flex>
         </Flex>
         <Footer mode="light" />
       </Flex>
