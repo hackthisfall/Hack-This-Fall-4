@@ -115,7 +115,7 @@ const Tracks = () => {
             w="full"
             alignItems={{ base: "flex-start", lg: "center" }}
             justifyContent="center"
-            overflowY={{ base: "auto", xl: "hidden" }}
+            overflowY={{ base: "auto" }}
           >
             <SimpleGrid
               columnGap="6rem"
