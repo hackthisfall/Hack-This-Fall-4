@@ -113,7 +113,7 @@ const Tracks = () => {
             pb={{ base: "2rem", md: "0" }}
             h="full"
             w="full"
-            alignItems={{ base: "flex-start", lg: "center" }}
+            alignItems={{ base: "flex-start", lg: "safe center" }}
             justifyContent="center"
             overflowY={{ base: "auto" }}
           >
@@ -132,7 +132,7 @@ const Tracks = () => {
                   mt="2rem"
                   w="240px"
                 >
-                  <Image height="150px" src={track.image} alt={track.heading} />
+                  <Image height="140px" src={track.image} alt={track.heading} />
                   <Text
                     mt="2rem"
                     lineHeight="130%"
