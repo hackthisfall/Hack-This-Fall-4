@@ -359,7 +359,7 @@ const Partners = () => {
                       alignItems="center"
                     >
                       <Link
-                        href="https://bit.ly/htf4-onc-repo"
+                        href="https://bit.ly/htf4-con-repo"
                         target="_blank"
                         className="no-underline"
                       >
@@ -418,7 +418,7 @@ const Partners = () => {
                         cursor="pointer"
                       >
                         <Link
-                          href="https://bit.ly/htf4-onc-repo"
+                          href="https://bit.ly/htf4-con-repo"
                           target="_blank"
                           className="no-underline"
                         >
