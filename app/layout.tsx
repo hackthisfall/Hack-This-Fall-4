@@ -17,33 +17,33 @@ const nohemi = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Hack This Fall 4.0",
+  title: "Hack This Fall 2024",
   description:
-    "Hack This Fall 4.0 is a 36 hour in-person hackathon scheduled to happen in Gandhinagar, Gujarat from 9th Feb to 11th Feb 2024! 🧡",
+    "Hack This Fall 2024 is a 36 hour in-person hackathon scheduled to happen in Gandhinagar, Gujarat from 9th Feb to 11th Feb 2024! 🧡",
   openGraph: {
-    title: "Hack This Fall 4.0",
+    title: "Hack This Fall 2024",
     description:
-      "Hack This Fall 4.0 is a 36 hour in-person hackathon scheduled to happen in Gandhinagar, Gujarat from 9th Feb to 11th Feb 2024! 🧡",
-    siteName: "Hack This Fall 4.0",
+      "Hack This Fall 2024 is a 36 hour in-person hackathon scheduled to happen in Gandhinagar, Gujarat from 9th Feb to 11th Feb 2024! 🧡",
+    siteName: "Hack This Fall 2024",
     images: [
       {
         url: "https://hackthisfall.tech/og.png",
         width: 2000,
         height: 1000,
-        alt: "Hack This Fall 4.0",
+        alt: "Hack This Fall 2024",
       },
     ],
   },
   twitter: {
-    title: "Hack This Fall 4.0",
+    title: "Hack This Fall 2024",
     description:
-      "Hack This Fall 4.0 is a 36 hour in-person hackathon scheduled to happen in Gandhinagar, Gujarat from 9th Feb to 11th Feb 2024! 🧡",
+      "Hack This Fall 2024 is a 36 hour in-person hackathon scheduled to happen in Gandhinagar, Gujarat from 9th Feb to 11th Feb 2024! 🧡",
     images: [
       {
         url: "https://hackthisfall.tech/og.png",
         width: 2000,
         height: 1000,
-        alt: "Hack This Fall 4.0",
+        alt: "Hack This Fall 2024",
       },
     ],
   },

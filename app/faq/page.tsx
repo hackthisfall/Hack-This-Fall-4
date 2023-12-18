@@ -20,35 +20,35 @@ const faqs = [
   {
     question: "Can I participate remotely?",
     answer:
-      "Hack This Fall 4.0 is an in-person hackathon. So remote participation is not applicable.",
+      "Hack This Fall 2024 is an in-person hackathon. So remote participation is not applicable.",
   },
   {
     question: "How much does it cost to participate?",
     answer:
-      "Nothing, participation in Hack This Fall 4.0 is absolutely FREE!!🎉 We’ll have meals, snacks, and beverages onsite at the hackathon, in addition to swags, prizes, fun mini-events and more.",
-  },
-  {
-    question:
-      "My parent/guardian will be coming along with me. Can they stay at the venue?",
-    answer:
-      "The answer is No. Arrangements like sleeping area, food, etc., are only for the attendees. We recommend you to find a stay option for them near the venue. They can drop you at the hackathon venue on 9th Feb and can pick you on 11th Feb but can't stay at venue during the hackathon as we do not have any provision for them.",
+      "Nothing, participation in Hack This Fall 2024 is absolutely FREE!!🎉 We’ll have meals, snacks, and beverages onsite at the hackathon, in addition to swags, prizes, fun mini-events and more.",
   },
 
-  {
-    question:
-      "What is the maximum team size? Can I participate as a Solo Hacker?",
-    answer:
-      "We encourage you to make a team of minimum 2 and maximum 4 members. If you are a Solo Hacker and do not have a team, you can still register and find team members on our Discord server.",
-  },
   {
     question: "I am a beginner, can I participate?",
     answer:
       "Absolutely. We will have mentors and resources available, along with several workshops targeted for beginners. Come learn and experience your first hackathon at Hack This Fall.",
   },
   {
+    question:
+      "What is the maximum team size? Can I participate as a solo Hacker?",
+    answer:
+      "We encourage you to make a team with a minimum of 2 and a maximum of 4 members. If you are a solo hacker and do not have a team, you can still register and find team members on our Discord server.",
+  },
+
+  {
+    question: "I am below 18 years of age, can I participate in the hackathon?",
+    answer:
+      "Yes! You can participate in the hackathon but we would need written consent from your parent/guardian and you wouldn’t be allowed to leave the venue during the hackathon.",
+  },
+  {
     question: "Will you support or reimburse our travel expenses?",
     answer:
-      "Since Hack This Fall 4.0 is a community-driven hackathon, unfortunately we will not be able to support you with travel.",
+      "Since Hack This Fall 2024 is a community-driven hackathon, unfortunately we will not be able to support you with travel.",
   },
   {
     question: "What are the sleeping arrangements?",
@@ -56,10 +56,35 @@ const faqs = [
       "On both nights (9th Feb & 10th Feb) we will have a supervised sleeping space for hackers to rest and sleep at the venue. We recommend bringing your own blanket if you need one.",
   },
   {
-    question: "I am below 18 years of age, can I participate in the hackathon?",
+    question: "What are the arrangements for female hackers?",
     answer:
-      "Yes! You can participate in the hackathon but we would need written consent from your parent/guardian and you wouldn’t be allowed to leave the venue during the hackathon.",
+      "We want to make sure that all female hackers feel comfortable and safe at the hackathon. We have arranged a separate sleeping area for girls, clean washrooms, personal hygiene and sanitary kits, etc. Once your application gets accepted, you will be added to a women-only private channel on Discord (make sure you join the Discord here).",
   },
+
+  {
+    question:
+      "At what time should I arrive at the hackathon on 9 Feb and at what time can I depart on 11 Feb?",
+    answer:
+      "You are expected to arrive at the hackathon venue by 2 PM IST on Friday, 9 Feb. The estimated departure time from the venue is 7 PM IST on Sunday, 11th Feb. Book your return travel tickets accordingly to ensure you don't miss the Closing Ceremony.",
+  },
+  {
+    question:
+      "Is there any resource that can help me get more info about the venue?",
+    answer:
+      "To learn more about the venue, arrival & departure, and how to reach there, you can check out our venue guide here.",
+  },
+  {
+    question:
+      "My parent/guardian will be coming along with me. Can they stay at the venue?",
+    answer:
+      "The answer is No. Arrangements like sleeping area, food, etc., are only for the attendees. We recommend you to find a stay option for them near the venue. They can drop you at the hackathon venue on 9th Feb and can pick you on 11th Feb but can't stay at venue during the hackathon as we do not have any provision for them.",
+  },
+  {
+    question: "Can hackers start working on projects in advance?",
+    answer:
+      "No. You can only start working on the projects once hacking begins on 9 Feb after the opening ceremony. Any project with an earlier commit history will be disqualified.<br/><br/>However, you can learn the basic tools and technologies you might need before the hackathon.",
+  },
+
   {
     question: "What is the event Code of Conduct?",
     answer:
