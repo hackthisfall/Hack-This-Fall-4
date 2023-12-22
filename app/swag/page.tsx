@@ -7,37 +7,44 @@ import {
   Image as ChakraImage,
   Input,
   Button,
+  Tabs,
+  TabPanels,
+  TabPanel,
+  useBreakpointValue,
 } from '@chakra-ui/react';
-import { MutableRefObject, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import UploadIcon from '../components/Icons/uploadIcon';
 import { Metadata } from 'next';
+import { DownloadIcon } from '@chakra-ui/icons';
+import ShareIcon from '../components/Icons/shareIcon';
 
-const tracksMapping = [
+const swagsMapping = [
   {
-    heading: 'Generative AI & Machine Learning',
-    image: '/assets/tracks/gen-ai.gif',
+    index: 0,
+    heading: 'Zoom Background',
+    assets: ['/og.png'],
+    height: "300px",
   },
   {
-    heading: 'Blockchain & Web3',
-    image: '/assets/tracks/blockchain.gif',
+    index: 1,
+    heading: 'Desktop Wallpapers',
+    assets: ['/assets/tracks/gen-ai.gif'],
+    height: "300px",
   },
   {
-    heading: 'IoT & Embedded Systems',
-    image: '/assets/tracks/iot.gif',
+    index: 2,
+    heading: 'Mobile Wallpapers',
+    assets: ['/assets/tracks/gen-ai.gif'],
+    height: "600px",
   },
   {
-    heading: 'Augmented/Virtual Reality',
-    image: '/assets/tracks/ar-vr.gif',
-  },
-  {
-    heading: 'Cloud & DevOps',
-    image: '/assets/tracks/cloud.gif',
-  },
-  {
-    heading: 'Open Track: Innovate for Good',
-    image: '/assets/tracks/open-innovation.gif',
-  },
+    index: 3,
+    heading: 'Instagram Bingo',
+    assets: ['/assets/tracks/gen-ai.gif'],
+    height: "600px",
+  }
 ];
 
 // export const metadata: Metadata = {
@@ -49,6 +56,14 @@ const Swag = () => {
   const [name, setName] = useState('');
   const canvasRef = useRef(null);
   const imageUploadRef = useRef(null);
+  const [currentTab, setCurrentTab] = useState(0);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const isMobile = useBreakpointValue({ base: true, sm: true, md: false });
+
+  const selectTab = (section: number) => {
+    setCurrentTab(section);
+    setIsDropdownOpen(false);
+  };
 
   useEffect(() => {
     if (canvasRef && canvasRef.current) {
@@ -224,6 +239,7 @@ const Swag = () => {
             h="full"
             flexDir="column"
             alignItems="center"
+            overflowY={{ base: 'auto' }}
           >
             <Heading
               lineHeight="90%"
@@ -237,16 +253,14 @@ const Swag = () => {
               Digital swags
             </Heading>
             <Flex
-              mt="4rem"
-              h="full"
+              mt={{ base: '2rem', xl: '4rem' }}
               w="full"
-              overflowY={{ base: 'auto' }}
               flexDirection="column"
             >
               <Flex
-                justifyContent="space-between"
+                justifyContent={{ base: 'flex-start', xl: 'space-between' }}
                 alignItems="center"
-                flexDirection={{ base: 'column', md: 'row' }}
+                flexDirection={{ base: 'column', xl: 'row' }}
                 w="full"
               >
                 <canvas
@@ -254,21 +268,28 @@ const Swag = () => {
                   width="1620"
                   height="1620"
                   style={{
-                    width: '600px',
-                    height: '600px',
+                    width: 'min(100%, 600px)',
+                    height: 'min(100%, 600px)',
                     borderRadius: '1.5rem',
                   }}
                 />
-                <Flex gap="3rem" w="50%" flexDir="column">
+                <Flex
+                  gap={{ base: '2rem', md: '3rem' }}
+                  w={{ base: 'full', lg: '60%', xl: '50%' }}
+                  mt={{ base: '3rem', xl: '0' }}
+                  flexDir="column"
+                >
                   <Heading
                     color="white"
                     fontSize="2.5rem"
                     fontWeight="600"
                     fontFamily={'var(--font-nohemi)'}
+                    textAlign={{ base: 'center', xl: 'left' }}
                   >
                     Digital Badge
                   </Heading>
                   <Text
+                    textAlign={{ base: 'center', xl: 'left' }}
                     color="white"
                     fontSize="1.5rem"
                     fontWeight="400"
@@ -283,11 +304,15 @@ const Swag = () => {
                     fontSize="1.5rem"
                     fontWeight="400"
                     fontFamily={'var(--font-dm-sans)'}
+                    textAlign={{ base: 'center', xl: 'left' }}
                   >
                     * We respect your privacy and are not storing your pictures
                     on our servers.
                   </Text>
-                  <Flex gap="2rem">
+                  <Flex
+                    flexDir={{ base: 'column', md: 'row' }}
+                    gap={{ base: '1rem', md: '2rem' }}
+                  >
                     <Input
                       height="70px"
                       px="2rem"
@@ -295,13 +320,13 @@ const Swag = () => {
                       value={name}
                       onChange={(e) => setName(e.target.value.toUpperCase())}
                       color="white"
-                      fontSize="1.5rem"
+                      fontSize={{ base: '1.3rem', lg: '1.5rem' }}
                       fontWeight="400"
                       fontFamily={'var(--font-dm-sans)'}
                       placeholder="Enter your name"
                       _focusVisible={{
                         zIndex: 1,
-                        borderColor: "#fff",
+                        borderColor: '#fff',
                         boxShadow: '0 0 0 1px #fff',
                       }}
                     />
@@ -317,12 +342,13 @@ const Swag = () => {
                       }}
                     />
                     <Button
+                      leftIcon={<UploadIcon />}
                       px="4rem"
                       py="1rem"
                       rounded="full"
                       height="70px"
                       color="black"
-                      fontSize="1.5rem"
+                      fontSize={{ base: '1.3rem', lg: '1.5rem' }}
                       fontWeight="400"
                       fontFamily={'var(--font-dm-sans)'}
                       background="white !important"
@@ -337,7 +363,267 @@ const Swag = () => {
                       Upload your photo
                     </Button>
                   </Flex>
+                  <Flex
+                    flexDir={{ base: 'column', md: 'row' }}
+                    gap={{ base: '1rem', md: '2rem' }}
+                    w={{ base: 'full', lg: '60%', xl: '70%' }}
+                  >
+                    <Button
+                      leftIcon={<DownloadIcon />}
+                      px="4rem"
+                      py="1rem"
+                      rounded="full"
+                      height="70px"
+                      color="black"
+                      isDisabled={!name || !image}
+                      _disabled={{
+                        cursor: 'not-allowed',
+                        backgroundColor: '#e0d9d97f !important',
+                      }}
+                      fontSize={{ base: '1.3rem', lg: '1.5rem' }}
+                      fontWeight="400"
+                      fontFamily={'var(--font-dm-sans)'}
+                      background="white !important"
+                      onClick={() => {
+                        if (canvasRef && canvasRef.current) {
+                          const canvas: HTMLCanvasElement = canvasRef.current;
+                          const image = canvas
+                            .toDataURL('image/png')
+                            .replace('image/png', 'image/octet-stream');
+                          const link = document.createElement('a');
+                          link.download = 'hackthisfall-badge.png';
+                          link.href = image;
+                          link.click();
+                        }
+                      }}
+                    >
+                      Download Image
+                    </Button>
+                    <Button
+                      leftIcon={<ShareIcon />}
+                      px="4rem"
+                      py="1rem"
+                      rounded="full"
+                      height="70px"
+                      color="black"
+                      isDisabled={!name || !image}
+                      _disabled={{
+                        cursor: 'not-allowed',
+                        backgroundColor: '#e0d9d97f !important',
+                      }}
+                      fontSize={{ base: '1.3rem', lg: '1.5rem' }}
+                      fontWeight="400"
+                      fontFamily={'var(--font-dm-sans)'}
+                      backgroundColor="white !important"
+                      onClick={() => {
+                        const link = document.createElement('a');
+                        link.href =
+                          "https://twitter.com/intent/tweet?text=Hey folks! Super excited to share that I will be attending @hackthisfall 3.0, a 36 Hours in-person hackathon🥳%0A%0ACan't wait to %23InnovateForGood and meet the amazing community🧡%0A%0AGet a personal badge for yourself: hackthisfall.tech/swag 🚀 %23HackThisFall";
+                        link.target = '_blank';
+                        link.rel = 'noopener noreferrer';
+                        link.click();
+                        link.remove();
+                      }}
+                    >
+                      Share
+                    </Button>
+                  </Flex>
                 </Flex>
+              </Flex>
+              <Flex
+                alignItems={'center'}
+                flexDir="column"
+                mt={{ base: '3rem', xl: '5rem' }}
+              >
+                {!isMobile && (
+                  <Flex
+                    border="1.5px solid white"
+                    bgColor="#0D2129"
+                    borderRadius="full"
+                    w="fit-content"
+                    gap="1rem"
+                    justifyContent="space-evenly"
+                    className="navbar"
+                    zIndex={10}
+                    marginTop="2rem"
+                  >
+                    {swagsMapping.map((section, index) => {
+                      return (
+                        <Flex
+                          zIndex={10}
+                          bgColor={
+                            currentTab === index ? 'white' : 'transparent'
+                          }
+                          color={currentTab === index ? 'black' : 'white'}
+                          fontFamily="var(--font-dm-sans)"
+                          borderRadius="full"
+                          fontSize="1.1rem"
+                          alignItems="center"
+                          justifyContent="center"
+                          fontWeight="500"
+                          px={{ md: '1rem', lg: '2rem', '2xl': '4rem' }}
+                          py="1rem"
+                          key={index}
+                          cursor="pointer"
+                          onClick={() => {
+                            setCurrentTab(index);
+                          }}
+                          className="font-dm-sans"
+                        >
+                          {section.heading}
+                        </Flex>
+                      );
+                    })}
+                  </Flex>
+                )}
+                {isMobile && (
+                  <Flex
+                    flexDirection="column"
+                    bgColor="#F0F0F0"
+                    marginTop="1rem"
+                    borderTopRadius="2rem"
+                    borderBottomRadius={isDropdownOpen ? '0rem' : '2rem'}
+                    position="relative"
+                  >
+                    <Flex
+                      bgColor="#d6d6d6"
+                      borderRadius="full"
+                      w="fit-content"
+                      gap="1rem"
+                      pr={swagsMapping.length > 1 ? '1rem' : '0rem'}
+                      justifyContent="space-evenly"
+                      className="navbar"
+                      position={'relative'}
+                      zIndex={10}
+                    >
+                      {swagsMapping.map((section, index) => {
+                        if (currentTab === index)
+                          return (
+                            <Flex
+                              zIndex={10}
+                              bgColor="black"
+                              color="white"
+                              fontFamily="var(--font-dm-sans)"
+                              borderRadius="full"
+                              fontSize="1.1rem"
+                              alignItems="center"
+                              justifyContent="center"
+                              fontWeight="500"
+                              px="2rem"
+                              py="1rem"
+                              key={index}
+                              cursor="pointer"
+                              className="font-dm-sans"
+                              onClick={() => {
+                                setIsDropdownOpen(!isDropdownOpen);
+                              }}
+                              minWidth="200px"
+                            >
+                              {section.heading}
+                            </Flex>
+                          );
+                      })}
+                      {swagsMapping.length > 1 && (
+                        <Flex
+                          onClick={() => {
+                            setIsDropdownOpen(!isDropdownOpen);
+                          }}
+                        >
+                          <ChakraImage
+                            src="/assets/icons/dropdown.svg"
+                            alt="logo"
+                          />
+                        </Flex>
+                      )}
+                    </Flex>
+                    {isDropdownOpen && (
+                      <Flex
+                        flexDirection={'column'}
+                        position="absolute"
+                        zIndex={40}
+                        top="100%"
+                        width="100%"
+                        bgColor="#F0F0F0"
+                        borderBottomRadius="2rem"
+                      >
+                        {swagsMapping.map((section, index) => {
+                          if (currentTab !== index)
+                            return (
+                              <Flex
+                                zIndex={10}
+                                bgColor="#f0f0f0"
+                                color="black"
+                                fontFamily="var(--font-dm-sans)"
+                                borderRadius="full"
+                                fontSize="1.1rem"
+                                alignItems="center"
+                                justifyContent="center"
+                                fontWeight="500"
+                                px="2rem"
+                                py="1rem"
+                                key={index}
+                                cursor="pointer"
+                                className="font-dm-sans"
+                                onClick={() => {
+                                  selectTab(index);
+                                }}
+                              >
+                                {section.heading}
+                              </Flex>
+                            );
+                        })}
+                      </Flex>
+                    )}
+                  </Flex>
+                )}
+                <Tabs
+                  w="full"
+                  mt={{ base: '2rem', xl: '3rem' }}
+                  index={currentTab}
+                >
+                  <TabPanels>
+                    {swagsMapping.map((section, index) => {
+                      return (
+                        <TabPanel
+                          px="0"
+                          key={index}
+                          display="flex"
+                          flexDirection="column"
+                          gap="2rem"
+                          w="full"
+                        >
+                          <Heading
+                            color="white"
+                            fontSize="2.5rem"
+                            fontWeight="600"
+                            fontFamily={'var(--font-nohemi)'}
+                            textAlign={{ base: 'center', md: 'left' }}
+                          >
+                            {section.heading}
+                          </Heading>
+                          <Flex
+                            gap="2rem"
+                            w="full"
+                            flexWrap="wrap"
+                            flexDir={{ base: 'column', md: 'row' }}
+                          >
+                            {section.assets.map((asset, index) => {
+                              return (
+                                <ChakraImage
+                                  height={{ base: 'auto', md: section.height }}
+                                  maxWidth={{ base: '100%', md: 'auto' }}
+                                  key={index}
+                                  src={asset}
+                                  alt="assets"
+                                />
+                              );
+                            })}
+                          </Flex>
+                        </TabPanel>
+                      );
+                    })}
+                  </TabPanels>
+                </Tabs>
               </Flex>
             </Flex>
           </Flex>
