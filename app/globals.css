@@ -116,3 +116,21 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.schedule-link:hover img {
+  filter: invert(100%);
+  transition: all 0.15s ease-in-out;
+}
+
+.schedule-link:hover {
+  transition: all 0.15s ease-in-out;
+}
+
+.schedule-link img {
+  filter: invert(0);
+  transition: all 0.15s ease-in-out;
+}
+
+.schedule-link {
+  transition: all 0.15s ease-in-out;
+}
