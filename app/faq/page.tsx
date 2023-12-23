@@ -58,7 +58,7 @@ const faqs = [
   {
     question: "What are the arrangements for female hackers?",
     answer:
-      'We want to make sure that all female hackers feel comfortable and safe at the hackathon. We have arranged a separate sleeping area for girls, clean washrooms, personal hygiene and sanitary kits, etc. Once your application gets accepted, you will be added to a women-only private channel on Discord (make sure you join the Discord <a href="https://discord.hackthisfall.tech" target="_blank">here</a>).',
+      "We want to make sure that all female hackers feel comfortable and safe at the hackathon. We have arranged a separate sleeping area for girls, clean washrooms, personal hygiene and sanitary kits, etc.",
   },
 
   {
