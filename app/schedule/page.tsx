@@ -37,7 +37,7 @@ const sessionMapping: sessionMappingType[] = [
     image: `/assets/humans/speakers/varsha.jpeg`,
   },
   {
-    title: "TBD",
+    title: "Level Up Your Projects by Building in Public",
     name: "Yash Gupta",
     date: new Date("2023-12-26T17:00:00"),
     displayDate: "Dec 26, 2023 · 17:00",
