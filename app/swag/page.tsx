@@ -418,7 +418,7 @@ const Swag = () => {
                       onClick={() => {
                         const link = document.createElement('a');
                         link.href =
-                          "https://twitter.com/intent/tweet?text=Hey folks! Super excited to share that I will be attending @hackthisfall 3.0, a 36 Hours in-person hackathon🥳%0A%0ACan't wait to %23InnovateForGood and meet the amazing community🧡%0A%0AGet a personal badge for yourself: hackthisfall.tech/swag 🚀 %23HackThisFall";
+                          "https://twitter.com/intent/tweet?text=Hey folks! Super excited to share that I will be attending @hackthisfall 4.0, a 36 Hours in-person hackathon🥳%0A%0ACan't wait to %23InnovateForGood and meet the amazing community🧡%0A%0AGet a personal badge for yourself: hackthisfall.tech/swag 🚀 %23HackThisFall";
                         link.target = '_blank';
                         link.rel = 'noopener noreferrer';
                         link.click();
