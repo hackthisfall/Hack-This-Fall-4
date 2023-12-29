@@ -34,6 +34,10 @@ const headerRoutes = [
     href: "/humans",
   },
   {
+    name: "Schedule",
+    href: "/schedule",
+  },
+  {
     name: "About Us",
     href: "/about",
   },

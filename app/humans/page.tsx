@@ -68,17 +68,72 @@ const humansMapping: humansMappingType[] = [
   //     },
   //   ],
   // },
-  // {
-  //   slug: "mentors",
-  //   heading: "Mentors",
-  //   people: [
-  //     {
-  //       name: "Shambhav Mishra",
-  //       title: "M publisher",
-  //       image: "/assets/humans/P1.jpeg",
-  //     },
-  //   ],
-  // },
+  {
+    slug: "mentors",
+    heading: "Mentors",
+    people: [
+      {
+        name: "Parth Jansari",
+        image: "/assets/humans/mentors/parth.png",
+        link: "https://twitter.com/jansariparth",
+      },
+      {
+        name: "Manav Darji",
+        image: "/assets/humans/mentors/manav.jpg",
+        link: "https://twitter.com/manav24_",
+      },
+      {
+        name: "Wilfred Almeida",
+        image: "/assets/humans/mentors/wilfred.avif",
+        link: "https://twitter.com/WilfredAlmeida_",
+      },
+      {
+        name: "Ayush Bherwani",
+        image: "/assets/humans/speakers/ayush.png",
+        link: "https://twitter.com/ayushbherwani",
+      },
+      {
+        name: "Apoorve Goyal",
+        image: "/assets/humans/mentors/apoorve.jpeg",
+        link: "https://twitter.com/Response_200",
+      },
+      {
+        name: "Vraj Desai",
+        image: "/assets/humans/mentors/vraj.jpg",
+        link: "https://twitter.com/vrajdesai78",
+      },
+      {
+        name: "Faizan",
+        image: "/assets/humans/mentors/faizan.jpg",
+        link: "https://twitter.com/faizan8684",
+      },
+      {
+        name: "Manan Bedi",
+        image: "/assets/humans/mentors/manan.jpg",
+        link: "https://twitter.com/manan_bedi29",
+      },
+      {
+        name: "Anam Ansari",
+        image: "/assets/humans/mentors/anam.jpg",
+        link: "https://twitter.com/anamansari062",
+      },
+      {
+        name: "Vidhu Mathur",
+        image: "/assets/humans/mentors/vidhu.jpeg",
+        link: "https://twitter.com/VidhuMathur2",
+      },
+      {
+        name: "Salma Shaik",
+        image: "/assets/humans/mentors/salma.jpg",
+        link: "https://twitter.com/IdealisticINTJ",
+      },
+      {
+        name: "Nazeeh Vahora",
+        image: "/assets/humans/mentors/nazeeh.jpg",
+        link: "https://twitter.com/nazeeh21",
+      },
+    ].sort((a, b) => a.name.localeCompare(b.name)),
+  },
   // {
   //   slug: "evangelists",
   //   heading: "Evangelists",
@@ -205,7 +260,7 @@ const humansMapping: humansMappingType[] = [
 // };
 
 const Humans = () => {
-  const [currentSection, setCurrentSection] = useState("organizers");
+  const [currentSection, setCurrentSection] = useState(humansMapping[0].slug);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const selectSection = (section: string) => {
