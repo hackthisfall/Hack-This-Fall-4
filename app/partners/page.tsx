@@ -217,6 +217,7 @@ const Partners = () => {
                 pr={partnerMapping.length > 1 ? "1rem" : "0rem"}
                 justifyContent="space-evenly"
                 className="navbar"
+                position={"relative"}
                 zIndex={10}
               >
                 {partnerMapping.map((section, index) => {
@@ -309,7 +310,6 @@ const Partners = () => {
             px={{ base: "2rem", lg: "5rem" }}
             columnGap={{ base: "1rem", lg: "2rem" }}
             rowGap={{ base: "1rem", lg: "2rem" }}
-            overflow="auto"
             marginTop="2rem"
           >
             {partnerMapping
