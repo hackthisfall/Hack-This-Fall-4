@@ -578,7 +578,9 @@ const Partners = () => {
                       flexDirection="column"
                     >
                       <Text align="center" lineHeight="1.5rem">
-                        Venue Partner
+                        Venue
+                        <br />
+                        Partner
                       </Text>
                       <Flex
                         flexGrow={1}
@@ -616,7 +618,9 @@ const Partners = () => {
                       flexDirection="column"
                     >
                       <Text align="center" lineHeight="1.5rem">
-                        Incubation Partner
+                        Incubation
+                        <br />
+                        Partner
                       </Text>
                       <Flex
                         flexGrow={1}
@@ -654,7 +658,9 @@ const Partners = () => {
                       flexDirection="column"
                     >
                       <Text align="center" lineHeight="1.5rem">
-                        Hackathon Partner
+                        Hackathon
+                        <br />
+                        Partner
                       </Text>
                       <Flex
                         flexGrow={1}
@@ -689,7 +695,9 @@ const Partners = () => {
                       flexDirection="column"
                     >
                       <Text align="center" lineHeight="1.5rem">
-                        Sports Partner
+                        Sports
+                        <br />
+                        Partner
                       </Text>
                       <Flex
                         flexGrow={1}
@@ -724,7 +732,9 @@ const Partners = () => {
                       flexDirection="column"
                     >
                       <Text align="center" lineHeight="1.5rem">
-                        Nutrition Partner
+                        Nutrition
+                        <br />
+                        Partner
                       </Text>
                       <Flex
                         flexGrow={1}
@@ -759,7 +769,9 @@ const Partners = () => {
                       flexDirection="column"
                     >
                       <Text align="center" lineHeight="1.5rem">
-                        Media Partner
+                        Media
+                        <br />
+                        Partner
                       </Text>
                       <Flex
                         flexGrow={1}
