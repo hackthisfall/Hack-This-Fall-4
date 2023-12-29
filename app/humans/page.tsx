@@ -74,62 +74,50 @@ const humansMapping: humansMappingType[] = [
     people: [
       {
         name: "Parth Jansari",
-        title: "M publisher",
         image: "/assets/humans/mentors/parth.png",
       },
       {
         name: "Manav Darji",
-        title: "M publisher",
         image: "/assets/humans/mentors/manav.jpg",
       },
       {
         name: "Wilfred Almeida",
-        title: "M publisher",
         image: "/assets/humans/mentors/wilfred.avif",
       },
       {
         name: "Ayush Bherwani",
-        title: "M publisher",
         image: "/assets/humans/speakers/ayush.png",
       },
       {
         name: "Apoorve Goyal",
-        title: "M publisher",
         image: "/assets/humans/mentors/apoorve.jpeg",
       },
       {
         name: "Vraj Desai",
-        title: "M publisher",
         image: "/assets/humans/mentors/vraj.jpg",
       },
       {
         name: "Faizan",
-        title: "M publisher",
         image: "/assets/humans/mentors/faizan.jpg",
       },
       {
         name: "Manan Bedi",
-        title: "M publisher",
         image: "/assets/humans/mentors/manan.jpg",
       },
       {
         name: "Anam Ansari",
-        title: "M publisher",
         image: "/assets/humans/mentors/anam.jpg",
       },
       {
         name: "Vidhu Mathur",
-        title: "M publisher",
         image: "/assets/humans/mentors/vidhu.jpeg",
       },
       {
         name: "Salma Shaik",
-        title: "M publisher",
         image: "/assets/humans/mentors/salma.jpg",
       },
       {
         name: "Nazeeh Vahora",
-        title: "M publisher",
         image: "/assets/humans/mentors/nazeeh.jpg",
       },
     ].sort((a, b) => a.name.localeCompare(b.name)),
