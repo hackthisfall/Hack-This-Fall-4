@@ -12,6 +12,7 @@ import {
   TabPanel,
   useBreakpointValue,
   SimpleGrid,
+  Link,
 } from '@chakra-ui/react';
 import { useEffect, useRef, useState } from 'react';
 import Header from '../components/Header';
@@ -630,11 +631,13 @@ const Swag = () => {
                           >
                             {section.assets.map((asset, index) => {
                               return (
-                                <ChakraImage
+                                <Link
+                                  href="https://bit.ly/htf-digital-swags"
+                                  target='_blank'
                                   key={index}
-                                  src={asset}
-                                  alt="assets"
-                                />
+                                >
+                                  <ChakraImage src={asset} alt="assets" />
+                                </Link>
                               );
                             })}
                           </SimpleGrid>
