@@ -217,6 +217,7 @@ const Partners = () => {
                 pr={partnerMapping.length > 1 ? "1rem" : "0rem"}
                 justifyContent="space-evenly"
                 className="navbar"
+                position={"relative"}
                 zIndex={10}
               >
                 {partnerMapping.map((section, index) => {
@@ -309,7 +310,6 @@ const Partners = () => {
             px={{ base: "2rem", lg: "5rem" }}
             columnGap={{ base: "1rem", lg: "2rem" }}
             rowGap={{ base: "1rem", lg: "2rem" }}
-            overflow="auto"
             marginTop="2rem"
           >
             {partnerMapping
@@ -578,7 +578,9 @@ const Partners = () => {
                       flexDirection="column"
                     >
                       <Text align="center" lineHeight="1.5rem">
-                        Venue Partner
+                        Venue
+                        <br />
+                        Partner
                       </Text>
                       <Flex
                         flexGrow={1}
@@ -616,7 +618,9 @@ const Partners = () => {
                       flexDirection="column"
                     >
                       <Text align="center" lineHeight="1.5rem">
-                        Incubation Partner
+                        Incubation
+                        <br />
+                        Partner
                       </Text>
                       <Flex
                         flexGrow={1}
@@ -654,7 +658,9 @@ const Partners = () => {
                       flexDirection="column"
                     >
                       <Text align="center" lineHeight="1.5rem">
-                        Hackathon Partner
+                        Hackathon
+                        <br />
+                        Partner
                       </Text>
                       <Flex
                         flexGrow={1}
@@ -689,7 +695,83 @@ const Partners = () => {
                       flexDirection="column"
                     >
                       <Text align="center" lineHeight="1.5rem">
-                        Media Partner
+                        Sports
+                        <br />
+                        Partner
+                      </Text>
+                      <Flex
+                        flexGrow={1}
+                        justifyContent={"center"}
+                        alignItems="center"
+                        marginY="1rem"
+                      >
+                        <Link target="blank" href="https://www.decathlon.in/">
+                          <Image
+                            src="/assets/partners/featured/decathlon.png"
+                            alt="logo"
+                            width={"100%"}
+                          />
+                        </Link>
+                      </Flex>
+                    </Flex>
+                  </GridItem>
+
+                  <GridItem>
+                    <Flex
+                      backgroundColor="#F7F7F7"
+                      height="100%"
+                      width="100%"
+                      alignItems="center"
+                      // justifyContent="space-between"
+                      paddingX={{ base: "1rem", lg: "3rem" }}
+                      paddingY={{ base: "0.5rem", lg: "3rem" }}
+                      borderRadius={{
+                        base: "0.75rem 2rem",
+                        lg: "1rem 5.75rem",
+                      }}
+                      flexDirection="column"
+                    >
+                      <Text align="center" lineHeight="1.5rem">
+                        Nutrition
+                        <br />
+                        Partner
+                      </Text>
+                      <Flex
+                        flexGrow={1}
+                        justifyContent={"center"}
+                        alignItems="center"
+                        marginY="1rem"
+                      >
+                        <Link target="blank" href="https://www.stroom.in/">
+                          <Image
+                            src="/assets/partners/featured/stroom.png"
+                            alt="logo"
+                            width={"100%"}
+                          />
+                        </Link>
+                      </Flex>
+                    </Flex>
+                  </GridItem>
+
+                  <GridItem>
+                    <Flex
+                      backgroundColor="#F7F7F7"
+                      height="100%"
+                      width="100%"
+                      alignItems="center"
+                      // justifyContent="space-between"
+                      paddingX={{ base: "1rem", lg: "3rem" }}
+                      paddingY={{ base: "0.5rem", lg: "3rem" }}
+                      borderRadius={{
+                        base: "0.75rem 2rem",
+                        lg: "1rem 5.75rem",
+                      }}
+                      flexDirection="column"
+                    >
+                      <Text align="center" lineHeight="1.5rem">
+                        Media
+                        <br />
+                        Partner
                       </Text>
                       <Flex
                         flexGrow={1}
