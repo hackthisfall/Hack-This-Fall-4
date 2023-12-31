@@ -196,7 +196,7 @@ const Swag = () => {
   }
 
   return (
-    <Flex background="#0D2129" w="100vw" h="100dvh">
+    <Flex background="#ffffff" w="100vw" h="100dvh">
       <Flex
         overflow="hidden"
         position="relative"
@@ -215,7 +215,7 @@ const Swag = () => {
         >
           <ChakraImage
             opacity="0.15"
-            src="/assets/mandala-main-dark.svg"
+            src="/assets/mandala-main-light.svg"
             h="min(90%, 100vw)"
             alt="mandala"
           />
@@ -224,7 +224,7 @@ const Swag = () => {
             right="-18vh"
             top={{ base: '-18vh', lg: '0' }}
             opacity="0.15"
-            src="/assets/mandala-right-dark.svg"
+            src="/assets/mandala-right-light.svg"
             h="36vh"
             alt="mandala"
           />
@@ -233,7 +233,7 @@ const Swag = () => {
             left={{ base: '-20vh', lg: '-15vh' }}
             bottom={{ base: '-20vh', lg: '-10vh' }}
             opacity="0.15"
-            src="/assets/mandala-left-dark.svg"
+            src="/assets/mandala-left-light.svg"
             h="40vh"
             alt="mandala"
           />
@@ -246,7 +246,7 @@ const Swag = () => {
           h="100%"
           zIndex="2"
         >
-          <Header mode="dark" position="relative" />
+          <Header mode="light" position="relative" />
           <Flex
             px={{ base: '2rem', md: '3rem', xl: '5rem' }}
             h="full"
@@ -258,7 +258,7 @@ const Swag = () => {
               lineHeight="90%"
               fontFamily="var(--font-nohemi)"
               fontSize="3rem"
-              color="#FFFFFF"
+              color="black"
               fontWeight="600"
               letterSpacing="0.3rem"
               mb="2rem"
@@ -450,8 +450,7 @@ const Swag = () => {
               >
                 {!isMobile && (
                   <Flex
-                    border="1.5px solid white"
-                    bgColor="#0D2129"
+                    bgColor="#F0F0F0"
                     borderRadius="full"
                     w="fit-content"
                     gap="1rem"
@@ -465,9 +464,9 @@ const Swag = () => {
                         <Flex
                           zIndex={10}
                           bgColor={
-                            currentTab === index ? 'white' : 'transparent'
+                            currentTab === index ? 'black' : 'transparent'
                           }
-                          color={currentTab === index ? 'black' : 'white'}
+                          color={currentTab === index ? 'white' : 'black'}
                           fontFamily="var(--font-dm-sans)"
                           borderRadius="full"
                           fontSize="1.1rem"
@@ -606,7 +605,7 @@ const Swag = () => {
                           w="full"
                         >
                           <Heading
-                            color="white"
+                            color="black"
                             fontSize="2.5rem"
                             fontWeight="600"
                             fontFamily={'var(--font-nohemi)'}
@@ -617,11 +616,16 @@ const Swag = () => {
                           <SimpleGrid
                             gap="2rem"
                             w="full"
-                            templateColumns={{
+                            templateColumns={section.index === 2 ? {
+                              base: 'repeat(1, 1fr)',
+                              md: 'repeat(3, 1fr)',
+                              lg: 'repeat(4, 1fr)',
+                              '2xl': 'repeat(5, 1fr)',
+                            } : {
                               base: 'repeat(1, 1fr)',
                               md: 'repeat(2, 1fr)',
                               lg: 'repeat(3, 1fr)',
-                              '2xl': 'repeat(4, 1fr)',                              
+                              '2xl': 'repeat(4, 1fr)',
                             }}
                           >
                             {section.assets.map((asset, index) => {
@@ -642,7 +646,7 @@ const Swag = () => {
               </Flex>
             </Flex>
           </Flex>
-          <Footer mode="dark" />
+          <Footer mode="light" />
         </Flex>
       </Flex>
     </Flex>
