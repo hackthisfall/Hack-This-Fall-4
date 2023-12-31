@@ -11,6 +11,7 @@ import {
   TabPanels,
   TabPanel,
   useBreakpointValue,
+  SimpleGrid,
 } from '@chakra-ui/react';
 import { useEffect, useRef, useState } from 'react';
 import Header from '../components/Header';
@@ -24,27 +25,39 @@ const swagsMapping = [
   {
     index: 0,
     heading: 'Zoom Background',
-    assets: ['/og.png'],
-    height: "300px",
+    assets: [
+      '/assets/swags/zoom/1.png',
+      '/assets/swags/zoom/2.png',
+      '/assets/swags/zoom/3.png',
+      '/assets/swags/zoom/4.png',
+    ],
   },
   {
     index: 1,
     heading: 'Desktop Wallpapers',
-    assets: ['/assets/tracks/gen-ai.gif'],
-    height: "300px",
+    assets: [
+      '/assets/swags/desktop/1.png',
+      '/assets/swags/desktop/2.png',
+      '/assets/swags/desktop/3.png',
+      '/assets/swags/desktop/4.png',
+    ],
   },
   {
     index: 2,
     heading: 'Mobile Wallpapers',
-    assets: ['/assets/tracks/gen-ai.gif'],
-    height: "600px",
+    assets: [
+      '/assets/swags/mobile/1.png',
+      '/assets/swags/mobile/2.png',
+      '/assets/swags/mobile/3.png',
+      // '/assets/swags/mobile/4.png',
+    ],
   },
-  {
-    index: 3,
-    heading: 'Instagram Bingo',
-    assets: ['/assets/tracks/gen-ai.gif'],
-    height: "600px",
-  }
+  // {
+  //   index: 3,
+  //   heading: 'Instagram Bingo',
+  //   assets: ['/assets/tracks/gen-ai.gif'],
+  //   height: '600px',
+  // },
 ];
 
 // export const metadata: Metadata = {
@@ -65,101 +78,101 @@ const Swag = () => {
     setIsDropdownOpen(false);
   };
 
-  useEffect(() => {
-    if (canvasRef && canvasRef.current) {
-      const canvas: HTMLCanvasElement = canvasRef.current;
-      const ctx = canvas.getContext('2d');
-      canvas.style.letterSpacing = '0.4rem';
-      const defaultBadge = new Image();
-      defaultBadge.src = '/default-badge.png';
-      const nohemiFont =
-        getComputedStyle(canvas).getPropertyValue('--font-nohemi');
+  // useEffect(() => {
+  //   if (canvasRef && canvasRef.current) {
+  //     const canvas: HTMLCanvasElement = canvasRef.current;
+  //     const ctx = canvas.getContext('2d');
+  //     canvas.style.letterSpacing = '0.4rem';
+  //     const defaultBadge = new Image();
+  //     defaultBadge.src = '/default-badge.png';
+  //     const nohemiFont =
+  //       getComputedStyle(canvas).getPropertyValue('--font-nohemi');
 
-      defaultBadge.onload = function () {
-        if (!ctx) {
-          return;
-        }
-        ctx.drawImage(defaultBadge, 0, 0, 1620, 1620);
-        ctx.font = `700 5rem ${nohemiFont}`;
-        ctx.fillStyle = 'white';
-        ctx.fillText(name.trim() !== '' ? name : 'Your Name Here', 96, 1367);
-      };
-    }
-  }, []);
+  //     defaultBadge.onload = function () {
+  //       if (!ctx) {
+  //         return;
+  //       }
+  //       ctx.drawImage(defaultBadge, 0, 0, 1620, 1620);
+  //       ctx.font = `700 5rem ${nohemiFont}`;
+  //       ctx.fillStyle = 'white';
+  //       ctx.fillText(name.trim() !== '' ? name : 'Your Name Here', 96, 1367);
+  //     };
+  //   }
+  // }, []);
 
-  useEffect(() => {
-    if (canvasRef && canvasRef.current && image) {
-      const canvas: HTMLCanvasElement = canvasRef.current;
-      const ctx = canvas.getContext('2d');
-      canvas.style.letterSpacing = '0.4rem';
-      const reader = new FileReader();
-      reader.readAsDataURL(image);
-      const nohemiFont =
-        getComputedStyle(canvas).getPropertyValue('--font-nohemi');
+  // useEffect(() => {
+  //   if (canvasRef && canvasRef.current && image) {
+  //     const canvas: HTMLCanvasElement = canvasRef.current;
+  //     const ctx = canvas.getContext('2d');
+  //     canvas.style.letterSpacing = '0.4rem';
+  //     const reader = new FileReader();
+  //     reader.readAsDataURL(image);
+  //     const nohemiFont =
+  //       getComputedStyle(canvas).getPropertyValue('--font-nohemi');
 
-      const badge = new Image();
-      badge.src = '/default-badge.png';
+  //     const badge = new Image();
+  //     badge.src = '/default-badge.png';
 
-      reader.onloadend = (e) => {
-        if (!ctx) {
-          return;
-        }
-        const myImage = new Image();
-        myImage.src = e.target?.result as string;
-        myImage.onload = (ev) => {
-          ctx.clearRect(0, 0, 1620, 1620);
-          const inputWidth = myImage.naturalWidth;
-          const inputHeight = myImage.naturalHeight;
-          const smallerSide = Math.min(inputWidth, inputHeight);
-          let startX = 0;
-          let startY = 0;
+  //     reader.onloadend = (e) => {
+  //       if (!ctx) {
+  //         return;
+  //       }
+  //       const myImage = new Image();
+  //       myImage.src = e.target?.result as string;
+  //       myImage.onload = (ev) => {
+  //         ctx.clearRect(0, 0, 1620, 1620);
+  //         const inputWidth = myImage.naturalWidth;
+  //         const inputHeight = myImage.naturalHeight;
+  //         const smallerSide = Math.min(inputWidth, inputHeight);
+  //         let startX = 0;
+  //         let startY = 0;
 
-          if (inputWidth < inputHeight) {
-            startY = (inputHeight - inputWidth) / 2;
-          } else if (inputWidth > inputHeight) {
-            startX = (inputWidth - inputHeight) / 2;
-          }
+  //         if (inputWidth < inputHeight) {
+  //           startY = (inputHeight - inputWidth) / 2;
+  //         } else if (inputWidth > inputHeight) {
+  //           startX = (inputWidth - inputHeight) / 2;
+  //         }
 
-          ctx.drawImage(badge, 0, 0, 1620, 1620);
-          ctx.save();
-          roundedImage(85, 370, 750, 810, 50, ctx);
-          ctx.clip();
-          ctx.drawImage(
-            myImage,
-            startX,
-            startY,
-            smallerSide,
-            smallerSide,
-            85,
-            370,
-            750,
-            810,
-          );
-          ctx.restore();
-          ctx.font = `700 5rem ${nohemiFont}`;
-          ctx.fillStyle = 'white';
-          ctx.fillText(name.trim() !== '' ? name : 'John Doe', 96, 1367);
-        };
-      };
-    } else if (canvasRef && canvasRef.current) {
-      const canvas: HTMLCanvasElement = canvasRef.current;
-      canvas.style.letterSpacing = '0.4rem';
-      const ctx = canvas.getContext('2d');
+  //         ctx.drawImage(badge, 0, 0, 1620, 1620);
+  //         ctx.save();
+  //         roundedImage(85, 370, 750, 810, 50, ctx);
+  //         ctx.clip();
+  //         ctx.drawImage(
+  //           myImage,
+  //           startX,
+  //           startY,
+  //           smallerSide,
+  //           smallerSide,
+  //           85,
+  //           370,
+  //           750,
+  //           810,
+  //         );
+  //         ctx.restore();
+  //         ctx.font = `700 5rem ${nohemiFont}`;
+  //         ctx.fillStyle = 'white';
+  //         ctx.fillText(name.trim() !== '' ? name : 'John Doe', 96, 1367);
+  //       };
+  //     };
+  //   } else if (canvasRef && canvasRef.current) {
+  //     const canvas: HTMLCanvasElement = canvasRef.current;
+  //     canvas.style.letterSpacing = '0.4rem';
+  //     const ctx = canvas.getContext('2d');
 
-      const nohemiFont =
-        getComputedStyle(canvas).getPropertyValue('--font-nohemi');
+  //     const nohemiFont =
+  //       getComputedStyle(canvas).getPropertyValue('--font-nohemi');
 
-      if (!ctx) {
-        return;
-      }
-      const defaultBadge = new Image();
-      defaultBadge.src = '/default-badge.png';
-      ctx.drawImage(defaultBadge, 0, 0, 1620, 1620);
-      ctx.font = `700 5rem ${nohemiFont}`;
-      ctx.fillStyle = 'white';
-      ctx.fillText(name.trim() !== '' ? name : 'Your Name Here', 96, 1367);
-    }
-  }, [image, name]);
+  //     if (!ctx) {
+  //       return;
+  //     }
+  //     const defaultBadge = new Image();
+  //     defaultBadge.src = '/default-badge.png';
+  //     ctx.drawImage(defaultBadge, 0, 0, 1620, 1620);
+  //     ctx.font = `700 5rem ${nohemiFont}`;
+  //     ctx.fillStyle = 'white';
+  //     ctx.fillText(name.trim() !== '' ? name : 'Your Name Here', 96, 1367);
+  //   }
+  // }, [image, name]);
 
   function roundedImage(
     x: number,
@@ -257,7 +270,7 @@ const Swag = () => {
               w="full"
               flexDirection="column"
             >
-              <Flex
+              {/* <Flex
                 justifyContent={{ base: 'flex-start', xl: 'space-between' }}
                 alignItems="center"
                 flexDirection={{ base: 'column', xl: 'row' }}
@@ -429,11 +442,11 @@ const Swag = () => {
                     </Button>
                   </Flex>
                 </Flex>
-              </Flex>
+              </Flex> */}
               <Flex
                 alignItems={'center'}
                 flexDir="column"
-                mt={{ base: '3rem', xl: '5rem' }}
+                // mt={{ base: '3rem', xl: '5rem' }}
               >
                 {!isMobile && (
                   <Flex
@@ -601,24 +614,26 @@ const Swag = () => {
                           >
                             {section.heading}
                           </Heading>
-                          <Flex
+                          <SimpleGrid
                             gap="2rem"
                             w="full"
-                            flexWrap="wrap"
-                            flexDir={{ base: 'column', md: 'row' }}
+                            templateColumns={{
+                              base: 'repeat(1, 1fr)',
+                              md: 'repeat(2, 1fr)',
+                              lg: 'repeat(3, 1fr)',
+                              '2xl': 'repeat(4, 1fr)',                              
+                            }}
                           >
                             {section.assets.map((asset, index) => {
                               return (
                                 <ChakraImage
-                                  height={{ base: 'auto', md: section.height }}
-                                  maxWidth={{ base: '100%', md: 'auto' }}
                                   key={index}
                                   src={asset}
                                   alt="assets"
                                 />
                               );
                             })}
-                          </Flex>
+                          </SimpleGrid>
                         </TabPanel>
                       );
                     })}
