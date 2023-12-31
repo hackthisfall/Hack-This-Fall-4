@@ -71,7 +71,7 @@ const Tracks = () => {
           <Image
             position="absolute"
             right="-18vh"
-            top={{ base: "-18vh", lg: "0" }}
+            top={{ base: '-18vh', lg: '0' }}
             opacity="0.15"
             src="/assets/mandala-right-dark.svg"
             h="36vh"
@@ -79,8 +79,8 @@ const Tracks = () => {
           />
           <Image
             position="absolute"
-            left={{ base: "-20vh", lg: "-15vh" }}
-            bottom={{ base: "-20vh", lg: "-10vh" }}
+            left={{ base: '-20vh', lg: '-15vh' }}
+            bottom={{ base: '-20vh', lg: '-10vh' }}
             opacity="0.15"
             src="/assets/mandala-left-dark.svg"
             h="40vh"
@@ -96,27 +96,28 @@ const Tracks = () => {
           zIndex="2"
         >
           <Header mode="dark" position="relative" />
-          <Heading
-            lineHeight="90%"
-            fontFamily="var(--font-nohemi)"
-            fontSize="3rem"
-            color="#FFFFFF"
-            fontWeight="600"
-            letterSpacing="0.3rem"
-            mb="2rem"
-          >
-            Tracks
-          </Heading>
           <Flex
-            px={{ base: "0rem", md: "2rem" }}
+            px={{ base: '0rem', md: '2rem' }}
             pt="0"
-            pb={{ base: "2rem", md: "0" }}
+            pb={{ base: '2rem', md: '0' }}
             h="full"
             w="full"
-            alignItems={{ base: "flex-start", lg: "safe center" }}
-            justifyContent="center"
-            overflowY={{ base: "auto" }}
+            justifyContent={{ base: 'flex-start', lg: 'safe center' }}
+            alignItems="center"
+            flexDir="column"
+            overflowY={{ base: 'auto' }}
           >
+            <Heading
+              lineHeight="90%"
+              fontFamily="var(--font-nohemi)"
+              fontSize="3rem"
+              color="#FFFFFF"
+              fontWeight="600"
+              letterSpacing="0.3rem"
+              mb={{ base: '2rem', lg: '4rem' }}
+            >
+              Tracks
+            </Heading>
             <SimpleGrid
               columnGap="6rem"
               rowGap="3rem"

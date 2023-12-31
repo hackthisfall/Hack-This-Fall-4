@@ -131,7 +131,7 @@ const FAQ = () => {
           <Image
             position="absolute"
             right="-18vh"
-            top={{ base: "-18vh", lg: "0" }}
+            top={{ base: '-18vh', lg: '0' }}
             opacity="0.1"
             src="/assets/mandala-right-light.svg"
             h="36vh"
@@ -139,8 +139,8 @@ const FAQ = () => {
           />
           <Image
             position="absolute"
-            left={{ base: "-20vh", lg: "-15vh" }}
-            bottom={{ base: "-20vh", lg: "-10vh" }}
+            left={{ base: '-20vh', lg: '-15vh' }}
+            bottom={{ base: '-20vh', lg: '-10vh' }}
             opacity="0.1"
             src="/assets/mandala-left-light.svg"
             h="40vh"
@@ -156,27 +156,28 @@ const FAQ = () => {
           alignItems="center"
         >
           <Header mode="light" position="relative" />
-          <Heading
-            lineHeight="90%"
-            fontFamily="var(--font-nohemi)"
-            fontSize="3rem"
-            color={"#000000"}
-            fontWeight="600"
-            letterSpacing="0.3rem"
-          >
-            FAQ
-          </Heading>
           <Flex
             w="full"
             h="full"
-            mt={{ base: "2rem", lg: "4rem" }}
-            justifyContent="center"
+            alignItems="center"
             overflowY="auto"
+            flexDir="column"
           >
+            <Heading
+              lineHeight="90%"
+              fontFamily="var(--font-nohemi)"
+              fontSize="3rem"
+              color={'#000000'}
+              fontWeight="600"
+              letterSpacing="0.3rem"
+              mb={{ base: '2rem', lg: '4rem' }}
+            >
+              FAQ
+            </Heading>
             <Accordion
               w="85%"
               display="grid"
-              gridTemplateColumns={{ base: "1fr", lg: "1fr 1fr" }}
+              gridTemplateColumns={{ base: '1fr', lg: '1fr 1fr' }}
               rowGap="2rem"
               h="fit-content"
               columnGap="4rem"
@@ -187,7 +188,7 @@ const FAQ = () => {
                   <AccordionItem key={index} border="none">
                     {({ isExpanded }) => (
                       <>
-                        <AccordionButton p={{ base: "0", md: "1rem" }}>
+                        <AccordionButton p={{ base: '0', md: '1rem' }}>
                           <Flex
                             color="#000"
                             fontSize="1.2rem"
@@ -195,12 +196,12 @@ const FAQ = () => {
                             lineHeight="100%"
                             w="full"
                             alignItems="center"
-                            gap={"1rem"}
+                            gap={'1rem'}
                             justifyContent="space-between"
                           >
                             <Flex
                               alignItems="center"
-                              gap={{ base: "1rem", lg: "1.5rem" }}
+                              gap={{ base: '1rem', lg: '1.5rem' }}
                             >
                               <Image
                                 src="/assets/faq/icon.svg"
@@ -227,7 +228,7 @@ const FAQ = () => {
                             color="#000"
                             sx={{
                               a: {
-                                textDecoration: "underline",
+                                textDecoration: 'underline',
                               },
                             }}
                             dangerouslySetInnerHTML={{

@@ -171,7 +171,6 @@ const About = () => {
           columnGap={{ md: "4rem", "2xl": "5rem" }}
           rowGap="0.5rem"
           overflow="auto"
-          marginTop={{ base: "0rem", lg: "4rem" }}
         >
           {isMobile && <ImageContainer />}
           <Flex
