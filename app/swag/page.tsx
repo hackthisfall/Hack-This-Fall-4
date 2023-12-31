@@ -25,7 +25,7 @@ import ShareIcon from '../components/Icons/shareIcon';
 const swagsMapping = [
   {
     index: 0,
-    heading: 'Zoom Background',
+    heading: 'Zoom Backgrounds',
     assets: [
       '/assets/swags/zoom/1.png',
       '/assets/swags/zoom/2.png',
@@ -263,11 +263,12 @@ const Swag = () => {
               fontWeight="600"
               letterSpacing="0.3rem"
               mb="2rem"
+              textAlign="center"
             >
               Digital swags
             </Heading>
             <Flex
-              mt={{ base: '2rem', xl: '4rem' }}
+              // mt={{ base: '2rem', xl: '4rem' }}
               w="full"
               flexDirection="column"
             >
@@ -617,23 +618,27 @@ const Swag = () => {
                           <SimpleGrid
                             gap="2rem"
                             w="full"
-                            templateColumns={section.index === 2 ? {
-                              base: 'repeat(1, 1fr)',
-                              md: 'repeat(3, 1fr)',
-                              lg: 'repeat(4, 1fr)',
-                              '2xl': 'repeat(5, 1fr)',
-                            } : {
-                              base: 'repeat(1, 1fr)',
-                              md: 'repeat(2, 1fr)',
-                              lg: 'repeat(3, 1fr)',
-                              '2xl': 'repeat(4, 1fr)',
-                            }}
+                            templateColumns={
+                              section.index === 2
+                                ? {
+                                    base: 'repeat(1, 1fr)',
+                                    md: 'repeat(3, 1fr)',
+                                    lg: 'repeat(4, 1fr)',
+                                    '2xl': 'repeat(5, 1fr)',
+                                  }
+                                : {
+                                    base: 'repeat(1, 1fr)',
+                                    md: 'repeat(2, 1fr)',
+                                    lg: 'repeat(3, 1fr)',
+                                    '2xl': 'repeat(4, 1fr)',
+                                  }
+                            }
                           >
                             {section.assets.map((asset, index) => {
                               return (
                                 <Link
                                   href="https://bit.ly/htf-digital-swags"
-                                  target='_blank'
+                                  target="_blank"
                                   key={index}
                                 >
                                   <ChakraImage src={asset} alt="assets" />
