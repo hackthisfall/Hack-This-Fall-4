@@ -70,7 +70,7 @@ const humansMapping: humansMappingType[] = [
   // },
   {
     slug: "mentors",
-    heading: "Mentors",
+    heading: "Mentors & Judges",
     people: [
       {
         name: "Parth Jansari",
