@@ -541,6 +541,39 @@ const Partners = () => {
                       </Flex>
                     </Flex>
                   </GridItem>
+
+                  <GridItem>
+                    <Flex
+                      backgroundColor="#F7F7F7"
+                      height="100%"
+                      width="100%"
+                      alignItems="center"
+                      // justifyContent="space-between"
+                      paddingX={{ base: "1rem", lg: "3rem" }}
+                      paddingY={{ base: "0.5rem", lg: "3rem" }}
+                      borderRadius={{
+                        base: "0.75rem 2rem",
+                        lg: "1rem 5.75rem",
+                      }}
+                      flexDirection="column"
+                    >
+                      <Text>Silver</Text>
+                      <Flex
+                        flexGrow={1}
+                        justifyContent={"center"}
+                        alignItems="center"
+                        marginY="1rem"
+                      >
+                        <Link target="blank" href="https://bit.ly/htf4-neurelo">
+                          <Image
+                            src="/assets/partners/silver/neurelo.png"
+                            alt="logo"
+                            width={"100%"}
+                          />
+                        </Link>
+                      </Flex>
+                    </Flex>
+                  </GridItem>
                 </Grid>
               </Flex>
             )}
