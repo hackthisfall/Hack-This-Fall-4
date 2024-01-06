@@ -137,6 +137,11 @@ const humansMapping: humansMappingType[] = [
         image: "/assets/humans/mentors/nazeeh.jpg",
         link: "https://twitter.com/nazeeh21",
       },
+      {
+        name: "Hrittik Roy",
+        image: "/assets/humans/mentors/hrittik.jpeg",
+        link: "https://twitter.com/hrittikhere",
+      },
     ].sort((a, b) => a.name.localeCompare(b.name)),
   },
   // {
