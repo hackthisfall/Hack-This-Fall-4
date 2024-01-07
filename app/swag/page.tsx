@@ -93,12 +93,12 @@ const Swag = () => {
         if (!ctx) {
           return;
         }
-        ctx.drawImage(defaultBadge, 0, 0, 2160, 2696);
+        ctx.drawImage(defaultBadge, 0, 0, 2157, 2696);
         ctx.font = `700 11rem ${nohemiFont}`;
         ctx.fillStyle = 'black';
         const text = name.trim() !== '' ? name : 'Your Name Here';
         const textWidth = ctx.measureText(text).width;
-        ctx.fillText(text, 2160 / 2 - textWidth / 2, 2272);
+        ctx.fillText(text, 2157 / 2 - textWidth / 2, 2272);
       };
     }
   }, []);
@@ -116,22 +116,23 @@ const Swag = () => {
       const badge = new Image();
       badge.src = '/badge.png';
 
-      reader.onloadend = (e) => {
+      reader.onload = (e) => {
         if (!ctx) {
           return;
         }
         const myImage = new Image();
         myImage.src = e.target?.result as string;
         myImage.onload = (ev) => {
-          ctx.clearRect(0, 0, 2160, 2696);
+          ctx.clearRect(0, 0, 2157, 2696);
           const inputWidth = myImage.naturalWidth;
           const inputHeight = myImage.naturalHeight;
+          const aspectRatio = 2157 / 2696;
           const smallerSide = Math.min(inputWidth, inputHeight);
           let startX = 0;
           let startY = 0;
 
           if (inputWidth < inputHeight) {
-            startY = (inputHeight - inputWidth);
+            startY = inputHeight - inputWidth;
           } else if (inputWidth > inputHeight) {
             startX = (inputWidth - inputHeight) / 2;
           }
@@ -141,18 +142,18 @@ const Swag = () => {
             startX,
             startY,
             smallerSide,
-            smallerSide,
+            smallerSide / aspectRatio,
             0,
             0,
-            2160,
-            2396,
+            2157,
+            2696,
           );
-          ctx.drawImage(badge, 0, 0, 2160, 2696);
+          ctx.drawImage(badge, 0, 0, 2157, 2696);
           ctx.font = `700 11rem ${nohemiFont}`;
           ctx.fillStyle = 'black';
           const text = name.trim() !== '' ? name : 'Your Name Here';
           const textWidth = ctx.measureText(text).width;
-          ctx.fillText(text, 2160/2 - textWidth/2, 2272);
+          ctx.fillText(text, 2157 / 2 - textWidth / 2, 2272);
         };
       };
     } else if (canvasRef && canvasRef.current) {
@@ -168,12 +169,12 @@ const Swag = () => {
       }
       const defaultBadge = new Image();
       defaultBadge.src = '/default-badge.png';
-      ctx.drawImage(defaultBadge, 0, 0, 2160, 2696);
+      ctx.drawImage(defaultBadge, 0, 0, 2157, 2696);
       ctx.font = `700 11rem ${nohemiFont}`;
       ctx.fillStyle = 'black';
       const text = name.trim() !== '' ? name : 'Your Name Here';
       const textWidth = ctx.measureText(text).width;
-      ctx.fillText(text, 2160 / 2 - textWidth / 2, 2272);
+      ctx.fillText(text, 2157 / 2 - textWidth / 2, 2272);
     }
   }, [image, name]);
 
@@ -196,7 +197,7 @@ const Swag = () => {
           zIndex="1"
         >
           <ChakraImage
-            opacity="0.15"
+            opacity="0.1"
             src="/assets/mandala-main-light.svg"
             h="min(90%, 100vw)"
             alt="mandala"
@@ -205,7 +206,7 @@ const Swag = () => {
             position="absolute"
             right="-18vh"
             top={{ base: '-18vh', lg: '0' }}
-            opacity="0.15"
+            opacity="0.1"
             src="/assets/mandala-right-light.svg"
             h="36vh"
             alt="mandala"
@@ -214,7 +215,7 @@ const Swag = () => {
             position="absolute"
             left={{ base: '-20vh', lg: '-15vh' }}
             bottom={{ base: '-20vh', lg: '-10vh' }}
-            opacity="0.15"
+            opacity="0.1"
             src="/assets/mandala-left-light.svg"
             h="40vh"
             alt="mandala"
@@ -254,15 +255,18 @@ const Swag = () => {
               flexDirection="column"
             >
               <Flex
-                justifyContent={{ base: 'flex-start', xl: 'space-between', '2xl': 'center' }}
+                justifyContent={{
+                  base: 'flex-start',
+                  xl: 'space-between',
+                  '2xl': 'center',
+                }}
                 alignItems="center"
                 gap={{ '2xl': '5rem' }}
                 flexDirection={{ base: 'column', xl: 'row' }}
-                w="full"
               >
                 <canvas
                   ref={canvasRef}
-                  width="2160"
+                  width="2157"
                   height="2696"
                   style={{
                     width: 'min(100%, 600px)',
@@ -321,10 +325,13 @@ const Swag = () => {
                       fontWeight="400"
                       fontFamily={'var(--font-dm-sans)'}
                       placeholder="Enter your name"
+                      background="white"
+                      borderColor="#000"
+                      boxShadow="0 0 0 1px #000"
                       _focusVisible={{
                         zIndex: 1,
-                        borderColor: '#fff',
-                        boxShadow: '0 0 0 1px #fff',
+                        borderColor: '#000',
+                        boxShadow: '0 0 0 1px #000',
                       }}
                     />
                     <input
