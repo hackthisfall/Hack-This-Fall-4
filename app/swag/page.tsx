@@ -79,122 +79,106 @@ const Swag = () => {
     setIsDropdownOpen(false);
   };
 
-  // useEffect(() => {
-  //   if (canvasRef && canvasRef.current) {
-  //     const canvas: HTMLCanvasElement = canvasRef.current;
-  //     const ctx = canvas.getContext('2d');
-  //     canvas.style.letterSpacing = '0.4rem';
-  //     const defaultBadge = new Image();
-  //     defaultBadge.src = '/default-badge.png';
-  //     const nohemiFont =
-  //       getComputedStyle(canvas).getPropertyValue('--font-nohemi');
+  useEffect(() => {
+    if (canvasRef && canvasRef.current) {
+      const canvas: HTMLCanvasElement = canvasRef.current;
+      const ctx = canvas.getContext('2d');
+      canvas.style.letterSpacing = '0.4rem';
+      const defaultBadge = new Image();
+      defaultBadge.src = '/default-badge.png';
+      const nohemiFont =
+        getComputedStyle(canvas).getPropertyValue('--font-nohemi');
 
-  //     defaultBadge.onload = function () {
-  //       if (!ctx) {
-  //         return;
-  //       }
-  //       ctx.drawImage(defaultBadge, 0, 0, 1620, 1620);
-  //       ctx.font = `700 5rem ${nohemiFont}`;
-  //       ctx.fillStyle = 'white';
-  //       ctx.fillText(name.trim() !== '' ? name : 'Your Name Here', 96, 1367);
-  //     };
-  //   }
-  // }, []);
+      defaultBadge.onload = function () {
+        if (!ctx) {
+          return;
+        }
+        ctx.drawImage(defaultBadge, 0, 0, 2160, 2696);
+        ctx.font = `700 11rem ${nohemiFont}`;
+        ctx.fillStyle = 'black';
+        const text = name.trim() !== '' ? name : 'Your Name Here';
+        const textWidth = ctx.measureText(text).width;
 
-  // useEffect(() => {
-  //   if (canvasRef && canvasRef.current && image) {
-  //     const canvas: HTMLCanvasElement = canvasRef.current;
-  //     const ctx = canvas.getContext('2d');
-  //     canvas.style.letterSpacing = '0.4rem';
-  //     const reader = new FileReader();
-  //     reader.readAsDataURL(image);
-  //     const nohemiFont =
-  //       getComputedStyle(canvas).getPropertyValue('--font-nohemi');
+        ctx.fillText(text, 2160 / 2 - textWidth / 2, 2272);
+      };
+    }
+  }, []);
 
-  //     const badge = new Image();
-  //     badge.src = '/default-badge.png';
+  useEffect(() => {
+    if (canvasRef && canvasRef.current && image) {
+      const canvas: HTMLCanvasElement = canvasRef.current;
+      const ctx = canvas.getContext('2d');
+      canvas.style.letterSpacing = '0.4rem';
+      const reader = new FileReader();
+      reader.readAsDataURL(image);
+      const nohemiFont =
+        getComputedStyle(canvas).getPropertyValue('--font-nohemi');
 
-  //     reader.onloadend = (e) => {
-  //       if (!ctx) {
-  //         return;
-  //       }
-  //       const myImage = new Image();
-  //       myImage.src = e.target?.result as string;
-  //       myImage.onload = (ev) => {
-  //         ctx.clearRect(0, 0, 1620, 1620);
-  //         const inputWidth = myImage.naturalWidth;
-  //         const inputHeight = myImage.naturalHeight;
-  //         const smallerSide = Math.min(inputWidth, inputHeight);
-  //         let startX = 0;
-  //         let startY = 0;
+      const badge = new Image();
+      badge.src = '/badge.png';
 
-  //         if (inputWidth < inputHeight) {
-  //           startY = (inputHeight - inputWidth) / 2;
-  //         } else if (inputWidth > inputHeight) {
-  //           startX = (inputWidth - inputHeight) / 2;
-  //         }
+      reader.onloadend = (e) => {
+        if (!ctx) {
+          return;
+        }
+        const myImage = new Image();
+        myImage.src = e.target?.result as string;
+        myImage.onload = (ev) => {
+          ctx.clearRect(0, 0, 2160, 2696);
+          const inputWidth = myImage.naturalWidth;
+          const inputHeight = myImage.naturalHeight;
+          const smallerSide = Math.min(inputWidth, inputHeight);
+          let startX = 0;
+          let startY = 0;
 
-  //         ctx.drawImage(badge, 0, 0, 1620, 1620);
-  //         ctx.save();
-  //         roundedImage(85, 370, 750, 810, 50, ctx);
-  //         ctx.clip();
-  //         ctx.drawImage(
-  //           myImage,
-  //           startX,
-  //           startY,
-  //           smallerSide,
-  //           smallerSide,
-  //           85,
-  //           370,
-  //           750,
-  //           810,
-  //         );
-  //         ctx.restore();
-  //         ctx.font = `700 5rem ${nohemiFont}`;
-  //         ctx.fillStyle = 'white';
-  //         ctx.fillText(name.trim() !== '' ? name : 'John Doe', 96, 1367);
-  //       };
-  //     };
-  //   } else if (canvasRef && canvasRef.current) {
-  //     const canvas: HTMLCanvasElement = canvasRef.current;
-  //     canvas.style.letterSpacing = '0.4rem';
-  //     const ctx = canvas.getContext('2d');
+          if (inputWidth < inputHeight) {
+            startY = (inputHeight - inputWidth);
+          } else if (inputWidth > inputHeight) {
+            startX = (inputWidth - inputHeight) / 2;
+          }
 
-  //     const nohemiFont =
-  //       getComputedStyle(canvas).getPropertyValue('--font-nohemi');
+          ctx.drawImage(
+            myImage,
+            startX,
+            startY,
+            smallerSide,
+            smallerSide,
+            0,
+            0,
+            2160,
+            2396,
+          );
+          ctx.drawImage(badge, 0, 0, 2160, 2696);
+          ctx.font = `700 11rem ${nohemiFont}`;
+          ctx.fillStyle = 'black';
+          const text = name.trim() !== '' ? name : 'Your Name Here';
+          const textWidth = ctx.measureText(text).width;
 
-  //     if (!ctx) {
-  //       return;
-  //     }
-  //     const defaultBadge = new Image();
-  //     defaultBadge.src = '/default-badge.png';
-  //     ctx.drawImage(defaultBadge, 0, 0, 1620, 1620);
-  //     ctx.font = `700 5rem ${nohemiFont}`;
-  //     ctx.fillStyle = 'white';
-  //     ctx.fillText(name.trim() !== '' ? name : 'Your Name Here', 96, 1367);
-  //   }
-  // }, [image, name]);
+          ctx.fillText(text, 2160/2 - textWidth/2, 2272);
+        };
+      };
+    } else if (canvasRef && canvasRef.current) {
+      const canvas: HTMLCanvasElement = canvasRef.current;
+      canvas.style.letterSpacing = '0.4rem';
+      const ctx = canvas.getContext('2d');
 
-  function roundedImage(
-    x: number,
-    y: number,
-    width: number,
-    height: number,
-    radius: number,
-    ctx: CanvasRenderingContext2D,
-  ) {
-    ctx.beginPath();
-    ctx.moveTo(x + radius, y);
-    ctx.lineTo(x + width - radius, y);
-    ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
-    ctx.lineTo(x + width, y + height - radius);
-    ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
-    ctx.lineTo(x + radius, y + height);
-    ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
-    ctx.lineTo(x, y + radius);
-    ctx.quadraticCurveTo(x, y, x + radius, y);
-    ctx.closePath();
-  }
+      const nohemiFont =
+        getComputedStyle(canvas).getPropertyValue('--font-nohemi');
+
+      if (!ctx) {
+        return;
+      }
+      const defaultBadge = new Image();
+      defaultBadge.src = '/default-badge.png';
+      ctx.drawImage(defaultBadge, 0, 0, 2160, 2696);
+      ctx.font = `700 11rem ${nohemiFont}`;
+      ctx.fillStyle = 'black';
+      const text = name.trim() !== '' ? name : 'Your Name Here';
+      const textWidth = ctx.measureText(text).width;
+
+      ctx.fillText(text, 2160 / 2 - textWidth / 2, 2272);
+    }
+  }, [image, name]);
 
   return (
     <Flex background="#ffffff" w="100vw" h="100dvh">
@@ -265,14 +249,14 @@ const Swag = () => {
               mb="2rem"
               textAlign="center"
             >
-              Digital swags
+              Digital Swags
             </Heading>
             <Flex
-              // mt={{ base: '2rem', xl: '4rem' }}
+              mt={{ base: '2rem', xl: '4rem' }}
               w="full"
               flexDirection="column"
             >
-              {/* <Flex
+              <Flex
                 justifyContent={{ base: 'flex-start', xl: 'space-between' }}
                 alignItems="center"
                 flexDirection={{ base: 'column', xl: 'row' }}
@@ -280,11 +264,11 @@ const Swag = () => {
               >
                 <canvas
                   ref={canvasRef}
-                  width="1620"
-                  height="1620"
+                  width="2160"
+                  height="2696"
                   style={{
                     width: 'min(100%, 600px)',
-                    height: 'min(100%, 600px)',
+                    height: 'min(100%, 724px)',
                     borderRadius: '1.5rem',
                   }}
                 />
@@ -295,7 +279,7 @@ const Swag = () => {
                   flexDir="column"
                 >
                   <Heading
-                    color="white"
+                    color="black"
                     fontSize="2.5rem"
                     fontWeight="600"
                     fontFamily={'var(--font-nohemi)'}
@@ -305,13 +289,13 @@ const Swag = () => {
                   </Heading>
                   <Text
                     textAlign={{ base: 'center', xl: 'left' }}
-                    color="white"
+                    color="black"
                     fontSize="1.5rem"
                     fontWeight="400"
                     fontFamily={'var(--font-dm-sans)'}
                     dangerouslySetInnerHTML={{
                       __html:
-                        'Once you have registered and booked your travels, you are all set to attend Hack This Fall 3.0! Now it is time to let the world know by sharing this super cool digital badge.<br /><br /> To get a personalized Hack This Fall Badge, just add your name & upload your image. Download it and Share it on socials using <a href="https://twitter.com/hashtag/hackthisfall" target="_blank" style="color: #F55F2F; font-weight: 600">#HackThisFall</a> and tag <a href="https://twitter.com/hackthisfall" target="_blank"style="color: #F55F2F; font-weight: 600">@hackthisfall</a>',
+                        'Once you have done the RSVP, you are all set to attend Hack This Fall 2024! Now it is time to let the world know by sharing this super cool digital badge.<br /><br />To get a personalized Hack This Fall Badge, just add your name & upload your image. Download it and Share it on socials using <a href="https://twitter.com/hashtag/HackThisFall2024" target="_blank" style="color: #F55F2F; font-weight: 600">#HackThisFall2024</a> and tag <a href="https://twitter.com/hackthisfall" target="_blank"style="color: #F55F2F; font-weight: 600">@hackthisfall</a>.',
                     }}
                   />
                   <Text
@@ -333,8 +317,8 @@ const Swag = () => {
                       px="2rem"
                       rounded="full"
                       value={name}
-                      onChange={(e) => setName(e.target.value.toUpperCase())}
-                      color="white"
+                      onChange={(e) => setName(e.target.value)}
+                      color="black"
                       fontSize={{ base: '1.3rem', lg: '1.5rem' }}
                       fontWeight="400"
                       fontFamily={'var(--font-dm-sans)'}
@@ -362,11 +346,11 @@ const Swag = () => {
                       py="1rem"
                       rounded="full"
                       height="70px"
-                      color="black"
+                      color="white"
                       fontSize={{ base: '1.3rem', lg: '1.5rem' }}
                       fontWeight="400"
                       fontFamily={'var(--font-dm-sans)'}
-                      background="white !important"
+                      background="black !important"
                       onClick={() => {
                         if (imageUploadRef && imageUploadRef.current) {
                           const imageUploadInput: HTMLInputElement =
@@ -389,7 +373,7 @@ const Swag = () => {
                       py="1rem"
                       rounded="full"
                       height="70px"
-                      color="black"
+                      color="white"
                       isDisabled={!name || !image}
                       _disabled={{
                         cursor: 'not-allowed',
@@ -398,7 +382,7 @@ const Swag = () => {
                       fontSize={{ base: '1.3rem', lg: '1.5rem' }}
                       fontWeight="400"
                       fontFamily={'var(--font-dm-sans)'}
-                      background="white !important"
+                      background="black !important"
                       onClick={() => {
                         if (canvasRef && canvasRef.current) {
                           const canvas: HTMLCanvasElement = canvasRef.current;
@@ -420,7 +404,7 @@ const Swag = () => {
                       py="1rem"
                       rounded="full"
                       height="70px"
-                      color="black"
+                      color="white"
                       isDisabled={!name || !image}
                       _disabled={{
                         cursor: 'not-allowed',
@@ -429,11 +413,11 @@ const Swag = () => {
                       fontSize={{ base: '1.3rem', lg: '1.5rem' }}
                       fontWeight="400"
                       fontFamily={'var(--font-dm-sans)'}
-                      backgroundColor="white !important"
+                      backgroundColor="black !important"
                       onClick={() => {
                         const link = document.createElement('a');
                         link.href =
-                          "https://twitter.com/intent/tweet?text=Hey folks! Super excited to share that I will be attending @hackthisfall 4.0, a 36 Hours in-person hackathon🥳%0A%0ACan't wait to %23InnovateForGood and meet the amazing community🧡%0A%0AGet a personal badge for yourself: hackthisfall.tech/swag 🚀 %23HackThisFall";
+                          'https://twitter.com/intent/tweet?text=Thrilled%20to%20be%20a%20Hacker%20at%20Hack%20This%20Fall%202024%2C%20a%2036-hour%20in-person%20hackathon%20%F0%9F%A5%B3%0A%0ACan%27t%20wait%20to%20Innovate%20For%20Good%20and%20build%20with%20the%20amazing%20community%21%F0%9F%A7%A1%0A%0AGet%20a%20personalized%20badge%20for%20yourself%20here%20%F0%9F%91%89%20hackthisfall.tech%2Fswag%20%F0%9F%96%BC%EF%B8%8F%0A%0A%23HackThisFall2024%20%23InnovateForGood%20%23HackThisFall';
                         link.target = '_blank';
                         link.rel = 'noopener noreferrer';
                         link.click();
@@ -444,11 +428,11 @@ const Swag = () => {
                     </Button>
                   </Flex>
                 </Flex>
-              </Flex> */}
+              </Flex>
               <Flex
                 alignItems={'center'}
                 flexDir="column"
-                // mt={{ base: '3rem', xl: '5rem' }}
+                mt={{ base: '3rem', xl: '5rem' }}
               >
                 {!isMobile && (
                   <Flex
