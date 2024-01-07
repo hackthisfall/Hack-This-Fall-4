@@ -98,7 +98,6 @@ const Swag = () => {
         ctx.fillStyle = 'black';
         const text = name.trim() !== '' ? name : 'Your Name Here';
         const textWidth = ctx.measureText(text).width;
-
         ctx.fillText(text, 2160 / 2 - textWidth / 2, 2272);
       };
     }
@@ -153,7 +152,6 @@ const Swag = () => {
           ctx.fillStyle = 'black';
           const text = name.trim() !== '' ? name : 'Your Name Here';
           const textWidth = ctx.measureText(text).width;
-
           ctx.fillText(text, 2160/2 - textWidth/2, 2272);
         };
       };
@@ -175,7 +173,6 @@ const Swag = () => {
       ctx.fillStyle = 'black';
       const text = name.trim() !== '' ? name : 'Your Name Here';
       const textWidth = ctx.measureText(text).width;
-
       ctx.fillText(text, 2160 / 2 - textWidth / 2, 2272);
     }
   }, [image, name]);
