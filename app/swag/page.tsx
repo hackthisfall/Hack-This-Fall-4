@@ -257,8 +257,9 @@ const Swag = () => {
               flexDirection="column"
             >
               <Flex
-                justifyContent={{ base: 'flex-start', xl: 'space-between' }}
+                justifyContent={{ base: 'flex-start', xl: 'space-between', '2xl': 'center' }}
                 alignItems="center"
+                gap={{ '2xl': '5rem' }}
                 flexDirection={{ base: 'column', xl: 'row' }}
                 w="full"
               >
