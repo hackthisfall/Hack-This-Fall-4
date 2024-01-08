@@ -197,12 +197,6 @@ const Swag = () => {
           zIndex="1"
         >
           <ChakraImage
-            opacity="0.1"
-            src="/assets/mandala-main-light.svg"
-            h="min(90%, 100vw)"
-            alt="mandala"
-          />
-          <ChakraImage
             position="absolute"
             right="-18vh"
             top={{ base: '-18vh', lg: '0' }}
