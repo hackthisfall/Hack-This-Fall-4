@@ -84,15 +84,6 @@ const sessionMapping: sessionMappingType[] = [
   {
     title: "TBD",
     name: "TBD",
-    date: new Date("2024-01-06T00:00:00"),
-    displayDate: "Jan 6, 2024",
-    platformImage: "/assets/icons/twitch.svg",
-    link: "https://hackthisfall.tech/",
-    image: `/assets/humans/speakers/silhouette.png`,
-  },
-  {
-    title: "TBD",
-    name: "TBD",
     date: new Date("2024-01-13T18:00:00"),
     displayDate: "Jan 13, 2024 · 18:00",
     platformImage: "/assets/icons/twitter.svg",
@@ -142,15 +133,6 @@ const sessionMapping: sessionMappingType[] = [
     displayDate: "Jan 25, 2024",
     platformImage: "/assets/icons/youtube.svg",
     link: "https://youtube.com/hackthisfall",
-    image: `/assets/humans/speakers/silhouette.png`,
-  },
-  {
-    title: "TBD",
-    name: "TBD",
-    date: new Date("2024-01-27T00:00:00"),
-    displayDate: "Jan 27, 2024",
-    platformImage: "/assets/icons/twitch.svg",
-    link: "https://hackthisfall.tech/",
     image: `/assets/humans/speakers/silhouette.png`,
   },
 ];
