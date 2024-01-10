@@ -353,6 +353,7 @@ const Prize = () => {
                   fontWeight="600"
                   letterSpacing="0.3rem"
                   mb="2rem"
+                  textAlign="center"
                 >
                   {prize.title}
                 </Heading>
