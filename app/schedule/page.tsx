@@ -1,20 +1,8 @@
 "use client";
 
-import {
-  Box,
-  Button,
-  Flex,
-  Grid,
-  Heading,
-  Image,
-  Link,
-  Text,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Box, Flex, Grid, Heading, Image, Link, Text } from "@chakra-ui/react";
 import Header from "../components/Header";
-import { useState } from "react";
 import Footer from "../components/Footer";
-import { Metadata } from "next";
 
 type sessionMappingType = {
   title: string;
@@ -138,9 +126,6 @@ const sessionMapping: sessionMappingType[] = [
 ];
 
 const Schedule = () => {
-  const [currentSection, setCurrentSection] = useState("organizers");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
   const isDateGreaterThanCurrentDate = (date: Date): boolean => {
     const currentDate = new Date();
     return date > currentDate;
@@ -152,12 +137,6 @@ const Schedule = () => {
     return date < oneHourBefore;
   };
 
-  const selectSection = (section: string) => {
-    setCurrentSection(section);
-    setIsDropdownOpen(false);
-  };
-
-  const isMobile = useBreakpointValue({ base: true, lg: false });
   return (
     <Flex background="#0D2129" w="100vw" h="100dvh">
       <Flex
