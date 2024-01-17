@@ -1,20 +1,8 @@
 "use client";
 
-import {
-  Box,
-  Button,
-  Flex,
-  Grid,
-  Heading,
-  Image,
-  Link,
-  Text,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Box, Flex, Grid, Heading, Image, Link, Text } from "@chakra-ui/react";
 import Header from "../components/Header";
-import { useState } from "react";
 import Footer from "../components/Footer";
-import { Metadata } from "next";
 
 type sessionMappingType = {
   title: string;
@@ -82,13 +70,22 @@ const sessionMapping: sessionMappingType[] = [
     image: `/assets/humans/speakers/ayush.png`,
   },
   {
-    title: "TBD",
-    name: "TBD",
+    title: "Defining Success at Hackathons beyond Prizes",
+    name: "Sneha Mishra",
     date: new Date("2024-01-13T18:00:00"),
     displayDate: "Jan 13, 2024 · 18:00",
     platformImage: "/assets/icons/twitter.svg",
     link: "https://twitter.com/hackthisfall",
-    image: `/assets/humans/speakers/silhouette.png`,
+    image: `/assets/humans/speakers/sneha.jpeg`,
+  },
+  {
+    title: "Defining Success at Hackathons beyond Prizes",
+    name: "Nazeeh Vohra",
+    date: new Date("2024-01-13T18:00:00"),
+    displayDate: "Jan 13, 2024 · 18:00",
+    platformImage: "/assets/icons/twitter.svg",
+    link: "https://twitter.com/hackthisfall",
+    image: `/assets/humans/speakers/nazeeh.jpg`,
   },
   {
     title: "TBD",
@@ -138,9 +135,6 @@ const sessionMapping: sessionMappingType[] = [
 ];
 
 const Schedule = () => {
-  const [currentSection, setCurrentSection] = useState("organizers");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
   const isDateGreaterThanCurrentDate = (date: Date): boolean => {
     const currentDate = new Date();
     return date > currentDate;
@@ -152,12 +146,6 @@ const Schedule = () => {
     return date < oneHourBefore;
   };
 
-  const selectSection = (section: string) => {
-    setCurrentSection(section);
-    setIsDropdownOpen(false);
-  };
-
-  const isMobile = useBreakpointValue({ base: true, lg: false });
   return (
     <Flex background="#0D2129" w="100vw" h="100dvh">
       <Flex
