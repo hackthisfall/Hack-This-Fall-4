@@ -498,7 +498,7 @@ const Humans = () => {
               .find((p) => p.slug === currentSection)
               ?.people.map((s, i) => (
                 <Flex
-                  key={i}
+                  key={`${currentSection}-${i}`}
                   justifyContent="center"
                   px={{ base: "0.5rem", lg: "1.5rem" }}
                   py={{ base: "0.5rem", lg: "1rem" }}
