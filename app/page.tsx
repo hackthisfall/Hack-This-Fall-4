@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { Flex, Heading, Text, Image, Button, Link } from "@chakra-ui/react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Location from "./components/Icons/location";
+import { Flex, Heading, Text, Image, Button, Link } from '@chakra-ui/react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Location from './components/Icons/location';
 
 const Page = () => {
   return (
@@ -34,7 +34,7 @@ const Page = () => {
           <Image
             position="absolute"
             right="-18vh"
-            top={{ base: "-18vh", lg: "0" }}
+            top={{ base: '-18vh', lg: '0' }}
             animation="antiClockwiseSpin 30s linear infinite"
             opacity="0.15"
             src="/assets/mandala-right-dark.svg"
@@ -43,8 +43,8 @@ const Page = () => {
           />
           <Image
             position="absolute"
-            left={{ base: "-20vh", lg: "-15vh" }}
-            bottom={{ base: "-20vh", lg: "-10vh" }}
+            left={{ base: '-20vh', lg: '-15vh' }}
+            bottom={{ base: '-20vh', lg: '-10vh' }}
             animation="antiClockwiseSpin 30s linear infinite"
             opacity="0.15"
             src="/assets/mandala-left-dark.svg"
@@ -61,15 +61,15 @@ const Page = () => {
         >
           <Header mode="dark" position="relative" isHomePage={true} />
           <Flex
-            px={{ base: "2rem", md: "3rem", xl: "5rem" }}
+            px={{ base: '2rem', md: '3rem', xl: '5rem' }}
             h="full"
             alignItems="center"
           >
-            <Flex gap={{ base: "1rem", lg: "2rem" }} flexDirection="column">
+            <Flex gap={{ base: '1rem', lg: '2rem' }} flexDirection="column">
               <Heading
-                lineHeight={{ base: "110%", lg: "90%" }}
+                lineHeight={{ base: '110%', lg: '90%' }}
                 fontFamily="var(--font-nohemi)"
-                fontSize={{ base: "3.5rem", lg: "7rem", xl: "11rem" }}
+                fontSize={{ base: '3.5rem', lg: '7rem', xl: '11rem' }}
                 fontWeight="600"
                 color="#FFF"
                 letterSpacing="0.3rem"
@@ -78,12 +78,12 @@ const Page = () => {
                 <br /> For Good
               </Heading>
               <Flex
-                gap={{ base: "2rem", xl: "0" }}
-                flexDir={{ base: "column", xl: "row" }}
+                gap={{ base: '2rem', xl: '0' }}
+                flexDir={{ base: 'column', xl: 'row' }}
                 justifyContent="space-between"
-                alignItems={{ base: "flex-start", xl: "center" }}
+                alignItems={{ base: 'flex-start', xl: 'center' }}
               >
-                <Flex gap={{ base: "1rem", xl: "1.5rem" }}>
+                <Flex gap={{ base: '1rem', xl: '1.5rem' }}>
                   <Link
                     display="flex"
                     alignItems="center"
@@ -95,41 +95,34 @@ const Page = () => {
                   <Text
                     color="#FFF"
                     fontFamily="var(--font-nohemi)"
-                    fontSize={{ base: "1.3rem", xl: "1.6rem" }}
+                    fontSize={{ base: '1.3rem', xl: '1.6rem' }}
                   >
                     9 - 11 February 2024
                     <br />
                     Gandhinagar (GJ), India
                   </Text>
                 </Flex>
-                <Link
+
+                <Button
+                  color="#fff"
+                  px={{ base: '2rem', lg: '4rem' }}
+                  py={{ base: '1.5rem', lg: '2rem' }}
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                  border="1.5px solid #fff"
+                  borderRadius="full"
+                  fontFamily="var(--font-nohemi)"
+                  fontSize={{ base: '1.4rem', lg: '1.6rem' }}
+                  fontWeight="400"
+                  lineHeight="90%"
+                  isDisabled
                   _hover={{
-                    textDecoration: "none",
+                    color: '#fff',
                   }}
-                  href="https://lu.ma/hackthisfall"
-                  target="_blank"
                 >
-                  <Button
-                    color="#fff"
-                    px={{ base: "2rem", lg: "6rem" }}
-                    py={{ base: "1.5rem", lg: "2rem" }}
-                    display="flex"
-                    justifyContent="center"
-                    alignItems="center"
-                    border="1.5px solid #fff"
-                    borderRadius="full"
-                    fontFamily="var(--font-nohemi)"
-                    fontSize={{ base: "1.4rem", lg: "1.6rem" }}
-                    fontWeight="400"
-                    lineHeight="90%"
-                    _hover={{
-                      background: "#fff",
-                      color: "#0D2129",
-                    }}
-                  >
-                    Apply Now
-                  </Button>
-                </Link>
+                  Registrations Closed
+                </Button>
               </Flex>
             </Flex>
           </Flex>

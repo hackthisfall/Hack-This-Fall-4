@@ -156,6 +156,12 @@ const Swag = () => {
             const textWidth = ctx.measureText(text).width;
             ctx.fillText(text, 2157 / 2 - textWidth / 2, 2272);
           };
+          ctx.drawImage(badge, 0, 0, 2157, 2696);
+          ctx.font = `700 11rem ${nohemiFont}`;
+          ctx.fillStyle = 'black';
+          const text = name.trim() !== '' ? name : 'Your Name Here';
+          const textWidth = ctx.measureText(text).width;
+          ctx.fillText(text, 2157 / 2 - textWidth / 2, 2272);
         };
       };
     } else if (canvasRef && canvasRef.current) {
