@@ -63,7 +63,7 @@ const Header = (props: {
   const pathName = usePathname();
 
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const isMobile = useBreakpointValue({ base: true, lg: false });
+  const isMobile = useBreakpointValue({ base: true, xl: false });
 
   const getRandomColor = () => {
     const colorList = ["#64B7B5", "#ECB258", "#E36941"];
@@ -109,7 +109,7 @@ const Header = (props: {
         />
       </Link>
       {/* <Flex> */}
-      <Flex hideBelow="lg" gap="3rem">
+      <Flex hideBelow="xl" gap="3rem">
         {headerRoutes.map((route) => (
           <Link
             fontSize="1.1rem"
