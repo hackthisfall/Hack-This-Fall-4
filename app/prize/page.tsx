@@ -601,7 +601,7 @@ const Prize = () => {
                         >
                           {prize.description}
                         </Text>
-                        <Flex gap="0.5rem">
+                        <Flex flexWrap="wrap" gap="0.5rem">
                           {prize.resources.map((resource, index) => (
                             <Link
                               key={index}
