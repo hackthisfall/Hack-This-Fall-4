@@ -26,6 +26,27 @@ type humansMappingType = {
 };
 
 const humansMapping: humansMappingType[] = [
+  {
+    slug: "partner",
+    heading: "Partner Reps",
+    people: [
+      {
+        name: "Karl Lingiah",
+        image: `/assets/humans/speakers/karl.jpeg`,
+        link: "https://twitter.com/KarlLingiah",
+      },
+      {
+        name: "Diana Pham",
+        image: `/assets/humans/partners/diana.png`,
+        link: "https://twitter.com/dianasoyster",
+      },
+      {
+        name: "Aanchal Mishra",
+        image: "/assets/humans/partners/aanchal.jpg",
+        link: "https://twitter.com/Aanchalmishra__",
+      },
+    ].sort((a, b) => a.name.localeCompare(b.name)),
+  },
   // {
   //   slug: "speakers",
   //   heading: "Speakers",
@@ -145,12 +166,17 @@ const humansMapping: humansMappingType[] = [
       {
         name: "Harshita Jain",
         image: "/assets/humans/mentors/harshita.jpg",
-        link: "#",
+        link: "https://twitter.com/harshitajain561",
       },
       {
         name: "Nitish Kumar",
         image: "/assets/humans/mentors/nitish.jpg",
-        link: "#",
+        link: "https://twitter.com/nitishfy",
+      },
+      {
+        name: "Abdul Vasay",
+        image: `/assets/humans/speakers/abdul.png`,
+        link: "https://twitter.com/abdulvasay_dev",
       },
     ].sort((a, b) => a.name.localeCompare(b.name)),
   },
@@ -253,32 +279,6 @@ const humansMapping: humansMappingType[] = [
         name: "Bishwajeet Parhi",
         image: "/assets/humans/team/biswa.jpg",
         link: "https://twitter.com/biswa_20p",
-      },
-    ].sort((a, b) => a.name.localeCompare(b.name)),
-  },
-  {
-    slug: "partner",
-    heading: "Partner Reps",
-    people: [
-      {
-        name: "Abdul Vasay",
-        link: "#",
-        image: `/assets/humans/speakers/abdul.png`,
-      },
-      {
-        name: "Karl Lingiah",
-        link: "https://youtube.com/hackthisfall",
-        image: `/assets/humans/speakers/karl.jpeg`,
-      },
-      {
-        name: "Diana Pham",
-        link: "https://youtube.com/hackthisfall",
-        image: `/assets/humans/partners/diana.png`,
-      },
-      {
-        name: "Aanchal Mishra",
-        image: "/assets/humans/partners/aanchal.jpg",
-        link: "#",
       },
     ].sort((a, b) => a.name.localeCompare(b.name)),
   },
