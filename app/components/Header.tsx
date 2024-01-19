@@ -38,6 +38,10 @@ const headerRoutes = [
     href: "/schedule",
   },
   {
+    name: "Prize",
+    href: "/prize",
+  },
+  {
     name: "Swag",
     href: "/swag",
   },

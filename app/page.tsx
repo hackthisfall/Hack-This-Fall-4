@@ -102,7 +102,6 @@ const Page = () => {
                     Gandhinagar (GJ), India
                   </Text>
                 </Flex>
-
                 <Button
                   color="#fff"
                   px={{ base: '2rem', lg: '4rem' }}

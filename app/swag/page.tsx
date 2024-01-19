@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   Flex,
@@ -13,43 +13,43 @@ import {
   useBreakpointValue,
   SimpleGrid,
   Link,
-} from "@chakra-ui/react";
-import { useEffect, useRef, useState } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import UploadIcon from "../components/Icons/uploadIcon";
-import { Metadata } from "next";
-import { DownloadIcon } from "@chakra-ui/icons";
-import ShareIcon from "../components/Icons/shareIcon";
+} from '@chakra-ui/react';
+import { useEffect, useRef, useState } from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import UploadIcon from '../components/Icons/uploadIcon';
+import { Metadata } from 'next';
+import { DownloadIcon } from '@chakra-ui/icons';
+import ShareIcon from '../components/Icons/shareIcon';
 
 const swagsMapping = [
   {
     index: 0,
-    heading: "Zoom Backgrounds",
+    heading: 'Zoom Backgrounds',
     assets: [
-      "/assets/swags/zoom/1.png",
-      "/assets/swags/zoom/2.png",
-      "/assets/swags/zoom/3.png",
-      "/assets/swags/zoom/4.png",
+      '/assets/swags/zoom/1.png',
+      '/assets/swags/zoom/2.png',
+      '/assets/swags/zoom/3.png',
+      '/assets/swags/zoom/4.png',
     ],
   },
   {
     index: 1,
-    heading: "Desktop Wallpapers",
+    heading: 'Desktop Wallpapers',
     assets: [
-      "/assets/swags/desktop/1.png",
-      "/assets/swags/desktop/2.png",
-      "/assets/swags/desktop/3.png",
-      "/assets/swags/desktop/4.png",
+      '/assets/swags/desktop/1.png',
+      '/assets/swags/desktop/2.png',
+      '/assets/swags/desktop/3.png',
+      '/assets/swags/desktop/4.png',
     ],
   },
   {
     index: 2,
-    heading: "Mobile Wallpapers",
+    heading: 'Mobile Wallpapers',
     assets: [
-      "/assets/swags/mobile/1.png",
-      "/assets/swags/mobile/2.png",
-      "/assets/swags/mobile/3.png",
+      '/assets/swags/mobile/1.png',
+      '/assets/swags/mobile/2.png',
+      '/assets/swags/mobile/3.png',
       // '/assets/swags/mobile/4.png',
     ],
   },
@@ -67,7 +67,7 @@ const swagsMapping = [
 
 const Swag = () => {
   const [image, setImage] = useState<File | null>(null);
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
   const canvasRef = useRef(null);
   const imageUploadRef = useRef(null);
   const [currentTab, setCurrentTab] = useState(0);
@@ -82,12 +82,12 @@ const Swag = () => {
   useEffect(() => {
     if (canvasRef && canvasRef.current) {
       const canvas: HTMLCanvasElement = canvasRef.current;
-      const ctx = canvas.getContext("2d");
-      canvas.style.letterSpacing = "0.4rem";
+      const ctx = canvas.getContext('2d');
+      canvas.style.letterSpacing = '0.4rem';
       const defaultBadge = new Image();
-      defaultBadge.src = "/default-badge.png";
+      defaultBadge.src = '/default-badge.png';
       const nohemiFont =
-        getComputedStyle(canvas).getPropertyValue("--font-nohemi");
+        getComputedStyle(canvas).getPropertyValue('--font-nohemi');
 
       defaultBadge.onload = function () {
         if (!ctx) {
@@ -95,26 +95,28 @@ const Swag = () => {
         }
         ctx.drawImage(defaultBadge, 0, 0, 2157, 2696);
         ctx.font = `700 11rem ${nohemiFont}`;
-        ctx.fillStyle = "black";
-        const text = name.trim() !== "" ? name : "Your Name Here";
+        ctx.fillStyle = 'black';
+        const text = name.trim() !== '' ? name : 'Your Name Here';
         const textWidth = ctx.measureText(text).width;
         ctx.fillText(text, 2157 / 2 - textWidth / 2, 2272);
       };
     }
   }, []);
 
-  const refreshCanvas = () => {
+  const refreshCanvas = () => {};
+
+  useEffect(() => {
     if (canvasRef && canvasRef.current && image) {
       const canvas: HTMLCanvasElement = canvasRef.current;
-      const ctx = canvas.getContext("2d");
-      canvas.style.letterSpacing = "0.4rem";
+      const ctx = canvas.getContext('2d');
+      canvas.style.letterSpacing = '0.4rem';
       const reader = new FileReader();
       reader.readAsDataURL(image);
       const nohemiFont =
-        getComputedStyle(canvas).getPropertyValue("--font-nohemi");
+        getComputedStyle(canvas).getPropertyValue('--font-nohemi');
 
       const badge = new Image();
-      badge.src = "/badge.png";
+      badge.src = '/badge.png';
 
       reader.onload = (e) => {
         if (!ctx) {
@@ -146,13 +148,13 @@ const Swag = () => {
             0,
             0,
             2157,
-            2696
+            2696,
           );
           badge.onload = function () {
             ctx.drawImage(badge, 0, 0, 2157, 2696);
             ctx.font = `700 11rem ${nohemiFont}`;
-            ctx.fillStyle = "black";
-            const text = name.trim() !== "" ? name : "Your Name Here";
+            ctx.fillStyle = 'black';
+            const text = name.trim() !== '' ? name : 'Your Name Here';
             const textWidth = ctx.measureText(text).width;
             ctx.fillText(text, 2157 / 2 - textWidth / 2, 2272);
           };
@@ -166,28 +168,24 @@ const Swag = () => {
       };
     } else if (canvasRef && canvasRef.current) {
       const canvas: HTMLCanvasElement = canvasRef.current;
-      canvas.style.letterSpacing = "0.4rem";
-      const ctx = canvas.getContext("2d");
+      canvas.style.letterSpacing = '0.4rem';
+      const ctx = canvas.getContext('2d');
 
       const nohemiFont =
-        getComputedStyle(canvas).getPropertyValue("--font-nohemi");
+        getComputedStyle(canvas).getPropertyValue('--font-nohemi');
 
       if (!ctx) {
         return;
       }
       const defaultBadge = new Image();
-      defaultBadge.src = "/default-badge.png";
+      defaultBadge.src = '/default-badge.png';
       ctx.drawImage(defaultBadge, 0, 0, 2157, 2696);
       ctx.font = `700 11rem ${nohemiFont}`;
-      ctx.fillStyle = "black";
-      const text = name.trim() !== "" ? name : "Your Name Here";
+      ctx.fillStyle = 'black';
+      const text = name.trim() !== '' ? name : 'Your Name Here';
       const textWidth = ctx.measureText(text).width;
       ctx.fillText(text, 2157 / 2 - textWidth / 2, 2272);
     }
-  };
-
-  useEffect(() => {
-    refreshCanvas();
   }, [image, name]);
 
   return (
@@ -211,7 +209,7 @@ const Swag = () => {
           <ChakraImage
             position="absolute"
             right="-18vh"
-            top={{ base: "-18vh", lg: "0" }}
+            top={{ base: '-18vh', lg: '0' }}
             opacity="0.1"
             src="/assets/mandala-right-light.svg"
             h="36vh"
@@ -219,8 +217,8 @@ const Swag = () => {
           />
           <ChakraImage
             position="absolute"
-            left={{ base: "-20vh", lg: "-15vh" }}
-            bottom={{ base: "-20vh", lg: "-10vh" }}
+            left={{ base: '-20vh', lg: '-15vh' }}
+            bottom={{ base: '-20vh', lg: '-10vh' }}
             opacity="0.1"
             src="/assets/mandala-left-light.svg"
             h="40vh"
@@ -237,11 +235,11 @@ const Swag = () => {
         >
           <Header mode="light" position="relative" />
           <Flex
-            px={{ base: "2rem", md: "3rem", xl: "5rem" }}
+            px={{ base: '2rem', md: '3rem', xl: '5rem' }}
             h="full"
             flexDir="column"
             alignItems="center"
-            overflowY={{ base: "auto" }}
+            overflowY={{ base: 'auto' }}
           >
             <Heading
               lineHeight="90%"
@@ -256,51 +254,51 @@ const Swag = () => {
               Digital Swags
             </Heading>
             <Flex
-              mt={{ base: "2rem", xl: "4rem" }}
+              mt={{ base: '2rem', xl: '4rem' }}
               w="full"
               flexDirection="column"
             >
               <Flex
                 justifyContent={{
-                  base: "flex-start",
-                  xl: "space-between",
-                  "2xl": "center",
+                  base: 'flex-start',
+                  xl: 'space-between',
+                  '2xl': 'center',
                 }}
                 alignItems="center"
-                gap={{ "2xl": "5rem" }}
-                flexDirection={{ base: "column", xl: "row" }}
+                gap={{ '2xl': '5rem' }}
+                flexDirection={{ base: 'column', xl: 'row' }}
               >
                 <canvas
                   ref={canvasRef}
                   width="2157"
                   height="2696"
                   style={{
-                    width: "min(100%, 600px)",
-                    height: "min(100%, 724px)",
-                    borderRadius: "1.5rem",
+                    width: 'min(100%, 600px)',
+                    height: 'min(100%, 724px)',
+                    borderRadius: '1.5rem',
                   }}
                 />
                 <Flex
-                  gap={{ base: "2rem", md: "3rem" }}
-                  w={{ base: "full", lg: "60%", xl: "50%" }}
-                  mt={{ base: "3rem", xl: "0" }}
+                  gap={{ base: '2rem', md: '3rem' }}
+                  w={{ base: 'full', lg: '60%', xl: '50%' }}
+                  mt={{ base: '3rem', xl: '0' }}
                   flexDir="column"
                 >
                   <Heading
                     color="black"
                     fontSize="2.5rem"
                     fontWeight="600"
-                    fontFamily={"var(--font-nohemi)"}
-                    textAlign={{ base: "center", xl: "left" }}
+                    fontFamily={'var(--font-nohemi)'}
+                    textAlign={{ base: 'center', xl: 'left' }}
                   >
                     Digital Badge
                   </Heading>
                   <Text
-                    textAlign={{ base: "center", xl: "left" }}
+                    textAlign={{ base: 'center', xl: 'left' }}
                     color="black"
                     fontSize="1.5rem"
                     fontWeight="400"
-                    fontFamily={"var(--font-dm-sans)"}
+                    fontFamily={'var(--font-dm-sans)'}
                     dangerouslySetInnerHTML={{
                       __html:
                         'Once you have done the RSVP, you are all set to attend Hack This Fall 2024! Now it is time to let the world know by sharing this super cool digital badge.<br /><br />To get a personalized Hack This Fall Badge, just add your name & upload your image. Download it and Share it on socials using <a href="https://twitter.com/hashtag/HackThisFall2024" target="_blank" style="color: #F55F2F; font-weight: 600">#HackThisFall2024</a> and tag <a href="https://twitter.com/hackthisfall" target="_blank"style="color: #F55F2F; font-weight: 600">@hackthisfall</a>.',
@@ -310,15 +308,15 @@ const Swag = () => {
                     color="#F55F2F"
                     fontSize="1.5rem"
                     fontWeight="400"
-                    fontFamily={"var(--font-dm-sans)"}
-                    textAlign={{ base: "center", xl: "left" }}
+                    fontFamily={'var(--font-dm-sans)'}
+                    textAlign={{ base: 'center', xl: 'left' }}
                   >
                     * We respect your privacy and are not storing your pictures
                     on our servers.
                   </Text>
                   <Flex
-                    flexDir={{ base: "column", md: "row" }}
-                    gap={{ base: "1rem", md: "2rem" }}
+                    flexDir={{ base: 'column', md: 'row' }}
+                    gap={{ base: '1rem', md: '2rem' }}
                   >
                     <Input
                       height="70px"
@@ -330,24 +328,24 @@ const Swag = () => {
                         refreshCanvas();
                       }}
                       color="black"
-                      fontSize={{ base: "1.3rem", lg: "1.5rem" }}
+                      fontSize={{ base: '1.3rem', lg: '1.5rem' }}
                       fontWeight="400"
-                      fontFamily={"var(--font-dm-sans)"}
+                      fontFamily={'var(--font-dm-sans)'}
                       placeholder="Enter your name"
                       background="white"
                       borderColor="#000"
                       boxShadow="0 0 0 1px #000"
                       _focusVisible={{
                         zIndex: 1,
-                        borderColor: "#000",
-                        boxShadow: "0 0 0 1px #000",
+                        borderColor: '#000',
+                        boxShadow: '0 0 0 1px #000',
                       }}
                     />
                     <input
                       ref={imageUploadRef}
                       type="file"
                       accept="image/*"
-                      style={{ display: "none" }}
+                      style={{ display: 'none' }}
                       onChange={(e) => {
                         if (e.target.files) {
                           setImage(e.target.files[0]);
@@ -362,9 +360,9 @@ const Swag = () => {
                       rounded="full"
                       height="70px"
                       color="white"
-                      fontSize={{ base: "1.3rem", lg: "1.5rem" }}
+                      fontSize={{ base: '1.3rem', lg: '1.5rem' }}
                       fontWeight="400"
-                      fontFamily={"var(--font-dm-sans)"}
+                      fontFamily={'var(--font-dm-sans)'}
                       background="black !important"
                       onClick={() => {
                         if (imageUploadRef && imageUploadRef.current) {
@@ -378,9 +376,9 @@ const Swag = () => {
                     </Button>
                   </Flex>
                   <Flex
-                    flexDir={{ base: "column", md: "row" }}
-                    gap={{ base: "1rem", md: "2rem" }}
-                    w={{ base: "full", lg: "60%", xl: "70%" }}
+                    flexDir={{ base: 'column', md: 'row' }}
+                    gap={{ base: '1rem', md: '2rem' }}
+                    w={{ base: 'full', lg: '60%', xl: '70%' }}
                   >
                     <Button
                       leftIcon={<DownloadIcon />}
@@ -391,21 +389,21 @@ const Swag = () => {
                       color="white"
                       isDisabled={!name || !image}
                       _disabled={{
-                        cursor: "not-allowed",
-                        backgroundColor: "#e0d9d97f !important",
+                        cursor: 'not-allowed',
+                        backgroundColor: '#e0d9d97f !important',
                       }}
-                      fontSize={{ base: "1.3rem", lg: "1.5rem" }}
+                      fontSize={{ base: '1.3rem', lg: '1.5rem' }}
                       fontWeight="400"
-                      fontFamily={"var(--font-dm-sans)"}
+                      fontFamily={'var(--font-dm-sans)'}
                       background="black !important"
                       onClick={() => {
                         if (canvasRef && canvasRef.current) {
                           const canvas: HTMLCanvasElement = canvasRef.current;
                           const image = canvas
-                            .toDataURL("image/png")
-                            .replace("image/png", "image/octet-stream");
-                          const link = document.createElement("a");
-                          link.download = "hackthisfall-badge.png";
+                            .toDataURL('image/png')
+                            .replace('image/png', 'image/octet-stream');
+                          const link = document.createElement('a');
+                          link.download = 'hackthisfall-badge.png';
                           link.href = image;
                           link.click();
                         }
@@ -422,19 +420,19 @@ const Swag = () => {
                       color="white"
                       isDisabled={!name || !image}
                       _disabled={{
-                        cursor: "not-allowed",
-                        backgroundColor: "#e0d9d97f !important",
+                        cursor: 'not-allowed',
+                        backgroundColor: '#e0d9d97f !important',
                       }}
-                      fontSize={{ base: "1.3rem", lg: "1.5rem" }}
+                      fontSize={{ base: '1.3rem', lg: '1.5rem' }}
                       fontWeight="400"
-                      fontFamily={"var(--font-dm-sans)"}
+                      fontFamily={'var(--font-dm-sans)'}
                       backgroundColor="black !important"
                       onClick={() => {
-                        const link = document.createElement("a");
+                        const link = document.createElement('a');
                         link.href =
-                          "https://twitter.com/intent/tweet?text=Thrilled%20to%20be%20a%20Hacker%20at%20Hack%20This%20Fall%202024%2C%20a%2036-hour%20in-person%20hackathon%20%F0%9F%A5%B3%0A%0ACan%27t%20wait%20to%20Innovate%20For%20Good%20and%20build%20with%20the%20amazing%20community%21%F0%9F%A7%A1%0A%0AGet%20a%20personalized%20badge%20for%20yourself%20here%20%F0%9F%91%89%20hackthisfall.tech%2Fswag%20%F0%9F%96%BC%EF%B8%8F%0A%0A%23HackThisFall2024%20%23InnovateForGood%20%23HackThisFall";
-                        link.target = "_blank";
-                        link.rel = "noopener noreferrer";
+                          'https://twitter.com/intent/tweet?text=Thrilled%20to%20be%20a%20Hacker%20at%20Hack%20This%20Fall%202024%2C%20a%2036-hour%20in-person%20hackathon%20%F0%9F%A5%B3%0A%0ACan%27t%20wait%20to%20Innovate%20For%20Good%20and%20build%20with%20the%20amazing%20community%21%F0%9F%A7%A1%0A%0AGet%20a%20personalized%20badge%20for%20yourself%20here%20%F0%9F%91%89%20hackthisfall.tech%2Fswag%20%F0%9F%96%BC%EF%B8%8F%0A%0A%23HackThisFall2024%20%23InnovateForGood%20%23HackThisFall';
+                        link.target = '_blank';
+                        link.rel = 'noopener noreferrer';
                         link.click();
                         link.remove();
                       }}
@@ -445,9 +443,9 @@ const Swag = () => {
                 </Flex>
               </Flex>
               <Flex
-                alignItems={"center"}
+                alignItems={'center'}
                 flexDir="column"
-                mt={{ base: "3rem", xl: "5rem" }}
+                mt={{ base: '3rem', xl: '5rem' }}
               >
                 {!isMobile && (
                   <Flex
@@ -465,16 +463,16 @@ const Swag = () => {
                         <Flex
                           zIndex={10}
                           bgColor={
-                            currentTab === index ? "black" : "transparent"
+                            currentTab === index ? 'black' : 'transparent'
                           }
-                          color={currentTab === index ? "white" : "black"}
+                          color={currentTab === index ? 'white' : 'black'}
                           fontFamily="var(--font-dm-sans)"
                           borderRadius="full"
                           fontSize="1.1rem"
                           alignItems="center"
                           justifyContent="center"
                           fontWeight="500"
-                          px={{ md: "1rem", lg: "2rem", "2xl": "4rem" }}
+                          px={{ md: '1rem', lg: '2rem', '2xl': '4rem' }}
                           py="1rem"
                           key={index}
                           cursor="pointer"
@@ -495,7 +493,7 @@ const Swag = () => {
                     bgColor="#F0F0F0"
                     marginTop="1rem"
                     borderTopRadius="2rem"
-                    borderBottomRadius={isDropdownOpen ? "0rem" : "2rem"}
+                    borderBottomRadius={isDropdownOpen ? '0rem' : '2rem'}
                     position="relative"
                   >
                     <Flex
@@ -503,10 +501,10 @@ const Swag = () => {
                       borderRadius="full"
                       w="fit-content"
                       gap="1rem"
-                      pr={swagsMapping.length > 1 ? "1rem" : "0rem"}
+                      pr={swagsMapping.length > 1 ? '1rem' : '0rem'}
                       justifyContent="space-evenly"
                       className="navbar"
-                      position={"relative"}
+                      position={'relative'}
                       zIndex={10}
                     >
                       {swagsMapping.map((section, index) => {
@@ -551,7 +549,7 @@ const Swag = () => {
                     </Flex>
                     {isDropdownOpen && (
                       <Flex
-                        flexDirection={"column"}
+                        flexDirection={'column'}
                         position="absolute"
                         zIndex={40}
                         top="100%"
@@ -591,7 +589,7 @@ const Swag = () => {
                 )}
                 <Tabs
                   w="full"
-                  mt={{ base: "2rem", xl: "3rem" }}
+                  mt={{ base: '2rem', xl: '3rem' }}
                   index={currentTab}
                 >
                   <TabPanels>
@@ -609,8 +607,8 @@ const Swag = () => {
                             color="black"
                             fontSize="2.5rem"
                             fontWeight="600"
-                            fontFamily={"var(--font-nohemi)"}
-                            textAlign={{ base: "center", md: "left" }}
+                            fontFamily={'var(--font-nohemi)'}
+                            textAlign={{ base: 'center', md: 'left' }}
                           >
                             {section.heading}
                           </Heading>
@@ -620,16 +618,16 @@ const Swag = () => {
                             templateColumns={
                               section.index === 2
                                 ? {
-                                    base: "repeat(1, 1fr)",
-                                    md: "repeat(3, 1fr)",
-                                    lg: "repeat(4, 1fr)",
-                                    "2xl": "repeat(5, 1fr)",
+                                    base: 'repeat(1, 1fr)',
+                                    md: 'repeat(3, 1fr)',
+                                    lg: 'repeat(4, 1fr)',
+                                    '2xl': 'repeat(5, 1fr)',
                                   }
                                 : {
-                                    base: "repeat(1, 1fr)",
-                                    md: "repeat(2, 1fr)",
-                                    lg: "repeat(3, 1fr)",
-                                    "2xl": "repeat(4, 1fr)",
+                                    base: 'repeat(1, 1fr)',
+                                    md: 'repeat(2, 1fr)',
+                                    lg: 'repeat(3, 1fr)',
+                                    '2xl': 'repeat(4, 1fr)',
                                   }
                             }
                           >
