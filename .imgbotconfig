@@ -1,7 +1,4 @@
 {
     "schedule": "daily",
-    "ignoredFiles": [
-        "app/*"
-    ],
     "aggressiveCompression": "true"
 }

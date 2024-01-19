@@ -37,10 +37,10 @@ const headerRoutes = [
     name: "Schedule",
     href: "/schedule",
   },
-  // {
-  //   name: "Swag",
-  //   href: "/swag",
-  // },
+  {
+    name: "Swag",
+    href: "/swag",
+  },
   {
     name: "About Us",
     href: "/about",

@@ -77,7 +77,11 @@ const partnerMapping: Array<{
     sponsors: [],
   },
   // { slug: "bronze", heading: "Bronze", sponsors: [] },
-  // { slug: "in-kind", heading: "In-Kind", sponsors: [] },
+  {
+    slug: "in-kind",
+    heading: "In-Kind Partners",
+    sponsors: [],
+  },
   // { slug: "community", heading: "Community", sponsors: [] },
 ];
 
@@ -512,6 +516,39 @@ const Partners = () => {
                   <GridItem>
                     <Flex
                       backgroundColor="#F7F7F7"
+                      width="100%"
+                      alignItems="center"
+                      height="100%"
+                      // justifyContent="space-between"
+                      paddingX={{ base: "1rem", lg: "3rem" }}
+                      paddingY={{ base: "0.5rem", lg: "3rem" }}
+                      borderRadius={{
+                        base: "0.75rem 2rem",
+                        lg: "1rem 5.75rem",
+                      }}
+                      flexDirection="column"
+                    >
+                      <Text>Gold</Text>
+                      <Flex
+                        flexGrow={1}
+                        justifyContent={"center"}
+                        alignItems="center"
+                      >
+                        <Link target="blank" href="https://devfolio.co">
+                          <Image
+                            src="/assets/partners/gold/devfolio.svg"
+                            alt="logo"
+                            marginY="1rem"
+                            width="100%"
+                          />
+                        </Link>
+                      </Flex>
+                    </Flex>
+                  </GridItem>
+
+                  <GridItem>
+                    <Flex
+                      backgroundColor="#F7F7F7"
                       height="100%"
                       width="100%"
                       alignItems="center"
@@ -815,6 +852,249 @@ const Partners = () => {
                         <Link target="blank" href="https://www.k2kframes.com/">
                           <Image
                             src="/assets/partners/featured/k2k.webp"
+                            alt="logo"
+                            width={"100%"}
+                          />
+                        </Link>
+                      </Flex>
+                    </Flex>
+                  </GridItem>
+                </Grid>
+              </Flex>
+            )}
+
+            {currentSection === "in-kind" && (
+              <Flex flexDirection="column" maxWidth={"1280px"}>
+                <Grid
+                  marginTop="1.5rem"
+                  fontFamily="var(--font-nohemi)"
+                  color="#9B9B9B"
+                  fontWeight={500}
+                  fontSize={{ base: "1rem", lg: "1.5rem" }}
+                  letterSpacing="0.64px"
+                  templateColumns={{
+                    base: "repeat(2, 1fr)",
+                    lg: "repeat(4, 1fr)",
+                  }}
+                  gridAutoRows={{ base: "unset", lg: "1fr" }}
+                  columnGap="1.5rem"
+                  rowGap="1.5rem"
+                >
+                  <GridItem>
+                    <Flex
+                      backgroundColor="#F7F7F7"
+                      width="100%"
+                      alignItems="center"
+                      height="100%"
+                      // justifyContent="space-between"
+                      paddingX={{ base: "1rem", lg: "3rem" }}
+                      paddingY={{ base: "0.5rem", lg: "2rem" }}
+                      borderRadius={{
+                        base: "0.75rem 2rem",
+                        lg: "1rem 5.75rem",
+                      }}
+                      flexDirection="column"
+                    >
+                      <Flex
+                        flexGrow={1}
+                        justifyContent={"center"}
+                        alignItems="center"
+                      >
+                        <Link target="blank" href="https://hack.mlh.io/">
+                          <Image
+                            src="/assets/partners/in-kind/mongodb.webp"
+                            alt="logo"
+                            width="100%"
+                          />
+                        </Link>
+                      </Flex>
+                    </Flex>
+                  </GridItem>
+
+                  <GridItem>
+                    <Flex
+                      backgroundColor="#F7F7F7"
+                      width="100%"
+                      alignItems="center"
+                      height="100%"
+                      // justifyContent="space-between"
+                      paddingX={{ base: "1rem", lg: "3rem" }}
+                      paddingY={{ base: "0.5rem", lg: "2rem" }}
+                      borderRadius={{
+                        base: "0.75rem 2rem",
+                        lg: "1rem 5.75rem",
+                      }}
+                      flexDirection="column"
+                    >
+                      <Flex
+                        flexGrow={1}
+                        justifyContent={"center"}
+                        alignItems="center"
+                      >
+                        <Link target="blank" href="https://hack.mlh.io/">
+                          <Image
+                            src="/assets/partners/in-kind/godaddy-registry.webp"
+                            alt="logo"
+                            width="100%"
+                          />
+                        </Link>
+                      </Flex>
+                    </Flex>
+                  </GridItem>
+
+                  <GridItem>
+                    <Flex
+                      backgroundColor="#F7F7F7"
+                      height="100%"
+                      width="100%"
+                      alignItems="center"
+                      // justifyContent="space-between"
+                      paddingX={{ base: "1rem", lg: "3rem" }}
+                      paddingY={{ base: "0.5rem", lg: "2rem" }}
+                      borderRadius={{
+                        base: "0.75rem 2rem",
+                        lg: "1rem 5.75rem",
+                      }}
+                      flexDirection="column"
+                    >
+                      <Flex
+                        flexGrow={1}
+                        justifyContent={"center"}
+                        alignItems="center"
+                      >
+                        <Link target="blank" href="https://hack.mlh.io/">
+                          <Image
+                            src="/assets/partners/in-kind/flow.webp"
+                            alt="logo"
+                            width={"100%"}
+                          />
+                        </Link>
+                      </Flex>
+                    </Flex>
+                  </GridItem>
+
+                  <GridItem>
+                    <Flex
+                      backgroundColor="#F7F7F7"
+                      height="100%"
+                      width="100%"
+                      alignItems="center"
+                      // justifyContent="space-between"
+                      paddingX={{ base: "1rem", lg: "3rem" }}
+                      paddingY={{ base: "0.5rem", lg: "2rem" }}
+                      borderRadius={{
+                        base: "0.75rem 2rem",
+                        lg: "1rem 5.75rem",
+                      }}
+                      flexDirection="column"
+                    >
+                      <Flex
+                        flexGrow={1}
+                        justifyContent={"center"}
+                        alignItems="center"
+                      >
+                        <Link target="blank" href="https://hack.mlh.io/">
+                          <Image
+                            src="/assets/partners/in-kind/cloudflare.svg"
+                            alt="logo"
+                            width={"100%"}
+                          />
+                        </Link>
+                      </Flex>
+                    </Flex>
+                  </GridItem>
+
+                  <GridItem>
+                    <Flex
+                      backgroundColor="#F7F7F7"
+                      height="100%"
+                      width="100%"
+                      alignItems="center"
+                      // justifyContent="space-between"
+                      paddingX={{ base: "1rem", lg: "3rem" }}
+                      paddingY={{ base: "0.5rem", lg: "2rem" }}
+                      borderRadius={{
+                        base: "0.75rem 2rem",
+                        lg: "1rem 5.75rem",
+                      }}
+                      flexDirection="column"
+                    >
+                      <Flex
+                        flexGrow={1}
+                        justifyContent={"center"}
+                        alignItems="center"
+                      >
+                        <Link target="blank" href="https://hack.mlh.io/">
+                          <Image
+                            src="/assets/partners/in-kind/tinymce.webp"
+                            alt="logo"
+                            width={"100%"}
+                          />
+                        </Link>
+                      </Flex>
+                    </Flex>
+                  </GridItem>
+
+                  <GridItem>
+                    <Flex
+                      backgroundColor="#F7F7F7"
+                      height="100%"
+                      width="100%"
+                      alignItems="center"
+                      // justifyContent="space-between"
+                      paddingX={{ base: "1rem", lg: "3rem" }}
+                      paddingY={{ base: "0.5rem", lg: "2rem" }}
+                      borderRadius={{
+                        base: "0.75rem 2rem",
+                        lg: "1rem 5.75rem",
+                      }}
+                      flexDirection="column"
+                    >
+                      <Flex
+                        flexGrow={1}
+                        justifyContent={"center"}
+                        alignItems="center"
+                      >
+                        <Link
+                          target="blank"
+                          href="https://jb.gg/studentlicense"
+                        >
+                          <Image
+                            src="/assets/partners/in-kind/jetbrains.svg"
+                            alt="logo"
+                            width={"100%"}
+                          />
+                        </Link>
+                      </Flex>
+                    </Flex>
+                  </GridItem>
+
+                  <GridItem>
+                    <Flex
+                      backgroundColor="#F7F7F7"
+                      height="100%"
+                      width="100%"
+                      alignItems="center"
+                      // justifyContent="space-between"
+                      paddingX={{ base: "1rem", lg: "3rem" }}
+                      paddingY={{ base: "0.5rem", lg: "2rem" }}
+                      borderRadius={{
+                        base: "0.75rem 2rem",
+                        lg: "1rem 5.75rem",
+                      }}
+                      flexDirection="column"
+                    >
+                      <Flex
+                        flexGrow={1}
+                        justifyContent={"center"}
+                        alignItems="center"
+                      >
+                        <Link
+                          target="blank"
+                          href="https://console.echo3d.com/#/auth/register-promo?code=Feb2024echo551"
+                        >
+                          <Image
+                            src="/assets/partners/in-kind/echo3D.png"
                             alt="logo"
                             width={"100%"}
                           />

@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { Flex, Heading, Text, Image, Button, Link } from "@chakra-ui/react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Location from "./components/Icons/location";
+import { Flex, Heading, Text, Image, Button, Link } from '@chakra-ui/react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Location from './components/Icons/location';
 
 const Page = () => {
   return (
