@@ -1,5 +1,3 @@
-"use client";
-
 import { Box, Flex, Grid, Heading, Image, Link, Text } from "@chakra-ui/react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -17,6 +15,24 @@ type sessionMappingType = {
 
 const sessionMapping: sessionMappingType[] = [
   {
+    title: "Super-Charge your Hack with Web APIs",
+    name: "Karl Lingiah",
+    date: new Date("2024-01-23T16:00:00"),
+    displayDate: "Jan 23, 2024 · 16:00",
+    platformImage: "/assets/icons/youtube.svg",
+    link: "https://www.youtube.com/watch?v=hmvmoBdCOZc",
+    image: `/assets/humans/speakers/karl.jpeg`,
+  },
+  {
+    title: "Getting started with Microservices Architecture & Conductor",
+    name: "Saksham Solanki",
+    date: new Date("2024-01-25T17:00:00"),
+    displayDate: "Jan 25, 2024 · 17:00",
+    platformImage: "/assets/icons/youtube.svg",
+    link: "https://www.youtube.com/watch?v=x1-dRvCNblM",
+    image: `/assets/humans/speakers/saksham.jpeg`,
+  },
+  {
     title: "Designing for Diversity",
     name: "Varsha Saha",
     date: new Date("2023-12-23T18:00:00"),
@@ -31,7 +47,7 @@ const sessionMapping: sessionMappingType[] = [
     date: new Date("2023-12-26T17:00:00"),
     displayDate: "Dec 26, 2023 · 17:00",
     platformImage: "/assets/icons/youtube.svg",
-    link: "https://youtube.com/hackthisfall",
+    link: "https://www.youtube.com/watch?v=8rKJumlU3Ws",
     image: `/assets/humans/speakers/yash.jpeg`,
   },
   {
@@ -40,7 +56,7 @@ const sessionMapping: sessionMappingType[] = [
     date: new Date("2023-12-28T18:00:00"),
     displayDate: "Dec 28, 2023 · 18:00",
     platformImage: "/assets/icons/youtube.svg",
-    link: "https://youtube.com/hackthisfall",
+    link: "https://www.youtube.com/watch?v=e9iYg1hGxCQ",
     image: `/assets/humans/speakers/shihan.png`,
   },
   {
@@ -58,7 +74,7 @@ const sessionMapping: sessionMappingType[] = [
     date: new Date("2024-01-02T15:00:00"),
     displayDate: "Jan 2, 2024 · 15:00",
     platformImage: "/assets/icons/youtube.svg",
-    link: "https://youtube.com/hackthisfall",
+    link: "https://www.youtube.com/watch?v=Q6BAA_Qavlo",
     image: `/assets/humans/speakers/mrunank.png`,
   },
   {
@@ -67,7 +83,7 @@ const sessionMapping: sessionMappingType[] = [
     date: new Date("2024-01-04T16:00:00"),
     displayDate: "Jan 04, 2024 · 16:00",
     platformImage: "/assets/icons/youtube.svg",
-    link: "https://youtube.com/hackthisfall",
+    link: "https://www.youtube.com/watch?v=SYW2RtITlyg",
     image: `/assets/humans/speakers/ayush.png`,
   },
   {
@@ -76,7 +92,7 @@ const sessionMapping: sessionMappingType[] = [
     date: new Date("2024-01-13T18:00:00"),
     displayDate: "Jan 13, 2024 · 18:00",
     platformImage: "/assets/icons/twitter.svg",
-    link: "https://twitter.com/hackthisfall",
+    link: "https://twitter.com/i/spaces/1vOxwjDQVZqJB",
     image: `/assets/humans/speakers/sneha.jpeg`,
   },
   {
@@ -85,7 +101,7 @@ const sessionMapping: sessionMappingType[] = [
     date: new Date("2024-01-13T18:00:00"),
     displayDate: "Jan 13, 2024 · 18:00",
     platformImage: "/assets/icons/twitter.svg",
-    link: "https://twitter.com/hackthisfall",
+    link: "https://twitter.com/i/spaces/1vOxwjDQVZqJB",
     image: `/assets/humans/speakers/nazeeh.jpg`,
   },
   {
@@ -94,41 +110,12 @@ const sessionMapping: sessionMappingType[] = [
     date: new Date("2024-01-18T17:00:00"),
     displayDate: "Jan 18, 2024 · 17:00",
     platformImage: "/assets/icons/youtube.svg",
-    link: "https://youtube.com/hackthisfall",
+    link: "https://www.youtube.com/watch?v=CznWuXygvlM",
     image: `/assets/humans/speakers/abdul.png`,
-  },
-  {
-    title: "Hack This Fall AMA",
-    name: "Siddharth Dayalwal",
-    date: new Date("2024-01-20T00:00:00"),
-    displayDate: "Jan 20, 2024",
-    platformImage: "/assets/icons/instagram.svg",
-    link: "https://www.instagram.com/hackthisfall",
-    image: `/assets/humans/speakers/siddharth.jpeg`,
-  },
-  {
-    title: "Super-Charge your Hack with Web APIs",
-    name: "Karl Lingiah",
-    date: new Date("2024-01-23T16:00:00"),
-    displayDate: "Jan 23, 2024 · 16:00",
-    platformImage: "/assets/icons/youtube.svg",
-    link: "https://youtube.com/hackthisfall",
-    image: `/assets/humans/speakers/karl.jpeg`,
-  },
-  {
-    title: "Getting started with Microservices Architecture & Conductor",
-    name: "Saksham Solanki",
-    date: new Date("2024-01-25T17:00:00"),
-    displayDate: "Jan 25, 2024 · 17:00",
-    platformImage: "/assets/icons/youtube.svg",
-    link: "https://youtube.com/hackthisfall",
-    image: `/assets/humans/speakers/saksham.jpeg`,
   },
 ];
 
 const Schedule = () => {
-  const [_sessionMapping, setSessionMapping] = useState(sessionMapping);
-
   const isDateGreaterThanCurrentDate = (date: Date): boolean => {
     const currentDate = new Date();
     return date > currentDate;
@@ -139,8 +126,6 @@ const Schedule = () => {
     const oneHourBefore = new Date(currentDate.getTime() - 60 * 60 * 1000);
     return date < oneHourBefore;
   };
-
-  useEffect(() => {}, []);
 
   return (
     <Flex background="#0D2129" w="100vw" h="100dvh">
