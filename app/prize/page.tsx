@@ -32,27 +32,6 @@ type PrizeCategory = {
   prizeList: PrizeList[];
 };
 
-const htfPrizes = [
-  {
-    title: 'First Runner-Up',
-    amount: '₹35k',
-    image: '/assets/prizes/second.svg',
-    width: '25%',
-  },
-  {
-    title: 'Winner',
-    amount: '₹50k',
-    image: '/assets/prizes/first.svg',
-    width: '40%',
-  },
-  {
-    title: 'Second Runner-Up',
-    amount: '₹20k',
-    image: '/assets/prizes/third.svg',
-    width: '25%',
-  },
-];
-
 const htfSecondaryPrizes = [
   {
     title: '👭 Best All Girls Team',
@@ -121,223 +100,246 @@ const prizesMapping: PrizeCategory[] = [
         image: `/assets/partners/silver/postman-white.svg`,
       },
       {
-        title: 'Prize name',
+        title: 'Best Domain Name from GoDaddy Registry',
         description:
-          'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
+          'Register your domain name with GoDaddy Registry for a chance to win a Hack from Home Kit! Each Kit contains wireless earbuds, blue light glasses, selfie ring light and a pouch for easy transport.',
         resources: [
           {
-            title: 'Vonage APIs',
-            link: 'https://www.vonage.com/',
-          },
-          {
-            title: 'Vonage APIs',
-            link: 'https://www.vonage.com/',
-          },
-        ],
-        image: `/assets/partners/inkind/mongodb-white.svg`,
-      },
-      {
-        title: 'Prize name',
-        description:
-          'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
-        resources: [
-          {
-            title: 'Vonage APIs',
-            link: 'https://www.vonage.com/',
-          },
-          {
-            title: 'Vonage APIs',
-            link: 'https://www.vonage.com/',
+            title: 'More Info',
+            link: 'https://hack.mlh.io/prizes',
           },
         ],
         image: `/assets/partners/inkind/godaddy-white.svg`,
       },
       {
-        title: 'Prize name',
+        title: 'Best AI Application Built with Cloudflare',
         description:
-          'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
+          'Build an AI Application utilizing Cloudflare’s numerous services for a chance to win Arduino Student Kits for you and your team!',
         resources: [
           {
-            title: 'Vonage APIs',
-            link: 'https://www.vonage.com/',
-          },
-          {
-            title: 'Vonage APIs',
-            link: 'https://www.vonage.com/',
-          },
-        ],
-        image: `/assets/partners/inkind/flow-white.svg`,
-      },
-      {
-        title: 'Prize name',
-        description:
-          'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
-        resources: [
-          {
-            title: 'Vonage APIs',
-            link: 'https://www.vonage.com/',
-          },
-          {
-            title: 'Vonage APIs',
-            link: 'https://www.vonage.com/',
+            title: 'More Info',
+            link: 'https://hack.mlh.io/prizes',
           },
         ],
         image: `/assets/partners/inkind/cloudflare-white.png`,
       },
       {
-        title: 'Prize name',
+        title: 'Best Use of TinyMCE',
+        description:
+          'Render the editor with a Tiny Cloud account and use at least 3 open source plugins and 2 premium plugins in your project, for a chance to win a 3D Printing Pen for you and each of your team members!',
+        resources: [
+          {
+            title: 'More Info',
+            link: 'https://hack.mlh.io/prizes',
+          },
+        ],
+        image: `/assets/partners/inkind/tinymce-white.svg`,
+      },
+      {
+        title: 'Best Use of Flow',
         description:
           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
         resources: [
           {
-            title: 'Vonage APIs',
-            link: 'https://www.vonage.com/',
-          },
-          {
-            title: 'Vonage APIs',
-            link: 'https://www.vonage.com/',
+            title: 'More Info',
+            link: 'https://hack.mlh.io/prizes',
           },
         ],
-        image: `/assets/partners/platinum/vonage-white.svg`,
+        image: `/assets/partners/inkind/flow-white.svg`,
+      },
+      {
+        title: 'Best Use of MongoDB Atlas',
+        description:
+          'Build a hack using MongoDB Atlas for a chance to win a M5GO IoT Starter Kit for you and each member of your team.',
+        resources: [
+          {
+            title: 'More Info',
+            link: 'https://hack.mlh.io/prizes',
+          },
+        ],
+        image: `/assets/partners/inkind/mongodb-white.svg`,
       },
     ],
   },
-//   {
-//     title: 'Fun Prizes',
-//     prizeList: [
-//       {
-//         title: 'Prize name',
-//         description:
-//           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
-//         resources: [
-//           {
-//             title: 'Vonage APIs',
-//             link: 'https://www.vonage.com/',
-//           },
-//           {
-//             title: 'Vonage APIs',
-//             link: 'https://www.vonage.com/',
-//           },
-//         ],
-//         image: `/assets/partners/platinum/vonage-white.svg`,
-//       },
-//       {
-//         title: 'Prize name',
-//         description:
-//           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
-//         resources: [
-//           {
-//             title: 'Vonage APIs',
-//             link: 'https://www.vonage.com/',
-//           },
-//           {
-//             title: 'Vonage APIs',
-//             link: 'https://www.vonage.com/',
-//           },
-//         ],
-//         image: `/assets/partners/platinum/vonage-white.svg`,
-//       },
-//       {
-//         title: 'Prize name',
-//         description:
-//           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
-//         resources: [
-//           {
-//             title: 'Vonage APIs',
-//             link: 'https://www.vonage.com/',
-//           },
-//           {
-//             title: 'Vonage APIs',
-//             link: 'https://www.vonage.com/',
-//           },
-//         ],
-//         image: `/assets/partners/platinum/vonage-white.svg`,
-//       },
-//       {
-//         title: 'Prize name',
-//         description:
-//           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
-//         resources: [
-//           {
-//             title: 'Vonage APIs',
-//             link: 'https://www.vonage.com/',
-//           },
-//           {
-//             title: 'Vonage APIs',
-//             link: 'https://www.vonage.com/',
-//           },
-//         ],
-//         image: `/assets/partners/platinum/vonage-white.svg`,
-//       },
-//       {
-//         title: 'Prize name',
-//         description:
-//           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
-//         resources: [
-//           {
-//             title: 'Vonage APIs',
-//             link: 'https://www.vonage.com/',
-//           },
-//           {
-//             title: 'Vonage APIs',
-//             link: 'https://www.vonage.com/',
-//           },
-//         ],
-//         image: `/assets/partners/platinum/vonage-white.svg`,
-//       },
-//       {
-//         title: 'Prize name',
-//         description:
-//           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
-//         resources: [
-//           {
-//             title: 'Vonage APIs',
-//             link: 'https://www.vonage.com/',
-//           },
-//           {
-//             title: 'Vonage APIs',
-//             link: 'https://www.vonage.com/',
-//           },
-//         ],
-//         image: `/assets/partners/platinum/vonage-white.svg`,
-//       },
-//       {
-//         title: 'Prize name',
-//         description:
-//           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
-//         resources: [
-//           {
-//             title: 'Vonage APIs',
-//             link: 'https://www.vonage.com/',
-//           },
-//           {
-//             title: 'Vonage APIs',
-//             link: 'https://www.vonage.com/',
-//           },
-//         ],
-//         image: `/assets/partners/platinum/vonage-white.svg`,
-//       },
-//       {
-//         title: 'Prize name',
-//         description:
-//           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
-//         resources: [
-//           {
-//             title: 'Vonage APIs',
-//             link: 'https://www.vonage.com/',
-//           },
-//           {
-//             title: 'Vonage APIs',
-//             link: 'https://www.vonage.com/',
-//           },
-//         ],
-//         image: `/assets/partners/platinum/vonage-white.svg`,
-//       },
-//     ],
-//   },
+  //   {
+  //     title: 'Fun Prizes',
+  //     prizeList: [
+  //       {
+  //         title: 'Prize name',
+  //         description:
+  //           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
+  //         resources: [
+  //           {
+  //             title: 'Vonage APIs',
+  //             link: 'https://www.vonage.com/',
+  //           },
+  //           {
+  //             title: 'Vonage APIs',
+  //             link: 'https://www.vonage.com/',
+  //           },
+  //         ],
+  //         image: `/assets/partners/platinum/vonage-white.svg`,
+  //       },
+  //       {
+  //         title: 'Prize name',
+  //         description:
+  //           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
+  //         resources: [
+  //           {
+  //             title: 'Vonage APIs',
+  //             link: 'https://www.vonage.com/',
+  //           },
+  //           {
+  //             title: 'Vonage APIs',
+  //             link: 'https://www.vonage.com/',
+  //           },
+  //         ],
+  //         image: `/assets/partners/platinum/vonage-white.svg`,
+  //       },
+  //       {
+  //         title: 'Prize name',
+  //         description:
+  //           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
+  //         resources: [
+  //           {
+  //             title: 'Vonage APIs',
+  //             link: 'https://www.vonage.com/',
+  //           },
+  //           {
+  //             title: 'Vonage APIs',
+  //             link: 'https://www.vonage.com/',
+  //           },
+  //         ],
+  //         image: `/assets/partners/platinum/vonage-white.svg`,
+  //       },
+  //       {
+  //         title: 'Prize name',
+  //         description:
+  //           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
+  //         resources: [
+  //           {
+  //             title: 'Vonage APIs',
+  //             link: 'https://www.vonage.com/',
+  //           },
+  //           {
+  //             title: 'Vonage APIs',
+  //             link: 'https://www.vonage.com/',
+  //           },
+  //         ],
+  //         image: `/assets/partners/platinum/vonage-white.svg`,
+  //       },
+  //       {
+  //         title: 'Prize name',
+  //         description:
+  //           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
+  //         resources: [
+  //           {
+  //             title: 'Vonage APIs',
+  //             link: 'https://www.vonage.com/',
+  //           },
+  //           {
+  //             title: 'Vonage APIs',
+  //             link: 'https://www.vonage.com/',
+  //           },
+  //         ],
+  //         image: `/assets/partners/platinum/vonage-white.svg`,
+  //       },
+  //       {
+  //         title: 'Prize name',
+  //         description:
+  //           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
+  //         resources: [
+  //           {
+  //             title: 'Vonage APIs',
+  //             link: 'https://www.vonage.com/',
+  //           },
+  //           {
+  //             title: 'Vonage APIs',
+  //             link: 'https://www.vonage.com/',
+  //           },
+  //         ],
+  //         image: `/assets/partners/platinum/vonage-white.svg`,
+  //       },
+  //       {
+  //         title: 'Prize name',
+  //         description:
+  //           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
+  //         resources: [
+  //           {
+  //             title: 'Vonage APIs',
+  //             link: 'https://www.vonage.com/',
+  //           },
+  //           {
+  //             title: 'Vonage APIs',
+  //             link: 'https://www.vonage.com/',
+  //           },
+  //         ],
+  //         image: `/assets/partners/platinum/vonage-white.svg`,
+  //       },
+  //       {
+  //         title: 'Prize name',
+  //         description:
+  //           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
+  //         resources: [
+  //           {
+  //             title: 'Vonage APIs',
+  //             link: 'https://www.vonage.com/',
+  //           },
+  //           {
+  //             title: 'Vonage APIs',
+  //             link: 'https://www.vonage.com/',
+  //           },
+  //         ],
+  //         image: `/assets/partners/platinum/vonage-white.svg`,
+  //       },
+  //     ],
+  //   },
 ];
 
 const Prize = () => {
+  const isMobile = useBreakpointValue({ base: true, lg: false });
+  const htfPrizes = isMobile
+    ? [
+        {
+          title: 'Winner',
+          amount: '₹50k',
+          image: '/assets/prizes/first.svg',
+          width: '40%',
+        },
+        {
+          title: 'First Runner-Up',
+          amount: '₹35k',
+          image: '/assets/prizes/second.svg',
+          width: '25%',
+        },
+        {
+          title: 'Second Runner-Up',
+          amount: '₹20k',
+          image: '/assets/prizes/third.svg',
+          width: '25%',
+        },
+      ]
+    : [
+        {
+          title: 'First Runner-Up',
+          amount: '₹35k',
+          image: '/assets/prizes/second.svg',
+          width: '25%',
+        },
+        {
+          title: 'Winner',
+          amount: '₹50k',
+          image: '/assets/prizes/first.svg',
+          width: '40%',
+        },
+        {
+          title: 'Second Runner-Up',
+          amount: '₹20k',
+          image: '/assets/prizes/third.svg',
+          width: '25%',
+        },
+      ];
+
   return (
     <Flex background="#0D2129" w="100vw" h="100dvh">
       <Flex
@@ -555,6 +557,7 @@ const Prize = () => {
                     <Flex
                       key={index}
                       flexDir="column"
+                      h="full"
                       p="1rem"
                       justifyContent="flex-start"
                       alignItems="center"
@@ -566,17 +569,19 @@ const Prize = () => {
                         w="100%"
                         borderRadius="0.75rem 2rem"
                         justifyContent="center"
-                        alignItems='center'
+                        alignItems="center"
                         bgColor="#2D5564"
                         aspectRatio="2.29"
                       >
                         <Image w="60%" src={prize.image} alt={prize.title} />
                       </Flex>
                       <Flex
+                        flexGrow="1"
                         flexDir="column"
                         mt="1rem"
                         w="full"
-                        justifyContent="center"
+                        gap="0.7rem"
+                        justifyContent="space-between"
                         alignItems="flex-start"
                       >
                         <Heading
@@ -592,12 +597,11 @@ const Prize = () => {
                             lg: '1.1rem',
                             xl: '1.25rem',
                           }}
-                          mt="0.5rem"
                           color="white"
                         >
                           {prize.description}
                         </Text>
-                        <Flex gap="0.5rem" mt="0.5rem">
+                        <Flex gap="0.5rem">
                           {prize.resources.map((resource, index) => (
                             <Link
                               key={index}
