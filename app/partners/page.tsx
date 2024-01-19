@@ -79,7 +79,7 @@ const partnerMapping: Array<{
   // { slug: "bronze", heading: "Bronze", sponsors: [] },
   {
     slug: "in-kind",
-    heading: "In-Kind",
+    heading: "In-Kind Partners",
     sponsors: [],
   },
   // { slug: "community", heading: "Community", sponsors: [] },

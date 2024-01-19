@@ -142,6 +142,16 @@ const humansMapping: humansMappingType[] = [
         image: "/assets/humans/mentors/hrittik.jpeg",
         link: "https://twitter.com/hrittikhere",
       },
+      {
+        name: "Harshita Jain",
+        image: "/assets/humans/mentors/harshita.jpg",
+        link: "#",
+      },
+      {
+        name: "Nitish Kumar",
+        image: "/assets/humans/mentors/nitish.jpg",
+        link: "#",
+      },
     ].sort((a, b) => a.name.localeCompare(b.name)),
   },
   // {
@@ -161,105 +171,114 @@ const humansMapping: humansMappingType[] = [
     people: [
       {
         name: "Siddharth Dayalwal",
-        url: "https://twitter.com/siddharth_hacks",
         image: "/assets/humans/team/siddharth.jpg",
         link: "https://twitter.com/siddharth_hacks",
       },
       {
         name: "Sahil Sen",
-        url: "https://www.linkedin.com/in/sahil-sen-528647ba/",
         image: "/assets/humans/team/sahilsen.webp",
         link: "https://www.linkedin.com/in/sahil-sen-528647ba/",
       },
       {
         name: "Dennis D'mello",
-        url: "https://www.linkedin.com/in/dendemello/",
         image: "/assets/humans/team/dennis.jpeg",
         link: "https://www.linkedin.com/in/dendemello/",
       },
       {
         name: "Paras Gupta",
-        url: "https://twitter.com/parasg1999/",
         image: "/assets/humans/team/paras.jpeg",
         link: "https://twitter.com/parasg1999/",
       },
       {
         name: "Vaibhav Toshniwal",
-        url: "https://www.linkedin.com/in/vaibhav-vinay-toshniwal-252ba8187/",
         image: "/assets/humans/team/vaibhav.jpeg",
         link: "https://www.linkedin.com/in/vaibhav-vinay-toshniwal-252ba8187/",
       },
       {
         name: "Apoorv Dwivedi",
-        url: "https://www.linkedin.com/in/apoorvdwi",
         image: "/assets/humans/team/apoorv.jpg",
         link: "https://www.twitter.com/apoorvdwi",
       },
       {
         name: "Shitiz Aggarwal",
-        url: "https://twitter.com/Shitiz_Agg",
         image: "/assets/humans/team/shitiz.jpg",
         link: "https://twitter.com/Shitiz_Agg",
       },
       {
         name: "Rohan Kambli",
-        url: "https://twitter.com/rohannrk",
         image: "/assets/humans/team/rohan.jpg",
         link: "https://twitter.com/rohannrk",
       },
       {
         name: "Priti Priya",
-        url: "https://twitter.com/pritisinghhhh",
         image: "/assets/humans/team/priti.jpeg",
         link: "https://twitter.com/pritisinghhhh",
       },
       {
         name: "Kriyanshi Shah",
-        url: "https://twitter.com/ShahKriyanshi",
         image: "/assets/humans/team/kriyanshi.jpg",
         link: "https://twitter.com/ShahKriyanshi",
       },
       {
         name: "Vedant Kakde",
-        url: "https://twitter.com/vedantstwt",
         image: "/assets/humans/team/vedant.png",
         link: "https://twitter.com/vedantstwt",
       },
       {
         name: "Ali Mustufa Shaikh",
-        url: "https://twitter.com/ialimustufa",
         image: "/assets/humans/team/ali.jpg",
         link: "https://twitter.com/ialimustufa",
       },
       {
         name: "Devanshi Pandya",
-        url: "https://twitter.com/DevanshiPandy11",
         image: "/assets/humans/team/devanshi.jpeg",
         link: "https://twitter.com/DevanshiPandy11",
       },
       {
         name: "Sakshi Hardwani",
-        url: "https://www.linkedin.com/in/sakshi-hardwani/",
         image: "/assets/humans/team/sakshi.jpeg",
         link: "https://www.linkedin.com/in/sakshi-hardwani/",
       },
       {
         name: "Toukir Khan",
-        url: "https://twitter.com/_toukirkhan_",
         image: "/assets/humans/team/toukir.jpeg",
         link: "https://twitter.com/_toukirkhan_",
       },
       {
         name: "Vishwa Mehta",
-        url: "https://twitter.com/vishwamehta30/",
         image: "/assets/humans/team/vishwa.jpeg",
         link: "https://twitter.com/vishwamehta30/",
       },
       {
         name: "Bishwajeet Parhi",
-        url: "https://twitter.com/biswa_20p",
         image: "/assets/humans/team/biswa.jpg",
         link: "https://twitter.com/biswa_20p",
+      },
+    ].sort((a, b) => a.name.localeCompare(b.name)),
+  },
+  {
+    slug: "partner",
+    heading: "Partner Reps",
+    people: [
+      {
+        name: "Abdul Vasay",
+        link: "#",
+        image: `/assets/humans/speakers/abdul.png`,
+      },
+      {
+        name: "Karl Lingiah",
+        link: "https://youtube.com/hackthisfall",
+        image: `/assets/humans/speakers/karl.jpeg`,
+      },
+      {
+        name: "Diana Pham",
+        link: "https://youtube.com/hackthisfall",
+        image: `/assets/humans/partners/diana.png`,
+      },
+      {
+        name: "Aanchal Mishra",
+        image: "/assets/humans/partners/aanchal.jpg",
+        link: "#",
       },
     ].sort((a, b) => a.name.localeCompare(b.name)),
   },

@@ -3,6 +3,7 @@
 import { Box, Flex, Grid, Heading, Image, Link, Text } from "@chakra-ui/react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useEffect, useState } from "react";
 
 type sessionMappingType = {
   title: string;
@@ -126,6 +127,8 @@ const sessionMapping: sessionMappingType[] = [
 ];
 
 const Schedule = () => {
+  const [_sessionMapping, setSessionMapping] = useState(sessionMapping);
+
   const isDateGreaterThanCurrentDate = (date: Date): boolean => {
     const currentDate = new Date();
     return date > currentDate;
@@ -136,6 +139,8 @@ const Schedule = () => {
     const oneHourBefore = new Date(currentDate.getTime() - 60 * 60 * 1000);
     return date < oneHourBefore;
   };
+
+  useEffect(() => {}, []);
 
   return (
     <Flex background="#0D2129" w="100vw" h="100dvh">
