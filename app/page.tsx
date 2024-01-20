@@ -104,6 +104,7 @@ const Page = () => {
                 </Flex>
                 <Button
                   color="#fff"
+                  backgroundColor="transparent"
                   px={{ base: '2rem', lg: '4rem' }}
                   py={{ base: '1.5rem', lg: '2rem' }}
                   display="flex"
@@ -118,6 +119,7 @@ const Page = () => {
                   isDisabled
                   _hover={{
                     color: '#fff',
+                    backgroundColor: 'transparent',
                   }}
                 >
                   Registrations Closed
