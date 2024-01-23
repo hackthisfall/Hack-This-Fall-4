@@ -17,15 +17,6 @@ type sessionMappingType = {
 
 const sessionMapping: sessionMappingType[] = [
   {
-    title: "Super-Charge your Hack with Web APIs",
-    name: "Karl Lingiah",
-    date: new Date("2024-01-23T16:00:00"),
-    displayDate: "Jan 23, 2024 · 16:00",
-    platformImage: "/assets/icons/youtube.svg",
-    link: "https://www.youtube.com/watch?v=hmvmoBdCOZc",
-    image: `/assets/humans/speakers/karl.jpeg`,
-  },
-  {
     title: "Getting started with Microservices Architecture & Conductor",
     name: "Saksham Solanki",
     date: new Date("2024-01-25T17:00:00"),
@@ -114,6 +105,15 @@ const sessionMapping: sessionMappingType[] = [
     platformImage: "/assets/icons/youtube.svg",
     link: "https://www.youtube.com/watch?v=CznWuXygvlM",
     image: `/assets/humans/speakers/abdul.png`,
+  },
+  {
+    title: "Super-Charge your Hack with Web APIs",
+    name: "Karl Lingiah",
+    date: new Date("2024-01-23T16:00:00"),
+    displayDate: "Jan 23, 2024 · 16:00",
+    platformImage: "/assets/icons/youtube.svg",
+    link: "https://www.youtube.com/watch?v=hmvmoBdCOZc",
+    image: `/assets/humans/speakers/karl.jpeg`,
   },
 ];
 
