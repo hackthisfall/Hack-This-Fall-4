@@ -718,12 +718,14 @@ const Schedule = () => {
               .find((em) => em.slug === currentSection)
               ?.events.map((e, i) => {
                 return (
-                  <Box width={{ base: "100%", lg: "700px" }}>
+                  <Box
+                    width={{ base: "100%", lg: "700px" }}
+                    key={`${currentSection}${i}`}
+                  >
                     <Flex
                       paddingTop={i === 0 ? "0" : "1rem"}
                       marginTop={i !== 0 ? "0" : "2rem"}
                       marginLeft={"0.5rem"}
-                      key={`${currentSection}${i}`}
                       // margin={"auto"}
                       position="relative"
                       color={"white"}
