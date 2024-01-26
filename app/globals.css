@@ -134,3 +134,45 @@
 .schedule-link {
   transition: all 0.15s ease-in-out;
 }
+
+.init-date {
+  position: relative;
+}
+
+.init-date:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 50%;
+  border-left: 1px solid #1a3844;
+}
+
+.last-date {
+  position: relative;
+}
+
+.last-date:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0%;
+  width: 1px;
+  height: 50%;
+  border-left: 1px solid #1a3844;
+}
+
+.date {
+  position: relative;
+}
+
+.date:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0%;
+  width: 1px;
+  height: 100%;
+  border-left: 1px solid #1a3844;
+}

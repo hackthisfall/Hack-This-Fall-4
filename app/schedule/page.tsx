@@ -1,9 +1,18 @@
 "use client";
 
-import { Box, Flex, Grid, Heading, Image, Link, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Grid,
+  Heading,
+  Image,
+  Link,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 type sessionMappingType = {
   title: string;
@@ -117,7 +126,372 @@ const sessionMapping: sessionMappingType[] = [
   },
 ];
 
+const events = {
+  "9th Feb 2024": [
+    {
+      start: "14:00",
+      end: "17:00",
+      duration: "180 mins",
+      title: "Check-in Opens & Icebreakers",
+      description: "Ground Floor",
+      location: "Ground Floor",
+    },
+    {
+      start: "16:00",
+      end: "16:30",
+      duration: "30 mins",
+      title: "Light Snacks + High Tea",
+      description: "Garden Area",
+      location: "Garden Area",
+    },
+    {
+      start: "17:00",
+      end: "17:10",
+      duration: "10 mins",
+      title: "Keynote by Orkes",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "17:15",
+      end: "18:15",
+      duration: "60 mins",
+      title: "Orkes Workshop",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "18:20",
+      end: "18:50",
+      duration: "30 mins",
+      title: "Vonage Workshop",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "19:00",
+      end: "19:30",
+      duration: "30 mins",
+      title: "Opening Ceremony",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "20:00",
+      end: "",
+      duration: "",
+      title: "Hacking Begins",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "21:00",
+      end: "22:00",
+      duration: "60 mins",
+      title: "Dinner",
+      description: "Garden Area",
+      location: "Garden Area",
+    },
+    {
+      start: "22:30",
+      end: "23:30",
+      duration: "60 mins",
+      title: "GitHub Workshop",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "23:45",
+      end: "23:55",
+      duration: "10 mins",
+      title: "Stroom Stage Time",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+  ],
+  "10th Feb 2024": [
+    {
+      start: "00:00",
+      end: "01:20",
+      duration: "80 mins",
+      title: "Mentorship Round - 1/3",
+      description: "Ideation Round",
+      location: "Hacking Hall",
+    },
+    {
+      start: "01:30",
+      end: "",
+      duration: "",
+      title: "Submission Checkpoint - 1/5",
+      description: "Add project details",
+      location: "Devfolio",
+    },
+    {
+      start: "02:00",
+      end: "02:30",
+      duration: "30 mins",
+      title: "Midnight Snacks",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "02:45",
+      end: "03:30",
+      duration: "45 mins",
+      title: "Midnight Mini Event - TBD",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "07:00",
+      end: "07:30",
+      duration: "30 mins",
+      title: "Zumba Session - Decathlon",
+      description: "Garden Area",
+      location: "Garden Area",
+    },
+    {
+      start: "08:00",
+      end: "09:00",
+      duration: "60 mins",
+      title: "Breakfast",
+      description: "Garden Area",
+      location: "Garden Area",
+    },
+    {
+      start: "10:00",
+      end: "10:45",
+      duration: "45 mins",
+      title: "Postman Workshop",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "10:50",
+      end: "11:20",
+      duration: "30 mins",
+      title: "MLH Soroban Workshop",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "11:25",
+      end: "11:55",
+      duration: "30 mins",
+      title: "Logitech Workshop",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "12:00",
+      end: "12:05",
+      duration: "5 mins",
+      title: "Orkes Stage Time",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "12:10",
+      end: "13:20",
+      duration: "70 mins",
+      title: "Mentorship Round - 2/3",
+      description: "Implementation Round",
+      location: "Hacking Hall",
+    },
+    {
+      start: "13:30",
+      end: "",
+      duration: "",
+      title: "Submission Checkpoint - 2/5",
+      description: "Submit GitHub Repo + Add Sponsor Tracks",
+      location: "Devfolio",
+    },
+    {
+      start: "13:30",
+      end: "14:30",
+      duration: "60 mins",
+      title: "Lunch",
+      description: "Garden Area",
+      location: "Garden Area",
+    },
+    {
+      start: "14:45",
+      end: "15:30",
+      duration: "45 mins",
+      title: "Orkes Mini Event",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "15:35",
+      end: "16:20",
+      duration: "45 mins",
+      title: "Vonage Mini Event",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "16:30",
+      end: "17:00",
+      duration: "30 mins",
+      title: "Light Snacks + High Tea",
+      description: "Garden",
+      location: "Garden Area",
+    },
+    {
+      start: "17:15",
+      end: "18:00",
+      duration: "45 mins",
+      title: "MLH Mini Event",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "18:15",
+      end: "19:15",
+      duration: "60 mins",
+      title: "Orkes Office Hours",
+      description: "TBD",
+      location: "Classroom",
+    },
+    {
+      start: "21:00",
+      end: "22:00",
+      duration: "60 mins",
+      title: "Dinner",
+      description: "Garden Area",
+      location: "Garden Area",
+    },
+    {
+      start: "23:00",
+      end: "00:00",
+      duration: "60 mins",
+      title: "Mentoring Round - 3/3",
+      description: "Final Round",
+      location: "Hacking Hall",
+    },
+  ],
+  "11th Feb 2024": [
+    {
+      start: "00:30",
+      end: "",
+      duration: "",
+      title: "Submission Checkpoint - 3/5",
+      description: "Submit MVP",
+      location: "Devfolio",
+    },
+    {
+      start: "02:00",
+      end: "02:30",
+      duration: "30 mins",
+      title: "Midnight Snacks",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "02:45",
+      end: "03:30",
+      duration: "45 mins",
+      title: "Midnight Mini Event - TBD",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "06:00",
+      end: "",
+      duration: "",
+      title: "Submission Checkpoint - 4/5",
+      description: "Soft Submission",
+      location: "Devfolio",
+    },
+    {
+      start: "08:00",
+      end: "",
+      duration: "",
+      title: "Submission Checkpoint - 5/5",
+      description: "Hacking Ends",
+      location: "Devfolio",
+    },
+    {
+      start: "08:00",
+      end: "09:00",
+      duration: "60 mins",
+      title: "Breakfast",
+      description: "Garden Area",
+      location: "Garden Area",
+    },
+    {
+      start: "11:00",
+      end: "14:00",
+      duration: "180 mins",
+      title: "Hackathon & Partner Judging",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "13:30",
+      end: "14:30",
+      duration: "60 mins",
+      title: "Lunch",
+      description: "Garden Area",
+      location: "Garden Area",
+    },
+    {
+      start: "14:30",
+      end: "",
+      duration: "",
+      title: "Top-10 teams announced",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "15:00",
+      end: "16:00",
+      duration: "60 mins",
+      title: "Top-10 teams Pitch",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+    {
+      start: "16:30",
+      end: "17:15",
+      duration: "45 mins",
+      title: "Closing Ceremony + Winner Announcement",
+      description: "Hacking Hall - 5th Floor",
+      location: "Hacking Hall",
+    },
+  ],
+};
+
+const eventsMapping = [
+  {
+    slug: "9th Feb 2024",
+    heading: "9th Feb 2024",
+    events: events["9th Feb 2024"],
+  },
+  {
+    slug: "10th Feb 2024",
+    heading: "10th Feb 2024",
+    events: events["10th Feb 2024"],
+  },
+  {
+    slug: "11th Feb 2024",
+    heading: "11th Feb 2024",
+    events: events["11th Feb 2024"],
+  },
+];
+
 const Schedule = () => {
+  const [currentSection, setCurrentSection] = useState("9th Feb 2024");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const selectSection = (section: string) => {
+    setCurrentSection(section);
+    setIsDropdownOpen(false);
+  };
+
+  const isMobile = useBreakpointValue({ base: true, lg: false });
+
   const isDateGreaterThanCurrentDate = (date: Date): boolean => {
     const currentDate = new Date();
     return date > currentDate;
@@ -182,6 +556,7 @@ const Schedule = () => {
           alignItems="center"
           overflow="auto"
           h="full"
+          zIndex="20"
         >
           <Heading
             lineHeight="90%"
@@ -191,6 +566,257 @@ const Schedule = () => {
             fontWeight="600"
             letterSpacing="0.3rem"
             textAlign={"center"}
+          >
+            Agenda
+          </Heading>
+
+          {!isMobile && (
+            <Flex
+              bgColor="transparent"
+              borderRadius="full"
+              w="fit-content"
+              gap="1rem"
+              justifyContent="space-evenly"
+              className="navbar"
+              zIndex={10}
+              marginTop="2rem"
+              border={"1px solid #FFFFFF"}
+            >
+              {eventsMapping.map((section, index) => {
+                return (
+                  <Flex
+                    zIndex={10}
+                    bgColor={
+                      currentSection === section.slug
+                        ? "#FFFFFF"
+                        : "transparent"
+                    }
+                    color={
+                      currentSection === section.slug ? "#0D2129" : "#ffffff"
+                    }
+                    fontFamily="var(--font-dm-sans)"
+                    borderRadius="full"
+                    fontSize="1.1rem"
+                    alignItems="center"
+                    justifyContent="center"
+                    fontWeight="500"
+                    px={{ md: "1rem", lg: "5rem" }}
+                    py="1rem"
+                    key={index}
+                    cursor="pointer"
+                    onClick={() => {
+                      setCurrentSection(section.slug);
+                    }}
+                    className="font-dm-sans"
+                  >
+                    {section.heading}
+                  </Flex>
+                );
+              })}
+            </Flex>
+          )}
+          {isMobile && (
+            <Flex
+              flexDirection="column"
+              bgColor="#ffffff"
+              marginTop="1rem"
+              borderTopRadius="2rem"
+              borderBottomRadius={isDropdownOpen ? "0rem" : "2rem"}
+              position="relative"
+            >
+              <Flex
+                bgColor="#d6d6d6"
+                borderRadius="full"
+                w="fit-content"
+                gap="1rem"
+                pr={eventsMapping.length > 1 ? "1rem" : "0rem"}
+                justifyContent="space-evenly"
+                className="navbar"
+                position={"relative"}
+                zIndex={10}
+              >
+                {eventsMapping.map((section, index) => {
+                  if (currentSection === section.slug)
+                    return (
+                      <Flex
+                        zIndex={10}
+                        bgColor="black"
+                        color="white"
+                        fontFamily="var(--font-dm-sans)"
+                        borderRadius="full"
+                        fontSize="1.1rem"
+                        alignItems="center"
+                        justifyContent="center"
+                        fontWeight="500"
+                        px="2rem"
+                        py="1rem"
+                        key={index}
+                        cursor="pointer"
+                        className="font-dm-sans"
+                        onClick={() => {
+                          setIsDropdownOpen(!isDropdownOpen);
+                        }}
+                        minWidth="200px"
+                      >
+                        {section.heading}
+                      </Flex>
+                    );
+                })}
+                {eventsMapping.length > 1 && (
+                  <Flex
+                    onClick={() => {
+                      setIsDropdownOpen(!isDropdownOpen);
+                    }}
+                  >
+                    <Image src="/assets/icons/dropdown.svg" alt="logo" />
+                  </Flex>
+                )}
+              </Flex>
+              {isDropdownOpen && (
+                <Flex
+                  flexDirection={"column"}
+                  position="absolute"
+                  zIndex={40}
+                  top="100%"
+                  width="100%"
+                  bgColor="#F0F0F0"
+                  borderBottomRadius="2rem"
+                >
+                  {eventsMapping.map((section, index) => {
+                    if (currentSection !== section.slug)
+                      return (
+                        <Flex
+                          zIndex={10}
+                          bgColor="#f0f0f0"
+                          color="#000000"
+                          fontFamily="var(--font-dm-sans)"
+                          borderRadius="full"
+                          fontSize="1.1rem"
+                          alignItems="center"
+                          justifyContent="center"
+                          fontWeight="500"
+                          px="2rem"
+                          py="1rem"
+                          key={index}
+                          cursor="pointer"
+                          className="font-dm-sans"
+                          onClick={() => {
+                            selectSection(section.slug);
+                          }}
+                        >
+                          {section.heading}
+                        </Flex>
+                      );
+                  })}
+                </Flex>
+              )}
+            </Flex>
+          )}
+
+          <Flex direction={"column"} fontFamily={"var(--font-dm-sans)"}>
+            {eventsMapping
+              .find((em) => em.slug === currentSection)
+              ?.events.map((e, i) => {
+                return (
+                  <Box width={{ base: "100%", lg: "700px" }}>
+                    <Flex
+                      paddingTop={i === 0 ? "0" : "1rem"}
+                      marginTop={i !== 0 ? "0" : "2rem"}
+                      marginLeft={"0.5rem"}
+                      // margin={"auto"}
+                      position="relative"
+                      color={"white"}
+                      alignItems={"center"}
+                      justifyContent="flex-start"
+                      alignSelf={"flex-start"}
+                      className={
+                        i === 0
+                          ? "init-date"
+                          : i ===
+                            (eventsMapping.find(
+                              (em) => em.slug === currentSection
+                            )?.events.length || 0) -
+                              1
+                          ? "last-date"
+                          : "date"
+                      }
+                    >
+                      <Flex
+                        position="absolute"
+                        width={{ base: "1rem", lg: "02rem" }}
+                        height={{ base: "1rem", lg: "02rem" }}
+                        backgroundColor={"#1A3844"}
+                        borderRadius={"50%"}
+                        left={{
+                          base: "calc(-0.5rem + 0.5px)",
+                          lg: "calc(-1rem + 0.5px)",
+                        }}
+                        align={"center"}
+                        justify="center"
+                      >
+                        <Box
+                          position="relative"
+                          width={{ base: "0.4rem", lg: "0.75rem" }}
+                          height={{ base: "0.4rem", lg: "0.75rem" }}
+                          backgroundColor={"white"}
+                          borderRadius={"50%"}
+                          // left="calc(50%-0rem)"
+                          // left="calc(-0.25rem + 0.5px)"
+                        ></Box>
+                      </Flex>
+                      <Flex
+                        direction={"column"}
+                        paddingLeft={{ base: "1rem", lg: "2rem" }}
+                        width={{ base: "6rem", lg: "8rem" }}
+                        minWidth={{ base: "6rem", lg: "8rem" }}
+                      >
+                        <Text
+                          color={"#ffffff"}
+                          fontSize={{ base: "1.25rem", lg: "2rem" }}
+                          fontWeight="700"
+                        >
+                          {e.start}
+                        </Text>
+                        <Text
+                          color={"#F46D24"}
+                          fontSize={{ base: "1rem", lg: "1.25rem" }}
+                        >
+                          {e.duration || ""}
+                        </Text>
+                      </Flex>
+                      <Flex
+                        direction={"column"}
+                        marginLeft={{ base: "1rem", lg: "6rem" }}
+                      >
+                        <Text
+                          color={"#ffffff"}
+                          fontSize={{ base: "1.25rem", lg: "2rem" }}
+                          fontWeight="700"
+                        >
+                          {e.title}
+                        </Text>
+                        <Text
+                          color={"#DCDCDC"}
+                          fontSize={{ base: "1rem", lg: "1.25rem" }}
+                        >
+                          {e.description}
+                        </Text>
+                      </Flex>
+                    </Flex>
+                  </Box>
+                );
+              })}
+          </Flex>
+
+          <Heading
+            lineHeight="90%"
+            fontFamily="var(--font-nohemi)"
+            fontSize={{ base: "2rem", lg: "3rem" }}
+            color={"#ffffff"}
+            fontWeight="600"
+            letterSpacing="0.3rem"
+            textAlign={"center"}
+            marginTop={"5rem"}
           >
             Speaker Schedule
           </Heading>
