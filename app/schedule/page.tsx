@@ -723,6 +723,7 @@ const Schedule = () => {
                       paddingTop={i === 0 ? "0" : "1rem"}
                       marginTop={i !== 0 ? "0" : "2rem"}
                       marginLeft={"0.5rem"}
+                      key={`${currentSection}${i}`}
                       // margin={"auto"}
                       position="relative"
                       color={"white"}
