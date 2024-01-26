@@ -100,6 +100,73 @@ const prizesMapping: PrizeCategory[] = [
         image: `/assets/partners/silver/postman-white.svg`,
       },
       {
+        title:
+          'Best overall project idea, prototype, and creative use of Neurelo',
+        description:
+          'Build your project with Neurelo’s Data APIs for databases PostgreSQL, MongoDB, and MySQL. The top two teams win cash prizes worth ₹25,000 and ₹15,000 respectively.',
+        resources: [
+          {
+            title: 'More Info',
+            link: 'https://bit.ly/htf4-neurelo-challenge',
+          },
+          {
+            title: 'Website',
+            link: 'https://bit.ly/htf4-neurelo',
+          },
+        ],
+        image: `/assets/partners/silver/neurelo-white.png`,
+      },
+      {
+        title:
+          'Best project idea addressing a local (India/Gujarat/etc) problem with creative use of Neurelo',
+        description:
+          'Create ideas towards solving local (India, Gujarat, etc) problem. The top team wins cash prizes worth ₹10,000.',
+        resources: [
+          {
+            title: 'More Info',
+            link: 'https://bit.ly/htf4-neurelo-challenge',
+          },
+          {
+            title: 'Website',
+            link: 'https://bit.ly/htf4-neurelo',
+          },
+        ],
+        image: `/assets/partners/silver/neurelo-white.png`,
+      },
+      {
+        title:
+          'Best project idea addressing a global problem with creative use of Neurelo',
+        description:
+          'Creative idea towards solving global problems. The top team wins cash prizes worth ₹10,000.',
+        resources: [
+          {
+            title: 'More Info',
+            link: 'https://bit.ly/htf4-neurelo-challenge',
+          },
+          {
+            title: 'Website',
+            link: 'https://bit.ly/htf4-neurelo',
+          },
+        ],
+        image: `/assets/partners/silver/neurelo-white.png`,
+      },
+      {
+        title: 'Creative Message on Linkedin, YouTube, and X (Twitter)',
+        description:
+          'Find creative ways to tell everyone about your project and how you used Neurelo. The best share as a LinkedIn Blog wins cash prizes worth ₹7,500. The best share as a YouTube Video wins cash prizes worth ₹7,500. The best share as an X (Twitter) Post wins cash prizes worth ₹3,000.',
+        resources: [
+          {
+            title: 'More Info',
+            link: 'https://bit.ly/htf4-neurelo-challenge',
+          },
+          {
+            title: 'Website',
+            link: 'https://bit.ly/htf4-neurelo',
+          },
+        ],
+        image: `/assets/partners/silver/neurelo-white.png`,
+      },
+      {
         title: 'Best Domain Name from GoDaddy Registry',
         description:
           'Register your domain name with GoDaddy Registry for a chance to win a Hack from Home Kit! Each Kit contains wireless earbuds, blue light glasses, selfie ring light and a pouch for easy transport.',
