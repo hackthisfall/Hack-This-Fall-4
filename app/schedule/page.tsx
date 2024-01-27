@@ -559,7 +559,6 @@ const Schedule = () => {
           zIndex="20"
         >
           <Heading
-            lineHeight="90%"
             fontFamily="var(--font-nohemi)"
             fontSize={{ base: '2rem', lg: '3rem' }}
             color={'#ffffff'}
@@ -812,7 +811,6 @@ const Schedule = () => {
           </Flex>
 
           <Heading
-            lineHeight="90%"
             fontFamily="var(--font-nohemi)"
             fontSize={{ base: '2rem', lg: '3rem' }}
             color={'#ffffff'}
