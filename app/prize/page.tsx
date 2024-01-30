@@ -48,6 +48,22 @@ const prizesMapping: PrizeCategory[] = [
     title: 'Partner Prizes',
     prizeList: [
       {
+        title: 'Most Creative use of Orkes',
+        description:
+          'Build the most creative project that uses Orkes. Top-3 teams that build the best project stand a chance to win Orkes branded sticker sheet, bag, cap, water bottle, and bottle cooler.',
+        resources: [
+          {
+            title: 'More Info',
+            link: 'https://bit.ly/htf4-orkes-challenge',
+          },
+          {
+            title: 'Github Repo',
+            link: 'https://bit.ly/htf4-con-repo',
+          },
+        ],
+        image: `/assets/partners/powered-by/orkes-white.png`,
+      },
+      {
         title: 'Best Project built using Vonage APIs',
         description:
           'Build a project that benefits our planet, Earth. Each winning team member will win a Razer BlackWidow V3 - Mechanical Wired Gaming Keyboard.',
@@ -66,6 +82,22 @@ const prizesMapping: PrizeCategory[] = [
           },
         ],
         image: `/assets/partners/platinum/vonage-white.svg`,
+      },
+      {
+        title: 'Best use of GitHub',
+        description:
+          'Stand a chance to win GitHub Mona figurine or plushy in two simple steps. First by signing up for GitHub Global Campus and second by using a GitHub repository to host your hackathon project’s code!',
+        resources: [
+          {
+            title: 'More Info',
+            link: 'https://bit.ly/htf4-github-challenge',
+          },
+          {
+            title: 'Github Global Campus',
+            link: 'https://bit.ly/htf4-sdp',
+          },
+        ],
+        image: `/assets/partners/gold/github-white.png`,
       },
       {
         title: 'Best use of GenAI APIs',
@@ -165,6 +197,18 @@ const prizesMapping: PrizeCategory[] = [
           },
         ],
         image: `/assets/partners/silver/neurelo-white.png`,
+      },
+      {
+        title: 'Logitech MX Macro Challenge',
+        description:
+          'Share one Smart Action Hack for Logitech MX Master series products and stand a chance to win MX Keys S Combo, MX Master 3S and more.',
+        resources: [
+          {
+            title: 'More Info',
+            link: 'https://bit.ly/htf4-logitech-challenge',
+          },
+        ],
+        image: `/assets/partners/silver/logitech-white.png`,
       },
       {
         title: 'Best Domain Name from GoDaddy Registry',
