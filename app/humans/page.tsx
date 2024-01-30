@@ -36,6 +36,11 @@ const humansMapping: humansMappingType[] = [
         link: "https://twitter.com/KarlLingiah",
       },
       {
+        name: "Ashwin Kumar Uppala",
+        image: `/assets/humans/partners/ashwin.jpg`,
+        link: "https://twitter.com/ashwinexe",
+      },
+      {
         name: "Diana Pham",
         image: `/assets/humans/partners/diana.png`,
         link: "https://twitter.com/dianasoyster",
@@ -44,6 +49,16 @@ const humansMapping: humansMappingType[] = [
         name: "Aanchal Mishra",
         image: "/assets/humans/partners/aanchal.jpg",
         link: "https://twitter.com/Aanchalmishra__",
+      },
+      {
+        name: "Saksham Solanki",
+        image: "/assets/humans/speakers/saksham.jpeg",
+        link: "https://www.linkedin.com/in/saksham-solanki-%F0%9F%87%AE%F0%9F%87%B3-248691174",
+      },
+      {
+        name: "Venus Vavadiya",
+        image: "/assets/humans/partners/venus.jpg",
+        link: "https://venusvavadiya.com/",
       },
     ].sort((a, b) => a.name.localeCompare(b.name)),
   },
@@ -97,6 +112,11 @@ const humansMapping: humansMappingType[] = [
         name: "Parth Jansari",
         image: "/assets/humans/mentors/parth.png",
         link: "https://twitter.com/jansariparth",
+      },
+      {
+        name: "Harsh Shah",
+        image: "/assets/humans/mentors/harsh.jpeg",
+        link: "https://twitter.com/harshcrop",
       },
       {
         name: "Janvi Thakkar",
@@ -180,17 +200,27 @@ const humansMapping: humansMappingType[] = [
       },
     ].sort((a, b) => a.name.localeCompare(b.name)),
   },
-  // {
-  //   slug: "evangelists",
-  //   heading: "Evangelists",
-  //   people: [
-  //     {
-  //       name: "Shambhav Mishra",
-  //       title: "E publisher",
-  //       image: "/assets/humans/P1.jpeg",
-  //     },
-  //   ],
-  // },
+  {
+    slug: "volunteers",
+    heading: "Volunteers",
+    people: [
+      {
+        name: "Aastha Shah",
+        image: `/assets/humans/volunteers/aastha.jpg`,
+        link: "https://twitter.com/aasthaashahh",
+      },
+      {
+        name: "Prasan Singh",
+        image: `/assets/humans/volunteers/prasan.jpg`,
+        link: "https://twitter.com/prasansecures",
+      },
+      {
+        name: "Avin Indrasoma",
+        image: `/assets/humans/volunteers/avin.jpg`,
+        link: "https://www.linkedin.com/in/avinin",
+      },
+    ].sort((a, b) => a.name.localeCompare(b.name)),
+  },
   {
     slug: "organizers",
     heading: "Organizers",
