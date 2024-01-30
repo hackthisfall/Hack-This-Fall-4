@@ -57,7 +57,7 @@ const prizesMapping: PrizeCategory[] = [
             link: 'https://bit.ly/htf4-orkes-challenge',
           },
           {
-            title: 'Github Repo',
+            title: 'GitHub Repo',
             link: 'https://bit.ly/htf4-con-repo',
           },
         ],
@@ -562,7 +562,7 @@ const Prize = () => {
                         fontFamily="var(--font-nohemi)"
                         lineHeight="90%"
                         fontSize={
-                          index == 1
+                          index == 1 && !isMobile
                             ? { base: '4rem', lg: '4rem', xl: '7rem' }
                             : { base: '3rem', lg: '3rem', xl: '5rem' }
                         }
