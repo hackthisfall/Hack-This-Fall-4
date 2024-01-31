@@ -249,7 +249,7 @@ const prizesMapping: PrizeCategory[] = [
       {
         title: 'Best Use of Flow',
         description:
-          'Build your hack using Flow this weekend for a chance to win $200 USD worth of FLOW token for each member of your team!',
+          'Build your hack using Flow and stand a chance to win $200 worth of FLOW tokens for each member of your team!',
         resources: [
           {
             title: 'More Info',
