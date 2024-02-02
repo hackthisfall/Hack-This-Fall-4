@@ -139,11 +139,6 @@ const humansMapping: humansMappingType[] = [
         link: "https://twitter.com/ayushbherwani",
       },
       {
-        name: "Apoorve Goyal",
-        image: "/assets/humans/mentors/apoorve.jpeg",
-        link: "https://twitter.com/Response_200",
-      },
-      {
         name: "Vraj Desai",
         image: "/assets/humans/mentors/vraj.jpg",
         link: "https://twitter.com/vrajdesai78",
