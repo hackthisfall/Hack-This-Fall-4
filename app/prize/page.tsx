@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Box,
@@ -11,11 +11,11 @@ import {
   SimpleGrid,
   Text,
   useBreakpointValue,
-} from '@chakra-ui/react';
-import Header from '../components/Header';
-import { useState } from 'react';
-import Footer from '../components/Footer';
-import { Metadata } from 'next';
+} from "@chakra-ui/react";
+import Header from "../components/Header";
+import { useState } from "react";
+import Footer from "../components/Footer";
+import { Metadata } from "next";
 
 type PrizeList = {
   title: string;
@@ -34,377 +34,297 @@ type PrizeCategory = {
 
 const htfSecondaryPrizes = [
   {
-    title: '👭 Best All Girls Team',
-    description: '₹10,000 to the winning team and additional perks',
+    title: "👭 Best All Girls Team",
+    description: "₹10,000 to the winning team and additional perks",
   },
   {
-    title: '🌟 Best Beginner Team',
-    description: '₹10,000 to the winning team and additional perks',
+    title: "🌟 Best Beginner Team",
+    description: "₹10,000 to the winning team and additional perks",
   },
 ];
 
 const prizesMapping: PrizeCategory[] = [
   {
-    title: 'Partner Prizes',
+    title: "Partner Prizes",
     prizeList: [
       {
-        title: 'Most Creative use of Orkes',
+        title: "Most Creative use of Orkes",
         description:
-          'Build the most creative project that uses Orkes. Top-3 teams that build the best project stand a chance to win Orkes branded sticker sheet, bag, cap, water bottle, and bottle cooler.',
+          "Build the most creative project that uses Orkes. Top-3 teams that build the best project stand a chance to win Orkes branded sticker sheet, bag, cap, water bottle, and bottle cooler.",
         resources: [
           {
-            title: 'More Info',
-            link: 'https://bit.ly/htf4-orkes-challenge',
+            title: "More Info",
+            link: "https://bit.ly/htf4-orkes-challenge",
           },
           {
-            title: 'GitHub Repo',
-            link: 'https://bit.ly/htf4-con-repo',
+            title: "GitHub Repo",
+            link: "https://bit.ly/htf4-con-repo",
           },
         ],
         image: `/assets/partners/powered-by/orkes-white.png`,
       },
       {
-        title: 'Best Project built using Vonage APIs',
+        title: "Best Project built using Vonage APIs",
         description:
-          'Build a project that benefits our planet, Earth. Each winning team member will win a Razer BlackWidow V3 - Mechanical Wired Gaming Keyboard.',
+          "Build a project that benefits our planet, Earth. Each winning team member will win a Razer BlackWidow V3 - Mechanical Wired Gaming Keyboard.",
         resources: [
           {
-            title: 'More Info',
-            link: 'https://bit.ly/htf4-vonage-challenge',
+            title: "More Info",
+            link: "https://bit.ly/htf4-vonage-challenge",
           },
           {
-            title: 'Live Workshop',
-            link: 'https://www.youtube.com/live/hmvmoBdCOZc?si=YEEgTjO03sOhZVcp',
+            title: "Live Workshop",
+            link: "https://www.youtube.com/live/hmvmoBdCOZc?si=YEEgTjO03sOhZVcp",
           },
           {
-            title: 'Developer Center',
-            link: 'https://bit.ly/htf4-vonage',
+            title: "Developer Center",
+            link: "https://bit.ly/htf4-vonage",
           },
         ],
         image: `/assets/partners/platinum/vonage-white.svg`,
       },
       {
-        title: 'Best use of GitHub',
+        title: "Best use of GitHub",
         description:
-          'Stand a chance to win GitHub Mona figurine or plushy in two simple steps. First by signing up for GitHub Global Campus and second by using a GitHub repository to host your hackathon project’s code!',
+          "Stand a chance to win GitHub Mona figurine or plushy in two simple steps. First by signing up for GitHub Global Campus and second by using a GitHub repository to host your hackathon project’s code!",
         resources: [
           {
-            title: 'More Info',
-            link: 'https://bit.ly/htf4-github-challenge',
+            title: "More Info",
+            link: "https://bit.ly/htf4-github-challenge",
           },
           {
-            title: 'Github Global Campus',
-            link: 'https://bit.ly/htf4-sdp',
+            title: "Github Global Campus",
+            link: "https://bit.ly/htf4-sdp",
           },
         ],
         image: `/assets/partners/gold/github-white.png`,
       },
       {
-        title: 'Best use of GenAI APIs',
+        title: "Best use of GenAI APIs",
         description:
-          'Build a project that uses GenAI APIs and win an exclusive Postman swag kit, a certification, and stand a chance to get featured on the Postman blog.',
+          "Build a project that uses GenAI APIs and win an exclusive Postman swag kit, a certification, and stand a chance to get featured on the Postman blog.",
         resources: [
           {
-            title: 'More Info',
-            link: 'https://bit.ly/htf4-postman-challenge',
+            title: "More Info",
+            link: "https://bit.ly/htf4-postman-challenge",
           },
           {
-            title: 'Public API Network',
-            link: 'https://www.postman.com/explore',
+            title: "Public API Network",
+            link: "https://www.postman.com/explore",
           },
         ],
         image: `/assets/partners/silver/postman-white.svg`,
       },
       {
-        title: 'Best use of Postman',
+        title: "Best use of Postman",
         description:
-          'Build a project that uses Postman and win an exclusive Postman swag kit, a certification, and stand a chance to get featured on the Postman blog.',
+          "Build a project that uses Postman and win an exclusive Postman swag kit, a certification, and stand a chance to get featured on the Postman blog.",
         resources: [
           {
-            title: 'More Info',
-            link: 'https://bit.ly/htf4-postman-challenge',
+            title: "More Info",
+            link: "https://bit.ly/htf4-postman-challenge",
           },
           {
-            title: 'Public API Network',
-            link: 'https://www.postman.com/explore',
+            title: "Public API Network",
+            link: "https://www.postman.com/explore",
           },
         ],
         image: `/assets/partners/silver/postman-white.svg`,
       },
       {
         title:
-          'Best overall project idea, prototype, and creative use of Neurelo',
+          "Best overall project idea, prototype, and creative use of Neurelo",
         description:
-          'Build your project with Neurelo’s Data APIs for databases PostgreSQL, MongoDB, and MySQL. The top two teams win cash prizes worth ₹25,000 and ₹15,000 respectively.',
+          "Build your project with Neurelo’s Data APIs for databases PostgreSQL, MongoDB, and MySQL. The top two teams win cash prizes worth ₹25,000 and ₹15,000 respectively.",
         resources: [
           {
-            title: 'More Info',
-            link: 'https://bit.ly/htf4-neurelo-challenge',
+            title: "More Info",
+            link: "https://bit.ly/htf4-neurelo-challenge",
           },
           {
-            title: 'Website',
-            link: 'https://bit.ly/htf4-neurelo',
+            title: "Website",
+            link: "https://bit.ly/htf4-neurelo",
           },
         ],
         image: `/assets/partners/silver/neurelo-white.png`,
       },
       {
         title:
-          'Best project idea addressing a local (India/Gujarat/etc) problem with creative use of Neurelo',
+          "Best project idea addressing a local (India/Gujarat/etc) problem with creative use of Neurelo",
         description:
-          'Create ideas towards solving local (India, Gujarat, etc) problem. The top team wins cash prizes worth ₹10,000.',
+          "Create ideas towards solving local (India, Gujarat, etc) problem. The top team wins cash prizes worth ₹10,000.",
         resources: [
           {
-            title: 'More Info',
-            link: 'https://bit.ly/htf4-neurelo-challenge',
+            title: "More Info",
+            link: "https://bit.ly/htf4-neurelo-challenge",
           },
           {
-            title: 'Website',
-            link: 'https://bit.ly/htf4-neurelo',
+            title: "Website",
+            link: "https://bit.ly/htf4-neurelo",
           },
         ],
         image: `/assets/partners/silver/neurelo-white.png`,
       },
       {
         title:
-          'Best project idea addressing a global problem with creative use of Neurelo',
+          "Best project idea addressing a global problem with creative use of Neurelo",
         description:
-          'Creative idea towards solving global problems. The top team wins cash prizes worth ₹10,000.',
+          "Creative idea towards solving global problems. The top team wins cash prizes worth ₹10,000.",
         resources: [
           {
-            title: 'More Info',
-            link: 'https://bit.ly/htf4-neurelo-challenge',
+            title: "More Info",
+            link: "https://bit.ly/htf4-neurelo-challenge",
           },
           {
-            title: 'Website',
-            link: 'https://bit.ly/htf4-neurelo',
+            title: "Website",
+            link: "https://bit.ly/htf4-neurelo",
           },
         ],
         image: `/assets/partners/silver/neurelo-white.png`,
       },
       {
-        title: 'Creative Message on Linkedin, YouTube, and X (Twitter)',
+        title: "Creative Message on Linkedin, YouTube, and X (Twitter)",
         description:
-          'Find creative ways to tell everyone about your project and how you used Neurelo. The best share as a LinkedIn Blog wins cash prizes worth ₹7,500. The best share as a YouTube Video wins cash prizes worth ₹7,500. The best share as an X (Twitter) Post wins cash prizes worth ₹3,000.',
+          "Find creative ways to tell everyone about your project and how you used Neurelo. The best share as a LinkedIn Blog wins cash prizes worth ₹7,500. The best share as a YouTube Video wins cash prizes worth ₹7,500. The best share as an X (Twitter) Post wins cash prizes worth ₹3,000.",
         resources: [
           {
-            title: 'More Info',
-            link: 'https://bit.ly/htf4-neurelo-challenge',
+            title: "More Info",
+            link: "https://bit.ly/htf4-neurelo-challenge",
           },
           {
-            title: 'Website',
-            link: 'https://bit.ly/htf4-neurelo',
+            title: "Website",
+            link: "https://bit.ly/htf4-neurelo",
           },
         ],
         image: `/assets/partners/silver/neurelo-white.png`,
       },
       {
-        title: 'Logitech MX Macro Challenge',
+        title: "Logitech MX Macro Challenge",
         description:
-          'Share one Smart Action Hack for Logitech MX Master series products and stand a chance to win MX Keys S Combo, MX Master 3S and more.',
+          "Share one Smart Action Hack for Logitech MX Master series products and stand a chance to win MX Keys S Combo, MX Master 3S and more.",
         resources: [
           {
-            title: 'More Info',
-            link: 'https://bit.ly/htf4-logitech-challenge',
+            title: "More Info",
+            link: "https://bit.ly/htf4-logitech-challenge",
           },
         ],
         image: `/assets/partners/silver/logitech-white.png`,
       },
       {
-        title: 'Best Domain Name from GoDaddy Registry',
+        title: "Best Domain Name from GoDaddy Registry",
         description:
-          'Register your domain name with GoDaddy Registry for a chance to win a Hack from Home Kit! Each Kit contains wireless earbuds, blue light glasses, selfie ring light and a pouch for easy transport.',
+          "Register your domain name with GoDaddy Registry for a chance to win a Hack from Home Kit! Each Kit contains wireless earbuds, blue light glasses, selfie ring light and a pouch for easy transport.",
         resources: [
           {
-            title: 'More Info',
-            link: 'https://hack.mlh.io/prizes',
+            title: "More Info",
+            link: "https://hack.mlh.io/prizes",
           },
         ],
         image: `/assets/partners/inkind/godaddy-white.svg`,
       },
       {
-        title: 'Best AI Application Built with Cloudflare',
+        title: "Best AI Application Built with Cloudflare",
         description:
-          'Build an AI Application utilizing Cloudflare’s numerous services for a chance to win Arduino Student Kits for you and your team!',
+          "Build an AI Application utilizing Cloudflare’s numerous services for a chance to win Arduino Student Kits for you and your team!",
         resources: [
           {
-            title: 'More Info',
-            link: 'https://hack.mlh.io/prizes',
+            title: "More Info",
+            link: "https://hack.mlh.io/prizes",
           },
         ],
         image: `/assets/partners/inkind/cloudflare-white.png`,
       },
       {
-        title: 'Best Use of TinyMCE',
+        title: "Best Use of TinyMCE",
         description:
-          'Render the editor with a Tiny Cloud account and use at least 3 open source plugins and 2 premium plugins in your project, for a chance to win a 3D Printing Pen for you and each of your team members!',
+          "Render the editor with a Tiny Cloud account and use at least 3 open source plugins and 2 premium plugins in your project, for a chance to win a 3D Printing Pen for you and each of your team members!",
         resources: [
           {
-            title: 'More Info',
-            link: 'https://hack.mlh.io/prizes',
+            title: "More Info",
+            link: "https://hack.mlh.io/prizes",
           },
         ],
         image: `/assets/partners/inkind/tinymce-white.svg`,
       },
       {
-        title: 'Best Use of Flow',
+        title: "Best Use of Flow",
         description:
-          'Build your hack using Flow and stand a chance to win $200 worth of FLOW tokens for each member of your team!',
+          "Build your hack using Flow and stand a chance to win $200 worth of FLOW tokens for each member of your team!",
         resources: [
           {
-            title: 'More Info',
-            link: 'https://hack.mlh.io/prizes',
+            title: "More Info",
+            link: "https://hack.mlh.io/prizes",
           },
         ],
         image: `/assets/partners/inkind/flow-white.svg`,
       },
       {
-        title: 'Best Use of MongoDB Atlas',
+        title: "Best Use of MongoDB Atlas",
         description:
-          'Build a hack using MongoDB Atlas for a chance to win a M5GO IoT Starter Kit for you and each member of your team.',
+          "Build a hack using MongoDB Atlas for a chance to win a M5GO IoT Starter Kit for you and each member of your team.",
         resources: [
           {
-            title: 'More Info',
-            link: 'https://hack.mlh.io/prizes',
+            title: "More Info",
+            link: "https://hack.mlh.io/prizes",
           },
         ],
         image: `/assets/partners/inkind/mongodb-white.svg`,
       },
     ],
   },
-  //   {
-  //     title: 'Fun Prizes',
-  //     prizeList: [
-  //       {
-  //         title: 'Prize name',
-  //         description:
-  //           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
-  //         resources: [
-  //           {
-  //             title: 'Vonage APIs',
-  //             link: 'https://www.vonage.com/',
-  //           },
-  //           {
-  //             title: 'Vonage APIs',
-  //             link: 'https://www.vonage.com/',
-  //           },
-  //         ],
-  //         image: `/assets/partners/platinum/vonage-white.svg`,
-  //       },
-  //       {
-  //         title: 'Prize name',
-  //         description:
-  //           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
-  //         resources: [
-  //           {
-  //             title: 'Vonage APIs',
-  //             link: 'https://www.vonage.com/',
-  //           },
-  //           {
-  //             title: 'Vonage APIs',
-  //             link: 'https://www.vonage.com/',
-  //           },
-  //         ],
-  //         image: `/assets/partners/platinum/vonage-white.svg`,
-  //       },
-  //       {
-  //         title: 'Prize name',
-  //         description:
-  //           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
-  //         resources: [
-  //           {
-  //             title: 'Vonage APIs',
-  //             link: 'https://www.vonage.com/',
-  //           },
-  //           {
-  //             title: 'Vonage APIs',
-  //             link: 'https://www.vonage.com/',
-  //           },
-  //         ],
-  //         image: `/assets/partners/platinum/vonage-white.svg`,
-  //       },
-  //       {
-  //         title: 'Prize name',
-  //         description:
-  //           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
-  //         resources: [
-  //           {
-  //             title: 'Vonage APIs',
-  //             link: 'https://www.vonage.com/',
-  //           },
-  //           {
-  //             title: 'Vonage APIs',
-  //             link: 'https://www.vonage.com/',
-  //           },
-  //         ],
-  //         image: `/assets/partners/platinum/vonage-white.svg`,
-  //       },
-  //       {
-  //         title: 'Prize name',
-  //         description:
-  //           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
-  //         resources: [
-  //           {
-  //             title: 'Vonage APIs',
-  //             link: 'https://www.vonage.com/',
-  //           },
-  //           {
-  //             title: 'Vonage APIs',
-  //             link: 'https://www.vonage.com/',
-  //           },
-  //         ],
-  //         image: `/assets/partners/platinum/vonage-white.svg`,
-  //       },
-  //       {
-  //         title: 'Prize name',
-  //         description:
-  //           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
-  //         resources: [
-  //           {
-  //             title: 'Vonage APIs',
-  //             link: 'https://www.vonage.com/',
-  //           },
-  //           {
-  //             title: 'Vonage APIs',
-  //             link: 'https://www.vonage.com/',
-  //           },
-  //         ],
-  //         image: `/assets/partners/platinum/vonage-white.svg`,
-  //       },
-  //       {
-  //         title: 'Prize name',
-  //         description:
-  //           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
-  //         resources: [
-  //           {
-  //             title: 'Vonage APIs',
-  //             link: 'https://www.vonage.com/',
-  //           },
-  //           {
-  //             title: 'Vonage APIs',
-  //             link: 'https://www.vonage.com/',
-  //           },
-  //         ],
-  //         image: `/assets/partners/platinum/vonage-white.svg`,
-  //       },
-  //       {
-  //         title: 'Prize name',
-  //         description:
-  //           'Everyone loves swags so that they can brag about them.Everyone loves swags so that they can brag about them.',
-  //         resources: [
-  //           {
-  //             title: 'Vonage APIs',
-  //             link: 'https://www.vonage.com/',
-  //           },
-  //           {
-  //             title: 'Vonage APIs',
-  //             link: 'https://www.vonage.com/',
-  //           },
-  //         ],
-  //         image: `/assets/partners/platinum/vonage-white.svg`,
-  //       },
-  //     ],
-  //   },
+  {
+    title: "Fun Prizes",
+    prizeList: [
+      {
+        title: "Hack This Fall Social Media Challenge",
+        description:
+          "Post anything and everything on social media about Hack This Fall. Make sure to tag @hackthisfall and use the hashtag #HackThisFall 2024. The most active hacker stands a chance to win the Logitech MX Master 3S Mouse.",
+        resources: [
+          {
+            title: "Prize",
+            link: "https://bit.ly/htf4-logitech",
+          },
+        ],
+        image: `/white-logo.png`,
+      },
+      {
+        title: "Hack This Fall Most Funny Meme Challenge",
+        description:
+          "Post funny memes on X (Twitter) by tagging @hackthisfall and using the hashtags #HTFMeme & #HackThisFall2024. Stand a chance to win the Logitech MX Keys S Keyboard",
+        resources: [
+          {
+            title: "Prize",
+            link: "https://bit.ly/htf4-logitech",
+          },
+        ],
+        image: `/white-logo.png`,
+      },
+      {
+        title: "Hack This Fall Most Creative Mascot Challenge",
+        description:
+          "Post creative mascots for Hack This Fall on X (Twitter) by tagging @hackthisfall and using the hashtags #HTFMascot & #HackThisFall2024. Stand a chance to win GitHub Octocat Plushie.",
+        resources: [
+          {
+            title: "Prize",
+            link: "https://pbs.twimg.com/media/FBwaQgsVEAADNa-.png",
+          },
+        ],
+        image: `/white-logo.png`,
+      },
+      {
+        title: "GitHub's Draw an Octocat Challenge",
+        description:
+          "Draw your own Mona in whatever medium you choose and stand a chance to win GitHub Tshirt by posting your art on X (Twitter). Make sure to tag us @githubeducation @hackthisfall and use the hashtags #MyOctocat #HackThisFall2024.",
+        resources: [
+          {
+            title: "More info",
+            link: "https://bit.ly/htf4-myoctocat",
+          },
+        ],
+        image: `/white-logo.png`,
+      },
+    ],
+  },
 ];
 
 const Prize = () => {
@@ -412,42 +332,42 @@ const Prize = () => {
   const htfPrizes = isMobile
     ? [
         {
-          title: 'Winner',
-          amount: '₹50k',
-          image: '/assets/prizes/first.svg',
-          width: '40%',
+          title: "Winner",
+          amount: "₹50k",
+          image: "/assets/prizes/first.svg",
+          width: "40%",
         },
         {
-          title: 'First Runner-Up',
-          amount: '₹35k',
-          image: '/assets/prizes/second.svg',
-          width: '25%',
+          title: "First Runner-Up",
+          amount: "₹35k",
+          image: "/assets/prizes/second.svg",
+          width: "25%",
         },
         {
-          title: 'Second Runner-Up',
-          amount: '₹20k',
-          image: '/assets/prizes/third.svg',
-          width: '25%',
+          title: "Second Runner-Up",
+          amount: "₹20k",
+          image: "/assets/prizes/third.svg",
+          width: "25%",
         },
       ]
     : [
         {
-          title: 'First Runner-Up',
-          amount: '₹35k',
-          image: '/assets/prizes/second.svg',
-          width: '25%',
+          title: "First Runner-Up",
+          amount: "₹35k",
+          image: "/assets/prizes/second.svg",
+          width: "25%",
         },
         {
-          title: 'Winner',
-          amount: '₹50k',
-          image: '/assets/prizes/first.svg',
-          width: '40%',
+          title: "Winner",
+          amount: "₹50k",
+          image: "/assets/prizes/first.svg",
+          width: "40%",
         },
         {
-          title: 'Second Runner-Up',
-          amount: '₹20k',
-          image: '/assets/prizes/third.svg',
-          width: '25%',
+          title: "Second Runner-Up",
+          amount: "₹20k",
+          image: "/assets/prizes/third.svg",
+          width: "25%",
         },
       ];
 
@@ -480,7 +400,7 @@ const Prize = () => {
           <Image
             position="absolute"
             right="-18vh"
-            top={{ base: '-18vh', lg: '0' }}
+            top={{ base: "-18vh", lg: "0" }}
             opacity="0.1"
             src="/assets/mandala-right-dark.svg"
             h="36vh"
@@ -488,8 +408,8 @@ const Prize = () => {
           />
           <Image
             position="absolute"
-            left={{ base: '-20vh', lg: '-15vh' }}
-            bottom={{ base: '-20vh', lg: '-10vh' }}
+            left={{ base: "-20vh", lg: "-15vh" }}
+            bottom={{ base: "-20vh", lg: "-10vh" }}
             opacity="0.1"
             src="/assets/mandala-left-dark.svg"
             h="40vh"
@@ -501,7 +421,7 @@ const Prize = () => {
         </Flex>
         <Flex
           flexDirection="column"
-          px={{ base: '2rem', md: '3rem', xl: '5rem' }}
+          px={{ base: "2rem", md: "3rem", xl: "5rem" }}
           alignItems="center"
           overflow="auto"
           w="full"
@@ -513,32 +433,32 @@ const Prize = () => {
             background="#0E252E"
             borderRadius="1.125rem 5.75rem"
             flexDirection="column"
-            px={{ base: '1rem', xl: '2rem' }}
-            py={{ base: '3.1rem', xl: '4rem' }}
+            px={{ base: "1rem", xl: "2rem" }}
+            py={{ base: "3.1rem", xl: "4rem" }}
             w="full"
           >
             <Heading
               lineHeight="90%"
               fontFamily="var(--font-nohemi)"
               fontSize="3rem"
-              color={'#ffffff'}
+              color={"#ffffff"}
               fontWeight="600"
               letterSpacing="0.3rem"
-              textAlign={'center'}
+              textAlign={"center"}
             >
               Hack This Fall Prizes
             </Heading>
             <Flex
-              mt={{ base: '2rem', lg: '4rem' }}
+              mt={{ base: "2rem", lg: "4rem" }}
               justifyContent="space-evenly"
-              px={{ base: '2.1rem', lg: '0' }}
+              px={{ base: "2.1rem", lg: "0" }}
               alignItems="center"
-              gap={{ base: '2.1rem', lg: '0' }}
-              flexDir={{ base: 'column', lg: 'row' }}
+              gap={{ base: "2.1rem", lg: "0" }}
+              flexDir={{ base: "column", lg: "row" }}
             >
               {htfPrizes.map((prize, index) => (
                 <Flex
-                  w={{ base: '100%', lg: prize.width }}
+                  w={{ base: "100%", lg: prize.width }}
                   position="relative"
                   key={index}
                 >
@@ -563,23 +483,23 @@ const Prize = () => {
                         lineHeight="90%"
                         fontSize={
                           index == 1 && !isMobile
-                            ? { base: '4rem', lg: '4rem', xl: '7rem' }
-                            : { base: '3rem', lg: '3rem', xl: '5rem' }
+                            ? { base: "4rem", lg: "4rem", xl: "7rem" }
+                            : { base: "3rem", lg: "3rem", xl: "5rem" }
                         }
-                        color={'#ffffff'}
+                        color={"#ffffff"}
                         fontWeight="600"
                         letterSpacing="0.09rem"
-                        textAlign={'center'}
+                        textAlign={"center"}
                       >
                         {prize.amount}
                       </Heading>
                       <Text
                         fontFamily="var(--font-nohemi)"
-                        fontSize={{ base: '0.9rem', xl: '1.5rem' }}
-                        color={'#ffffff'}
+                        fontSize={{ base: "0.9rem", xl: "1.5rem" }}
+                        color={"#ffffff"}
                         fontWeight="400"
                         letterSpacing="0.09rem"
-                        textAlign={'center'}
+                        textAlign={"center"}
                       >
                         {prize.title}
                       </Text>
@@ -591,7 +511,7 @@ const Prize = () => {
             <SimpleGrid
               px="2.1rem"
               mt="4rem"
-              gap={{ base: '2rem', xl: '4rem' }}
+              gap={{ base: "2rem", xl: "4rem" }}
               columns={{ base: 1, md: 2, lg: 2 }}
             >
               {htfSecondaryPrizes.map((prize, index) => (
@@ -621,9 +541,9 @@ const Prize = () => {
                     </Heading>
                     <Text
                       fontSize={{
-                        base: '1rem',
-                        lg: '1.1rem',
-                        xl: '1.25rem',
+                        base: "1rem",
+                        lg: "1.1rem",
+                        xl: "1.25rem",
                       }}
                       mt="0.5rem"
                       textAlign="center"
@@ -638,12 +558,12 @@ const Prize = () => {
           </Flex>
           <Flex
             w="full"
-            mt={{ base: '3rem', lg: '6rem' }}
+            mt={{ base: "3rem", lg: "6rem" }}
             justifyContent="center"
             flexDir="column"
-            gap={{ base: '3rem', lg: '6rem' }}
+            gap={{ base: "3rem", lg: "6rem" }}
             alignItems="center"
-            mb={{ base: '3rem', lg: '6rem' }}
+            mb={{ base: "3rem", lg: "6rem" }}
           >
             {prizesMapping.map((prize, index) => (
               <Flex
@@ -704,9 +624,9 @@ const Prize = () => {
                         </Heading>
                         <Text
                           fontSize={{
-                            base: '1rem',
-                            lg: '1.1rem',
-                            xl: '1.25rem',
+                            base: "1rem",
+                            lg: "1.1rem",
+                            xl: "1.25rem",
                           }}
                           color="white"
                         >
