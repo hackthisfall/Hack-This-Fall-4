@@ -321,7 +321,7 @@ const prizesMapping: PrizeCategory[] = [
             link: "https://bit.ly/htf4-myoctocat",
           },
         ],
-        image: `/white-logo.png`,
+        image: `/assets/partners/gold/github-white.png`,
       },
     ],
   },
