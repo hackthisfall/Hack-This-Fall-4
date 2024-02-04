@@ -126,10 +126,11 @@ const sessionMapping: sessionMappingType[] = [
   },
 ];
 
-const events = {
+export const events: Record<string, Array<any>> = {
   "9th Feb 2024": [
     {
       start: "14:00",
+      referenceDate: "2024-02-09T14:00:00+05:30",
       end: "17:00",
       duration: "180 mins",
       title: "Check-in Opens & Icebreakers",
@@ -138,6 +139,7 @@ const events = {
     },
     {
       start: "16:00",
+      referenceDate: "2024-02-09T16:00:00+05:30",
       end: "16:30",
       duration: "30 mins",
       title: "Light Snacks + High Tea",
@@ -146,6 +148,7 @@ const events = {
     },
     {
       start: "17:00",
+      referenceDate: "2024-02-09T17:00:00+05:30",
       end: "17:10",
       duration: "10 mins",
       title: "Keynote by Orkes",
@@ -154,6 +157,7 @@ const events = {
     },
     {
       start: "17:15",
+      referenceDate: "2024-02-09T17:15:00+05:30",
       end: "18:15",
       duration: "60 mins",
       title: "Orkes Workshop",
@@ -162,6 +166,7 @@ const events = {
     },
     {
       start: "18:20",
+      referenceDate: "2024-02-09T18:20:00+05:30",
       end: "18:50",
       duration: "30 mins",
       title: "Vonage Workshop",
@@ -170,6 +175,7 @@ const events = {
     },
     {
       start: "19:00",
+      referenceDate: "2024-02-09T19:00:00+05:30",
       end: "19:30",
       duration: "30 mins",
       title: "Opening Ceremony",
@@ -178,6 +184,7 @@ const events = {
     },
     {
       start: "20:00",
+      referenceDate: "2024-02-09T20:00:00+05:30",
       end: "",
       duration: "",
       title: "Hacking Begins",
@@ -186,6 +193,7 @@ const events = {
     },
     {
       start: "21:00",
+      referenceDate: "2024-02-09T21:00:00+05:30",
       end: "22:00",
       duration: "60 mins",
       title: "Dinner",
@@ -194,6 +202,7 @@ const events = {
     },
     {
       start: "22:30",
+      referenceDate: "2024-02-09T22:30:00+05:30",
       end: "23:30",
       duration: "60 mins",
       title: "GitHub Workshop",
@@ -202,6 +211,7 @@ const events = {
     },
     {
       start: "23:45",
+      referenceDate: "2024-02-09T23:45:00+05:30",
       end: "23:55",
       duration: "10 mins",
       title: "Stroom Stage Time",
@@ -212,6 +222,7 @@ const events = {
   "10th Feb 2024": [
     {
       start: "00:00",
+      referenceDate: "2024-02-10T00:00:00+05:30",
       end: "01:20",
       duration: "80 mins",
       title: "Mentorship Round - 1/3",
@@ -220,6 +231,7 @@ const events = {
     },
     {
       start: "01:30",
+      referenceDate: "2024-02-10T01:30:00+05:30",
       end: "",
       duration: "",
       title: "Submission Checkpoint - 1/5",
@@ -228,6 +240,7 @@ const events = {
     },
     {
       start: "02:00",
+      referenceDate: "2024-02-10T02:00:00+05:30",
       end: "02:30",
       duration: "30 mins",
       title: "Midnight Snacks",
@@ -236,6 +249,7 @@ const events = {
     },
     {
       start: "02:45",
+      referenceDate: "2024-02-10T02:45:00+05:30",
       end: "03:30",
       duration: "45 mins",
       title: "Midnight Mini Event - TBD",
@@ -244,6 +258,7 @@ const events = {
     },
     {
       start: "07:00",
+      referenceDate: "2024-02-10T07:00:00+05:30",
       end: "07:30",
       duration: "30 mins",
       title: "Zumba Session - Decathlon",
@@ -252,6 +267,7 @@ const events = {
     },
     {
       start: "08:00",
+      referenceDate: "2024-02-10T08:00:00+05:30",
       end: "09:00",
       duration: "60 mins",
       title: "Breakfast",
@@ -260,6 +276,7 @@ const events = {
     },
     {
       start: "10:00",
+      referenceDate: "2024-02-10T10:00:00+05:30",
       end: "10:45",
       duration: "45 mins",
       title: "Postman Workshop",
@@ -268,6 +285,7 @@ const events = {
     },
     {
       start: "10:50",
+      referenceDate: "2024-02-10T10:50:00+05:30",
       end: "11:20",
       duration: "30 mins",
       title: "MLH Soroban Workshop",
@@ -276,6 +294,7 @@ const events = {
     },
     {
       start: "11:25",
+      referenceDate: "2024-02-10T11:25:00+05:30",
       end: "11:55",
       duration: "30 mins",
       title: "Logitech Workshop",
@@ -284,6 +303,7 @@ const events = {
     },
     {
       start: "12:00",
+      referenceDate: "2024-02-10T12:00:00+05:30",
       end: "12:05",
       duration: "5 mins",
       title: "Orkes Stage Time",
@@ -292,6 +312,7 @@ const events = {
     },
     {
       start: "12:10",
+      referenceDate: "2024-02-10T12:10:00+05:30",
       end: "13:20",
       duration: "70 mins",
       title: "Mentorship Round - 2/3",
@@ -300,6 +321,7 @@ const events = {
     },
     {
       start: "13:30",
+      referenceDate: "2024-02-10T13:30:00+05:30",
       end: "",
       duration: "",
       title: "Submission Checkpoint - 2/5",
@@ -308,6 +330,7 @@ const events = {
     },
     {
       start: "13:30",
+      referenceDate: "2024-02-10T13:30:00+05:30",
       end: "14:30",
       duration: "60 mins",
       title: "Lunch",
@@ -316,6 +339,7 @@ const events = {
     },
     {
       start: "14:45",
+      referenceDate: "2024-02-10T14:45:00+05:30",
       end: "15:30",
       duration: "45 mins",
       title: "Orkes Mini Event",
@@ -324,6 +348,7 @@ const events = {
     },
     {
       start: "15:35",
+      referenceDate: "2024-02-10T15:35:00+05:30",
       end: "16:20",
       duration: "45 mins",
       title: "Vonage Mini Event",
@@ -332,6 +357,7 @@ const events = {
     },
     {
       start: "16:30",
+      referenceDate: "2024-02-10T16:30:00+05:30",
       end: "17:00",
       duration: "30 mins",
       title: "Light Snacks + High Tea",
@@ -340,6 +366,7 @@ const events = {
     },
     {
       start: "17:15",
+      referenceDate: "2024-02-10T17:15:00+05:30",
       end: "18:00",
       duration: "45 mins",
       title: "MLH Mini Event",
@@ -348,6 +375,7 @@ const events = {
     },
     {
       start: "18:15",
+      referenceDate: "2024-02-10T18:15:00+05:30",
       end: "19:15",
       duration: "60 mins",
       title: "Orkes Office Hours",
@@ -356,6 +384,7 @@ const events = {
     },
     {
       start: "21:00",
+      referenceDate: "2024-02-10T21:00:00+05:30",
       end: "22:00",
       duration: "60 mins",
       title: "Dinner",
@@ -364,6 +393,7 @@ const events = {
     },
     {
       start: "23:00",
+      referenceDate: "2024-02-10T23:00:00+05:30",
       end: "00:00",
       duration: "60 mins",
       title: "Mentorship Round - 3/3",
@@ -374,6 +404,7 @@ const events = {
   "11th Feb 2024": [
     {
       start: "00:30",
+      referenceDate: "2024-02-11T00:30:00+05:30",
       end: "",
       duration: "",
       title: "Submission Checkpoint - 3/5",
@@ -382,6 +413,7 @@ const events = {
     },
     {
       start: "02:00",
+      referenceDate: "2024-02-11T02:00:00+05:30",
       end: "02:30",
       duration: "30 mins",
       title: "Midnight Snacks",
@@ -390,6 +422,7 @@ const events = {
     },
     {
       start: "02:45",
+      referenceDate: "2024-02-11T02:45:00+05:30",
       end: "03:30",
       duration: "45 mins",
       title: "Midnight Mini Event - TBD",
@@ -398,6 +431,7 @@ const events = {
     },
     {
       start: "06:00",
+      referenceDate: "2024-02-11T06:00:00+05:30",
       end: "",
       duration: "",
       title: "Submission Checkpoint - 4/5",
@@ -406,6 +440,7 @@ const events = {
     },
     {
       start: "08:00",
+      referenceDate: "2024-02-11T08:00:00+05:30",
       end: "",
       duration: "",
       title: "Submission Checkpoint - 5/5",
@@ -414,6 +449,7 @@ const events = {
     },
     {
       start: "08:00",
+      referenceDate: "2024-02-11T08:00:00+05:30",
       end: "09:00",
       duration: "60 mins",
       title: "Breakfast",
@@ -422,6 +458,7 @@ const events = {
     },
     {
       start: "11:00",
+      referenceDate: "2024-02-11T11:00:00+05:30",
       end: "14:00",
       duration: "180 mins",
       title: "Hackathon & Partner Judging",
@@ -430,6 +467,7 @@ const events = {
     },
     {
       start: "13:30",
+      referenceDate: "2024-02-11T13:30:00+05:30",
       end: "14:30",
       duration: "60 mins",
       title: "Lunch",
@@ -438,6 +476,7 @@ const events = {
     },
     {
       start: "14:30",
+      referenceDate: "2024-02-11T14:30:00+05:30",
       end: "",
       duration: "",
       title: "Top-10 teams announced",
@@ -446,6 +485,7 @@ const events = {
     },
     {
       start: "15:00",
+      referenceDate: "2024-02-11T15:00:00+05:30",
       end: "16:00",
       duration: "60 mins",
       title: "Top-10 teams Pitch",
@@ -454,6 +494,7 @@ const events = {
     },
     {
       start: "16:30",
+      referenceDate: "2024-02-11T16:30:00+05:30",
       end: "17:15",
       duration: "45 mins",
       title: "Closing Ceremony + Winner Announcement",

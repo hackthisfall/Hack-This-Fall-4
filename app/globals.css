@@ -176,3 +176,59 @@
   height: 100%;
   border-left: 1px solid #1a3844;
 }
+
+.progress-bar {
+  border-radius: 4rem 2rem;
+
+  /* to center the percentage value */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 1s ease-in;
+}
+
+.timer-content {
+  border-radius: 4rem 2rem;
+}
+
+.timer {
+  background: linear-gradient(
+      90deg,
+      #145666 -1.9%,
+      #3ebbb7 26.76%,
+      #f7b141 66.19%,
+      #f55f2f 100%
+    ),
+    linear-gradient(0deg, #ffffff, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.agenda-class {
+  /* border-bottom: 1px solid #3ebbb7; */
+  position: sticky;
+  z-index: 2;
+  padding-right: 1rem;
+  background: #0f2832;
+}
+
+.agenda-class:after {
+  line-height: 0.1em;
+  content: "";
+  position: absolute;
+  bottom: calc(50%);
+  left: 30%;
+  width: 60%;
+  border-bottom: 1px solid #3ebbb7;
+  z-index: -1;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.opaque-sheet {
+  background: linear-gradient(180deg, transparent, rgba(15, 40, 50, 1));
+}
