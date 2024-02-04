@@ -16,7 +16,7 @@ import Header from "../components/Header";
 import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import { Metadata } from "next";
-import { events } from "../schedule/page";
+import events from "../events";
 
 const combinedEvents = Object.keys(events).reduce((a, k) => {
   events[k].forEach((e) => {
