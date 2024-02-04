@@ -60,6 +60,91 @@ const humansMapping: humansMappingType[] = [
         image: "/assets/humans/partners/venus.jpg",
         link: "https://venusvavadiya.com/",
       },
+      {
+        name: "Ankit Panday",
+        image: "/assets/humans/partners/ankit.jpeg",
+        link: "",
+      },
+      {
+        name: "Ayusman Sahu",
+        image: "/assets/humans/partners/ayusman.jpeg",
+        link: "",
+      },
+      {
+        name: "Manan Bhatt",
+        image: "/assets/humans/partners/manan.png",
+        link: "",
+      },
+      {
+        name: "Bharat Kumar",
+        image: "/assets/humans/partners/bharat.jpeg",
+        link: "",
+      },
+      {
+        name: "Darshan Gattani",
+        image: "/assets/humans/partners/darshan.jpeg",
+        link: "",
+      },
+      {
+        name: "Ritvi Mishra",
+        image: "/assets/humans/partners/ritvi.jpeg",
+        link: "",
+      },
+      {
+        name: "Srinadh Mattaparthi",
+        image: "/assets/humans/partners/srinadh.jpeg",
+        link: "",
+      },
+      {
+        name: "Shiven Chaturvedi",
+        image: "/assets/humans/partners/shiven.jpeg",
+        link: "",
+      },
+      {
+        name: "Rohan Shah",
+        image: "/assets/humans/partners/rohan.jpeg",
+        link: "",
+      },
+      {
+        name: "Ridhima Malhotra",
+        image: "/assets/humans/partners/ridhima.png",
+        link: "",
+      },
+      {
+        name: "Priyanka Shetty",
+        image: "/assets/humans/partners/priyanka.jpeg",
+        link: "",
+      },
+      {
+        name: "Nipun Agrwal",
+        image: "/assets/humans/partners/nipun.jpeg",
+        link: "",
+      },
+      {
+        name: "Karan Khurana",
+        image: "/assets/humans/partners/karan.jpeg",
+        link: "",
+      },
+      {
+        name: "Chirag Shah",
+        image: "/assets/humans/partners/chirag.jpeg",
+        link: "",
+      },
+      {
+        name: "Brinda Pandya",
+        image: "/assets/humans/partners/brinda.jpeg",
+        link: "",
+      },
+      {
+        name: "Jignesh Thakor",
+        image: "/assets/humans/partners/jignesh.jpg",
+        link: "",
+      },
+      {
+        name: "Chiraayu Pandya",
+        image: "/assets/humans/partners/chiraayu.jpeg",
+        link: "",
+      },
     ].sort((a, b) => a.name.localeCompare(b.name)),
   },
   // {
@@ -112,6 +197,11 @@ const humansMapping: humansMappingType[] = [
         name: "Parth Jansari",
         image: "/assets/humans/mentors/parth.png",
         link: "https://twitter.com/jansariparth",
+      },
+      {
+        name: "Pratik Parmar",
+        image: "/assets/humans/mentors/pratik.png",
+        link: "https://twitter.com/hackyroot",
       },
       {
         name: "Harsh Shah",
