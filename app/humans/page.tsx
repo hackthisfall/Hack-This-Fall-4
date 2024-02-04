@@ -215,7 +215,7 @@ const humansMapping: humansMappingType[] = [
       },
       {
         name: "Priyanshi Rai",
-        image: "/assets/humans/mentors/janvi.png",
+        image: "/assets/humans/mentors/priyanshi.jpeg",
         link: "https://twitter.com/Pri_Rai25",
       },
       {
