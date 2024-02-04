@@ -200,7 +200,7 @@ const humansMapping: humansMappingType[] = [
       },
       {
         name: "Pratik Parmar",
-        image: "/assets/humans/mentors/pratik.png",
+        image: "/assets/humans/mentors/pratik.jpg",
         link: "https://twitter.com/hackyroot",
       },
       {
