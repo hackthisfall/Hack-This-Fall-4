@@ -387,7 +387,7 @@ const humansMapping: humansMappingType[] = [
       },
       {
         name: "Rohan Kambli",
-        image: "/assets/humans/team/rohan.jpg",
+        image: "/assets/humans/team/rohan.jpeg",
         link: "https://twitter.com/rohannrk",
       },
       {
