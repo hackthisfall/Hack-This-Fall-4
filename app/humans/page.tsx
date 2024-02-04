@@ -309,41 +309,41 @@ const humansMapping: humansMappingType[] = [
         image: `/assets/humans/volunteers/avin.jpg`,
         link: "https://www.linkedin.com/in/avinin",
       },
-      // {
-      //   name: "Avin Indrasoma",
-      //   image: `/assets/humans/volunteers/avin.jpg`,
-      //   link: "",
-      // },
-      // {
-      //   name: "Avin Indrasoma",
-      //   image: `/assets/humans/volunteers/avin.jpg`,
-      //   link: "",
-      // },
-      // {
-      //   name: "Avin Indrasoma",
-      //   image: `/assets/humans/volunteers/avin.jpg`,
-      //   link: "",
-      // },
-      // {
-      //   name: "Avin Indrasoma",
-      //   image: `/assets/humans/volunteers/avin.jpg`,
-      //   link: "",
-      // },
-      // {
-      //   name: "Avin Indrasoma",
-      //   image: `/assets/humans/volunteers/avin.jpg`,
-      //   link: "",
-      // },
-      // {
-      //   name: "Avin Indrasoma",
-      //   image: `/assets/humans/volunteers/avin.jpg`,
-      //   link: "",
-      // },
-      // {
-      //   name: "Avin Indrasoma",
-      //   image: `/assets/humans/volunteers/avin.jpg`,
-      //   link: "",
-      // },
+      {
+        name: "Suhani Jain",
+        image: `/assets/humans/volunteers/suhani.jpg`,
+        link: "",
+      },
+      {
+        name: "Dhruv Saraswat",
+        image: `/assets/humans/volunteers/dhruv.jpg`,
+        link: "",
+      },
+      {
+        name: "Kavusikaa Prabhu",
+        image: `/assets/humans/volunteers/kaushika.jpg`,
+        link: "",
+      },
+      {
+        name: "Kamna Sharma",
+        image: `/assets/humans/volunteers/kamna.jpg`,
+        link: "",
+      },
+      {
+        name: "Hemavarshini Akkireddy",
+        image: `/assets/humans/volunteers/hemavarshini.jpg`,
+        link: "",
+      },
+      {
+        name: "Jay Oza",
+        image: `/assets/humans/volunteers/jay.jpg`,
+        link: "",
+      },
+      {
+        name: "Chaitya Nanavati",
+        image: `/assets/humans/volunteers/chaitya.jpg`,
+        link: "",
+      },
     ].sort((a, b) => a.name.localeCompare(b.name)),
   },
   {
