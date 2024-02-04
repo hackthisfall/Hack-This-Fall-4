@@ -214,6 +214,11 @@ const humansMapping: humansMappingType[] = [
         link: "https://twitter.com/JanviTh110302",
       },
       {
+        name: "Priyanshi Rai",
+        image: "/assets/humans/mentors/janvi.png",
+        link: "https://twitter.com/Pri_Rai25",
+      },
+      {
         name: "Manav Darji",
         image: "/assets/humans/mentors/manav.jpg",
         link: "https://twitter.com/manav24_",
@@ -304,6 +309,41 @@ const humansMapping: humansMappingType[] = [
         image: `/assets/humans/volunteers/avin.jpg`,
         link: "https://www.linkedin.com/in/avinin",
       },
+      // {
+      //   name: "Avin Indrasoma",
+      //   image: `/assets/humans/volunteers/avin.jpg`,
+      //   link: "",
+      // },
+      // {
+      //   name: "Avin Indrasoma",
+      //   image: `/assets/humans/volunteers/avin.jpg`,
+      //   link: "",
+      // },
+      // {
+      //   name: "Avin Indrasoma",
+      //   image: `/assets/humans/volunteers/avin.jpg`,
+      //   link: "",
+      // },
+      // {
+      //   name: "Avin Indrasoma",
+      //   image: `/assets/humans/volunteers/avin.jpg`,
+      //   link: "",
+      // },
+      // {
+      //   name: "Avin Indrasoma",
+      //   image: `/assets/humans/volunteers/avin.jpg`,
+      //   link: "",
+      // },
+      // {
+      //   name: "Avin Indrasoma",
+      //   image: `/assets/humans/volunteers/avin.jpg`,
+      //   link: "",
+      // },
+      // {
+      //   name: "Avin Indrasoma",
+      //   image: `/assets/humans/volunteers/avin.jpg`,
+      //   link: "",
+      // },
     ].sort((a, b) => a.name.localeCompare(b.name)),
   },
   {
