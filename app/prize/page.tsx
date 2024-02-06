@@ -223,18 +223,6 @@ const prizesMapping: PrizeCategory[] = [
         image: `/assets/partners/inkind/godaddy-white.svg`,
       },
       {
-        title: "Best AI Application Built with Cloudflare",
-        description:
-          "Build an AI Application utilizing Cloudflare’s numerous services for a chance to win Arduino Student Kits for you and your team!",
-        resources: [
-          {
-            title: "More Info",
-            link: "https://hack.mlh.io/prizes",
-          },
-        ],
-        image: `/assets/partners/inkind/cloudflare-white.png`,
-      },
-      {
         title: "Best Use of TinyMCE",
         description:
           "Render the editor with a Tiny Cloud account and use at least 3 open source plugins and 2 premium plugins in your project, for a chance to win a 3D Printing Pen for you and each of your team members!",

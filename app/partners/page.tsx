@@ -1008,38 +1008,6 @@ const Partners = () => {
                       </Flex>
                     </Flex>
                   </GridItem>
-
-                  <GridItem>
-                    <Flex
-                      backgroundColor="#F7F7F7"
-                      height="100%"
-                      width="100%"
-                      alignItems="center"
-                      // justifyContent="space-between"
-                      paddingX={{ base: "1rem", lg: "3rem" }}
-                      paddingY={{ base: "0.5rem", lg: "2rem" }}
-                      borderRadius={{
-                        base: "0.75rem 2rem",
-                        lg: "1rem 5.75rem",
-                      }}
-                      flexDirection="column"
-                    >
-                      <Flex
-                        flexGrow={1}
-                        justifyContent={"center"}
-                        alignItems="center"
-                      >
-                        <Link target="blank" href="https://hack.mlh.io/">
-                          <Image
-                            src="/assets/partners/in-kind/cloudflare.svg"
-                            alt="logo"
-                            width={"100%"}
-                          />
-                        </Link>
-                      </Flex>
-                    </Flex>
-                  </GridItem>
-
                   <GridItem>
                     <Flex
                       backgroundColor="#F7F7F7"
