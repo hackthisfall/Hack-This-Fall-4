@@ -30,8 +30,7 @@ const faqs = [
   {
     question:
       "A member/few members of my team canceled at the last minute. Can I still hack?",
-    answer:
-      "Kindly open the #organizer-ticket on Discord and let the organizers know as soon as possible, so that we can try to make necessary next steps.",
+    answer: `Kindly open the #organizer-ticket on our <a href="https://discord.hackthisfall.tech" target="_blank">Discord Server</a> and let the organizers know as soon as possible, so that we can try to make necessary next steps.`,
   },
   {
     question: "What are the arrangements for hackers?",

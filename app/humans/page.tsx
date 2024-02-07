@@ -423,7 +423,7 @@ const humansMapping: humansMappingType[] = [
       {
         name: "Toukir Khan",
         image: "/assets/humans/team/toukir.jpeg",
-        link: "https://twitter.com/_toukirkhan_",
+        link: "https://twitter.com/toukirkhan_",
       },
       {
         name: "Vishwa Mehta",
