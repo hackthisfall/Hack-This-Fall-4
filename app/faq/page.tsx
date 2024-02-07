@@ -17,50 +17,44 @@ import Footer from "../components/Footer";
 import { Metadata } from "next";
 
 const faqs = [
-  {
-    question: "Can I participate remotely?",
-    answer:
-      "Hack This Fall 2024 is an in-person hackathon. So remote participation is not applicable.",
-  },
-  {
-    question: "How much does it cost to participate?",
-    answer:
-      "Nothing, participation in Hack This Fall 2024 is absolutely FREE!!🎉 We’ll have meals, snacks, and beverages onsite at the hackathon, in addition to swags, prizes, fun mini-events and more.",
-  },
-
-  {
-    question: "I am a beginner, can I participate?",
-    answer:
-      "Absolutely. We will have mentors and resources available, along with several workshops targeted for beginners. Come learn and experience your first hackathon at Hack This Fall.",
-  },
-  {
-    question:
-      "What is the maximum team size? Can I participate as a solo Hacker?",
-    answer:
-      "We encourage you to make a team with a minimum of 2 and a maximum of 4 members. If you are a solo hacker and do not have a team, you can still register and find team members on our Discord server.",
-  },
-
-  {
-    question: "I am below 18 years of age, can I participate in the hackathon?",
-    answer:
-      "Yes! You can participate in the hackathon but we would need written consent from your parent/guardian and you wouldn’t be allowed to leave the venue during the hackathon.",
-  },
+  // {
+  //   question: "I am a beginner, can I participate?",
+  //   answer:
+  //     "Absolutely. We will have mentors and resources available, along with several workshops targeted for beginners. Come learn and experience your first hackathon at Hack This Fall.",
+  // },
   {
     question: "Will you support or reimburse our travel expenses?",
     answer:
       "Since Hack This Fall 2024 is a community-driven hackathon, unfortunately we will not be able to support you with travel.",
   },
   {
-    question: "What are the sleeping arrangements?",
+    question:
+      "A member/few members of my team canceled at the last minute. Can I still hack?",
     answer:
-      "On both nights (9th Feb & 10th Feb) we will have a supervised sleeping space for hackers to rest and sleep at the venue. We recommend bringing your own blanket if you need one.",
+      "Kindly open the #organizer-ticket on Discord and let the organizers know as soon as possible, so that we can try to make necessary next steps.",
   },
   {
-    question: "What are the arrangements for women hackers?",
-    answer:
-      "We want to make sure that all women hackers feel comfortable and safe at the hackathon. We have arranged a separate sleeping area for girls, clean washrooms, personal hygiene and sanitary kits, etc.",
+    question: "What are the arrangements for hackers?",
+    answer: `On both nights (9th Feb & 10th Feb) we will have a supervised sleeping space for hackers to rest and sleep at the venue. We have arranged a separate sleeping area for girls, clean washrooms, personal hygiene and sanitary kits, etc. We recommend bringing your own blanket if you need one. We want to make sure that all hackers feel comfortable and safe at the hackathon. 
+      <br/>
+      <br/>
+      There will be meals served on the respective days to everyone who checks-in
+      <ul>
+      <li style="margin-left:1rem">High-tea, and Dinner on<b> 9 Feb</b></li><li style="margin-left:1rem">
+      Breakfast, Lunch, High-tea, and Dinner on<b> 10 Feb</b></li ><li style="margin-left:1rem">
+      Breakfast and Lunch on <b>11 Feb</b></li>
+      `,
   },
-
+  {
+    question: "Can hackers start working on projects in advance?",
+    answer:
+      "No. You can only start working on the projects once hacking begins on 9 Feb after the opening ceremony. Any project with an earlier commit history will be disqualified.<br/><br/>However, you can learn the basic tools and technologies you might need before the hackathon.",
+  },
+  // {
+  //   question: "What are the arrangements for women hackers?",
+  //   answer:
+  //     "We want to make sure that all women hackers feel comfortable and safe at the hackathon. We have arranged a separate sleeping area for girls, clean washrooms, personal hygiene and sanitary kits, etc.",
+  // },
   {
     question:
       "At what time should I arrive at the hackathon on 9 Feb and at what time can I depart on 11 Feb?",
@@ -79,12 +73,24 @@ const faqs = [
     answer:
       "The answer is No. Arrangements like sleeping area, food, etc., are only for the attendees. We recommend you to find a stay option for them near the venue. They can drop you at the hackathon venue on 9th Feb and can pick you on 11th Feb but can't stay at venue during the hackathon as we do not have any provision for them.",
   },
+
   {
-    question: "Can hackers start working on projects in advance?",
+    question:
+      "Is it mandatory to stay at the venue during the hackathon? How long am I allowed to leave the premises?",
     answer:
-      "No. You can only start working on the projects once hacking begins on 9 Feb after the opening ceremony. Any project with an earlier commit history will be disqualified.<br/><br/>However, you can learn the basic tools and technologies you might need before the hackathon.",
+      "Yes, once you are checked-in for the hackathon, it is mandatory to stay at the venue. You can only leave after the hackathon ends, i.e. on Feb 11 after the closing ceremony.",
+  },
+  {
+    question: "Is there a packing list? Where can I find it?",
+    answer: `The packing list can be found here in our <a href="https://quiver-substance-830.notion.site/Things-to-Pack-for-Hack-This-Fall-2024-de3d49f96a184753a36a08c303f9e810" target="_blank">Hack This Fall packing guide</a>`,
   },
 
+  {
+    question:
+      "Where can I find the judging criteria? How many judging rounds should I be prepared for?",
+    answer:
+      "You can find everything you need to know about judging including the criteria and the structure in the judging guidelines in the Hacker Guide sent to you via email.",
+  },
   {
     question: "What is the event Code of Conduct?",
     answer:
@@ -131,7 +137,7 @@ const FAQ = () => {
           <Image
             position="absolute"
             right="-18vh"
-            top={{ base: '-18vh', lg: '0' }}
+            top={{ base: "-18vh", lg: "0" }}
             opacity="0.1"
             src="/assets/mandala-right-light.svg"
             h="36vh"
@@ -139,8 +145,8 @@ const FAQ = () => {
           />
           <Image
             position="absolute"
-            left={{ base: '-20vh', lg: '-15vh' }}
-            bottom={{ base: '-20vh', lg: '-10vh' }}
+            left={{ base: "-20vh", lg: "-15vh" }}
+            bottom={{ base: "-20vh", lg: "-10vh" }}
             opacity="0.1"
             src="/assets/mandala-left-light.svg"
             h="40vh"
@@ -167,17 +173,17 @@ const FAQ = () => {
               lineHeight="90%"
               fontFamily="var(--font-nohemi)"
               fontSize="3rem"
-              color={'#000000'}
+              color={"#000000"}
               fontWeight="600"
               letterSpacing="0.3rem"
-              mb={{ base: '2rem', lg: '4rem' }}
+              mb={{ base: "2rem", lg: "4rem" }}
             >
               FAQ
             </Heading>
             <Accordion
               w="85%"
               display="grid"
-              gridTemplateColumns={{ base: '1fr', lg: '1fr 1fr' }}
+              gridTemplateColumns={{ base: "1fr", lg: "1fr 1fr" }}
               rowGap="2rem"
               h="fit-content"
               columnGap="4rem"
@@ -188,7 +194,7 @@ const FAQ = () => {
                   <AccordionItem key={index} border="none">
                     {({ isExpanded }) => (
                       <>
-                        <AccordionButton p={{ base: '0', md: '1rem' }}>
+                        <AccordionButton p={{ base: "0", md: "1rem" }}>
                           <Flex
                             color="#000"
                             fontSize="1.2rem"
@@ -196,12 +202,12 @@ const FAQ = () => {
                             lineHeight="100%"
                             w="full"
                             alignItems="center"
-                            gap={'1rem'}
+                            gap={"1rem"}
                             justifyContent="space-between"
                           >
                             <Flex
                               alignItems="center"
-                              gap={{ base: '1rem', lg: '1.5rem' }}
+                              gap={{ base: "1rem", lg: "1.5rem" }}
                             >
                               <Image
                                 src="/assets/faq/icon.svg"
@@ -228,7 +234,7 @@ const FAQ = () => {
                             color="#000"
                             sx={{
                               a: {
-                                textDecoration: 'underline',
+                                textDecoration: "underline",
                               },
                             }}
                             dangerouslySetInnerHTML={{
