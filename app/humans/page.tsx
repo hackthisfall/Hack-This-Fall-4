@@ -36,6 +36,11 @@ const humansMapping: humansMappingType[] = [
         link: "https://twitter.com/KarlLingiah",
       },
       {
+        name: "Sangeeta Gupta",
+        image: `/assets/humans/partners/sangeeta.jpeg`,
+        link: "https://twitter.com/sangee_2068",
+      },
+      {
         name: "Ashwin Kumar Uppala",
         image: `/assets/humans/partners/ashwin.jpg`,
         link: "https://twitter.com/ashwinexe",
@@ -212,6 +217,11 @@ const humansMapping: humansMappingType[] = [
         name: "Janvi Thakkar",
         image: "/assets/humans/mentors/janvi.png",
         link: "https://twitter.com/JanviTh110302",
+      },
+      {
+        name: "Akash Shukla",
+        image: "/assets/humans/mentors/akash.jpeg",
+        link: "https://twitter.com/0xAkashShukla",
       },
       {
         name: "Priyanshi Rai",
