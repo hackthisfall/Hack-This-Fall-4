@@ -1,22 +1,9 @@
 "use client";
 
-import {
-  Flex,
-  Heading,
-  Image,
-  Text,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  Box,
-} from "@chakra-ui/react";
-import { MinusIcon, AddIcon } from "@chakra-ui/icons";
-import Header from "../components/Header";
+import { Flex, Image, Text, Box } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import Footer from "../components/Footer";
-import { Metadata } from "next";
 import events from "../events";
+import Masonry from "react-responsive-masonry";
 
 const combinedEvents = Object.keys(events).reduce((a, k) => {
   events[k].forEach((e) => {
@@ -35,6 +22,8 @@ const Live = () => {
 
   const [remianingHackTime, setRemianingHackTime] = useState("36 : 00 : 00");
   const [percentTimeRemaining, setPercentTimeRemaining] = useState(100);
+
+  const [displayTweets, setDisplayTweets] = useState<Array<any>>([]);
 
   const updateTimer = () => {
     if (new Date() < new Date("2024-02-09T20:00:00+05:30")) {
@@ -129,14 +118,33 @@ const Live = () => {
     }
   };
 
+  const updateFeed = async () => {
+    const res = await fetch(`https://hackthisfall.tech/live/api`, {
+      headers: {
+        "Content-Type": "application/json",
+        "API-Key": process.env.DATA_API_KEY!,
+      },
+    });
+
+    const { tweets, rawTweets } = await res.json();
+
+    console.log(tweets, rawTweets);
+
+    setDisplayTweets((prev: Array<any>) => [
+      ...prev,
+      ...tweets.filter((t: any) => !prev.some((p) => t.entryId === p.entryId)),
+    ]);
+  };
+
   useEffect(() => {
     const a = setInterval(updateTimer, 1000);
-
     const b = setInterval(updateAgenda, 1000);
+    const c = setInterval(updateFeed, 1000 * 60);
 
     return () => {
       clearInterval(a);
       clearInterval(b);
+      clearInterval(c);
     };
   }, []);
 
@@ -202,6 +210,7 @@ const Live = () => {
             rowGap="2rem"
             grow={1}
             height="100%"
+            // minHeight={"10rem"}
             justify={"space-between"}
           >
             <Box
@@ -214,7 +223,7 @@ const Live = () => {
               #1c2d37 0)`}
               transition="all 1s ease-in"
               // animation={''}
-              minHeight={"8rem"}
+              minHeight={"18rem"}
               padding={"0.75rem"}
             >
               <Flex
@@ -264,6 +273,7 @@ const Live = () => {
               borderRadius="2rem"
               flexGrow={1}
               background="#0F2832"
+              overflow={"auto"}
               maxHeight="66vh"
               position={"relative"}
               // textAlign={"center"}
@@ -273,6 +283,7 @@ const Live = () => {
                 width="100%"
                 height="50%"
                 bottom={0}
+                borderRadius="2rem"
                 zIndex={2}
                 className="opaque-sheet"
                 pointerEvents="none"
@@ -385,10 +396,101 @@ const Live = () => {
               </Flex>
             </Flex>
           </Flex>
-          <iframe
+          {/* <iframe
             src="https://widget.taggbox.com/149349"
             style={{ width: "55%", height: "100%", border: "none" }}
-          ></iframe>
+          ></iframe> */}
+          <Flex
+            height={"100%"}
+            width={"55%"}
+            overflow="auto"
+            background={"#0f2832"}
+            padding={"0.75rem"}
+            borderRadius="2rem"
+            fontFamily="var(--font-nohemi)"
+          >
+            {/* <Grid
+              style={{
+                minHeight: "100vh",
+                border: "none",
+                color: "white",
+              }}
+              templateColumns="repeat(2,1fr)"
+              gap={"0.75rem"}
+              // position={"sticky"}
+              // top={0}
+              // marginTop={0}
+              // overflow="hidden"
+              className="live-grid"
+            >
+              {displayTweets.map((t) => (
+                <Flex
+                  display="inline-block"
+                  float={"left"}
+                  // className="live-grid-item"
+                  background={"#0f2832"}
+                  padding="0.75rem"
+                  key={t.id}
+                  flexDirection="column"
+                  minWidth={"15rem"}
+                  marginTop={"1rem"}
+                  height={"fit-content"}
+                >
+                  {t.images.length > 0 && <Image src={t.images[0]} />}
+                  {t.text && <Text marginTop={"0.75rem"}>{t.text}</Text>}
+                  <Flex marginTop={"0.75rem"}>
+                    <Image src={t.user_img} borderRadius="50%" />
+                    <Flex marginLeft={"1rem"} flexDirection={"column"}>
+                      <Text>{t.user_name}</Text>
+                      <Text>@{t.user_screen_name}</Text>
+                    </Flex>
+                  </Flex>
+                </Flex>
+              ))}
+            </Grid> */}
+            <Masonry columnsCount={2} height="100%" gutter="1rem">
+              {displayTweets.map((t) => (
+                <Flex
+                  borderRadius="1rem"
+                  // display="inline-block"
+                  // float={"left"}
+                  color={"white"}
+                  // className="live-grid-item"
+                  background={"#172f38"}
+                  padding="0.75rem"
+                  key={t.id}
+                  flexDirection="column"
+                  minWidth={"15rem"}
+                  // marginTop={"1rem"}
+                  // alignContent="center"
+                  height={"fit-content"}
+                >
+                  <Flex marginTop={"0.75rem"} alignItems={"center"}>
+                    <Image src={t.user_img} borderRadius="50%" />
+                    <Flex marginLeft={"0.5rem"} flexDirection={"column"}>
+                      <Text fontSize={"1rem"}>
+                        <b>{t.user_name}</b>
+                      </Text>
+                      <Text opacity={"70%"}>@{t.user_screen_name}</Text>
+                    </Flex>
+                  </Flex>
+
+                  {t.images.length > 0 && (
+                    <Image
+                      marginTop={"0.75rem"}
+                      // alignSelf="center"
+                      borderRadius="0.625rem"
+                      src={t.images[0]}
+                    />
+                  )}
+                  {t.text && <Text marginTop={"0.75rem"}>{t.text}</Text>}
+                  <Text marginTop={"0.75rem"} opacity={"50%"}>
+                    {t.created_at}
+                  </Text>
+                </Flex>
+              ))}
+            </Masonry>
+          </Flex>
         </Flex>
       </Flex>
     </Flex>
