@@ -18,8 +18,6 @@ export async function GET(request: Request) {
     const tweet_data = t.content.itemContent.tweet_results.result;
 
     const date = new Date(tweet_data.legacy.created_at);
-    // date.setHours(date.getHours() + 5);
-    // date.setMinutes(date.getMinutes() + 30);
 
     const doc = {
       id: t.entryId,
@@ -32,7 +30,9 @@ export async function GET(request: Request) {
         tweet_data.core.user_results.result.legacy.profile_image_url_https,
       user_name: tweet_data.core.user_results.result.legacy.name,
       user_screen_name: tweet_data.core.user_results.result.legacy.screen_name,
-      created_at: `${date.getHours()}:${date.getMinutes()} · ${
+      created_at: `${date.getHours()}:${
+        date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes()
+      } · ${
         date.getDate() < 10 ? `0${date.getDate()}` : date.getDate()
       } ${date.toLocaleString("default", {
         month: "short",

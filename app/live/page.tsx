@@ -119,7 +119,7 @@ const Live = () => {
   };
 
   const updateFeed = async () => {
-    const res = await fetch(`https://hackthisfall.tech/live/api`, {
+    const res = await fetch(`http://localhost:3000/live/api`, {
       headers: {
         "Content-Type": "application/json",
         "API-Key": process.env.DATA_API_KEY!,
@@ -143,6 +143,7 @@ const Live = () => {
   useEffect(() => {
     const a = setInterval(updateTimer, 1000);
     const b = setInterval(updateAgenda, 1000);
+    updateFeed();
     const c = setInterval(updateFeed, 1000 * 60);
 
     return () => {
