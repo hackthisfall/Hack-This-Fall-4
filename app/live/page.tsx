@@ -119,7 +119,7 @@ const Live = () => {
   };
 
   const updateFeed = async () => {
-    const res = await fetch(`http://localhost:3000/live/api`, {
+    const res = await fetch(`https://hackthisfall.tech/live/api`, {
       headers: {
         "Content-Type": "application/json",
         "API-Key": process.env.DATA_API_KEY!,
