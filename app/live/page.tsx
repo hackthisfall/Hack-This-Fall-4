@@ -452,7 +452,7 @@ const Live = () => {
                 </Flex>
               ))}
             </Grid> */}
-            <Masonry columnsCount={2} height="100%" gutter="1rem">
+            <Masonry columnsCount={2} style={{ height: "100%" }} gutter="1rem">
               {displayTweets.map((t) => (
                 <Flex
                   borderRadius="1rem"
