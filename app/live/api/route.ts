@@ -48,5 +48,5 @@ export async function GET(request: Request) {
     rawTweets.push(t);
   }
 
-  return Response.json({ tweets: formattedTweets, rawTweets }, {headers: });
+  return Response.json({ tweets: formattedTweets, rawTweets });
 }
