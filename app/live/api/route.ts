@@ -33,7 +33,9 @@ export async function GET(request: Request) {
         tweet_data.core.user_results.result.legacy.profile_image_url_https,
       user_name: tweet_data.core.user_results.result.legacy.name,
       user_screen_name: tweet_data.core.user_results.result.legacy.screen_name,
-      created_at: `${date.getHours()}:${
+      created_at: `${
+        date.getHours() < 10 ? `0${date.getHours()}` : date.getHours()
+      }:${
         date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes()
       } · ${
         date.getDate() < 10 ? `0${date.getDate()}` : date.getDate()
@@ -46,5 +48,5 @@ export async function GET(request: Request) {
     rawTweets.push(t);
   }
 
-  return Response.json({ tweets: formattedTweets, rawTweets });
+  return Response.json({ tweets: formattedTweets, rawTweets }, {headers: });
 }

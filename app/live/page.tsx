@@ -124,6 +124,7 @@ const Live = () => {
         "Content-Type": "application/json",
         "API-Key": process.env.DATA_API_KEY!,
       },
+      cache: "no-store",
     });
 
     const { tweets, rawTweets } = await res.json();
@@ -132,10 +133,10 @@ const Live = () => {
 
     setDisplayTweets((prev: Array<any>) =>
       [
-        ...prev,
         ...tweets.filter(
           (t: any) => !prev.some((p) => t.entryId === p.entryId)
         ),
+        ...prev,
       ].slice(0, 1000)
     );
   };
