@@ -19,6 +19,9 @@ export async function GET(request: Request) {
 
     const date = new Date(tweet_data.legacy.created_at);
 
+    date.setHours(date.getHours() + 5);
+    date.setMinutes(date.getMinutes() + 30);
+
     const doc = {
       id: t.entryId,
       entryId: t.entryId,
