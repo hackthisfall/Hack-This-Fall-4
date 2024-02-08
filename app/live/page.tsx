@@ -130,10 +130,14 @@ const Live = () => {
 
     console.log(tweets, rawTweets);
 
-    setDisplayTweets((prev: Array<any>) => [
-      ...prev,
-      ...tweets.filter((t: any) => !prev.some((p) => t.entryId === p.entryId)),
-    ]);
+    setDisplayTweets((prev: Array<any>) =>
+      [
+        ...prev,
+        ...tweets.filter(
+          (t: any) => !prev.some((p) => t.entryId === p.entryId)
+        ),
+      ].slice(0, 1000)
+    );
   };
 
   useEffect(() => {
