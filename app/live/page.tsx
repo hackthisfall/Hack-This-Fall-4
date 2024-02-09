@@ -88,7 +88,7 @@ const Live = () => {
   };
 
   const updateAgenda = () => {
-    const parent = document.querySelector(".agenda");
+    const parent = document.querySelector(".agenda2");
 
     const currentScrollPos = parent?.scrollTop || 0;
     const parentBoudingBox = parent?.getBoundingClientRect();
@@ -111,6 +111,7 @@ const Live = () => {
     const boundingBox = document
       .querySelector(`#i${indexOfNextEvent - 1}`)
       ?.getBoundingClientRect();
+
     if (boundingBox?.y) {
       parent?.scrollTo({
         top: currentScrollPos + boundingBox?.y - (parentBoudingBox?.y || 0),
@@ -119,33 +120,38 @@ const Live = () => {
   };
 
   const updateFeed = async () => {
-    const res = await fetch(`https://hackthisfall.tech/live/api`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "API-Key": process.env.DATA_API_KEY!,
-      },
-      cache: "no-store",
-    });
+    try {
+      const res = await fetch(`https://hackthisfall.tech/live/api`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "API-Key": process.env.DATA_API_KEY!,
+        },
+        cache: "no-store",
+      });
 
-    const { tweets, rawTweets } = await res.json();
+      const { tweets, rawTweets } = await res.json();
 
-    console.log(tweets, rawTweets);
+      console.log(tweets, rawTweets);
 
-    setDisplayTweets((prev: Array<any>) =>
-      [
-        ...tweets.filter(
-          (t: any) => !prev.some((p) => t.entryId === p.entryId)
-        ),
-        ...prev,
-      ].slice(0, 1000)
-    );
+      setDisplayTweets((prev: Array<any>) =>
+        [
+          ...tweets.filter(
+            (t: any) => !prev.some((p) => t.entryId === p.entryId)
+          ),
+          ...prev,
+        ].slice(0, 1000)
+      );
+    } catch (error) {}
   };
 
   useEffect(() => {
+    updateTimer();
+    updateAgenda();
+    updateFeed();
+
     const a = setInterval(updateTimer, 1000);
     const b = setInterval(updateAgenda, 1000);
-    updateFeed();
     const c = setInterval(updateFeed, 1000 * 60);
 
     return () => {
@@ -297,7 +303,12 @@ const Live = () => {
                 className="opaque-sheet"
                 pointerEvents="none"
               ></Box>
-              <Flex flexDirection={"column"} overflow={"auto"} height="100%">
+              <Flex
+                flexDirection={"column"}
+                overflow={"auto"}
+                height="100%"
+                className="agenda2"
+              >
                 <Text
                   color="#3EBBB7"
                   fontFamily="var(--font-nohemi)"
