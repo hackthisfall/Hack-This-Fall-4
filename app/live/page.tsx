@@ -283,7 +283,7 @@ const Live = () => {
               flexGrow={1}
               background="#0F2832"
               overflow={"auto"}
-              maxHeight="66vh"
+              maxHeight="74vh"
               position={"relative"}
               // textAlign={"center"}
             >
