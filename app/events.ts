@@ -133,7 +133,7 @@ const events: Record<string, Array<any>> = {
       referenceDate: "2024-02-10T07:00:00+05:30",
       end: "07:30",
       duration: "30 mins",
-      title: "Zumba Session - Decathlon",
+      title: "Morning Drill",
       description: "Garden Area",
       location: "Garden Area",
     },

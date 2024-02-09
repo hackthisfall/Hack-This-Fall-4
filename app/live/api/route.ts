@@ -8,7 +8,9 @@ const client = new MongoClient(uri);
 const database = client.db("test");
 const tweets = database.collection("tweets");
 
-export async function GET(request: Request) {
+export async function POST(request: Request) {
+  console.log(request.body);
+
   const _tweets = tweets.find().sort({ entryId: -1 }).limit(100);
 
   const formattedTweets = [];
