@@ -217,6 +217,8 @@ const Live = () => {
             rowGap="2rem"
             grow={1}
             height="100%"
+            maxWidth="40vw"
+            minWidth="38vw"
             // minHeight={"10rem"}
             justify={"space-between"}
           >
@@ -413,6 +415,8 @@ const Live = () => {
             overflow="auto"
             background={"#0f2832"}
             padding={"0.75rem"}
+            maxWidth="60vw"
+            minWidth="58vw"
             borderRadius="2rem"
             fontFamily="var(--font-nohemi)"
           >
