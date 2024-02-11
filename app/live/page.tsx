@@ -256,7 +256,11 @@ const Live = () => {
                   fontWeight={500}
                   fontSize="2rem"
                 >
-                  {timerType !== "khatam" && <> Hacking {timerType} in</>}
+                  {timerType !== "khatam" ? (
+                    <> Hacking {timerType} in</>
+                  ) : (
+                    <>See you in </>
+                  )}
                 </Text>
                 {timerType !== "khatam" && (
                   <Text
@@ -277,7 +281,7 @@ const Live = () => {
                     fontWeight={700}
                     fontSize="4rem"
                   >
-                    See you in 2025
+                    2025
                   </Text>
                 )}
               </Flex>
