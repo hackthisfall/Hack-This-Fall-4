@@ -121,7 +121,7 @@ const Live = () => {
 
   const updateFeed = async () => {
     try {
-      const res = await fetch(`https://hackthisfall.tech/live/api`, {
+      const res = await fetch(`https://s4.hackthisfall.tech/live/api`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
